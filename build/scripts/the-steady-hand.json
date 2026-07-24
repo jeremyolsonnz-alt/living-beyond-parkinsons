@@ -1,0 +1,78 @@
+{
+  "id": "the-steady-hand",
+  "title": "The Steady Hand",
+  "domain": "Fine motor & handwriting",
+  "badge": "emerging",
+  "audio_file": "audio_hand.mp3",
+  "approx_minutes": 15,
+  "note": "Channel-agnostic script. Rehearsed at rest, never performed. A complement to occupational therapy.",
+  "phases": [
+    {
+      "id": "opening",
+      "label": "Opening — Breath and Light",
+      "paragraphs": [
+        { "id": "op1", "agnostic": "And you're here now, settled, your hands resting and asked to do nothing at all. Let them be heavy, or light, or somewhere in between — however they happen to be is exactly right." },
+        { "id": "op2", "agnostic": "There's a little time set aside, and nothing to accomplish in it. Just the rehearsing of ease, gently, while the hands themselves rest." },
+        { "id": "op3", "agnostic": "You're breathing, easily and on its own. And you might let your attention drift, in a moment, down the arms and into the hands — those remarkable, expressive things that do so much of our reaching out into the world." },
+        { "id": "op4", "agnostic": "A soft warmth, settling into the palms and the fingers. Not a task, not a stretch — just warmth, and ease, resting in the hands like sun on a windowsill." }
+      ]
+    },
+    {
+      "id": "phase1",
+      "label": "Phase I — The Ideal Being",
+      "paragraphs": [
+        {
+          "id": "p1a",
+          "agnostic": "A little way off, there's a figure — sitting at a table, writing. You may see them clearly, or simply sense them there. And notice the hand. It moves fluidly, easily, the pen gliding along without gripping or cramping. And notice, especially, the size of the writing: full and open, each letter as generous as the last, staying that way all the way along the line. Nothing shrinking, nothing tightening. The hand simply keeps its fullness, effortlessly.",
+          "see": "A little way off, a figure comes into view — sitting at a table, writing. Watch the hand. It moves fluidly, easily, the pen gliding along without gripping or cramping. And watch, especially, the size of the writing: full and open, each letter as generous as the last, staying that way all the way along the line. Nothing shrinking, nothing tightening. The hand simply keeps its fullness, effortlessly.",
+          "feel": "A little way off, you sense someone there — sitting at a table, writing. Feel the hand. It moves fluidly, easily, the pen gliding along without gripping or cramping. And feel, especially, the size of the writing: full and open, each letter as generous as the last, staying that way all the way along the line. Nothing shrinking, nothing tightening. The hand simply keeps its fullness, effortlessly."
+        },
+        {
+          "id": "p1b",
+          "agnostic": "And now the figure sets down the pen and does something ordinary — fastens a button, perhaps, or picks up a cup. Notice how the fingers find their way without fuss: smooth, unhurried, sure. Not fast, not forced. Just easy, full movements that do what they mean to.",
+          "see": "And now the figure sets down the pen and does something ordinary — fastens a button, perhaps, or picks up a cup. Watch how the fingers find their way without fuss: smooth, unhurried, sure. Not fast, not forced. Just easy, full movements that do what they mean to.",
+          "feel": "And now the figure sets down the pen and does something ordinary — fastens a button, perhaps, or picks up a cup. Feel how the fingers find their way without fuss: smooth, unhurried, sure. Not fast, not forced. Just easy, full movements that do what they mean to."
+        },
+        {
+          "id": "p1c",
+          "agnostic": "This is the quality to stay with: not speed, and not precision under pressure, but fullness and flow — the hand moving at its natural, ample size, relaxed and continuous. Writing that stays large. Fingers that stay easy."
+        },
+        {
+          "id": "p1d",
+          "agnostic": "And now the figure turns, and comes closer, and steps into you — gently — so that being near it becomes doing, from the inside.",
+          "see": "And now the figure turns, and comes closer, and steps into you — gently — so that watching becomes doing, from the inside.",
+          "feel": "And now that presence turns, and draws closer, and steps into you — gently — so that sensing it becomes doing, from the inside."
+        },
+        {
+          "id": "p1e",
+          "agnostic": "Take in your own hand moving that way. An imagined pen, gliding — the letters full and open, keeping their size across the line. An imagined button, an imagined cup — the fingers easy and sure. Not forcing anything. Just rehearsing a hand that stays full and fluid. However your hands are today, you've taken in the ease of them, and that's yours to keep.",
+          "see": "Picture your own hand moving that way. An imagined pen, gliding — the letters full and open, keeping their size across the line. An imagined button, an imagined cup — the fingers easy and sure. Not forcing anything. Just rehearsing a hand that stays full and fluid. However your hands are today, you've pictured the ease of them, and that's yours to keep.",
+          "feel": "Feel your own hand moving that way. An imagined pen, gliding — the letters full and open, keeping their size across the line. An imagined button, an imagined cup — the fingers easy and sure. Not forcing anything. Just rehearsing a hand that stays full and fluid. However your hands are today, you've felt the ease of them, and that's yours to keep."
+        }
+      ]
+    },
+    {
+      "id": "phase2",
+      "label": "Phase II — The Working Hand",
+      "paragraphs": [
+        { "id": "p2a", "agnostic": "A great deal of the brain is given over to the hand — far more than its size would suggest. Movements of the fingers are shaped by the motor cortex, drawing on the same deep structures, the basal ganglia, that help keep any movement at its full size. In Parkinson's, when those structures run short of dopamine, movements tend to shrink — and the hand, which trades in small, precise movements, feels it keenly. That shrinking is the micrographia, the tightening grip." },
+        { "id": "p2b", "agnostic": "Here's the useful part: movement size responds to intention and to attention. When you deliberately aim for large, full movements — in rehearsal, and then in practice with your therapist — you push back against the shrinking. Aiming big helps the movement land at a more normal size." },
+        {
+          "id": "p2c",
+          "agnostic": "So bring the full, easy hand to mind once more — the writing keeping its size, the fingers moving amply and without cramp. Not straining. Just holding the intention of fullness, quietly, so the pattern of a generous movement stays warm and familiar, ready for the real page and the real button, and for the exercises your occupational therapist gives you.",
+          "see": "So picture the full, easy hand once more — the writing keeping its size, the fingers moving amply and without cramp. Not straining. Just holding the intention of fullness, quietly, so the pattern of a generous movement stays warm and familiar, ready for the real page and the real button, and for the exercises your occupational therapist gives you.",
+          "feel": "So feel the full, easy hand once more — the writing keeping its size, the fingers moving amply and without cramp. Not straining. Just holding the intention of fullness, quietly, so the pattern of a generous movement stays warm and familiar, ready for the real page and the real button, and for the exercises your occupational therapist gives you."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "label": "Closing",
+      "paragraphs": [
+        { "id": "cl1", "agnostic": "And when you're ready, in your own time, let the room return, your hands resting where they are. No need to test anything, and no rush to reach for a pen." },
+        { "id": "cl2", "agnostic": "Carry a little of it with you, however much came — the sense of a hand that stays full and easy, the intention of writing that keeps its size. It's a pattern you've rehearsed, and it will be here to rehearse again." },
+        { "id": "cl3", "agnostic": "There was nothing to get back to here, and nothing to prove. This practice sits gently beside the real work of the hands — your occupational therapy, your own daily practice, your medication. It's a rehearsal of ease, offered to your hands as they are today. And whenever you'd like it, the full, easy hand is here to bring to mind again." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "walking-freely",
+  "title": "Walking Freely",
+  "domain": "Gait & freezing",
+  "badge": "moderate",
+  "audio_file": "audio_walking.mp3",
+  "approx_minutes": 15,
+  "note": "Channel-agnostic script. 'agnostic' is the default wording and the audio narration; 'see' and 'feel' are optional overrides for the toggle. No paragraph commands a single sensory channel.",
+  "phases": [
+    {
+      "id": "opening",
+      "label": "Opening — Breath and Light",
+      "paragraphs": [
+        {
+          "id": "op1",
+          "agnostic": "And you're here now, settled, having taken a little time for this. There's nothing to do yet, and nowhere to be — just a few quiet minutes that are already underway."
+        },
+        {
+          "id": "op2",
+          "agnostic": "Let the chair or the bed take your weight. You don't have to hold yourself up; the surface beneath you is doing that. And your feet — resting, for now — can be exactly as heavy or as light as they like."
+        },
+        {
+          "id": "op3",
+          "agnostic": "You're breathing, as you have been all along. And you might simply notice it — the air arriving, the air leaving — without changing a thing. Often, just letting the breath be watched lets the out-breath grow a little longer on its own, and that's welcome whenever it comes."
+        },
+        {
+          "id": "op4",
+          "agnostic": "And somewhere there's a soft warmth — resting on the shoulders, perhaps, or across the tops of the legs. However it comes to you, let it be easy and unhurried. There's a lot of time."
+        }
+      ]
+    },
+    {
+      "id": "phase1",
+      "label": "Phase I — The Ideal Being",
+      "paragraphs": [
+        {
+          "id": "p1a",
+          "agnostic": "And now, a little way off — across a room, or along a path — there's a figure. You may see them clearly, or you may simply sense that someone is there, moving. Either is right; take whatever comes. What matters is the walking, and this walking is easy. Unhurried. The weight rolling smoothly from heel to toe, one step flowing into the next, as if the ground itself were helping.",
+          "see": "And now, a little way off — across a room, or along a path — a figure comes into view. Someone walking. You don't need to make the picture sharp; just let yourself watch the walking. And this walking is easy. Unhurried. The weight rolling smoothly from heel to toe, one step flowing into the next, as if the ground itself were helping.",
+          "feel": "And now, a little way off, you become aware of someone there — a figure, moving. You needn't picture them; it's enough to sense their presence and the rhythm of how they move. And this walking is easy. Unhurried. A smooth roll of weight from heel to toe, one step flowing into the next, as if the ground itself were helping."
+        },
+        {
+          "id": "p1b",
+          "agnostic": "You're just noticing it, for now. The rhythm of it. The way there's no catch, no hesitation — just an even, flowing motion, the most ordinary thing in the world and somehow lovely to be near.",
+          "see": "You're just watching, for now. The rhythm of it. The way there's no catch, no hesitation — just an even, flowing motion, the most ordinary thing in the world and somehow lovely to see.",
+          "feel": "You're just registering it, for now. The rhythm of it. The way there's no catch, no hesitation — just an even, flowing motion, the most ordinary thing in the world and somehow steadying to sense."
+        },
+        {
+          "id": "p1c",
+          "agnostic": "And you become aware of the figure coming to a doorway — that narrow place where the step so often catches. Notice what happens. There's no slowing with worry. There's a line on the floor at the threshold — just a line to meet — and the figure meets it, lifts, and steps over it, through the doorway, in one smooth motion. Through, and onward, the rhythm unbroken."
+        },
+        {
+          "id": "p1d",
+          "agnostic": "And now the figure turns, and comes closer, closer — and steps into you. Gently. So that being near it becomes being it, and you're the one walking now. From the inside.",
+          "see": "And now the figure turns, and comes closer, closer — and steps into you. Gently. So that watching becomes doing, and you're the one walking now. From the inside.",
+          "feel": "And now that presence turns, and draws closer, closer — and steps into you. Gently. So that sensing it becomes being it, and you're the one walking now. From the inside."
+        },
+        {
+          "id": "p1e",
+          "agnostic": "Notice it however it reaches you: the weight shifting, heel to toe. The unhurried rhythm that's yours now. And as you come to the threshold, there's the line on the floor, and you lift, and you step over it — through the doorway, and onward. However it feels today, you've rehearsed the way through, and that rehearsal is yours to keep.",
+          "see": "Picture it, as much or as little as comes: the weight shifting, heel to toe. The unhurried rhythm that's yours now. And as you come to the threshold, you find the line on the floor, and you lift, and you step over it — through the doorway, and onward. However it feels today, you've rehearsed the way through, and that rehearsal is yours to keep.",
+          "feel": "Feel it, in whatever way it comes: the weight shifting, heel to toe. The unhurried rhythm that's yours now. And as you come to the threshold, you sense the line on the floor, and you lift, and you step over it — through the doorway, and onward. However it feels today, you've rehearsed the way through, and that rehearsal is yours to keep."
+        }
+      ]
+    },
+    {
+      "id": "phase2",
+      "label": "Phase II — The Walking Circuit",
+      "paragraphs": [
+        {
+          "id": "p2a",
+          "agnostic": "Deep in the brain there's a set of structures that, in most people, keep walking running quietly in the background — the automatic rhythm you never have to think about. In Parkinson's, that automatic supply can falter, and the step that used to run itself sometimes needs a hand."
+        },
+        {
+          "id": "p2b",
+          "agnostic": "But here's the quiet good news the research points to: when the automatic path stumbles, movement can be routed another way — through attention, through a cue, through a line on the floor or a beat to walk to. A different road to the same step. That's what the doorway line was: a way of handing the movement to a part of the brain that's still steady, and letting it carry the step through."
+        },
+        {
+          "id": "p2c",
+          "agnostic": "So as you bring the smooth step to mind once more — the approach, the line, the lift, the step over and through — you're quietly travelling that other road. Not forcing anything. Just letting the rehearsed step lay down its track, the same track a real step can later follow, with a cue to guide it.",
+          "see": "So as you picture the smooth step once more — the approach, the line, the lift, the step over and through — you're quietly travelling that other road. Not forcing anything. Just letting the imagined step lay down its track, the same track a real step can later follow, with a cue to guide it.",
+          "feel": "So as you call up the feeling of the smooth step once more — the approach, the line, the lift, the step over and through — you're quietly travelling that other road. Not forcing anything. Just letting the rehearsed step lay down its track, the same track a real step can later follow, with a cue to guide it."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "label": "Closing",
+      "paragraphs": [
+        {
+          "id": "cl1",
+          "agnostic": "And when you're ready, in your own time, you can let the room come back — the surface beneath you, the light in the space you're actually in. No rush to rise."
+        },
+        {
+          "id": "cl2",
+          "agnostic": "You don't have to carry the whole of it with you. Just a little — the sense of an easeful step, the memory of the line on the floor, the knowledge that there's a way through a threshold that you've now walked in your mind."
+        },
+        {
+          "id": "cl3",
+          "agnostic": "There was nothing to get back to here, and nothing to prove. Parkinson's is what it is, and this practice sits gently alongside it — a rehearsal of ease, offered to your body as it is today. And whenever you'd like it, the easeful step is here to rehearse again."
+        },
+        {
+          "id": "cl4",
+          "agnostic": "When you next walk, let your physiotherapist's cues lead the way. This practice was the rehearsal; those are the real thing."
+        }
+      ]
+    }
+  ]
+}

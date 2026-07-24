@@ -1,0 +1,26 @@
+# Living Beyond Parkinson's — Netlify configuration
+#
+# Only the public/ directory is served. The build/ toolkit (script JSON,
+# generate.py, generated audio/print/partials) stays in the repository for
+# version control but is never deployed to the web.
+
+[build]
+  publish = "public"
+  # Static site — no build step. If you later run the generator in CI,
+  # replace this with: command = "python3 build/generate.py"
+  command = ""
+
+# Sensible security headers for a static health-information site.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Long-cache the fonts/static assets if you add any hashed files later.
+# [[headers]]
+#   for = "/assets/*"
+#   [headers.values]
+#     Cache-Control = "public, max-age=31536000, immutable"

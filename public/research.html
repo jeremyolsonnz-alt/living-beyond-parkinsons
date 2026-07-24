@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Living Beyond Parkinson's</title>
+<meta name="description" content="Why guided motor imagery is worth exploring in Parkinson's disease — the framing, the neuroscience, and an honest account of what the evidence does and doesn't show.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F0E8;
+    --warm-white:#FAF8F4;
+    --charcoal:#2A2820;
+    --bark:#5C4A2A;
+    --gold:#C8963C;
+    --muted:#7A7060;
+    --border:#E0D8C8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream);color:var(--charcoal);font-family:'DM Sans',system-ui,sans-serif;font-weight:400;line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.2;color:var(--charcoal);}
+  a{color:var(--bark);}
+  .label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-variant:small-caps;font-weight:600;color:var(--gold);}
+  .nav{position:sticky;top:0;z-index:100;background:var(--charcoal);border-bottom:2px solid var(--gold);}
+  .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:'Lora',serif;font-size:1.15rem;font-weight:500;color:var(--warm-white);text-decoration:none;letter-spacing:.01em;}
+  .brand span{color:var(--gold);}
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{color:var(--warm-white);text-decoration:none;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-variant:small-caps;font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s;}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold);}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--warm-white);margin:5px 0;transition:.25s;}
+  @media(max-width:860px){
+    .hamburger{display:block;}
+    .nav-links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--charcoal);border-bottom:2px solid var(--gold);max-height:0;overflow:hidden;transition:max-height .3s ease;}
+    .nav-links.open{max-height:420px;}
+    .nav-links li{width:100%;}
+    .nav-links a{display:block;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav-links a:hover,.nav-links a[aria-current="page"]{border-bottom-color:rgba(255,255,255,.08);}
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  .wide{max-width:1080px;}
+  .page-hero{background:var(--warm-white);border-bottom:1px solid var(--border);padding:72px 0 60px;}
+  .page-hero h1{font-size:2.9rem;margin:0 0 18px;}
+  .page-hero .lede{font-size:1.22rem;color:var(--bark);max-width:56ch;line-height:1.55;}
+  section{padding:52px 0;}
+  section + section{border-top:1px solid var(--border);}
+  h2.section-title{font-size:1.9rem;margin:0 0 8px;}
+  h3.sub{font-size:1.25rem;margin:28px 0 8px;}
+  .section-eyebrow{margin-bottom:6px;}
+  p{margin:0 0 20px;}
+  .framing{background:var(--charcoal);color:var(--warm-white);border-radius:4px;padding:32px 32px 28px;margin:8px 0 0;}
+  .framing .label{color:var(--gold);}
+  .framing h3{color:var(--warm-white);font-size:1.5rem;margin:6px 0 14px;}
+  .framing p{color:#D8D2C6;margin:0 0 16px;}
+  .framing p:last-child{margin-bottom:0;}
+  .framing .pull{font-family:'Lora',serif;font-size:1.3rem;color:var(--warm-white);line-height:1.4;font-style:italic;border-left:3px solid var(--gold);padding-left:18px;margin:20px 0;}
+  .pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
+  .pillar{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:24px 24px;}
+  .pillar .pn{color:var(--gold);font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;}
+  .pillar h3{font-size:1.25rem;margin:6px 0 8px;}
+  .pillar p{font-size:.95rem;margin:0;color:#3D3A30;}
+  @media(max-width:640px){.pillars{grid-template-columns:1fr;}}
+  .strength-table{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:8px 0 0;}
+  .strength-table .st-row{display:grid;grid-template-columns:1.3fr 1fr 2fr;gap:0;border-top:1px solid var(--border);}
+  .strength-table .st-row:first-child{border-top:0;background:var(--cream);}
+  .strength-table .st-row > div{padding:14px 16px;font-size:.9rem;}
+  .strength-table .st-row.head > div{font-variant:small-caps;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;color:var(--muted);font-weight:600;}
+  .strength-table .prac{font-family:'Lora',serif;color:var(--charcoal);}
+  .strength-table .badge-cell{display:flex;align-items:center;gap:8px;color:var(--charcoal);}
+  .strength-table .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto;}
+  .dot.emerging{background:var(--gold);box-shadow:0 0 0 3px rgba(200,150,60,.18);}
+  .dot.moderate{background:var(--bark);box-shadow:0 0 0 3px rgba(200,150,60,.30);}
+  .dot.strong{background:var(--charcoal);box-shadow:0 0 0 3px rgba(200,150,60,.42);}
+  .strength-table .note{color:#3D3A30;}
+  @media(max-width:640px){
+    .strength-table .st-row{grid-template-columns:1fr;}
+    .strength-table .st-row.head{display:none;}
+    .strength-table .st-row > div{border-top:1px solid var(--border);}
+    .strength-table .st-row > div:first-child{border-top:0;font-weight:600;}
+  }
+  .callout{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin:8px 0 0;}
+  .callout p{margin:0;font-size:.95rem;color:#3D3A30;}
+  .callout p strong{color:var(--bark);}
+  .cta-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;}
+  .cta{display:inline-block;text-decoration:none;border:1px solid var(--gold);color:var(--bark);border-radius:3px;padding:12px 20px;font-size:.9rem;font-variant:small-caps;letter-spacing:.06em;transition:background .2s,color .2s;}
+  .cta:hover{background:var(--gold);color:var(--warm-white);}
+  .cta.solid{background:var(--charcoal);color:var(--warm-white);border-color:var(--charcoal);}
+  .cta.solid:hover{background:var(--bark);border-color:var(--bark);}
+  footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
+  footer .brand{font-size:1.05rem;}
+  footer .brand span{color:var(--gold);}
+  footer p{margin:14px 0 0;line-height:1.6;max-width:60ch;}
+  footer a{color:var(--gold);text-decoration:none;}
+  .foot-links{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .foot-links a{color:#C9C2B4;font-size:.8rem;font-variant:small-caps;letter-spacing:.06em;}
+  .foot-links a:hover{color:var(--gold);}
+
+  .free-line{color:var(--gold);font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-top:20px;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Living Beyond <span>Parkinson's</span></a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" aria-current="page">Research</a></li>
+      <li><a href="guided-imagery.html">Guided Imagery</a></li>
+      <li><a href="work-with-jeremy.html">Work with Jeremy</a></li>
+      <li><a href="bibliography.html">Bibliography</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <h1>The research, honestly</h1>
+    <p class="lede">Why mental rehearsal is worth exploring in Parkinson's — the thinking behind this site, the neuroscience underneath it, and a straight account of where the evidence is solid, where it is thin, and where it simply isn't in yet.</p>
+  </div>
+</header>
+
+<!-- PLAIN SUMMARY -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The short version, in plain words</div>
+    <h2 class="section-title">If you read nothing else</h2>
+    <ul style="margin:0 0 16px;padding-left:20px;">
+      <li style="margin:0 0 12px;line-height:1.6;"><strong>What this is:</strong> imagining a movement in your mind gently switches on some of the same brain areas as really moving. That's the idea behind these practices.</li>
+      <li style="margin:0 0 12px;line-height:1.6;"><strong>The honest bottom line:</strong> the most recent large study — one that pooled many trials together — found that imagery did <em>not</em> clearly improve people's overall movement scores. So we don't claim it improves your Parkinson's movements.</li>
+      <li style="margin:0 0 12px;line-height:1.6;"><strong>Where there's a little hope:</strong> for walking and "freezing," some smaller studies still point in a good direction — weakly. That's the one practice we rate a step higher.</li>
+      <li style="margin:0 0 12px;line-height:1.6;"><strong>What it's really for:</strong> feeling calmer and a bit more at ease, as a gentle add-on to your real care — medication, physiotherapy, speech therapy. Never instead of them.</li>
+      <li style="margin:0 0 12px;line-height:1.6;"><strong>Speech:</strong> for a soft voice there's a proper treatment (called LSVT LOUD). Imagery is not a stand-in, so we don't offer one.</li>
+    </ul>
+    <p style="color:var(--muted);font-size:.9rem;">The rest of this page explains all of that more fully, with the studies behind each point. Read as much or as little as you like.</p>
+  </div>
+</section>
+
+<!-- FRAMING -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The framing</div>
+    <h2 class="section-title">Not recovery. Not only acceptance.</h2>
+    <p>The starting point for this site is a distinction that matters. Parkinson's is a progressive condition — one that slowly advances over time. It is not an injury that happened once and can be relearned around, and so the language of "recovery" — of getting back to how things were — does not belong here. Nothing on this site will promise that.</p>
+    <p>But there is an opposite error, too. Because Parkinson's is progressive, it is tempting to conclude that the only honest offering is acceptance — comfort, calm, and making peace, with no claim that anything can change in how the body actually moves. That would be too cautious. For some Parkinson's symptoms, there is real, published evidence that mental practice can help — modestly, as a complement to medical care, but genuinely.</p>
+    <div class="framing">
+      <div class="label">Where this site stands</div>
+      <h3>Symptom management and quality of life, within a progressive condition</h3>
+      <p class="pull">Not getting better in the sense of going back — but living better, and sometimes moving with a little more ease, inside a condition that is moving in one direction.</p>
+      <p>That is the whole of the claim. Every practice, every script, and every evidence badge on this site is written to stay inside it — hopeful where the evidence allows, and quiet where it doesn't.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IMAGERY -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The neuroscience</div>
+    <h2 class="section-title">Why imagining a movement is not nothing</h2>
+    <p>When you vividly imagine performing a movement, your brain does not stay silent. Motor imagery — the mental simulation of an action — recruits many of the same networks that light up when the movement is actually performed: motor and premotor regions, the supplementary motor area, parietal and subcortical structures. Imagined and executed movement are, in the brain, close cousins.</p>
+    <p>Two things make this relevant to Parkinson's in particular. The first is that the ability to form motor imagery is <em>largely preserved</em> in people with mild-to-moderate Parkinson's — the capacity to rehearse mentally is, for most, still intact even as physical movement becomes harder <a href="bibliography.html">(Readman et al., 2023)</a>. The second is that imagery has been used as a window onto the very circuits that fail in Parkinson's: imaging studies of imagined walking have revealed altered activity in the brainstem gait regions that correlate with freezing severity <a href="bibliography.html">(Snijders et al., 2011)</a>.</p>
+    <p>So the premise is reasonable: if imagined movement engages real movement circuitry, and if that capacity survives in Parkinson's, then rehearsing an easeful movement in the mind might help make it a little more available to the body. Reasonable — but a premise is not a proof, and the next section is where honesty earns its keep.</p>
+  </div>
+</section>
+
+<!-- WHAT THE EVIDENCE SHOWS -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">What the evidence shows</div>
+    <h2 class="section-title">Solid in places, thin in others, absent in a few</h2>
+    <p>The imagery-in-Parkinson's literature is young and uneven. The honest summary is that the mechanistic groundwork is fairly strong, a handful of trials point in a hopeful direction with low certainty, at least one good trial found nothing, and several symptom areas have barely been studied at all. Here is how that maps onto the five practices.</p>
+
+    <div class="strength-table" role="table" aria-label="Evidence strength by practice">
+      <div class="st-row head" role="row"><div role="columnheader">Practice</div><div role="columnheader">Evidence</div><div role="columnheader">The honest version</div></div>
+      <div class="st-row" role="row">
+        <div class="prac" role="cell">Walking Freely<br><span style="color:var(--muted);font-size:.82rem;">gait &amp; freezing</span></div>
+        <div class="badge-cell" role="cell"><span class="dot moderate"></span>Moderate</div>
+        <div class="note" role="cell">The most-studied target. Strong imaging and a sound cueing rationale; clinical trials mixed, including one that found no effect on freezing.</div>
+      </div>
+      <div class="st-row" role="row">
+        <div class="prac" role="cell">Finding Flow<br><span style="color:var(--muted);font-size:.82rem;">bradykinesia</span></div>
+        <div class="badge-cell" role="cell"><span class="dot emerging"></span>Emerging</div>
+        <div class="note" role="cell">Once the best outcome bet — but the 2025 UPDRS-III meta-analysis found no motor benefit, and the earlier positive trials were bundled with virtual reality.</div>
+      </div>
+      <div class="st-row" role="row">
+        <div class="prac" role="cell">Steady Ground<br><span style="color:var(--muted);font-size:.82rem;">balance</span></div>
+        <div class="badge-cell" role="cell"><span class="dot emerging"></span>Emerging</div>
+        <div class="note" role="cell">Mostly a secondary outcome in the gait and combined trials; low-certainty, hopeful, not established.</div>
+      </div>
+      <div class="st-row" role="row">
+        <div class="prac" role="cell">The Steady Hand<br><span style="color:var(--muted);font-size:.82rem;">fine motor</span></div>
+        <div class="badge-cell" role="cell"><span class="dot emerging"></span>Emerging</div>
+        <div class="note" role="cell">A few small studies of hand amplitude and one home-training pilot. The lightest evidence of the motor practices.</div>
+      </div>
+      <div class="st-row" role="row">
+        <div class="prac" role="cell">Calm Beneath the Storm<br><span style="color:var(--muted);font-size:.82rem;">non-motor</span></div>
+        <div class="badge-cell" role="cell"><span class="dot emerging"></span>Emerging</div>
+        <div class="note" role="cell">A firmer base for mindfulness easing anxiety and depression, plus a small, preliminary imagery signal on "on" time. Framed as wellbeing, not a motor claim.</div>
+      </div>
+    </div>
+
+    <h3 class="sub">The headline result: a recent null on overall motor symptoms</h3>
+    <p>The single most important finding to sit with is a discouraging one. A 2025 meta-analysis pooled the randomised trials of motor imagery and action observation that used the whole-body motor score (UPDRS-III) as their primary outcome, and found <em>no significant improvement</em> — neither on nor off medication <a href="bibliography.html">(Pettenuzzo et al., 2025)</a>. At the level of overall motor symptoms, the most recent and most direct evidence is null. Everything below should be read against that.</p>
+
+    <h3 class="sub">Where a signal survives: gait and freezing</h3>
+    <p>Gait is the one strand where a positive signal holds up, and only when you look at gait-<em>specific</em> measures rather than the whole-body score. The mechanistic case is good — imagined walking engages the freezing circuitry — and there is a well-argued rationale that imagery could help a person rehearse an attention- or cue-based route through freezing triggers like doorways <a href="bibliography.html">(How, Wagner &amp; Brach, 2022)</a>. Gait-focused reviews report very-low-certainty gains in walking speed and in freezing at follow-up. But even here the trials are mixed: one well-conducted randomised trial found no effect on freezing or balance at all <a href="bibliography.html">(Bezerra et al., 2022)</a>. That fragile, hedged signal is the whole reason Walking Freely holds a Moderate badge while everything else is Emerging.</p>
+
+    <h3 class="sub">Once promising, now downgraded: bradykinesia</h3>
+    <p>Bradykinesia was once the most encouraging strand — trials where motor imagery added to physiotherapy improved slowness more than physiotherapy alone <a href="bibliography.html">(Kashif et al., 2022)</a>. Two problems have since deflated that. Those trials combined imagery with virtual reality, so imagery's own share was never isolated; and the 2025 meta-analysis above, which directly measures motor symptoms including slowness, found nothing. A cleaner single-session study did reduce finger slowness <a href="bibliography.html">(Pelosin et al., 2013)</a>, but it is small and short. This is why Finding Flow was moved from Moderate down to Emerging.</p>
+
+    <h3 class="sub">The honest gap: speech</h3>
+    <p>There is no guided-imagery voice practice on this site, and that is deliberate. Soft, indistinct speech (hypophonia) has an established, gold-standard treatment — LSVT LOUD — that works through intensive, high-effort recalibration of vocal loudness, a fundamentally different mechanism from mental rehearsal, with durable results <a href="bibliography.html">(Ramig et al., 2001; Fox et al., 2012)</a>. Offering a gentle imagery exercise next to it would risk implying an equivalence that doesn't exist. If speech is a concern, the honest recommendation is a referral to a speech-language therapist, not a script from this site.</p>
+  </div>
+</section>
+
+<!-- COMPLEMENT -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The non-negotiable</div>
+    <h2 class="section-title">A complement, never a replacement</h2>
+    <p>Whatever the evidence does or doesn't support, one principle sits above all of it. Guided imagery is offered here alongside the things that do the real work in Parkinson's — medication and its careful timing, physiotherapy, cueing strategies, speech therapy, and the guidance of a Parkinson's team. It is never a substitute for any of them, and every practice page repeats this in its own words.</p>
+    <div class="callout">
+      <p><strong>If a practice ever seems to be working in place of your medical care, that is a signal to step back, not lean in.</strong> The purpose of this site is to sit quietly beside good treatment, not to compete with it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TWO PILLARS -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">How the site is built</div>
+    <h2 class="section-title">Two pillars</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pn">Pillar One</div>
+        <h3>The research</h3>
+        <p>This page and the bibliography — the framing, the neuroscience, and an honest, badge-by-badge account of the evidence for each practice, with every claim traceable to a named source.</p>
+      </div>
+      <div class="pillar">
+        <div class="pn">Pillar Two</div>
+        <h3>The guided imagery programme</h3>
+        <p>Five practices, each a three-phase guided session. The structure is the author's own synthesis of an established therapeutic tradition — offered in good faith, and clearly labelled as such rather than as a tested protocol.</p>
+      </div>
+    </div>
+    <div class="cta-links">
+      <a class="cta solid" href="guided-imagery.html">Explore the practices</a>
+      <a class="cta" href="bibliography.html">Read the bibliography</a>
+    </div>
+  </div>
+</section>
+
+<!-- A NOTE ON THE METHOD -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">One more honesty note</div>
+    <h2 class="section-title">On the three-phase structure</h2>
+    <p>The individual ingredients on this site — motor imagery, action observation, relaxation and breath work — each have research behind them, gathered in the bibliography. The particular way they are combined into a three-phase session (Opening, an "ideal being" phase, an anatomical-pathway phase, and a closing) is the author's own synthesis, drawn from the Ericksonian and solution-oriented tradition. That combined protocol has not been tested as a unit in any clinical trial, and every practice page says so plainly. Believing in the parts is reasonable; treating the whole as proven would not be.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap wide">
+    <div class="brand">Living Beyond <span>Parkinson's</span></div>
+    <p>Guided imagery and wellbeing practices for people living with Parkinson's disease. Built by Jeremy Olson, Auckland, New Zealand. This site offers supportive practices alongside medical care; it does not diagnose, treat, or replace the advice of your healthcare team.</p>
+    <nav class="foot-links" aria-label="Support and guidance">
+      <a href="newly-diagnosed.html">Just diagnosed?</a>
+      <a href="for-family-and-friends.html">For family &amp; friends</a>
+      <a href="when-nothing-happens.html">When nothing happens</a>
+      <a href="imagery-check.html">Imagery self-check</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="for-clinicians.html">For clinicians</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+    <p class="free-line">Free · No paywall · No email required · No ads</p>
+  </div>
+</footer>
+
+<script>
+  var btn = document.querySelector('.hamburger');
+  var links = document.getElementById('navlinks');
+  btn.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+
+</body>
+</html>

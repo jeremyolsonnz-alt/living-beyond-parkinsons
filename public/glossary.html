@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Glossary — Living Beyond Parkinson's</title><meta name="description" content="Plain-language definitions of the Parkinson's and guided-imagery words used on this site."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"><style>
+  :root{--cream:#F5F0E8;--warm-white:#FAF8F4;--charcoal:#2A2820;--bark:#5C4A2A;--gold:#C8963C;--muted:#7A7060;--border:#E0D8C8;}
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream);color:var(--charcoal);font-family:'DM Sans',system-ui,sans-serif;line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.2;color:var(--charcoal);}
+  a{color:var(--bark);}
+  .label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-variant:small-caps;font-weight:600;color:var(--gold);}
+  .nav{position:sticky;top:0;z-index:100;background:var(--charcoal);border-bottom:2px solid var(--gold);}
+  .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:'Lora',serif;font-size:1.15rem;font-weight:500;color:var(--warm-white);text-decoration:none;}
+  .brand span{color:var(--gold);}
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{color:var(--warm-white);text-decoration:none;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-variant:small-caps;font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s;}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold);}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--warm-white);margin:5px 0;transition:.25s;}
+  @media(max-width:860px){.hamburger{display:block;}
+    .nav-links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--charcoal);border-bottom:2px solid var(--gold);max-height:0;overflow:hidden;transition:max-height .3s ease;}
+    .nav-links.open{max-height:420px;}.nav-links li{width:100%;}
+    .nav-links a{display:block;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav-links a:hover,.nav-links a[aria-current="page"]{border-bottom-color:rgba(255,255,255,.08);}}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px;} .wide{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .page-hero{background:var(--warm-white);border-bottom:1px solid var(--border);padding:72px 0 56px;}
+  .page-hero h1{font-size:2.9rem;margin:0 0 18px;}
+  .page-hero .lede{font-size:1.22rem;color:var(--bark);max-width:56ch;line-height:1.55;}
+  section{padding:48px 0;} section + section{border-top:1px solid var(--border);}
+  h2.section-title{font-size:1.6rem;margin:0 0 10px;} h3.sub{font-size:1.2rem;margin:24px 0 6px;}
+  .section-eyebrow{margin-bottom:6px;} p{margin:0 0 18px;}
+  ul.plain{margin:0 0 18px;padding-left:20px;} ul.plain li{margin:0 0 10px;line-height:1.6;}
+  .callout{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:20px 22px;margin:6px 0 18px;}
+  .callout p{margin:0;font-size:.95rem;color:#3D3A30;} .callout p strong{color:var(--bark);}
+  .callout.warm{background:var(--warm-white);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;}
+  .callout.dark{background:var(--charcoal);color:#D8D2C6;border:0;} .callout.dark p{color:#D8D2C6;} .callout.dark p strong{color:var(--gold);}
+  .cta-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;}
+  .cta{display:inline-block;text-decoration:none;border:1px solid var(--gold);color:var(--bark);border-radius:3px;padding:12px 22px;font-size:.9rem;font-variant:small-caps;letter-spacing:.06em;transition:background .2s,color .2s;}
+  .cta:hover{background:var(--gold);color:var(--warm-white);}
+  .cta.solid{background:var(--charcoal);color:var(--warm-white);border-color:var(--charcoal);} .cta.solid:hover{background:var(--bark);border-color:var(--bark);}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;}
+  .card{display:block;text-decoration:none;color:inherit;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:20px 22px;transition:border-color .2s,transform .2s;}
+  .card:hover{border-color:var(--gold);transform:translateY(-2px);} .card h3{font-size:1.15rem;margin:0 0 4px;} .card p{font-size:.9rem;color:#3D3A30;margin:0;}
+  @media(max-width:640px){.cards{grid-template-columns:1fr;}}
+  dl.glossary{margin:0;} dl.glossary div{padding:16px 0;border-top:1px solid var(--border);} dl.glossary div:first-child{border-top:0;}
+  dl.glossary dt{font-family:'Lora',serif;font-size:1.15rem;color:var(--bark);margin:0 0 4px;}
+  dl.glossary dt .also{font-family:'DM Sans',sans-serif;font-size:.8rem;color:var(--muted);font-variant:small-caps;letter-spacing:.06em;margin-left:8px;}
+  dl.glossary dd{margin:0;font-size:.96rem;color:#3D3A30;line-height:1.6;}
+  table.clin{width:100%;border-collapse:collapse;margin:6px 0 18px;font-size:.92rem;}
+  table.clin th,table.clin td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+  table.clin th{background:var(--cream);font-variant:small-caps;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;color:var(--muted);}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:6px;}
+  .dot.emerging{background:var(--gold);box-shadow:0 0 0 2px rgba(200,150,60,.18);}
+  .dot.moderate{background:var(--bark);box-shadow:0 0 0 2px rgba(200,150,60,.30);}
+  .dot.strong{background:var(--charcoal);box-shadow:0 0 0 2px rgba(200,150,60,.42);}
+  form.fb label{display:block;font-size:.9rem;color:var(--bark);margin:0 0 6px;font-weight:500;}
+  form.fb input[type=text],form.fb input[type=email],form.fb textarea{width:100%;border:1px solid var(--border);border-radius:3px;padding:11px 13px;font:inherit;font-size:.95rem;background:var(--warm-white);color:var(--charcoal);margin:0 0 16px;}
+  form.fb textarea{min-height:140px;resize:vertical;}
+  form.fb .consent{display:flex;gap:10px;align-items:flex-start;margin:0 0 18px;font-size:.9rem;color:#3D3A30;} form.fb .consent input{margin-top:5px;}
+  form.fb .hp{position:absolute;left:-5000px;}
+  .btn{display:inline-block;border:1px solid var(--charcoal);background:var(--charcoal);color:var(--warm-white);border-radius:3px;padding:12px 26px;font:inherit;font-size:.9rem;font-variant:small-caps;letter-spacing:.06em;cursor:pointer;transition:background .2s;}
+  .btn:hover{background:var(--bark);border-color:var(--bark);}
+  footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
+  footer .brand{font-size:1.05rem;}footer .brand span{color:var(--gold);}
+  footer p{margin:14px 0 0;line-height:1.6;max-width:60ch;} footer a{color:var(--gold);text-decoration:none;}
+  .foot-links{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .foot-links a{color:#C9C2B4;font-size:.8rem;font-variant:small-caps;letter-spacing:.06em;} .foot-links a:hover{color:var(--gold);}
+  .free-line{color:var(--gold);font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-top:18px;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+</style></head><body><nav class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html">Living Beyond <span>Parkinson's</span></a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li>
+      <li><a href="guided-imagery.html">Guided Imagery</a></li><li><a href="work-with-jeremy.html">Work with Jeremy</a></li>
+      <li><a href="bibliography.html">Bibliography</a></li><li><a href="contact.html">Contact</a></li>
+    </ul></div></nav><header class="page-hero"><div class="wrap">
+  <h1>Glossary</h1>
+  <p class="lede">Plain-language meanings for the words used around this site — Parkinson's terms and imagery terms, explained simply.</p>
+</div></header>
+<section><div class="wrap">
+  <dl class="glossary"><div><dt>Bradykinesia <span class="also">say: brad-ee-kin-EE-zha</span></dt><dd>Slowness of movement, and movements getting smaller as you go. One of the main features of Parkinson's.</dd></div><div><dt>Freezing of gait</dt><dd>A sudden feeling that your feet are stuck to the floor, often when starting to walk, turning, or reaching a doorway.</dd></div><div><dt>Micrographia <span class="also">say: my-kro-GRAF-ee-a</span></dt><dd>Handwriting that starts normal and shrinks and tightens as you write.</dd></div><div><dt>Hypophonia <span class="also">say: high-po-FOH-nee-a</span></dt><dd>A soft, quiet voice that can happen in Parkinson's. The main treatment is a speech therapy called LSVT LOUD, not imagery.</dd></div><div><dt>Motor imagery</dt><dd>Imagining a movement in your mind without actually doing it. This is what most of the practices use.</dd></div><div><dt>Action observation</dt><dd>Watching a movement (or imagining watching one). Like imagery, it gently activates the brain's movement systems.</dd></div><div><dt>Seeing vs feeling imagery <span class="also">visual / kinesthetic</span></dt><dd>Two ways of imagining. “Seeing” is picturing a movement; “feeling” (kinesthetic) is sensing it in your body. Many people do a bit of both.</dd></div><div><dt>Aphantasia <span class="also">say: a-fan-TAY-zha</span></dt><dd>Having little or no mental pictures at all. It's common and completely normal, and the practices still work without pictures.</dd></div><div><dt>Basal ganglia</dt><dd>A group of structures deep in the brain that help start and size movement. In Parkinson's they run short of dopamine.</dd></div><div><dt>Dopamine</dt><dd>A brain chemical that helps movement run smoothly. Parkinson's involves losing dopamine-making cells; medication helps replace it.</dd></div><div><dt>“On” and “off” periods</dt><dd>“On” is when medication is working and movement is easier; “off” is when it wears thin and symptoms return. Imagery does not change this cycle.</dd></div><div><dt>Cueing</dt><dd>Using an outside prompt — a line on the floor, a beat to walk to — to help movement along. A key physiotherapy strategy for walking.</dd></div><div><dt>UPDRS-III</dt><dd>A standard clinical score doctors use to measure movement symptoms in Parkinson's. The most recent research found imagery did not significantly improve it.</dd></div><div><dt>LSVT LOUD</dt><dd>An intensive, evidence-based speech therapy for the soft voice of Parkinson's. It is the recommended approach for speech — not imagery.</dd></div><div><dt>Balance systems <span class="also">vestibular / proprioception</span></dt><dd>How the body stays upright: the inner-ear balance organs (vestibular) and the sense of where your body is (proprioception), pulled together by the brain.</dd></div></dl>
+  <div class="callout" style="margin-top:24px;"><p><strong>Missing a word?</strong> If there's a term you'd like added or explained more clearly, let us know on the <a href="feedback.html">feedback page</a>.</p></div>
+</div></section><footer><div class="wide">
+    <div class="brand">Living Beyond <span>Parkinson's</span></div>
+    <p>Guided imagery and wellbeing practices for people living with Parkinson's disease. Built by Jeremy Olson, Auckland, New Zealand. This site offers supportive practices alongside medical care; it does not diagnose, treat, or replace the advice of your healthcare team.</p>
+      <nav class="foot-links" aria-label="Support and guidance">
+        <a href="newly-diagnosed.html">Just diagnosed?</a>
+        <a href="for-family-and-friends.html">For family &amp; friends</a>
+        <a href="when-nothing-happens.html">When nothing happens</a>
+        <a href="imagery-check.html">Imagery self-check</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="for-clinicians.html">For clinicians</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    <p class="free-line">Free · No paywall · No email required · No ads</p>
+  </div></footer><script>var b=document.querySelector('.hamburger'),l=document.getElementById('navlinks');b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});</script></body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Just diagnosed? — Living Beyond Parkinson's</title><meta name="description" content="A calm, plain-language starting point for people newly diagnosed with Parkinson's — what this site is, what it isn't, and a gentle place to begin."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"><style>
+  :root{--cream:#F5F0E8;--warm-white:#FAF8F4;--charcoal:#2A2820;--bark:#5C4A2A;--gold:#C8963C;--muted:#7A7060;--border:#E0D8C8;}
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream);color:var(--charcoal);font-family:'DM Sans',system-ui,sans-serif;line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.2;color:var(--charcoal);}
+  a{color:var(--bark);}
+  .label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-variant:small-caps;font-weight:600;color:var(--gold);}
+  .nav{position:sticky;top:0;z-index:100;background:var(--charcoal);border-bottom:2px solid var(--gold);}
+  .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:'Lora',serif;font-size:1.15rem;font-weight:500;color:var(--warm-white);text-decoration:none;}
+  .brand span{color:var(--gold);}
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{color:var(--warm-white);text-decoration:none;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-variant:small-caps;font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s;}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold);}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--warm-white);margin:5px 0;transition:.25s;}
+  @media(max-width:860px){.hamburger{display:block;}
+    .nav-links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--charcoal);border-bottom:2px solid var(--gold);max-height:0;overflow:hidden;transition:max-height .3s ease;}
+    .nav-links.open{max-height:420px;}.nav-links li{width:100%;}
+    .nav-links a{display:block;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav-links a:hover,.nav-links a[aria-current="page"]{border-bottom-color:rgba(255,255,255,.08);}}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px;} .wide{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .page-hero{background:var(--warm-white);border-bottom:1px solid var(--border);padding:72px 0 56px;}
+  .page-hero h1{font-size:2.9rem;margin:0 0 18px;}
+  .page-hero .lede{font-size:1.22rem;color:var(--bark);max-width:56ch;line-height:1.55;}
+  section{padding:48px 0;} section + section{border-top:1px solid var(--border);}
+  h2.section-title{font-size:1.6rem;margin:0 0 10px;} h3.sub{font-size:1.2rem;margin:24px 0 6px;}
+  .section-eyebrow{margin-bottom:6px;} p{margin:0 0 18px;}
+  ul.plain{margin:0 0 18px;padding-left:20px;} ul.plain li{margin:0 0 10px;line-height:1.6;}
+  .callout{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:20px 22px;margin:6px 0 18px;}
+  .callout p{margin:0;font-size:.95rem;color:#3D3A30;} .callout p strong{color:var(--bark);}
+  .callout.warm{background:var(--warm-white);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;}
+  .callout.dark{background:var(--charcoal);color:#D8D2C6;border:0;} .callout.dark p{color:#D8D2C6;} .callout.dark p strong{color:var(--gold);}
+  .cta-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;}
+  .cta{display:inline-block;text-decoration:none;border:1px solid var(--gold);color:var(--bark);border-radius:3px;padding:12px 22px;font-size:.9rem;font-variant:small-caps;letter-spacing:.06em;transition:background .2s,color .2s;}
+  .cta:hover{background:var(--gold);color:var(--warm-white);}
+  .cta.solid{background:var(--charcoal);color:var(--warm-white);border-color:var(--charcoal);} .cta.solid:hover{background:var(--bark);border-color:var(--bark);}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;}
+  .card{display:block;text-decoration:none;color:inherit;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:20px 22px;transition:border-color .2s,transform .2s;}
+  .card:hover{border-color:var(--gold);transform:translateY(-2px);} .card h3{font-size:1.15rem;margin:0 0 4px;} .card p{font-size:.9rem;color:#3D3A30;margin:0;}
+  @media(max-width:640px){.cards{grid-template-columns:1fr;}}
+  dl.glossary{margin:0;} dl.glossary div{padding:16px 0;border-top:1px solid var(--border);} dl.glossary div:first-child{border-top:0;}
+  dl.glossary dt{font-family:'Lora',serif;font-size:1.15rem;color:var(--bark);margin:0 0 4px;}
+  dl.glossary dt .also{font-family:'DM Sans',sans-serif;font-size:.8rem;color:var(--muted);font-variant:small-caps;letter-spacing:.06em;margin-left:8px;}
+  dl.glossary dd{margin:0;font-size:.96rem;color:#3D3A30;line-height:1.6;}
+  table.clin{width:100%;border-collapse:collapse;margin:6px 0 18px;font-size:.92rem;}
+  table.clin th,table.clin td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+  table.clin th{background:var(--cream);font-variant:small-caps;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;color:var(--muted);}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:6px;}
+  .dot.emerging{background:var(--gold);box-shadow:0 0 0 2px rgba(200,150,60,.18);}
+  .dot.moderate{background:var(--bark);box-shadow:0 0 0 2px rgba(200,150,60,.30);}
+  .dot.strong{background:var(--charcoal);box-shadow:0 0 0 2px rgba(200,150,60,.42);}
+  form.fb label{display:block;font-size:.9rem;color:var(--bark);margin:0 0 6px;font-weight:500;}
+  form.fb input[type=text],form.fb input[type=email],form.fb textarea{width:100%;border:1px solid var(--border);border-radius:3px;padding:11px 13px;font:inherit;font-size:.95rem;background:var(--warm-white);color:var(--charcoal);margin:0 0 16px;}
+  form.fb textarea{min-height:140px;resize:vertical;}
+  form.fb .consent{display:flex;gap:10px;align-items:flex-start;margin:0 0 18px;font-size:.9rem;color:#3D3A30;} form.fb .consent input{margin-top:5px;}
+  form.fb .hp{position:absolute;left:-5000px;}
+  .btn{display:inline-block;border:1px solid var(--charcoal);background:var(--charcoal);color:var(--warm-white);border-radius:3px;padding:12px 26px;font:inherit;font-size:.9rem;font-variant:small-caps;letter-spacing:.06em;cursor:pointer;transition:background .2s;}
+  .btn:hover{background:var(--bark);border-color:var(--bark);}
+  footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
+  footer .brand{font-size:1.05rem;}footer .brand span{color:var(--gold);}
+  footer p{margin:14px 0 0;line-height:1.6;max-width:60ch;} footer a{color:var(--gold);text-decoration:none;}
+  .foot-links{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .foot-links a{color:#C9C2B4;font-size:.8rem;font-variant:small-caps;letter-spacing:.06em;} .foot-links a:hover{color:var(--gold);}
+  .free-line{color:var(--gold);font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-top:18px;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+</style></head><body><nav class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html">Living Beyond <span>Parkinson's</span></a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li>
+      <li><a href="guided-imagery.html">Guided Imagery</a></li><li><a href="work-with-jeremy.html">Work with Jeremy</a></li>
+      <li><a href="bibliography.html">Bibliography</a></li><li><a href="contact.html">Contact</a></li>
+    </ul></div></nav><header class="page-hero"><div class="wrap">
+  <h1>Just diagnosed?</h1>
+  <p class="lede">A diagnosis is a lot to take in. There's no rush to do anything here. This page is a calm place to start, whenever you're ready.</p>
+</div></header>
+<section><div class="wrap">
+  <div class="label section-eyebrow">First, breathe</div>
+  <h2 class="section-title">You don't have to do anything today</h2>
+  <p>Parkinson's changes slowly, over years. Whatever you're feeling right now — shock, worry, numbness, or nothing much at all — is normal, and you have time. You don't need to learn everything at once, and you don't need to start any practice today.</p>
+  <div class="callout warm"><p><strong>The most useful first step isn't on this site.</strong> It's building a good relationship with your care team — your GP, a neurologist, and in time a Parkinson's nurse, physiotherapist, and others. They guide the things that matter most, especially medication. This site sits gently alongside that care; it never replaces it.</p></div>
+</div></section>
+<section><div class="wrap">
+  <div class="label section-eyebrow">What this site is</div>
+  <h2 class="section-title">Gentle practices, honestly described</h2>
+  <p>This is a free set of guided imagery practices — calm, spoken exercises where you rest and picture, or simply sense, easy movement and settled feelings. Some people find them soothing and helpful. They are offered as a companion to your medical care, not as a treatment.</p>
+  <p>We try hard to be honest about what the science does and doesn't show. Parkinson's is a condition that slowly progresses, so nothing here promises to reverse it or take you back to how things were. What these practices aim at is smaller and truer: feeling a little more at ease, and living well, day to day.</p>
+  <div class="callout"><p><strong>A word you'll see:</strong> we call this "living beyond" Parkinson's — not because you leave it behind, but because there's a whole life to keep living alongside it.</p></div>
+</div></section>
+<section><div class="wrap">
+  <div class="label section-eyebrow">Where to begin</div>
+  <h2 class="section-title">A gentle first path</h2>
+  <p>If and when you'd like to try something, here's an easy way in — no pressure, and in any order.</p>
+  <div class="cards">
+    <a class="card" href="calm-beneath-the-storm.html"><h3>Start with calm</h3><p>The gentlest practice, for anxious or difficult moments. A good first taste.</p></a>
+    <a class="card" href="imagery-check.html"><h3>Find your way of imagining</h3><p>A two-minute check so the practices word themselves to suit how your mind works.</p></a>
+    <a class="card" href="guided-imagery.html"><h3>See all five practices</h3><p>Browse the full programme and pick whatever speaks to your day.</p></a>
+    <a class="card" href="research.html"><h3>Read the honest research</h3><p>If you'd like to know exactly what the evidence says, in plain terms.</p></a>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <div class="label section-eyebrow">You're not alone in this</div>
+  <h2 class="section-title">Lean on people, too</h2>
+  <p>Websites can only do so much. Real support — a Parkinson's nurse, a local support group, a national Parkinson's charity, and the people close to you — matters more than anything here. If you have family or friends who want to help, there's <a href="for-family-and-friends.html">a page for them</a>, too.</p>
+  <div class="callout dark"><p><strong>If things feel very heavy,</strong> please tell your doctor — low mood and anxiety are common in Parkinson's and can be helped. If you ever feel in crisis, contact your local emergency services or a crisis line straight away.</p></div>
+</div></section><footer><div class="wide">
+    <div class="brand">Living Beyond <span>Parkinson's</span></div>
+    <p>Guided imagery and wellbeing practices for people living with Parkinson's disease. Built by Jeremy Olson, Auckland, New Zealand. This site offers supportive practices alongside medical care; it does not diagnose, treat, or replace the advice of your healthcare team.</p>
+      <nav class="foot-links" aria-label="Support and guidance">
+        <a href="newly-diagnosed.html">Just diagnosed?</a>
+        <a href="for-family-and-friends.html">For family &amp; friends</a>
+        <a href="when-nothing-happens.html">When nothing happens</a>
+        <a href="imagery-check.html">Imagery self-check</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="for-clinicians.html">For clinicians</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    <p class="free-line">Free · No paywall · No email required · No ads</p>
+  </div></footer><script>var b=document.querySelector('.hamburger'),l=document.getElementById('navlinks');b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});</script></body></html>

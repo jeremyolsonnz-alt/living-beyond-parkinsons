@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Living Beyond Parkinson's</title>
+<meta name="description" content="Get in touch with Jeremy Olson about Living Beyond Parkinson's — questions, feedback, corrections, or working together.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F0E8;
+    --warm-white:#FAF8F4;
+    --charcoal:#2A2820;
+    --bark:#5C4A2A;
+    --gold:#C8963C;
+    --muted:#7A7060;
+    --border:#E0D8C8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream);color:var(--charcoal);font-family:'DM Sans',system-ui,sans-serif;font-weight:400;line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.2;color:var(--charcoal);}
+  a{color:var(--bark);}
+  .label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-variant:small-caps;font-weight:600;color:var(--gold);}
+  .nav{position:sticky;top:0;z-index:100;background:var(--charcoal);border-bottom:2px solid var(--gold);}
+  .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:'Lora',serif;font-size:1.15rem;font-weight:500;color:var(--warm-white);text-decoration:none;letter-spacing:.01em;}
+  .brand span{color:var(--gold);}
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{color:var(--warm-white);text-decoration:none;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-variant:small-caps;font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s;}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold);}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--warm-white);margin:5px 0;transition:.25s;}
+  @media(max-width:860px){
+    .hamburger{display:block;}
+    .nav-links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--charcoal);border-bottom:2px solid var(--gold);max-height:0;overflow:hidden;transition:max-height .3s ease;}
+    .nav-links.open{max-height:420px;}
+    .nav-links li{width:100%;}
+    .nav-links a{display:block;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav-links a:hover,.nav-links a[aria-current="page"]{border-bottom-color:rgba(255,255,255,.08);}
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px;}
+  .wide{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .page-hero{background:var(--warm-white);border-bottom:1px solid var(--border);padding:72px 0 60px;}
+  .page-hero h1{font-size:2.9rem;margin:0 0 18px;}
+  .page-hero .lede{font-size:1.22rem;color:var(--bark);max-width:52ch;line-height:1.55;}
+  section{padding:52px 0;}
+  section + section{border-top:1px solid var(--border);}
+  h2.section-title{font-size:1.7rem;margin:0 0 8px;}
+  .section-eyebrow{margin-bottom:6px;}
+  p{margin:0 0 20px;}
+  .contact-card{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:28px 30px;margin:8px 0 0;text-align:center;}
+  .contact-card .k{font-variant:small-caps;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--muted);}
+  .contact-card .email{font-family:'Lora',serif;font-size:1.5rem;color:var(--bark);margin:8px 0 0;word-break:break-word;}
+  .placeholder{background:var(--cream);border:1px dashed var(--gold);border-radius:4px;padding:20px 22px;margin:14px 0 0;}
+  .placeholder p{margin:0;font-size:.9rem;color:#3D3A30;}
+  .placeholder p strong{color:var(--bark);}
+  .reassure{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin:8px 0 0;}
+  .reassure p{margin:0;font-size:.95rem;color:#3D3A30;}
+  .reassure p strong{color:var(--bark);}
+  .medical{background:var(--charcoal);color:var(--warm-white);border-radius:4px;padding:26px 28px;margin:8px 0 0;}
+  .medical .label{color:var(--gold);}
+  .medical p{color:#D8D2C6;margin:6px 0 0;font-size:.95rem;}
+  footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
+  footer .brand{font-size:1.05rem;}
+  footer .brand span{color:var(--gold);}
+  footer p{margin:14px 0 0;line-height:1.6;max-width:60ch;}
+  footer a{color:var(--gold);text-decoration:none;}
+  .foot-links{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .foot-links a{color:#C9C2B4;font-size:.8rem;font-variant:small-caps;letter-spacing:.06em;}
+  .foot-links a:hover{color:var(--gold);}
+
+  .free-line{color:var(--gold);font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-top:20px;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Living Beyond <span>Parkinson's</span></a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="guided-imagery.html">Guided Imagery</a></li>
+      <li><a href="work-with-jeremy.html">Work with Jeremy</a></li>
+      <li><a href="bibliography.html">Bibliography</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <h1>Contact</h1>
+    <p class="lede">Questions, feedback, a correction to the research, or a note about working together — all welcome.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">Get in touch</div>
+    <h2 class="section-title">By email</h2>
+    <p>The simplest way to reach Jeremy is by email. There's no form to fill in and no account to create — just write, and he'll reply when he can.</p>
+    <div class="contact-card">
+      <div class="k">Email</div>
+      <div class="email">[ email address to be added ]</div>
+    </div>
+    <div class="placeholder">
+      <p><strong>Placeholder — for Jeremy to complete.</strong> The contact email address hasn't been added yet. Drop in the real address here (ideally as a <code>mailto:</code> link) before the site goes live. No invented address has been used, so that nothing false is published.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">A couple of notes</div>
+    <h2 class="section-title">Before you write</h2>
+    <div class="reassure">
+      <p><strong>Your privacy.</strong> This site asks nothing of you — no sign-up, no email capture, no tracking for ads. If you email, your message is used only to reply to you, and for nothing else.</p>
+    </div>
+    <div class="medical">
+      <div class="label">Please note</div>
+      <p>Jeremy can't offer medical advice, and this site isn't a place for urgent help. For anything about your symptoms, your medication, or your care, your GP, neurologist, or Parkinson's nurse is the right person to speak to. If you're in crisis or need urgent help, please contact your local emergency services or a crisis line in your country.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wide">
+    <div class="brand">Living Beyond <span>Parkinson's</span></div>
+    <p>Guided imagery and wellbeing practices for people living with Parkinson's disease. Built by Jeremy Olson, Auckland, New Zealand. This site offers supportive practices alongside medical care; it does not diagnose, treat, or replace the advice of your healthcare team.</p>
+    <nav class="foot-links" aria-label="Support and guidance">
+      <a href="newly-diagnosed.html">Just diagnosed?</a>
+      <a href="for-family-and-friends.html">For family &amp; friends</a>
+      <a href="when-nothing-happens.html">When nothing happens</a>
+      <a href="imagery-check.html">Imagery self-check</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="for-clinicians.html">For clinicians</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+    <p class="free-line">Free · No paywall · No email required · No ads</p>
+  </div>
+</footer>
+
+<script>
+  var btn = document.querySelector('.hamburger');
+  var links = document.getElementById('navlinks');
+  btn.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+
+</body>
+</html>

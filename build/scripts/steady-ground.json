@@ -1,0 +1,78 @@
+{
+  "id": "steady-ground",
+  "title": "Steady Ground",
+  "domain": "Balance & postural stability",
+  "badge": "emerging",
+  "audio_file": "audio_steady.mp3",
+  "approx_minutes": 15,
+  "note": "Channel-agnostic script. Rehearses calm, unhurried adjustment only — never a sudden save or catching a fall. Done seated or lying, never while balancing.",
+  "phases": [
+    {
+      "id": "opening",
+      "label": "Opening — Breath and Light",
+      "paragraphs": [
+        { "id": "op1", "agnostic": "And you're here now, held safely by the chair or the bed — nothing to hold up, nothing to steady. The surface beneath you is doing all the holding, completely, so that you can let go of doing it yourself." },
+        { "id": "op2", "agnostic": "Notice that. The way you are already, right now, entirely supported. There's a kind of steadiness in that — a steadiness you don't have to work for at all." },
+        { "id": "op3", "agnostic": "And the breath, arriving and leaving in its own quiet rhythm — itself a kind of gentle swaying, a small tide moving in and out, needing no correction, no effort. Just an easy, continuous motion that keeps itself." },
+        { "id": "op4", "agnostic": "A soft warmth somewhere easy — low in the body, perhaps, around the base of you, where we carry our sense of being grounded. Let it settle there, unhurried." }
+      ]
+    },
+    {
+      "id": "phase1",
+      "label": "Phase I — The Ideal Being",
+      "paragraphs": [
+        {
+          "id": "p1a",
+          "agnostic": "A little way off, there's a figure — standing. You may see them clearly, or simply sense that someone is there, standing comfortably, the way someone stands when they're not thinking about it at all. Not stiff, not braced, not guarding against anything. Simply upright, and at ease, weight resting down through the feet into the floor.",
+          "see": "A little way off, a figure comes into view — standing. Watch them standing comfortably, the way someone stands when they're not thinking about it at all. Not stiff, not braced, not guarding against anything. Simply upright, and at ease, weight resting down through the feet into the floor.",
+          "feel": "A little way off, you sense someone there — standing. Feel the ease of how they stand, the way someone stands when they're not thinking about it at all. Not stiff, not braced, not guarding against anything. Simply upright, and at ease, weight resting down through the feet into the floor."
+        },
+        {
+          "id": "p1b",
+          "agnostic": "And notice something quiet happening. The figure is never perfectly still — no one is. There's a small, constant sway, and with it a small, constant settling: a little shift this way, an easy adjustment back, weight moving gently from one foot toward the other and back again. Unhurried. Untroubled. The body correcting itself the way it always has, softly, without alarm."
+        },
+        {
+          "id": "p1c",
+          "agnostic": "Notice that none of it is a scramble. Nothing is caught at the last moment. It's all slow and rolling and calm — sway and settle, shift and ease, like a boat resting on gentle water. This is the quality to stay with: not rigid stillness, but relaxed, flowing adjustment. Steadiness that breathes.",
+          "see": "Watch how none of it is a scramble. Nothing is caught at the last moment. It's all slow and rolling and calm — sway and settle, shift and ease, like a boat resting on gentle water. This is the quality to watch: not rigid stillness, but relaxed, flowing adjustment. Steadiness that breathes.",
+          "feel": "Feel how none of it is a scramble. Nothing is caught at the last moment. It's all slow and rolling and calm — sway and settle, shift and ease, like a boat resting on gentle water. This is the quality to feel: not rigid stillness, but relaxed, flowing adjustment. Steadiness that breathes."
+        },
+        {
+          "id": "p1d",
+          "agnostic": "And now the figure turns, and comes closer, and steps into you — gently — so that being near it becomes a kind of knowing from the inside.",
+          "see": "And now the figure turns, and comes closer, and steps into you — gently — so that watching becomes a kind of knowing from the inside.",
+          "feel": "And now that presence turns, and draws closer, and steps into you — gently — so that sensing it becomes a kind of knowing from the inside."
+        },
+        {
+          "id": "p1e",
+          "agnostic": "Take in, in imagination only, that easy uprightness. Weight resting down. A small, calm sway, and an easy settling with it — nothing gripped, nothing braced. Just the quiet, continuous adjusting that steadiness is really made of, rehearsed in the safety of your mind while your body rests. However your balance is today, you've taken in the ease of it, and that's yours to keep.",
+          "see": "Picture, in imagination only, that easy uprightness. Weight resting down. A small, calm sway, and an easy settling with it — nothing gripped, nothing braced. Just the quiet, continuous adjusting that steadiness is really made of, rehearsed in the safety of your mind while your body rests. However your balance is today, you've pictured the ease of it, and that's yours to keep.",
+          "feel": "Feel, in imagination only, that easy uprightness. Weight resting down. A small, calm sway, and an easy settling with it — nothing gripped, nothing braced. Just the quiet, continuous adjusting that steadiness is really made of, rehearsed in the safety of your mind while your body rests. However your balance is today, you've felt the ease of it, and that's yours to keep."
+        }
+      ]
+    },
+    {
+      "id": "phase2",
+      "label": "Phase II — The Balancing Body",
+      "paragraphs": [
+        { "id": "p2a", "agnostic": "Staying upright is a quiet conversation the body holds with itself, all the time. Sensors in the feet and joints report where your weight is; the inner ear senses the tilt of your head; the eyes take in the level of the world. All of it streams to the brain, which answers with small, constant corrections — a little more weight here, a small adjustment there — mostly beneath any awareness." },
+        { "id": "p2b", "agnostic": "In Parkinson's, some of that automatic answering can slow, and the corrections can become less sure. This is real, and it's why the practical work of a physiotherapist matters so much. What imagery can gently offer is a rehearsal of the calm version of this conversation — unhurried, trusting, without the tension that fear of falling can add on top." },
+        {
+          "id": "p2c",
+          "agnostic": "So bring that quiet conversation to mind once more, running smoothly — the sensing, the small answering adjustments, the easy settling. Not forcing it. Just holding a sense of steadiness as something calm and continuous, so the calm is a little more familiar. The real steadying happens on your feet, with your physiotherapist and your supports; this simply keeps the calm of it close.",
+          "see": "So picture that quiet conversation once more, running smoothly — the sensing, the small answering adjustments, the easy settling. Not forcing it. Just holding an image of steadiness as something calm and continuous, so the calm is a little more familiar. The real steadying happens on your feet, with your physiotherapist and your supports; this simply keeps the calm of it close.",
+          "feel": "So feel that quiet conversation once more, running smoothly — the sensing, the small answering adjustments, the easy settling. Not forcing it. Just holding the feeling of steadiness as something calm and continuous, so the calm is a little more familiar. The real steadying happens on your feet, with your physiotherapist and your supports; this simply keeps the calm of it close."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "label": "Closing",
+      "paragraphs": [
+        { "id": "cl1", "agnostic": "And when you're ready, in your own time, let the room return — the chair or the bed still holding you completely. There is no need to rise quickly, and when you do rise, do it exactly as carefully as you always would, with whatever support you use." },
+        { "id": "cl2", "agnostic": "Carry a little of the ease with you, however much came — the sense of steadiness as something calm and unhurried, rather than something to grip for. It's a feeling you've rehearsed, and it will be here again." },
+        { "id": "cl3", "agnostic": "There was nothing to get back to here, and nothing to prove. This practice sits quietly beside the real work of balance — your physiotherapy, your falls assessment, your supports. It's a rehearsal of calm, offered to your body as it is today. And whenever you'd like it, the easy, steady ground is here to bring to mind again." }
+      ]
+    }
+  ]
+}

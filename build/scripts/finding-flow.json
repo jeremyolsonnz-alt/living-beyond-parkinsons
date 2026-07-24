@@ -1,0 +1,78 @@
+{
+  "id": "finding-flow",
+  "title": "Finding Flow",
+  "domain": "Movement initiation & bradykinesia",
+  "badge": "emerging",
+  "audio_file": "audio_flow.mp3",
+  "approx_minutes": 15,
+  "note": "Channel-agnostic script. Never commands a sensory channel.",
+  "phases": [
+    {
+      "id": "opening",
+      "label": "Opening — Breath and Light",
+      "paragraphs": [
+        { "id": "op1", "agnostic": "And you're here now, settled, with a little time set aside. Nothing to begin, because it's already begun. Nothing to reach for yet." },
+        { "id": "op2", "agnostic": "Let the chair or the bed hold your weight completely. Your hands can rest wherever they've come to rest. There's no movement being asked of you here — only the rehearsing of it, later, and gently." },
+        { "id": "op3", "agnostic": "You're breathing, without having to start it or steer it — the breath simply arrives, and leaves, and arrives again. You might notice how it needs no effort at all. How it flows on its own. Let that stay quietly with you: movement that happens without forcing." },
+        { "id": "op4", "agnostic": "And a soft warmth, somewhere easy — the hands, perhaps, where so much of our movement lives. Just resting there, for now." }
+      ]
+    },
+    {
+      "id": "phase1",
+      "label": "Phase I — The Ideal Being",
+      "paragraphs": [
+        {
+          "id": "p1a",
+          "agnostic": "A little way off, there's a figure. You may see them clearly, or simply sense that someone is there — either is right. And this figure is doing the most ordinary things: reaching for something, rising from a chair, beginning to walk. But notice how. Each movement begins the very moment it's intended. No pause, no waiting for the body to catch up with the wish. Decision and movement, arriving together.",
+          "see": "A little way off, a figure comes into view. Watch them doing the most ordinary things: reaching for something, rising from a chair, beginning to walk. But notice how. Each movement begins the very moment it's intended. No pause, no waiting for the body to catch up with the wish. Decision and movement, arriving together.",
+          "feel": "A little way off, you sense someone there — a figure, moving through the most ordinary things: reaching for something, rising from a chair, beginning to walk. But notice how it feels. Each movement begins the very moment it's intended. No pause, no waiting for the body to catch up with the wish. Decision and movement, arriving together."
+        },
+        {
+          "id": "p1b",
+          "agnostic": "And notice the size of the movements. Full. Generous. The reach goes all the way. The step is a whole step. Nothing shrinking, nothing held back — movement at its natural, ample size, as though there were plenty of room and plenty of ease for all of it."
+        },
+        {
+          "id": "p1c",
+          "agnostic": "Take in the start of it once more. There's the intention — and there's the movement, right behind it, smooth and immediate. And again: the thought to move, and the moving, flowing one into the other with nothing caught in between. This is the quality to stay with — not speed for its own sake, but the ease of starting, and the fullness of what follows.",
+          "see": "Watch the start of it once more. There's the intention — and there's the movement, right behind it, smooth and immediate. And again: the thought to move, and the moving, flowing one into the other with nothing caught in between. This is the quality to watch — not speed for its own sake, but the ease of starting, and the fullness of what follows.",
+          "feel": "Feel the start of it once more. There's the intention — and there's the movement, right behind it, smooth and immediate. And again: the thought to move, and the moving, flowing one into the other with nothing caught in between. This is the quality to feel — not speed for its own sake, but the ease of starting, and the fullness of what follows."
+        },
+        {
+          "id": "p1d",
+          "agnostic": "And now the figure turns, and comes closer, and steps into you — gently, so that being near it becomes being it. You're the one moving now, from the inside.",
+          "see": "And now the figure turns, and comes closer, and steps into you — gently, so that watching becomes doing. You're the one moving now, from the inside.",
+          "feel": "And now that presence turns, and draws closer, and steps into you — gently, so that sensing it becomes being it. You're the one moving now, from the inside."
+        },
+        {
+          "id": "p1e",
+          "agnostic": "Take it in however it comes to you: a movement beginning the instant you intend it. Perhaps a reach — and it goes all the way, full and easy. Perhaps a rising — and it starts smoothly, no stall before it. However it feels today, you've rehearsed the flow: intention and movement together, and the movement staying generous. That rehearsal is yours to keep.",
+          "see": "Picture it, as much or as little as comes: a movement beginning the instant you intend it. Perhaps a reach — and it goes all the way, full and easy. Perhaps a rising — and it starts smoothly, no stall before it. However it feels today, you've rehearsed the flow: intention and movement together, and the movement staying generous. That rehearsal is yours to keep.",
+          "feel": "Feel it, in whatever way it comes: a movement beginning the instant you intend it. Perhaps a reach — and it goes all the way, full and easy. Perhaps a rising — and it starts smoothly, no stall before it. However it feels today, you've rehearsed the flow: intention and movement together, and the movement staying generous. That rehearsal is yours to keep."
+        }
+      ]
+    },
+    {
+      "id": "phase2",
+      "label": "Phase II — The Initiating Circuit",
+      "paragraphs": [
+        { "id": "p2a", "agnostic": "Deep in the brain sit clusters of cells — the basal ganglia — that help launch movement and keep it at full size, running quietly beneath awareness so you never usually have to think about starting. In Parkinson's, these cells lose some of the dopamine they rely on, and so the launching falters: movement hesitates at the start, and quietly shrinks as it goes." },
+        { "id": "p2b", "agnostic": "Here's what helps. This launching system responds to intention, to attention, and to rehearsal. When you clearly prepare a movement in your mind, you give that system a running start — priming the pathway, so that when the movement comes, more of it is ready. It's a little like warming an engine before a cold morning start." },
+        {
+          "id": "p2c",
+          "agnostic": "So bring the easy beginning to mind once more — the intention, and the movement arriving with it, full-sized and flowing. Not forcing it. Just laying down the pattern of an easy start, quietly, so the pattern is there to be found again. Your medication does much of this work in the body; the rehearsal simply keeps the pattern warm.",
+          "see": "So picture the easy beginning once more — the intention, and the movement arriving with it, full-sized and flowing. Not forcing it. Just laying down the pattern of an easy start, quietly, so the pattern is there to be found again. Your medication does much of this work in the body; the rehearsal simply keeps the pattern warm.",
+          "feel": "So feel the easy beginning once more — the intention, and the movement arriving with it, full-sized and flowing. Not forcing it. Just laying down the pattern of an easy start, quietly, so the pattern is there to be found again. Your medication does much of this work in the body; the rehearsal simply keeps the pattern warm."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "label": "Closing",
+      "paragraphs": [
+        { "id": "cl1", "agnostic": "And when you're ready, in your own time, let the room return — the surface beneath you, the light in the space you're in. No rush to move, and no test to pass when you do." },
+        { "id": "cl2", "agnostic": "Carry a little of it with you, however much came — the sense of a movement that starts when you ask it to, and stays full. It's a pattern you've rehearsed, and it will be here to rehearse again." },
+        { "id": "cl3", "agnostic": "There was nothing to get back to here, and nothing to prove. This practice sits gently alongside your medication and your physiotherapy — a rehearsal of ease, offered to your body as it is today. And whenever you'd like it, the easy beginning is here to find again." }
+      ]
+    }
+  ]
+}
