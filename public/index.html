@@ -24,6 +24,8 @@
   h1,h2,h3,h4{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.2;color:var(--charcoal);}
   a{color:var(--bark);}
   .label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-variant:small-caps;font-weight:600;color:var(--gold);}
+
+  /* ---------- NAV ---------- */
   .nav{position:sticky;top:0;z-index:100;background:var(--charcoal);border-bottom:2px solid var(--gold);}
   .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
   .brand{font-family:'Lora',serif;font-size:1.15rem;font-weight:500;color:var(--warm-white);text-decoration:none;letter-spacing:.01em;}
@@ -36,23 +38,62 @@
   @media(max-width:860px){
     .hamburger{display:block;}
     .nav-links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--charcoal);border-bottom:2px solid var(--gold);max-height:0;overflow:hidden;transition:max-height .3s ease;}
-    .nav-links.open{max-height:420px;}
+    .nav-links.open{max-height:360px;}
     .nav-links li{width:100%;}
     .nav-links a{display:block;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08);}
     .nav-links a:hover,.nav-links a[aria-current="page"]{border-bottom-color:rgba(255,255,255,.08);}
   }
+
+  /* ---------- HERO (dark, two-column, matches Stroke) ---------- */
+  .hero{
+    background:var(--charcoal);
+    padding:88px 0 80px;
+  }
+  .hero-inner{
+    max-width:1080px;margin:0 auto;padding:0 24px;
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  }
+  .hero-credential{
+    font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-variant:small-caps;
+    color:var(--gold);margin:0 0 20px;display:flex;align-items:center;gap:10px;
+  }
+  .hero-credential::before{content:'';display:block;width:32px;height:1px;background:var(--gold);}
+  .hero h1{
+    font-family:'Lora',Georgia,serif;font-size:3.6rem;font-weight:500;
+    line-height:1.05;color:var(--warm-white);margin:0 0 22px;
+  }
+  .hero h1 em{font-style:italic;color:var(--gold);}
+  .hero .lede{font-size:1.15rem;color:#C9C2B4;line-height:1.6;margin:0 0 34px;max-width:42ch;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-ctas .cta{
+    display:inline-block;text-decoration:none;border-radius:3px;
+    padding:13px 24px;font-size:.9rem;font-variant:small-caps;letter-spacing:.06em;
+    transition:background .2s,color .2s,border-color .2s;
+  }
+  .hero-ctas .cta.solid{background:var(--gold);color:var(--charcoal);border:1px solid var(--gold);}
+  .hero-ctas .cta.solid:hover{background:#b5832e;border-color:#b5832e;}
+  .hero-ctas .cta.outline{background:transparent;color:var(--warm-white);border:1px solid rgba(255,255,255,.35);}
+  .hero-ctas .cta.outline:hover{border-color:var(--warm-white);}
+  /* Pillar cards in hero (dark version) */
+  .hero-pillars{display:flex;flex-direction:column;gap:16px;}
+  .hero-pillar{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+    border-radius:4px;padding:24px 26px;text-decoration:none;
+    transition:border-color .2s,background .2s;display:block;
+  }
+  .hero-pillar:hover{background:rgba(255,255,255,.1);border-color:rgba(200,150,60,.5);}
+  .hero-pillar .pn{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-variant:small-caps;color:var(--gold);margin:0 0 6px;}
+  .hero-pillar h3{font-family:'Lora',serif;font-size:1.2rem;color:var(--warm-white);margin:0 0 6px;}
+  .hero-pillar p{font-size:.9rem;color:#A9A294;margin:0;line-height:1.55;}
+  @media(max-width:860px){
+    .hero-inner{grid-template-columns:1fr;gap:40px;}
+    .hero h1{font-size:2.8rem;}
+  }
+  @media(max-width:480px){.hero h1{font-size:2.3rem;}}
+
+  /* ---------- BODY SECTIONS ---------- */
   .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
   .wide{max-width:1080px;margin:0 auto;padding:0 24px;}
-  .hero{background:var(--warm-white);border-bottom:1px solid var(--border);padding:96px 0 84px;}
-  .hero .eyebrow{margin-bottom:18px;}
-  .hero h1{font-size:3.4rem;line-height:1.08;margin:0 0 22px;max-width:16ch;}
-  .hero h1 span{color:var(--gold);}
-  .hero .lede{font-size:1.35rem;color:var(--bark);max-width:50ch;line-height:1.5;margin:0 0 32px;}
-  .cta-links{display:flex;gap:14px;flex-wrap:wrap;}
-  .cta{display:inline-block;text-decoration:none;border:1px solid var(--gold);color:var(--bark);border-radius:3px;padding:13px 24px;font-size:.9rem;font-variant:small-caps;letter-spacing:.06em;transition:background .2s,color .2s;}
-  .cta:hover{background:var(--gold);color:var(--warm-white);}
-  .cta.solid{background:var(--charcoal);color:var(--warm-white);border-color:var(--charcoal);}
-  .cta.solid:hover{background:var(--bark);border-color:var(--bark);}
   section{padding:60px 0;}
   section + section{border-top:1px solid var(--border);}
   h2.section-title{font-size:2rem;margin:0 0 10px;}
@@ -62,7 +103,7 @@
   .framing .label{color:var(--gold);}
   .framing .pull{font-family:'Lora',serif;font-size:1.5rem;color:var(--warm-white);line-height:1.35;font-style:italic;margin:14px 0 0;}
   .pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
-  .pillar{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:26px 26px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;display:block;}
+  .pillar{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:26px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;display:block;}
   .pillar:hover{border-color:var(--gold);transform:translateY(-2px);}
   .pillar .pn{color:var(--gold);font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;}
   .pillar h3{font-size:1.35rem;margin:6px 0 8px;}
@@ -82,15 +123,20 @@
   .prac-card .pc-dom{color:var(--muted);font-size:.86rem;}
   @media(max-width:640px){.prac-grid{grid-template-columns:1fr;}}
   .principles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:22px;}
-  .principle{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:24px 24px;}
+  .principle{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:24px;}
   .principle h4{font-size:1.1rem;margin:0 0 8px;}
   .principle p{font-size:.92rem;margin:0;color:#3D3A30;}
   @media(max-width:760px){.principles{grid-template-columns:1fr;}}
-  .builder{display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap;}
-  .builder .b-body{flex:1;min-width:280px;}
   .callout{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin-top:8px;}
   .callout p{margin:0;font-size:.95rem;color:#3D3A30;}
   .callout p strong{color:var(--bark);}
+  .cta-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;}
+  .cta{display:inline-block;text-decoration:none;border:1px solid var(--gold);color:var(--bark);border-radius:3px;padding:13px 24px;font-size:.9rem;font-variant:small-caps;letter-spacing:.06em;transition:background .2s,color .2s;}
+  .cta:hover{background:var(--gold);color:var(--warm-white);}
+  .cta.solid{background:var(--charcoal);color:var(--warm-white);border-color:var(--charcoal);}
+  .cta.solid:hover{background:var(--bark);border-color:var(--bark);}
+
+  /* ---------- FOOTER ---------- */
   footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
   footer .brand{font-size:1.05rem;}
   footer .brand span{color:var(--gold);}
@@ -99,7 +145,6 @@
   .foot-links{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;}
   .foot-links a{color:#C9C2B4;font-size:.8rem;font-variant:small-caps;letter-spacing:.06em;}
   .foot-links a:hover{color:var(--gold);}
-
   .free-line{color:var(--gold);font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-top:20px;}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
@@ -107,12 +152,12 @@
 </head>
 <body>
 
+<!-- ===== NAV (no Home link, matches Stroke) ===== -->
 <nav class="nav">
   <div class="nav-inner">
     <a class="brand" href="index.html">Living Beyond <span>Parkinson's</span></a>
     <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navlinks">
-      <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="guided-imagery.html">Guided Imagery</a></li>
       <li><a href="work-with-jeremy.html">Work with Jeremy</a></li>
@@ -122,18 +167,36 @@
   </div>
 </nav>
 
+<!-- ===== HERO (dark, two-column, matches Stroke layout) ===== -->
 <header class="hero">
-  <div class="wrap">
-    <div class="label eyebrow">Guided imagery &amp; wellbeing</div>
-    <h1>Living Beyond <span>Parkinson's</span></h1>
-    <p class="lede">Free guided imagery practices for living well with Parkinson's — grounded in research, honest about the evidence, and offered alongside your medical care, never in place of it.</p>
-    <div class="cta-links">
-      <a class="cta solid" href="guided-imagery.html">Explore the practices</a>
-      <a class="cta" href="research.html">Read the research</a>
+  <div class="hero-inner">
+    <!-- LEFT: headline + lede + CTAs -->
+    <div>
+      <p class="hero-credential">Jeremy Olson, MSocSc &nbsp;·&nbsp; Waikato University</p>
+      <h1>Parkinson's changes the path —<br>not the <em>possibility</em></h1>
+      <p class="lede">Free guided imagery practices for living well with Parkinson's — grounded in research, honest about the evidence, and offered alongside your medical care, never instead of it.</p>
+      <div class="hero-ctas">
+        <a class="cta solid" href="guided-imagery.html">Explore the Guided Imagery Programme</a>
+        <a class="cta outline" href="research.html">Read the Research</a>
+      </div>
+    </div>
+    <!-- RIGHT: pillar cards -->
+    <div class="hero-pillars">
+      <a class="hero-pillar" href="research.html">
+        <div class="pn">Pillar 01 &nbsp;·&nbsp; Neuroplasticity &amp; Motor Imagery</div>
+        <h3>The Research Foundation</h3>
+        <p>What the science says about mental practice and Parkinson's. Plain language, cited throughout.</p>
+      </a>
+      <a class="hero-pillar" href="guided-imagery.html">
+        <div class="pn">Pillar 02 &nbsp;·&nbsp; Mind-Body Practice</div>
+        <h3>Guided Imagery Programme</h3>
+        <p>Five practices targeting gait, movement, balance, fine motor, and wellbeing. Free to use.</p>
+      </a>
     </div>
   </div>
 </header>
 
+<!-- ===== BODY SECTIONS (content unchanged) ===== -->
 <section>
   <div class="wrap">
     <div class="label section-eyebrow">What this is</div>
@@ -230,13 +293,9 @@
   <div class="wrap">
     <div class="label section-eyebrow">Who made this</div>
     <h2 class="section-title">Built by Jeremy Olson</h2>
-    <div class="builder">
-      <div class="b-body">
-        <p>Jeremy Olson is a psychology graduate and solution-oriented hypnosis practitioner based in Auckland, New Zealand, with a background in quality-of-life research. He does not have Parkinson's himself, and doesn't claim the authority of lived experience — this site grows out of his research training and his work in the Ericksonian therapeutic tradition, offered in good faith and openly labelled as a personal synthesis.</p>
-        <div class="cta-links">
-          <a class="cta" href="work-with-jeremy.html">More about Jeremy</a>
-        </div>
-      </div>
+    <p>Jeremy Olson is a psychology graduate and solution-oriented hypnosis practitioner based in Auckland, New Zealand, with a background in quality-of-life research. He does not have Parkinson's himself, and doesn't claim the authority of lived experience — this site grows out of his research training and his work in the Ericksonian therapeutic tradition, offered in good faith and openly labelled as a personal synthesis.</p>
+    <div class="cta-links">
+      <a class="cta" href="work-with-jeremy.html">More about Jeremy</a>
     </div>
   </div>
 </section>
