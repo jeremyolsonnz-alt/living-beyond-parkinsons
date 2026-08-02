@@ -13,7 +13,7 @@ publishing; the rest can follow. Deploy detail lives in `README.md`.
 - Navigation identical on every main page; footer "support & guidance" links on every page; colour palette and footer consistent throughout.
 - No broken internal links anywhere; all HTML structurally balanced.
 - Evidence badges consistent across every place each practice appears — **one Moderate (Walking Freely), four Emerging** — reflecting the 2025 null UPDRS-III meta-analysis.
-- Every practice page carries its disclaimers (synthesis note, recording disclosure, anatomy warning, complement-not-replacement) and a working, persisted See/Feel/Both toggle.
+- Every practice page carries its disclaimers (synthesis note, own-voice disclosure, anatomy warning, complement-not-replacement) and a working, persisted See/Feel/Both toggle.
 - Bibliography verified against the published record, including the null result and the Malouin (KVIQ) citation behind the self-check.
 - The `build/` toolkit is isolated from serving (Netlify publishes only `public/`).
 
@@ -32,9 +32,9 @@ Both are flagged on-page in dashed gold boxes.
 
 Each practice page has a disabled player with a placeholder filename (`audio_walking.mp3`, `audio_flow.mp3`, `audio_steady.mp3`, `audio_hand.mp3`, `audio_calm.mp3`).
 
-- [ ] Record the five narrations. The exact scripts to read are auto-generated — run `python3 build/generate.py`, then use `build/out/audio/<id>.txt` (the agnostic wording). Jeremy records these directly, in his own voice — no synthesised or AI-generated voice.
+- [ ] Record the five narrations. The exact scripts to read are auto-generated — run `python3 build/generate.py`, then use `build/out/audio/<id>.txt` (the agnostic wording). Jeremy records these directly in his own voice — no synthesised or AI-generated voice is used anywhere on this site.
 - [ ] Add the five MP3s to `public/` (or a `public/audio/` folder — update the paths if so) and wire up each player (or swap in a simple `<audio controls>`).
-- [ ] Keep the recording disclosure visible on each page (already written in).
+- [ ] Keep the own-voice disclosure visible on each page (already written in).
 
 ---
 
