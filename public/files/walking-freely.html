@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Walking Freely — Living Beyond Parkinson's</title>
+<meta name="description" content="A guided motor imagery practice for gait and freezing of gait in Parkinson's disease. Mental rehearsal of easeful walking, offered alongside — never instead of — physiotherapy and cueing strategies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F0E8;
+    --warm-white:#FAF8F4;
+    --charcoal:#2A2820;
+    --bark:#5C4A2A;
+    --gold:#C8963C;
+    --muted:#7A7060;
+    --border:#E0D8C8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:'DM Sans',system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.65;
+    font-size:18px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.2;color:var(--charcoal);}
+  a{color:var(--bark);}
+  .label{
+    font-size:.72rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-variant:small-caps;
+    font-weight:600;
+    color:var(--gold);
+  }
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:100;
+    background:var(--charcoal);
+    border-bottom:2px solid var(--gold);
+  }
+  .nav-inner{
+    max-width:1080px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;justify-content:space-between;height:64px;
+  }
+  .brand{
+    font-family:'Lora',serif;font-size:1.15rem;font-weight:500;
+    color:var(--warm-white);text-decoration:none;letter-spacing:.01em;
+  }
+  .brand span{color:var(--gold);}
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{
+    color:var(--warm-white);text-decoration:none;
+    font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-variant:small-caps;
+    font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s;
+  }
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold);}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--warm-white);margin:5px 0;transition:.25s;}
+
+  @media(max-width:860px){
+    .hamburger{display:block;}
+    .nav-links{
+      position:absolute;top:64px;left:0;right:0;
+      flex-direction:column;gap:0;background:var(--charcoal);
+      border-bottom:2px solid var(--gold);
+      max-height:0;overflow:hidden;transition:max-height .3s ease;
+    }
+    .nav-links.open{max-height:420px;}
+    .nav-links li{width:100%;}
+    .nav-links a{display:block;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav-links a:hover,.nav-links a[aria-current="page"]{border-bottom-color:rgba(255,255,255,.08);}
+  }
+
+  /* ---------- LAYOUT ---------- */
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  .wide{max-width:1080px;}
+
+  /* ---------- HERO ---------- */
+  .page-hero{
+    background:var(--warm-white);
+    border-bottom:1px solid var(--border);
+    padding:72px 0 60px;
+  }
+  .page-hero .breadcrumb{color:var(--muted);font-size:.85rem;margin-bottom:22px;}
+  .page-hero .breadcrumb a{color:var(--muted);text-decoration:none;}
+  .page-hero .breadcrumb a:hover{color:var(--bark);}
+  .page-hero h1{font-size:2.9rem;margin:14px 0 18px;}
+  .page-hero .lede{font-size:1.22rem;color:var(--bark);max-width:52ch;line-height:1.55;}
+  .practice-index{color:var(--muted);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-variant:small-caps;}
+
+  /* ---------- EVIDENCE BADGE ---------- */
+  .badge{
+    display:inline-flex;align-items:center;gap:9px;
+    border:1px solid var(--border);border-radius:2px;background:var(--cream);
+    padding:7px 14px;margin-top:26px;font-size:.82rem;color:var(--charcoal);
+  }
+  .badge .dot{width:10px;height:10px;border-radius:50%;}
+  .badge.emerging .dot{background:var(--gold);box-shadow:0 0 0 3px rgba(200,150,60,.18);}
+  .badge.moderate .dot{background:var(--bark);box-shadow:0 0 0 3px rgba(200,150,60,.30);}
+  .badge.strong .dot{background:var(--charcoal);box-shadow:0 0 0 3px rgba(200,150,60,.42);}
+  .badge strong{font-weight:600;}
+  .badge .tag{font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;color:var(--muted);}
+
+  /* ---------- BADGE SCOPE NOTE ---------- */
+  .badge-scope{margin-top:14px;max-width:58ch;border-left:2px solid var(--border);padding:2px 0 2px 14px;}
+  .badge-scope p{margin:0;font-size:.86rem;line-height:1.55;color:var(--muted);}
+  .badge-scope strong{color:var(--bark);font-weight:600;}
+  .badge-scope a{color:var(--bark);text-decoration:underline;text-underline-offset:2px;}
+
+  section{padding:52px 0;}
+  section + section{border-top:1px solid var(--border);}
+  h2.section-title{font-size:1.9rem;margin:0 0 8px;}
+  .section-eyebrow{margin-bottom:6px;}
+  p{margin:0 0 20px;}
+
+  /* ---------- PRACTICE CONSOLE ---------- */
+  .practice-console{
+    background:var(--charcoal);color:var(--warm-white);
+    border-radius:4px;padding:30px 30px 26px;margin:8px 0 4px;
+  }
+  .practice-console h3{color:var(--warm-white);font-size:1.3rem;margin:0 0 4px;}
+  .practice-console .console-sub{color:#C9C2B4;font-size:.9rem;margin:0 0 22px;}
+  .audio-shell{
+    display:flex;align-items:center;gap:16px;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    border-radius:3px;padding:16px 18px;
+  }
+  .audio-play{
+    flex:0 0 auto;width:46px;height:46px;border-radius:50%;
+    border:1px solid var(--gold);background:transparent;color:var(--gold);
+    display:flex;align-items:center;justify-content:center;cursor:not-allowed;
+  }
+  .audio-play svg{width:16px;height:16px;margin-left:2px;}
+  .audio-meta{flex:1;min-width:0;}
+  .audio-meta .track{font-size:.92rem;color:var(--warm-white);margin:0 0 6px;}
+  .audio-bar{height:4px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;}
+  .audio-bar i{display:block;width:0;height:100%;background:var(--gold);}
+  .audio-time{font-size:.75rem;color:#A9A294;margin-top:8px;letter-spacing:.04em;}
+  .placeholder-flag{
+    margin-top:16px;font-size:.8rem;color:#C9C2B4;
+    border-top:1px solid rgba(255,255,255,.1);padding-top:14px;line-height:1.55;
+  }
+  .placeholder-flag strong{color:var(--gold);font-weight:600;}
+
+  /* ---------- TIMING GRID ---------- */
+  .timing-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:8px 0 0;
+  }
+  .timing-grid .cell{background:var(--warm-white);padding:18px 16px;}
+  .timing-grid .cell .ph{font-family:'Lora',serif;font-size:1.05rem;color:var(--charcoal);margin-bottom:3px;}
+  .timing-grid .cell .mins{color:var(--gold);font-size:.82rem;letter-spacing:.1em;font-variant:small-caps;text-transform:uppercase;}
+  .timing-grid .cell .note{color:var(--muted);font-size:.82rem;margin-top:6px;line-height:1.4;}
+  @media(max-width:640px){.timing-grid{grid-template-columns:1fr 1fr;}}
+
+  /* ---------- SCRIPT / COLLAPSIBLE ---------- */
+  .script-intro{color:var(--muted);font-size:.92rem;margin-bottom:8px;}
+  details.script{
+    background:var(--warm-white);border:1px solid var(--border);
+    border-radius:4px;margin:0 0 14px;overflow:hidden;
+  }
+  details.script > summary{
+    list-style:none;cursor:pointer;padding:20px 22px;display:flex;align-items:baseline;gap:14px;
+  }
+  details.script > summary::-webkit-details-marker{display:none;}
+  details.script > summary .phase-no{
+    font-family:'Lora',serif;color:var(--gold);font-size:1.05rem;flex:0 0 auto;
+  }
+  details.script > summary .phase-name{font-family:'Lora',serif;font-size:1.2rem;color:var(--charcoal);flex:1;}
+  details.script > summary .chev{flex:0 0 auto;color:var(--muted);transition:transform .25s;font-size:.9rem;}
+  details.script[open] > summary .chev{transform:rotate(90deg);}
+  .script-body{padding:2px 22px 24px;border-top:1px solid var(--border);}
+  .script-body .stage{
+    color:var(--gold);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+    font-variant:small-caps;font-weight:600;margin:20px 0 6px;
+  }
+  .script-body p{color:#3D3A30;line-height:1.72;margin:0 0 16px;}
+  .script-body em{color:var(--bark);font-style:italic;}
+
+  /* ---------- ANATOMY PLACEHOLDER ---------- */
+  .anatomy{
+    background:var(--warm-white);border:1px solid var(--border);border-radius:4px;
+    padding:0;overflow:hidden;margin:6px 0 0;
+  }
+  .anatomy .frame{
+    background:repeating-linear-gradient(45deg,#EDE6D8,#EDE6D8 12px,#E8E0D0 12px,#E8E0D0 24px);
+    height:240px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);
+  }
+  .anatomy .frame span{font-size:.9rem;max-width:34ch;line-height:1.5;}
+  .anatomy .cap{padding:16px 20px;font-size:.82rem;color:var(--muted);line-height:1.55;}
+  .anatomy .cap strong{color:var(--bark);font-weight:600;}
+
+  /* ---------- ACADEMIC NOTE ---------- */
+  .academic-note{
+    background:var(--warm-white);border-left:3px solid var(--gold);
+    border-radius:0 4px 4px 0;padding:24px 26px;margin:6px 0 0;
+  }
+  .academic-note h4{font-size:1.05rem;margin:0 0 12px;}
+  .academic-note p{font-size:.95rem;color:#3D3A30;margin:0 0 14px;}
+  .academic-note p:last-child{margin-bottom:0;}
+  .academic-note .cite{font-size:.85rem;color:var(--muted);}
+  .academic-note a{color:var(--bark);}
+
+  .honest-callout{
+    background:var(--cream);border:1px solid var(--border);border-radius:4px;
+    padding:22px 24px;margin:6px 0 0;
+  }
+  .honest-callout p{margin:0;font-size:.95rem;color:#3D3A30;}
+  .honest-callout p strong{color:var(--bark);}
+  .honest-callout + .honest-callout{margin-top:14px;}
+
+
+  /* ---------- CUE TOGGLE (See / Feel / Both) ---------- */
+  .cue-toggle{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:14px 16px;margin:2px 0 18px;}
+  .cue-toggle .ct-label{font-size:.85rem;color:var(--muted);}
+  .cue-toggle .ct-opts{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;}
+  .cue-toggle button{border:0;background:transparent;padding:8px 15px;font:inherit;font-size:.82rem;cursor:pointer;color:var(--bark);border-right:1px solid var(--border);transition:background .15s,color .15s;}
+  .cue-toggle button:last-child{border-right:0;}
+  .cue-toggle button[aria-pressed="true"]{background:var(--gold);color:var(--warm-white);}
+  .cue-toggle .ct-hint{flex-basis:100%;font-size:.8rem;color:var(--muted);margin:2px 0 0;line-height:1.5;}
+
+  /* ---------- EXERCISE NAV ---------- */
+  .exercise-nav{background:var(--warm-white);border-top:1px solid var(--border);padding:52px 0;}
+  .exercise-nav .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px;}
+  .ex-card{
+    display:block;text-decoration:none;color:inherit;
+    background:var(--cream);border:1px solid var(--border);border-radius:4px;
+    padding:20px 22px;transition:border-color .2s,transform .2s;
+  }
+  .ex-card:hover{border-color:var(--gold);transform:translateY(-2px);}
+  .ex-card .ex-no{color:var(--gold);font-size:.72rem;letter-spacing:.14em;font-variant:small-caps;text-transform:uppercase;}
+  .ex-card .ex-name{font-family:'Lora',serif;font-size:1.18rem;margin:4px 0 4px;color:var(--charcoal);}
+  .ex-card .ex-dom{color:var(--muted);font-size:.86rem;}
+  .ex-card.current{border-color:var(--gold);background:var(--warm-white);}
+  .ex-card.current .ex-name{color:var(--bark);}
+  @media(max-width:640px){.exercise-nav .grid{grid-template-columns:1fr;}}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
+  footer .brand{font-size:1.05rem;}
+  footer .brand span{color:var(--gold);}
+  footer p{margin:14px 0 0;line-height:1.6;max-width:60ch;}
+  footer a{color:var(--gold);text-decoration:none;}
+  .foot-links{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .foot-links a{color:#C9C2B4;font-size:.8rem;font-variant:small-caps;letter-spacing:.06em;}
+  .foot-links a:hover{color:var(--gold);}
+
+  .free-line{color:var(--gold);font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-top:20px;}
+
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Living Beyond <span>Parkinson's</span></a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="guided-imagery.html" aria-current="page">Guided Imagery</a></li>
+      <li><a href="work-with-jeremy.html">Work with Jeremy</a></li>
+      <li><a href="bibliography.html">Bibliography</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="guided-imagery.html">Guided Imagery Programme</a> &nbsp;/&nbsp; Practice One</div>
+    <div class="practice-index">Practice 1 of 5 &nbsp;·&nbsp; Gait &amp; freezing</div>
+    <h1>Walking Freely</h1>
+    <p class="lede">A mental rehearsal of the easeful step — the smooth approach, the unhurried rhythm, the way through the doorway — practised safely in imagination, to sit alongside the physiotherapy and cueing strategies that do the real day-to-day work.</p>
+    <div class="badge moderate" title="Evidence strength for this practice">
+      <span class="dot"></span>
+      <span><strong>Moderate evidence</strong> <span class="tag">·&nbsp;most-studied imagery target in PD</span></span>
+    </div>
+    <div class="badge-scope">
+      <p><strong>What this badge rates.</strong> It rates the published research on mental imagery for gait and freezing of gait — not the session on this page. That session is Jeremy's own synthesis and has not itself been tested. <a href="research.html#badge-scope">Why those are two separate questions</a>.</p>
+    </div>
+  </div>
+</header>
+
+<!-- ================= WHAT THIS IS ================= -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">What this practice is for</div>
+    <h2 class="section-title">The step that catches, and the step that flows</h2>
+    <p>Many people with Parkinson's know the moment: the feet seem to stick to the floor just as you set off, or turn, or reach a doorway — the intention to move is there, but the movement won't come. This is <em>freezing of gait</em>, and it tends to arrive at particular triggers: starting off, turning, narrow spaces, thresholds, or moments of hurry and divided attention.</p>
+    <p>This practice is a way of rehearsing the smooth version — the approach and the step-through — from the inside, in imagination, where there's no risk of a stumble and no floor to catch you. Motor imagery draws on the same movement circuits as real walking, which is why mentally rehearsing an action can, over time, make the real thing feel a little more available.</p>
+    <div class="honest-callout">
+      <p><strong>This is mental rehearsal — please stay seated or lying down.</strong> Do this practice sitting or lying, never while actually walking. It is not a cue to use in the moment of a freeze, and it is not a substitute for the strategies your physiotherapist has given you. If freezing puts you at risk of falls, imagery belongs at rest — the real-world techniques (and your walking aids) belong in the moment.</p>
+    </div>
+    <div class="honest-callout">
+      <p><strong>A complement, not a replacement.</strong> The established front line for freezing is physiotherapy and cueing — stepping over a line on the floor, walking to a beat or a counted rhythm, and the exercises your team prescribes — together with medication timing. This imagery practice is offered to sit beside those, quietly reinforcing them. It doesn't replace any of them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE PRACTICE CONSOLE ================= -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The practice</div>
+    <h2 class="section-title">Around fifteen minutes, at rest</h2>
+    <p>Find a comfortable seat or lie down. You'll be picturing movement, not making it — so there's nothing to hold onto and nowhere to go.</p>
+
+    <div class="practice-console">
+      <h3>Walking Freely — full narration</h3>
+      <p class="console-sub">Guided audio, approximately 15 minutes</p>
+      <div class="audio-shell">
+        <button class="audio-play" aria-label="Audio placeholder — not yet available" disabled>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="audio-meta">
+          <p class="track">audio_walking.mp3</p>
+          <div class="audio-bar"><i></i></div>
+          <div class="audio-time">00:00 &nbsp;/&nbsp; 15:00</div>
+        </div>
+      </div>
+      <p class="placeholder-flag">
+        <strong>Audio placeholder.</strong> This narration has not been recorded yet. The finished recordings will be Jeremy's own voice, recorded directly — no synthesised or AI-generated voice is used anywhere on this site.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIMING GRID ================= -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">Shape of the session</div>
+    <h2 class="section-title">Four movements</h2>
+    <p>Every practice in the programme follows the same four-part shape. In this one, the middle movement uses the figure technique in full: a figure of easeful walking, watched and then stepped into, so that watching becomes doing.</p>
+    <div class="timing-grid">
+      <div class="cell"><div class="ph">Opening</div><div class="mins">≈ 3 min</div><div class="note">Breath and Light. Settling and arriving.</div></div>
+      <div class="cell"><div class="ph">Phase I</div><div class="mins">≈ 5 min</div><div class="note">The Ideal Being. Watched walking, then stepped into.</div></div>
+      <div class="cell"><div class="ph">Phase II</div><div class="mins">≈ 4 min</div><div class="note">The Walking Circuit. Where the step is organised.</div></div>
+      <div class="cell"><div class="ph">Closing</div><div class="mins">≈ 3 min</div><div class="note">Carrying a little of the ease back with you.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE FIGURE ================= -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">About the figure</div>
+    <h2 class="section-title">Who the figure is — and isn't</h2>
+    <p>In Phase I, a figure appears at a distance and is seen walking with ease. It matters what this figure is. It is <em>not</em> you before Parkinson's, and it is not a lost self to grieve or chase. There's no going back to a former version of anyone, and this practice never asks you to.</p>
+    <p>The figure is simply an embodiment of easeful movement — the quality of a flowing step, shown to you so you can study it and then feel it from the inside. When the figure steps into you, you're not becoming someone else or someone you used to be. You're borrowing the <em>feeling</em> of ease and finding where it lives in your own body, as it is now.</p>
+  </div>
+</section>
+
+<!-- ================= THE SCRIPT ================= -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The full script</div>
+    <h2 class="section-title">Read it, or read along</h2>
+    <p class="script-intro">The words below are the script beneath the audio — read them slowly to yourself, or read along while you listen. Every line is an invitation, never a command.</p>
+
+    <div class="cue-toggle" role="group" aria-label="Choose how the script is worded">
+      <span class="ct-label">How do you imagine things?</span>
+      <span class="ct-opts">
+        <button type="button" data-mode="both" aria-pressed="true">Both</button>
+        <button type="button" data-mode="see" aria-pressed="false">Seeing</button>
+        <button type="button" data-mode="feel" aria-pressed="false">Feeling</button>
+      </span>
+      <span class="ct-hint">Some people imagine mostly by seeing pictures, some by feeling movement, many by both. This gently re-words parts of the script to suit you. Not sure which fits you? Try the <a href="imagery-check.html">2-minute imagery self-check</a>, or just leave it on <strong>Both</strong>.</span>
+    </div>
+
+    <!-- AUTO-GENERATED from build/scripts/walking-freely.json — do not edit by hand -->
+    <details class="script" open>
+      <summary><span class="phase-no">·</span><span class="phase-name">Opening — Breath and Light</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p>And you&#x27;re here now, settled, having taken a little time for this. There&#x27;s nothing to do yet, and nowhere to be — just a few quiet minutes that are already underway.</p>
+        <p>Let the chair or the bed take your weight. You don&#x27;t have to hold yourself up; the surface beneath you is doing that. And your feet — resting, for now — can be exactly as heavy or as light as they like.</p>
+        <p>You&#x27;re breathing, as you have been all along. And you might simply notice it — the air arriving, the air leaving — without changing a thing. Often, just letting the breath be watched lets the out-breath grow a little longer on its own, and that&#x27;s welcome whenever it comes.</p>
+        <p>And somewhere there&#x27;s a soft warmth — resting on the shoulders, perhaps, or across the tops of the legs. However it comes to you, let it be easy and unhurried. There&#x27;s a lot of time.</p>
+      </div>
+    </details>
+    <details class="script">
+      <summary><span class="phase-no">I</span><span class="phase-name">Phase I — The Ideal Being</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p data-see="And now, a little way off — across a room, or along a path — a figure comes into view. Someone walking. You don&#x27;t need to make the picture sharp; just let yourself watch the walking. And this walking is easy. Unhurried. The weight rolling smoothly from heel to toe, one step flowing into the next, as if the ground itself were helping." data-feel="And now, a little way off, you become aware of someone there — a figure, moving. You needn&#x27;t picture them; it&#x27;s enough to sense their presence and the rhythm of how they move. And this walking is easy. Unhurried. A smooth roll of weight from heel to toe, one step flowing into the next, as if the ground itself were helping." data-agnostic="And now, a little way off — across a room, or along a path — there&#x27;s a figure. You may see them clearly, or you may simply sense that someone is there, moving. Either is right; take whatever comes. What matters is the walking, and this walking is easy. Unhurried. The weight rolling smoothly from heel to toe, one step flowing into the next, as if the ground itself were helping.">And now, a little way off — across a room, or along a path — there&#x27;s a figure. You may see them clearly, or you may simply sense that someone is there, moving. Either is right; take whatever comes. What matters is the walking, and this walking is easy. Unhurried. The weight rolling smoothly from heel to toe, one step flowing into the next, as if the ground itself were helping.</p>
+        <p data-see="You&#x27;re just watching, for now. The rhythm of it. The way there&#x27;s no catch, no hesitation — just an even, flowing motion, the most ordinary thing in the world and somehow lovely to see." data-feel="You&#x27;re just registering it, for now. The rhythm of it. The way there&#x27;s no catch, no hesitation — just an even, flowing motion, the most ordinary thing in the world and somehow steadying to sense." data-agnostic="You&#x27;re just noticing it, for now. The rhythm of it. The way there&#x27;s no catch, no hesitation — just an even, flowing motion, the most ordinary thing in the world and somehow lovely to be near.">You&#x27;re just noticing it, for now. The rhythm of it. The way there&#x27;s no catch, no hesitation — just an even, flowing motion, the most ordinary thing in the world and somehow lovely to be near.</p>
+        <p>And you become aware of the figure coming to a doorway — that narrow place where the step so often catches. Notice what happens. There&#x27;s no slowing with worry. There&#x27;s a line on the floor at the threshold — just a line to meet — and the figure meets it, lifts, and steps over it, through the doorway, in one smooth motion. Through, and onward, the rhythm unbroken.</p>
+        <p data-see="And now the figure turns, and comes closer, closer — and steps into you. Gently. So that watching becomes doing, and you&#x27;re the one walking now. From the inside." data-feel="And now that presence turns, and draws closer, closer — and steps into you. Gently. So that sensing it becomes being it, and you&#x27;re the one walking now. From the inside." data-agnostic="And now the figure turns, and comes closer, closer — and steps into you. Gently. So that being near it becomes being it, and you&#x27;re the one walking now. From the inside.">And now the figure turns, and comes closer, closer — and steps into you. Gently. So that being near it becomes being it, and you&#x27;re the one walking now. From the inside.</p>
+        <p data-see="Picture it, as much or as little as comes: the weight shifting, heel to toe. The unhurried rhythm that&#x27;s yours now. And as you come to the threshold, you find the line on the floor, and you lift, and you step over it — through the doorway, and onward. However it feels today, you&#x27;ve rehearsed the way through, and that rehearsal is yours to keep." data-feel="Feel it, in whatever way it comes: the weight shifting, heel to toe. The unhurried rhythm that&#x27;s yours now. And as you come to the threshold, you sense the line on the floor, and you lift, and you step over it — through the doorway, and onward. However it feels today, you&#x27;ve rehearsed the way through, and that rehearsal is yours to keep." data-agnostic="Notice it however it reaches you: the weight shifting, heel to toe. The unhurried rhythm that&#x27;s yours now. And as you come to the threshold, there&#x27;s the line on the floor, and you lift, and you step over it — through the doorway, and onward. However it feels today, you&#x27;ve rehearsed the way through, and that rehearsal is yours to keep.">Notice it however it reaches you: the weight shifting, heel to toe. The unhurried rhythm that&#x27;s yours now. And as you come to the threshold, there&#x27;s the line on the floor, and you lift, and you step over it — through the doorway, and onward. However it feels today, you&#x27;ve rehearsed the way through, and that rehearsal is yours to keep.</p>
+      </div>
+    </details>
+    <details class="script">
+      <summary><span class="phase-no">II</span><span class="phase-name">Phase II — The Walking Circuit</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p>Deep in the brain there&#x27;s a set of structures that, in most people, keep walking running quietly in the background — the automatic rhythm you never have to think about. In Parkinson&#x27;s, that automatic supply can falter, and the step that used to run itself sometimes needs a hand.</p>
+        <p>But here&#x27;s the quiet good news the research points to: when the automatic path stumbles, movement can be routed another way — through attention, through a cue, through a line on the floor or a beat to walk to. A different road to the same step. That&#x27;s what the doorway line was: a way of handing the movement to a part of the brain that&#x27;s still steady, and letting it carry the step through.</p>
+        <p data-see="So as you picture the smooth step once more — the approach, the line, the lift, the step over and through — you&#x27;re quietly travelling that other road. Not forcing anything. Just letting the imagined step lay down its track, the same track a real step can later follow, with a cue to guide it." data-feel="So as you call up the feeling of the smooth step once more — the approach, the line, the lift, the step over and through — you&#x27;re quietly travelling that other road. Not forcing anything. Just letting the rehearsed step lay down its track, the same track a real step can later follow, with a cue to guide it." data-agnostic="So as you bring the smooth step to mind once more — the approach, the line, the lift, the step over and through — you&#x27;re quietly travelling that other road. Not forcing anything. Just letting the rehearsed step lay down its track, the same track a real step can later follow, with a cue to guide it.">So as you bring the smooth step to mind once more — the approach, the line, the lift, the step over and through — you&#x27;re quietly travelling that other road. Not forcing anything. Just letting the rehearsed step lay down its track, the same track a real step can later follow, with a cue to guide it.</p>
+      </div>
+    </details>
+    <details class="script">
+      <summary><span class="phase-no">·</span><span class="phase-name">Closing</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p>And when you&#x27;re ready, in your own time, you can let the room come back — the surface beneath you, the light in the space you&#x27;re actually in. No rush to rise.</p>
+        <p>You don&#x27;t have to carry the whole of it with you. Just a little — the sense of an easeful step, the memory of the line on the floor, the knowledge that there&#x27;s a way through a threshold that you&#x27;ve now walked in your mind.</p>
+        <p>There was nothing to get back to here, and nothing to prove. Parkinson&#x27;s is what it is, and this practice sits gently alongside it — a rehearsal of ease, offered to your body as it is today. And whenever you&#x27;d like it, the easeful step is here to rehearse again.</p>
+        <p>When you next walk, let your physiotherapist&#x27;s cues lead the way. This practice was the rehearsal; those are the real thing.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ================= ANATOMY PLACEHOLDER ================= -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The pathway in Phase II</div>
+    <h2 class="section-title">The walking circuit, illustrated</h2>
+    <p>Phase II works with the circuits that organise gait — the basal ganglia and their loop to the supplementary motor area, and the alternative, cue-driven routes that can carry a step when the automatic path falters. The illustration below is a placeholder only.</p>
+    <div class="anatomy">
+      <div class="frame">
+        <span>Placeholder — basal ganglia &amp; supplementary motor area gait loop, with cue-driven cortical route</span>
+      </div>
+      <div class="cap">
+        <strong>This image is a placeholder and must be replaced before publication.</strong> Do not use AI-generated anatomy here — automatically generated anatomical illustrations are frequently wrong in ways that look convincing, and inaccurate anatomy on a health site is worse than none. Source a correct diagram from <strong>Servier Medical Art</strong> (free, CC-licensed, clinically drawn) or licensed medical stock, and confirm the basal-ganglia / SMA gait circuit is depicted accurately before use.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EVIDENCE ================= -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">What the evidence says</div>
+    <h2 class="section-title">Moderate — the least-weak of the five, and still heavily qualified</h2>
+    <div class="academic-note">
+      <h4>Where the "Moderate" badge comes from — and the null result behind it</h4>
+      <p>Start with the discouraging part, because it matters most. A 2025 meta-analysis of the randomised trials that used the whole-body motor score (UPDRS-III) as their main measure found <em>no significant motor improvement</em> from motor imagery or action observation, on or off medication. Taken at the level of overall motor symptoms, the most recent and most direct evidence is null.</p>
+      <p>So why does gait keep this practice at Moderate rather than Emerging? Because gait is the one place a positive signal survives when you look at gait-<em>specific</em> measures rather than the whole-body score. Reviews focused on walking have found very-low-certainty improvements in walking speed and in freezing at follow-up, and the mechanistic case is genuinely good: brain-imaging shows imagined walking recruits the same circuits as real walking, and there's a sound rationale for rehearsing a cue-based route through freezing triggers like doorways — the thinking behind the "line on the floor" here.</p>
+      <p>But even that gait-specific signal is mixed: at least one well-conducted randomised trial found no effect on freezing or balance at all. So "Moderate" here is a carefully hedged badge — the best-supported of the five, resting on a solid mechanism and a fragile, very-low-certainty gait signal, set against a null result on overall motor symptoms. It is worth trying as a complement; it is not a proven treatment for freezing, and it does not replace physiotherapy, cueing, or medication.</p>
+      <p class="cite">Full references — Pettenuzzo et al. (2025, the null UPDRS-III meta-analysis), Snijders et al. (motor imagery of gait in freezing), the gait-specific action-observation / motor-imagery review, the null freezing RCT (Bezerra et al., 2022), and the attentional-strategy perspective on doorways (How, Wagner &amp; Brach, 2022) — are listed on the <a href="bibliography.html">Bibliography</a> page.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SYNTHESIS DISCLAIMER ================= -->
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">A note on this method</div>
+    <h2 class="section-title">Jeremy's own synthesis</h2>
+    <p>The four-part structure used across this programme — Opening, Phase I, Phase II, Closing, with the figure watched and then stepped into — is Jeremy's own synthesis, drawn from the Ericksonian and solution-oriented tradition he trained in. It has not been tested as a unified protocol in any clinical trial. The individual ingredients (motor imagery, action observation, breath work) have research behind them, as noted above; the particular way they're combined here is a considered personal design, offered in good faith, not a validated treatment.</p>
+    <p>Please treat this as a complement to your care, never a replacement for it. Guided imagery sits alongside medication, physiotherapy, and cueing strategies — it does not stand in for any of them.</p>
+  </div>
+</section>
+
+<!-- ================= EXERCISE NAV ================= -->
+<nav class="exercise-nav">
+  <div class="wrap wide">
+    <div class="label section-eyebrow">The five practices</div>
+    <h2 class="section-title">Explore the programme</h2>
+    <div class="grid">
+      <a class="ex-card current" href="walking-freely.html" aria-current="page">
+        <span class="ex-no">Practice 1 · You are here</span>
+        <div class="ex-name">Walking Freely</div>
+        <div class="ex-dom">Gait &amp; freezing</div>
+      </a>
+      <a class="ex-card" href="finding-flow.html">
+        <span class="ex-no">Practice 2</span>
+        <div class="ex-name">Finding Flow</div>
+        <div class="ex-dom">Movement initiation &amp; bradykinesia</div>
+      </a>
+      <a class="ex-card" href="steady-ground.html">
+        <span class="ex-no">Practice 3</span>
+        <div class="ex-name">Steady Ground</div>
+        <div class="ex-dom">Balance &amp; postural stability</div>
+      </a>
+      <a class="ex-card" href="the-steady-hand.html">
+        <span class="ex-no">Practice 4</span>
+        <div class="ex-name">The Steady Hand</div>
+        <div class="ex-dom">Fine motor &amp; handwriting</div>
+      </a>
+      <a class="ex-card" href="calm-beneath-the-storm.html">
+        <span class="ex-no">Practice 5</span>
+        <div class="ex-name">Calm Beneath the Storm</div>
+        <div class="ex-dom">Non-motor wellbeing</div>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap wide">
+    <div class="brand">Living Beyond <span>Parkinson's</span></div>
+    <p>Guided imagery and wellbeing practices for people living with Parkinson's disease. Built by Jeremy Olson, Auckland, New Zealand. This site offers supportive practices alongside medical care; it does not diagnose, treat, or replace the advice of your healthcare team.</p>
+    <nav class="foot-links" aria-label="Support and guidance">
+      <a href="newly-diagnosed.html">Just diagnosed?</a>
+      <a href="for-family-and-friends.html">For family &amp; friends</a>
+      <a href="when-nothing-happens.html">When nothing happens</a>
+      <a href="imagery-check.html">Imagery self-check</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="for-clinicians.html">For clinicians</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+    <p class="free-line">Free · No paywall · No email required · No ads</p>
+  </div>
+</footer>
+
+<script>
+  var btn = document.querySelector('.hamburger');
+  var links = document.getElementById('navlinks');
+  btn.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+
+<script>
+  (function(){
+    var KEY='lbp-cue-mode';
+    var toggle=document.querySelector('.cue-toggle');
+    if(!toggle) return;
+    var paras=[].slice.call(document.querySelectorAll('.script-body p[data-agnostic]'));
+    function apply(mode){
+      paras.forEach(function(p){
+        var t = mode==='see' ? p.getAttribute('data-see')
+              : mode==='feel'? p.getAttribute('data-feel')
+              : p.getAttribute('data-agnostic');
+        if(t) p.textContent=t;
+      });
+      [].forEach.call(toggle.querySelectorAll('button'),function(b){
+        b.setAttribute('aria-pressed', b.getAttribute('data-mode')===mode ? 'true':'false');
+      });
+    }
+    var saved='both';
+    try{ saved=localStorage.getItem(KEY)||'both'; }catch(e){}
+    apply(saved);
+    toggle.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      var mode=b.getAttribute('data-mode');
+      apply(mode);
+      try{ localStorage.setItem(KEY,mode); }catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>

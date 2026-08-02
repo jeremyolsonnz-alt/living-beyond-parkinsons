@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steady Ground — Living Beyond Parkinson's</title>
+<meta name="description" content="A guided motor imagery practice for balance and postural steadiness in Parkinson's disease. Gentle mental rehearsal offered alongside — never instead of — physiotherapy, a falls assessment, and your medical care.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F0E8;
+    --warm-white:#FAF8F4;
+    --charcoal:#2A2820;
+    --bark:#5C4A2A;
+    --gold:#C8963C;
+    --muted:#7A7060;
+    --border:#E0D8C8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream);color:var(--charcoal);font-family:'DM Sans',system-ui,sans-serif;font-weight:400;line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.2;color:var(--charcoal);}
+  a{color:var(--bark);}
+  .label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-variant:small-caps;font-weight:600;color:var(--gold);}
+  .nav{position:sticky;top:0;z-index:100;background:var(--charcoal);border-bottom:2px solid var(--gold);}
+  .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:'Lora',serif;font-size:1.15rem;font-weight:500;color:var(--warm-white);text-decoration:none;letter-spacing:.01em;}
+  .brand span{color:var(--gold);}
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{color:var(--warm-white);text-decoration:none;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-variant:small-caps;font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s;}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold);}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--warm-white);margin:5px 0;transition:.25s;}
+  @media(max-width:860px){
+    .hamburger{display:block;}
+    .nav-links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--charcoal);border-bottom:2px solid var(--gold);max-height:0;overflow:hidden;transition:max-height .3s ease;}
+    .nav-links.open{max-height:420px;}
+    .nav-links li{width:100%;}
+    .nav-links a{display:block;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav-links a:hover,.nav-links a[aria-current="page"]{border-bottom-color:rgba(255,255,255,.08);}
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  .wide{max-width:1080px;}
+  .page-hero{background:var(--warm-white);border-bottom:1px solid var(--border);padding:72px 0 60px;}
+  .page-hero .breadcrumb{color:var(--muted);font-size:.85rem;margin-bottom:22px;}
+  .page-hero .breadcrumb a{color:var(--muted);text-decoration:none;}
+  .page-hero .breadcrumb a:hover{color:var(--bark);}
+  .page-hero h1{font-size:2.9rem;margin:14px 0 18px;}
+  .page-hero .lede{font-size:1.22rem;color:var(--bark);max-width:52ch;line-height:1.55;}
+  .practice-index{color:var(--muted);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-variant:small-caps;}
+  .badge{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--border);border-radius:2px;background:var(--cream);padding:7px 14px;margin-top:26px;font-size:.82rem;color:var(--charcoal);}
+  .badge .dot{width:10px;height:10px;border-radius:50%;}
+  .badge.emerging .dot{background:var(--gold);box-shadow:0 0 0 3px rgba(200,150,60,.18);}
+  .badge.moderate .dot{background:var(--bark);box-shadow:0 0 0 3px rgba(200,150,60,.30);}
+  .badge.strong .dot{background:var(--charcoal);box-shadow:0 0 0 3px rgba(200,150,60,.42);}
+  .badge strong{font-weight:600;}
+  .badge .tag{font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;color:var(--muted);}
+
+  /* ---------- BADGE SCOPE NOTE ---------- */
+  .badge-scope{margin-top:14px;max-width:58ch;border-left:2px solid var(--border);padding:2px 0 2px 14px;}
+  .badge-scope p{margin:0;font-size:.86rem;line-height:1.55;color:var(--muted);}
+  .badge-scope strong{color:var(--bark);font-weight:600;}
+  .badge-scope a{color:var(--bark);text-decoration:underline;text-underline-offset:2px;}
+  section{padding:52px 0;}
+  section + section{border-top:1px solid var(--border);}
+  h2.section-title{font-size:1.9rem;margin:0 0 8px;}
+  .section-eyebrow{margin-bottom:6px;}
+  p{margin:0 0 20px;}
+  .practice-console{background:var(--charcoal);color:var(--warm-white);border-radius:4px;padding:30px 30px 26px;margin:8px 0 4px;}
+  .practice-console h3{color:var(--warm-white);font-size:1.3rem;margin:0 0 4px;}
+  .practice-console .console-sub{color:#C9C2B4;font-size:.9rem;margin:0 0 22px;}
+  .audio-shell{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:16px 18px;}
+  .audio-play{flex:0 0 auto;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:transparent;color:var(--gold);display:flex;align-items:center;justify-content:center;cursor:not-allowed;}
+  .audio-play svg{width:16px;height:16px;margin-left:2px;}
+  .audio-meta{flex:1;min-width:0;}
+  .audio-meta .track{font-size:.92rem;color:var(--warm-white);margin:0 0 6px;}
+  .audio-bar{height:4px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;}
+  .audio-bar i{display:block;width:0;height:100%;background:var(--gold);}
+  .audio-time{font-size:.75rem;color:#A9A294;margin-top:8px;letter-spacing:.04em;}
+  .placeholder-flag{margin-top:16px;font-size:.8rem;color:#C9C2B4;border-top:1px solid rgba(255,255,255,.1);padding-top:14px;line-height:1.55;}
+  .placeholder-flag strong{color:var(--gold);font-weight:600;}
+  .timing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:8px 0 0;}
+  .timing-grid .cell{background:var(--warm-white);padding:18px 16px;}
+  .timing-grid .cell .ph{font-family:'Lora',serif;font-size:1.05rem;color:var(--charcoal);margin-bottom:3px;}
+  .timing-grid .cell .mins{color:var(--gold);font-size:.82rem;letter-spacing:.1em;font-variant:small-caps;text-transform:uppercase;}
+  .timing-grid .cell .note{color:var(--muted);font-size:.82rem;margin-top:6px;line-height:1.4;}
+  @media(max-width:640px){.timing-grid{grid-template-columns:1fr 1fr;}}
+  .script-intro{color:var(--muted);font-size:.92rem;margin-bottom:8px;}
+  details.script{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;margin:0 0 14px;overflow:hidden;}
+  details.script > summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;align-items:baseline;gap:14px;}
+  details.script > summary::-webkit-details-marker{display:none;}
+  details.script > summary .phase-no{font-family:'Lora',serif;color:var(--gold);font-size:1.05rem;flex:0 0 auto;}
+  details.script > summary .phase-name{font-family:'Lora',serif;font-size:1.2rem;color:var(--charcoal);flex:1;}
+  details.script > summary .chev{flex:0 0 auto;color:var(--muted);transition:transform .25s;font-size:.9rem;}
+  details.script[open] > summary .chev{transform:rotate(90deg);}
+  .script-body{padding:2px 22px 24px;border-top:1px solid var(--border);}
+  .script-body .stage{color:var(--gold);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-variant:small-caps;font-weight:600;margin:20px 0 6px;}
+  .script-body p{color:#3D3A30;line-height:1.72;margin:0 0 16px;}
+  .script-body em{color:var(--bark);font-style:italic;}
+  .anatomy{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:0;overflow:hidden;margin:6px 0 0;}
+  .anatomy .frame{background:repeating-linear-gradient(45deg,#EDE6D8,#EDE6D8 12px,#E8E0D0 12px,#E8E0D0 24px);height:240px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);}
+  .anatomy .frame span{font-size:.9rem;max-width:34ch;line-height:1.5;}
+  .anatomy .cap{padding:16px 20px;font-size:.82rem;color:var(--muted);line-height:1.55;}
+  .anatomy .cap strong{color:var(--bark);font-weight:600;}
+  .academic-note{background:var(--warm-white);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;padding:24px 26px;margin:6px 0 0;}
+  .academic-note h4{font-size:1.05rem;margin:0 0 12px;}
+  .academic-note p{font-size:.95rem;color:#3D3A30;margin:0 0 14px;}
+  .academic-note p:last-child{margin-bottom:0;}
+  .academic-note .cite{font-size:.85rem;color:var(--muted);}
+  .academic-note a{color:var(--bark);}
+  .honest-callout{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin:6px 0 0;}
+  .honest-callout p{margin:0;font-size:.95rem;color:#3D3A30;}
+  .honest-callout p strong{color:var(--bark);}
+  .honest-callout + .honest-callout{margin-top:14px;}
+  .honest-callout.safety{border-color:var(--gold);border-left:3px solid var(--gold);background:var(--warm-white);}
+  /* ---------- CUE TOGGLE (See / Feel / Both) ---------- */
+  .cue-toggle{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:14px 16px;margin:2px 0 18px;}
+  .cue-toggle .ct-label{font-size:.85rem;color:var(--muted);}
+  .cue-toggle .ct-opts{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;}
+  .cue-toggle button{border:0;background:transparent;padding:8px 15px;font:inherit;font-size:.82rem;cursor:pointer;color:var(--bark);border-right:1px solid var(--border);transition:background .15s,color .15s;}
+  .cue-toggle button:last-child{border-right:0;}
+  .cue-toggle button[aria-pressed="true"]{background:var(--gold);color:var(--warm-white);}
+  .cue-toggle .ct-hint{flex-basis:100%;font-size:.8rem;color:var(--muted);margin:2px 0 0;line-height:1.5;}
+  .cue-toggle .ct-hint a{color:var(--bark);}
+  .exercise-nav{background:var(--warm-white);border-top:1px solid var(--border);padding:52px 0;}
+  .exercise-nav .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px;}
+  .ex-card{display:block;text-decoration:none;color:inherit;background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:20px 22px;transition:border-color .2s,transform .2s;}
+  .ex-card:hover{border-color:var(--gold);transform:translateY(-2px);}
+  .ex-card .ex-no{color:var(--gold);font-size:.72rem;letter-spacing:.14em;font-variant:small-caps;text-transform:uppercase;}
+  .ex-card .ex-name{font-family:'Lora',serif;font-size:1.18rem;margin:4px 0 4px;color:var(--charcoal);}
+  .ex-card .ex-dom{color:var(--muted);font-size:.86rem;}
+  .ex-card.current{border-color:var(--gold);background:var(--warm-white);}
+  .ex-card.current .ex-name{color:var(--bark);}
+  @media(max-width:640px){.exercise-nav .grid{grid-template-columns:1fr;}}
+  footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
+  footer .brand{font-size:1.05rem;}
+  footer .brand span{color:var(--gold);}
+  footer p{margin:14px 0 0;line-height:1.6;max-width:60ch;}
+  footer a{color:var(--gold);text-decoration:none;}
+  .foot-links{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .foot-links a{color:#C9C2B4;font-size:.8rem;font-variant:small-caps;letter-spacing:.06em;}
+  .foot-links a:hover{color:var(--gold);}
+
+  .free-line{color:var(--gold);font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-top:20px;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Living Beyond <span>Parkinson's</span></a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="guided-imagery.html" aria-current="page">Guided Imagery</a></li>
+      <li><a href="work-with-jeremy.html">Work with Jeremy</a></li>
+      <li><a href="bibliography.html">Bibliography</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="guided-imagery.html">Guided Imagery Programme</a> &nbsp;/&nbsp; Practice Three</div>
+    <div class="practice-index">Practice 3 of 5 &nbsp;·&nbsp; Balance &amp; postural stability</div>
+    <h1>Steady Ground</h1>
+    <p class="lede">A gentle mental rehearsal of standing easy and adjusting without alarm — the small, unhurried shifts of weight that steadiness is made of — practised safely in imagination, as a quiet companion to physiotherapy and a falls assessment.</p>
+    <div class="badge emerging" title="Evidence strength for this practice">
+      <span class="dot"></span>
+      <span><strong>Emerging evidence</strong> <span class="tag">·&nbsp;balance as a secondary finding only</span></span>
+    </div>
+    <div class="badge-scope">
+      <p><strong>What this badge rates.</strong> It rates the published research on mental imagery for balance and postural stability — not the session on this page. That session is Jeremy's own synthesis and has not itself been tested. <a href="research.html#badge-scope">Why those are two separate questions</a>.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">Please read this first</div>
+    <h2 class="section-title">The safety note that comes before everything else</h2>
+    <p>Balance deserves more caution than any other practice on this site, so its safety note comes first rather than last. Postural instability is the Parkinson's symptom most closely tied to falls, and falls carry real consequences.</p>
+    <div class="honest-callout safety">
+      <p><strong>Do this practice seated or lying down, always. Never stand, shift your weight, or test your balance while doing it.</strong> This is imagination only. Picturing an easy weight-shift must never become an invitation to try one unsupported, and a sense of calm steadiness during the practice must never translate into attempting something you'd normally approach with care or with your usual support. If anything, treat this practice as a reason to be <em>more</em> deliberate about your real-world balance, not less.</p>
+    </div>
+    <div class="honest-callout">
+      <p><strong>Balance work belongs with a professional.</strong> The people who can actually help with postural instability are a physiotherapist and, where appropriate, a falls-assessment service — through prescribed balance training, home-hazard review, and the right walking aids. If falls or unsteadiness are part of your life, please ask your GP or neurologist for those referrals. This imagery practice is a quiet adjunct to that work, never a replacement for it, and never a substitute for a walking aid.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">What this practice is for</div>
+    <h2 class="section-title">Steadiness is made of small adjustments</h2>
+    <p>We tend to think of balance as holding still. It's really the opposite: staying upright is a constant, quiet stream of tiny adjustments — the body swaying a little and correcting, shifting weight and settling, moment by moment, mostly below awareness. In Parkinson's, some of that automatic correcting can become slower or less sure, and standing can start to feel less trustworthy.</p>
+    <p>This practice rehearses the <em>feeling</em> of that quiet, unhurried adjusting — not gripping or bracing against the world, but a relaxed, continuous settling. It's a gentle mental picture of steadiness as something fluid and calm, held in imagination where it's completely safe to explore.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The practice</div>
+    <h2 class="section-title">Around fifteen minutes, safely seated</h2>
+    <p>Settle into a chair with a back, or lie down. You'll be picturing steadiness, not practising it on your feet — so you're completely secure throughout.</p>
+    <div class="practice-console">
+      <h3>Steady Ground — full narration</h3>
+      <p class="console-sub">Guided audio, approximately 15 minutes</p>
+      <div class="audio-shell">
+        <button class="audio-play" aria-label="Audio placeholder — not yet available" disabled>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="audio-meta">
+          <p class="track">audio_steady.mp3</p>
+          <div class="audio-bar"><i></i></div>
+          <div class="audio-time">00:00 &nbsp;/&nbsp; 15:00</div>
+        </div>
+      </div>
+      <p class="placeholder-flag">
+        <strong>Audio placeholder.</strong> This narration has not been recorded yet. The finished recordings will be Jeremy's own voice, recorded directly — no synthesised or AI-generated voice is used anywhere on this site.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">Shape of the session</div>
+    <h2 class="section-title">Four movements</h2>
+    <p>The same four-part shape as the rest of the programme. Phase I uses the figure technique: a figure standing easy and adjusting calmly, watched and then stepped into — all of it imagined, none of it performed.</p>
+    <div class="timing-grid">
+      <div class="cell"><div class="ph">Opening</div><div class="mins">≈ 3 min</div><div class="note">Breath and Light. Settling and arriving.</div></div>
+      <div class="cell"><div class="ph">Phase I</div><div class="mins">≈ 5 min</div><div class="note">The Ideal Being. Watched standing easy, then stepped into.</div></div>
+      <div class="cell"><div class="ph">Phase II</div><div class="mins">≈ 4 min</div><div class="note">The Balancing Body. How steadiness is kept.</div></div>
+      <div class="cell"><div class="ph">Closing</div><div class="mins">≈ 3 min</div><div class="note">Carrying a little of the ease back with you.</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">About the figure</div>
+    <h2 class="section-title">Who the figure is — and isn't</h2>
+    <p>In Phase I, a figure is seen standing comfortably and making small, easy adjustments of balance. As with every practice here, this figure is <em>not</em> you before Parkinson's, and not a steadier self to grieve or chase. There's no going back, and the practice never suggests it.</p>
+    <p>The figure is simply an embodiment of relaxed steadiness — the quality of standing without bracing, adjusting without alarm. When the figure steps into you, you borrow the <em>feeling</em> of that ease, and find it in your body as it is now. What you're rehearsing is calm, unhurried adjustment — never a sudden save, never catching a fall.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The full script</div>
+    <h2 class="section-title">Read it, or read along</h2>
+    <p class="script-intro">The words below are the script beneath the audio — read them slowly to yourself, or read along while you listen. Every line is an invitation, never a command.</p>
+
+    <div class="cue-toggle" role="group" aria-label="Choose how the script is worded">
+      <span class="ct-label">How do you imagine things?</span>
+      <span class="ct-opts">
+        <button type="button" data-mode="both" aria-pressed="true">Both</button>
+        <button type="button" data-mode="see" aria-pressed="false">Seeing</button>
+        <button type="button" data-mode="feel" aria-pressed="false">Feeling</button>
+      </span>
+      <span class="ct-hint">Some people imagine mostly by seeing pictures, some by feeling movement, many by both. This gently re-words parts of the script to suit you. Not sure which fits you? Try the <a href="imagery-check.html">2-minute imagery self-check</a>, or just leave it on <strong>Both</strong>.</span>
+    </div>
+
+    <!-- AUTO-GENERATED from build/scripts/steady-ground.json — do not edit by hand -->
+    <details class="script" open>
+      <summary><span class="phase-no">·</span><span class="phase-name">Opening — Breath and Light</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p>And you&#x27;re here now, held safely by the chair or the bed — nothing to hold up, nothing to steady. The surface beneath you is doing all the holding, completely, so that you can let go of doing it yourself.</p>
+        <p>Notice that. The way you are already, right now, entirely supported. There&#x27;s a kind of steadiness in that — a steadiness you don&#x27;t have to work for at all.</p>
+        <p>And the breath, arriving and leaving in its own quiet rhythm — itself a kind of gentle swaying, a small tide moving in and out, needing no correction, no effort. Just an easy, continuous motion that keeps itself.</p>
+        <p>A soft warmth somewhere easy — low in the body, perhaps, around the base of you, where we carry our sense of being grounded. Let it settle there, unhurried.</p>
+      </div>
+    </details>
+    <details class="script">
+      <summary><span class="phase-no">I</span><span class="phase-name">Phase I — The Ideal Being</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p data-see="A little way off, a figure comes into view — standing. Watch them standing comfortably, the way someone stands when they&#x27;re not thinking about it at all. Not stiff, not braced, not guarding against anything. Simply upright, and at ease, weight resting down through the feet into the floor." data-feel="A little way off, you sense someone there — standing. Feel the ease of how they stand, the way someone stands when they&#x27;re not thinking about it at all. Not stiff, not braced, not guarding against anything. Simply upright, and at ease, weight resting down through the feet into the floor." data-agnostic="A little way off, there&#x27;s a figure — standing. You may see them clearly, or simply sense that someone is there, standing comfortably, the way someone stands when they&#x27;re not thinking about it at all. Not stiff, not braced, not guarding against anything. Simply upright, and at ease, weight resting down through the feet into the floor.">A little way off, there&#x27;s a figure — standing. You may see them clearly, or simply sense that someone is there, standing comfortably, the way someone stands when they&#x27;re not thinking about it at all. Not stiff, not braced, not guarding against anything. Simply upright, and at ease, weight resting down through the feet into the floor.</p>
+        <p>And notice something quiet happening. The figure is never perfectly still — no one is. There&#x27;s a small, constant sway, and with it a small, constant settling: a little shift this way, an easy adjustment back, weight moving gently from one foot toward the other and back again. Unhurried. Untroubled. The body correcting itself the way it always has, softly, without alarm.</p>
+        <p data-see="Watch how none of it is a scramble. Nothing is caught at the last moment. It&#x27;s all slow and rolling and calm — sway and settle, shift and ease, like a boat resting on gentle water. This is the quality to watch: not rigid stillness, but relaxed, flowing adjustment. Steadiness that breathes." data-feel="Feel how none of it is a scramble. Nothing is caught at the last moment. It&#x27;s all slow and rolling and calm — sway and settle, shift and ease, like a boat resting on gentle water. This is the quality to feel: not rigid stillness, but relaxed, flowing adjustment. Steadiness that breathes." data-agnostic="Notice that none of it is a scramble. Nothing is caught at the last moment. It&#x27;s all slow and rolling and calm — sway and settle, shift and ease, like a boat resting on gentle water. This is the quality to stay with: not rigid stillness, but relaxed, flowing adjustment. Steadiness that breathes.">Notice that none of it is a scramble. Nothing is caught at the last moment. It&#x27;s all slow and rolling and calm — sway and settle, shift and ease, like a boat resting on gentle water. This is the quality to stay with: not rigid stillness, but relaxed, flowing adjustment. Steadiness that breathes.</p>
+        <p data-see="And now the figure turns, and comes closer, and steps into you — gently — so that watching becomes a kind of knowing from the inside." data-feel="And now that presence turns, and draws closer, and steps into you — gently — so that sensing it becomes a kind of knowing from the inside." data-agnostic="And now the figure turns, and comes closer, and steps into you — gently — so that being near it becomes a kind of knowing from the inside.">And now the figure turns, and comes closer, and steps into you — gently — so that being near it becomes a kind of knowing from the inside.</p>
+        <p data-see="Picture, in imagination only, that easy uprightness. Weight resting down. A small, calm sway, and an easy settling with it — nothing gripped, nothing braced. Just the quiet, continuous adjusting that steadiness is really made of, rehearsed in the safety of your mind while your body rests. However your balance is today, you&#x27;ve pictured the ease of it, and that&#x27;s yours to keep." data-feel="Feel, in imagination only, that easy uprightness. Weight resting down. A small, calm sway, and an easy settling with it — nothing gripped, nothing braced. Just the quiet, continuous adjusting that steadiness is really made of, rehearsed in the safety of your mind while your body rests. However your balance is today, you&#x27;ve felt the ease of it, and that&#x27;s yours to keep." data-agnostic="Take in, in imagination only, that easy uprightness. Weight resting down. A small, calm sway, and an easy settling with it — nothing gripped, nothing braced. Just the quiet, continuous adjusting that steadiness is really made of, rehearsed in the safety of your mind while your body rests. However your balance is today, you&#x27;ve taken in the ease of it, and that&#x27;s yours to keep.">Take in, in imagination only, that easy uprightness. Weight resting down. A small, calm sway, and an easy settling with it — nothing gripped, nothing braced. Just the quiet, continuous adjusting that steadiness is really made of, rehearsed in the safety of your mind while your body rests. However your balance is today, you&#x27;ve taken in the ease of it, and that&#x27;s yours to keep.</p>
+      </div>
+    </details>
+    <details class="script">
+      <summary><span class="phase-no">II</span><span class="phase-name">Phase II — The Balancing Body</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p>Staying upright is a quiet conversation the body holds with itself, all the time. Sensors in the feet and joints report where your weight is; the inner ear senses the tilt of your head; the eyes take in the level of the world. All of it streams to the brain, which answers with small, constant corrections — a little more weight here, a small adjustment there — mostly beneath any awareness.</p>
+        <p>In Parkinson&#x27;s, some of that automatic answering can slow, and the corrections can become less sure. This is real, and it&#x27;s why the practical work of a physiotherapist matters so much. What imagery can gently offer is a rehearsal of the calm version of this conversation — unhurried, trusting, without the tension that fear of falling can add on top.</p>
+        <p data-see="So picture that quiet conversation once more, running smoothly — the sensing, the small answering adjustments, the easy settling. Not forcing it. Just holding an image of steadiness as something calm and continuous, so the calm is a little more familiar. The real steadying happens on your feet, with your physiotherapist and your supports; this simply keeps the calm of it close." data-feel="So feel that quiet conversation once more, running smoothly — the sensing, the small answering adjustments, the easy settling. Not forcing it. Just holding the feeling of steadiness as something calm and continuous, so the calm is a little more familiar. The real steadying happens on your feet, with your physiotherapist and your supports; this simply keeps the calm of it close." data-agnostic="So bring that quiet conversation to mind once more, running smoothly — the sensing, the small answering adjustments, the easy settling. Not forcing it. Just holding a sense of steadiness as something calm and continuous, so the calm is a little more familiar. The real steadying happens on your feet, with your physiotherapist and your supports; this simply keeps the calm of it close.">So bring that quiet conversation to mind once more, running smoothly — the sensing, the small answering adjustments, the easy settling. Not forcing it. Just holding a sense of steadiness as something calm and continuous, so the calm is a little more familiar. The real steadying happens on your feet, with your physiotherapist and your supports; this simply keeps the calm of it close.</p>
+      </div>
+    </details>
+    <details class="script">
+      <summary><span class="phase-no">·</span><span class="phase-name">Closing</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p>And when you&#x27;re ready, in your own time, let the room return — the chair or the bed still holding you completely. There is no need to rise quickly, and when you do rise, do it exactly as carefully as you always would, with whatever support you use.</p>
+        <p>Carry a little of the ease with you, however much came — the sense of steadiness as something calm and unhurried, rather than something to grip for. It&#x27;s a feeling you&#x27;ve rehearsed, and it will be here again.</p>
+        <p>There was nothing to get back to here, and nothing to prove. This practice sits quietly beside the real work of balance — your physiotherapy, your falls assessment, your supports. It&#x27;s a rehearsal of calm, offered to your body as it is today. And whenever you&#x27;d like it, the easy, steady ground is here to bring to mind again.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The pathway in Phase II</div>
+    <h2 class="section-title">The balancing body, illustrated</h2>
+    <p>Phase II works with the systems that keep us upright — the balance organs of the inner ear (the vestibular system), sensory feedback from the feet and joints (proprioception), and the brain regions that integrate them. The illustration below is a placeholder only.</p>
+    <div class="anatomy">
+      <div class="frame"><span>Placeholder — vestibular system, proprioceptive feedback &amp; postural-control integration</span></div>
+      <div class="cap">
+        <strong>This image is a placeholder and must be replaced before publication.</strong> Do not use AI-generated anatomy here — automatically generated anatomical illustrations are frequently wrong in ways that look convincing, and inaccurate anatomy on a health site is worse than none. Source a correct diagram from <strong>Servier Medical Art</strong> (free, CC-licensed, clinically drawn) or licensed medical stock, and confirm the vestibular and postural-control anatomy is depicted accurately before use.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">What the evidence says</div>
+    <h2 class="section-title">Emerging — and the most cautious badge of the motor practices</h2>
+    <div class="academic-note">
+      <h4>Where the "Emerging" badge comes from</h4>
+      <p>Balance carries the most cautious badge of the motor practices, and honestly so. There is no imagery study whose main purpose was to improve postural instability. Every balance signal comes bundled inside research built for something else.</p>
+      <p>In the pooled analyses of imagery and observation, balance appears as a secondary outcome with low-certainty improvement — and the same reviews include a well-conducted trial that found no effect on balance at all. The imagery-plus-virtual-reality trials reported gains in balance and balance-confidence, but those carry the same two problems noted throughout this site: imagery was combined with VR, so its own contribution is unclear, and balance was one outcome among several rather than the target.</p>
+      <p>So "Emerging" here means: a plausible, gentle adjunct with no direct evidence base of its own, resting on findings borrowed from other work. That is exactly why this page leans so hard on physiotherapy and a falls assessment as the real interventions, and offers imagery only as a quiet companion to them.</p>
+      <p class="cite">Full references — the pooled imagery/observation analyses, the null balance trial (Bezerra et al., 2022), and the imagery-plus-VR trials (Kashif et al., 2022) — are listed on the <a href="bibliography.html">Bibliography</a> page.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">A note on this method</div>
+    <h2 class="section-title">Jeremy's own synthesis</h2>
+    <p>The four-part structure used across this programme — Opening, Phase I, Phase II, Closing, with the figure watched and then stepped into — is Jeremy's own synthesis, drawn from the Ericksonian and solution-oriented tradition he trained in. It has not been tested as a unified protocol in any clinical trial. The individual ingredients (motor imagery, action observation, breath work) have research behind them, as noted above; the particular way they're combined here is a considered personal design, offered in good faith, not a validated treatment.</p>
+    <p>Please treat this as a complement to your care, never a replacement for it. Guided imagery sits alongside physiotherapy, falls prevention, medication, and the guidance of your Parkinson's team — it does not stand in for any of them, and it is never a substitute for a walking aid or the caution your own balance calls for.</p>
+  </div>
+</section>
+
+<nav class="exercise-nav">
+  <div class="wrap wide">
+    <div class="label section-eyebrow">The five practices</div>
+    <h2 class="section-title">Explore the programme</h2>
+    <div class="grid">
+      <a class="ex-card" href="walking-freely.html">
+        <span class="ex-no">Practice 1</span>
+        <div class="ex-name">Walking Freely</div>
+        <div class="ex-dom">Gait &amp; freezing</div>
+      </a>
+      <a class="ex-card" href="finding-flow.html">
+        <span class="ex-no">Practice 2</span>
+        <div class="ex-name">Finding Flow</div>
+        <div class="ex-dom">Movement initiation &amp; bradykinesia</div>
+      </a>
+      <a class="ex-card current" href="steady-ground.html" aria-current="page">
+        <span class="ex-no">Practice 3 · You are here</span>
+        <div class="ex-name">Steady Ground</div>
+        <div class="ex-dom">Balance &amp; postural stability</div>
+      </a>
+      <a class="ex-card" href="the-steady-hand.html">
+        <span class="ex-no">Practice 4</span>
+        <div class="ex-name">The Steady Hand</div>
+        <div class="ex-dom">Fine motor &amp; handwriting</div>
+      </a>
+      <a class="ex-card" href="calm-beneath-the-storm.html">
+        <span class="ex-no">Practice 5</span>
+        <div class="ex-name">Calm Beneath the Storm</div>
+        <div class="ex-dom">Non-motor wellbeing</div>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<footer>
+  <div class="wrap wide">
+    <div class="brand">Living Beyond <span>Parkinson's</span></div>
+    <p>Guided imagery and wellbeing practices for people living with Parkinson's disease. Built by Jeremy Olson, Auckland, New Zealand. This site offers supportive practices alongside medical care; it does not diagnose, treat, or replace the advice of your healthcare team.</p>
+    <nav class="foot-links" aria-label="Support and guidance">
+      <a href="newly-diagnosed.html">Just diagnosed?</a>
+      <a href="for-family-and-friends.html">For family &amp; friends</a>
+      <a href="when-nothing-happens.html">When nothing happens</a>
+      <a href="imagery-check.html">Imagery self-check</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="for-clinicians.html">For clinicians</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+    <p class="free-line">Free · No paywall · No email required · No ads</p>
+  </div>
+</footer>
+
+<script>
+  var btn = document.querySelector('.hamburger');
+  var links = document.getElementById('navlinks');
+  btn.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+
+<script>
+  (function(){
+    var KEY='lbp-cue-mode';
+    var toggle=document.querySelector('.cue-toggle');
+    if(!toggle) return;
+    var paras=[].slice.call(document.querySelectorAll('.script-body p[data-agnostic]'));
+    function apply(mode){
+      paras.forEach(function(p){
+        var t = mode==='see' ? p.getAttribute('data-see')
+              : mode==='feel'? p.getAttribute('data-feel')
+              : p.getAttribute('data-agnostic');
+        if(t) p.textContent=t;
+      });
+      [].forEach.call(toggle.querySelectorAll('button'),function(b){
+        b.setAttribute('aria-pressed', b.getAttribute('data-mode')===mode ? 'true':'false');
+      });
+    }
+    var saved='both';
+    try{ saved=localStorage.getItem(KEY)||'both'; }catch(e){}
+    apply(saved);
+    toggle.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      var mode=b.getAttribute('data-mode');
+      apply(mode);
+      try{ localStorage.setItem(KEY,mode); }catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>
