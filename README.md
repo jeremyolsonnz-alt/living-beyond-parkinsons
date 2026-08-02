@@ -54,7 +54,7 @@ python3 build/generate.py walking-freely   # just one
 
 This writes, into `build/out/`:
 
-- `audio/<id>.txt` — narration script for recording (ElevenLabs voice clone of Jeremy)
+- `audio/<id>.txt` — narration script for recording (Jeremy records this directly, in his own voice — no synthesised or AI-generated voice)
 - `print/<id>-both.html`, `-see.html`, `-feel.html` — print-ready (A4) → "Print to PDF"
 - `partials/<id>.script.html` — the script block with `data-see` / `data-feel`
   attributes that gets pasted into the matching `public/<id>.html`
