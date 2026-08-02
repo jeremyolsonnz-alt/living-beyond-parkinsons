@@ -8,7 +8,7 @@ narration) plus optional 'see' / 'feel' overrides used by the on-page toggle
 and the printable versions.
 
 From each JSON this produces, into build/out/:
-  audio/<id>.txt              - agnostic narration script (for ElevenLabs)
+  audio/<id>.txt              - agnostic narration script (for Jeremy to record directly)
   print/<id>-both.html        - print-ready, agnostic wording
   print/<id>-see.html         - print-ready, 'seeing' wording
   print/<id>-feel.html        - print-ready, 'feeling' wording
