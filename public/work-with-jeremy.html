@@ -4,10 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Work with Jeremy — Living Beyond Parkinson's</title>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta name="description" content="About Jeremy Olson — psychology graduate, quality-of-life researcher, and solution-oriented hypnosis practitioner in Auckland, New Zealand, and the background behind Living Beyond Parkinson's.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +25,7 @@
   a{color:var(--bark);}
   .label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-variant:small-caps;font-weight:600;color:var(--gold);}
   .nav{position:sticky;top:0;z-index:100;background:var(--charcoal);border-bottom:2px solid var(--gold);}
-  .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .nav-inner{margin:0;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
   .brand{font-family:'Lora',serif;font-size:1.15rem;font-weight:500;color:var(--warm-white);text-decoration:none;letter-spacing:.01em;}
   .brand span{color:var(--gold);}
   .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
@@ -47,9 +43,9 @@
   }
   .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
   .wide{max-width:1080px;margin:0 auto;padding:0 24px;}
-  .page-hero{background:var(--warm-white);border-bottom:1px solid var(--border);padding:72px 0 60px;}
-  .page-hero h1{font-size:2.9rem;margin:0 0 18px;}
-  .page-hero .lede{font-size:1.22rem;color:var(--bark);max-width:56ch;line-height:1.55;}
+  .page-hero{background:var(--charcoal);border-bottom:1px solid rgba(255,255,255,.12);padding:72px 0 60px;}
+  .page-hero h1{font-size:2.9rem;margin:0 0 18px;color:var(--warm-white);}
+  .page-hero .lede{font-size:1.22rem;color:#C9C2B4;max-width:56ch;line-height:1.55;}
   section{padding:52px 0;}
   section + section{border-top:1px solid var(--border);}
   h2.section-title{font-size:1.9rem;margin:0 0 8px;}
@@ -75,31 +71,6 @@
   .cta:hover{background:var(--gold);color:var(--warm-white);}
   .cta.solid{background:var(--charcoal);color:var(--warm-white);border-color:var(--charcoal);}
   .cta.solid:hover{background:var(--bark);border-color:var(--bark);}
-
-  .offerings{display:grid;grid-template-columns:1fr;gap:28px;margin:22px 0 0;}
-  @media(min-width:720px){.offerings{grid-template-columns:1.1fr .9fr;align-items:start;}}
-  .price-card{background:var(--warm-white);border:1px solid var(--border);border-radius:6px;padding:30px 28px;display:flex;flex-direction:column;}
-  .price-card.lead{border:2px solid var(--gold);}
-  .price-card .offer-kicker{font-size:1.3rem;margin:0 0 2px;}
-  .price-figure{font-family:'Lora',serif;font-size:1.55rem;color:var(--gold);margin:2px 0 16px;}
-  .price-figure small{display:block;font-family:'DM Sans',sans-serif;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-variant:small-caps;font-weight:600;margin-top:3px;}
-  .koha-box{background:var(--cream);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:18px 22px;margin:2px 0 20px;}
-  .koha-box p{margin:0 0 10px;font-size:.92rem;color:#3D3A30;font-style:italic;}
-  .koha-box p:last-child{margin-bottom:0;font-style:normal;}
-  .details-card{background:var(--cream);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:0 0 22px;}
-  .details-card .row{display:grid;grid-template-columns:1fr 1.6fr;border-top:1px solid var(--border);}
-  .details-card .row:first-child{border-top:0;}
-  .details-card .row>div{padding:12px 16px;}
-  .details-card .row .k{font-variant:small-caps;text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;color:var(--muted);font-weight:600;}
-  .details-card .row .v{font-size:.9rem;color:#3D3A30;}
-  @media(max-width:600px){.details-card .row{grid-template-columns:1fr;}}
-  .topic-list{margin:0 0 20px;padding-left:20px;font-size:.95rem;color:#3D3A30;}
-  .topic-list li{margin-bottom:6px;}
-  .offer-note{font-size:.85rem;color:var(--muted);margin:auto 0 0;padding-top:4px;}
-  .offer-intro{font-size:.95rem;color:#3D3A30;margin:0 0 18px;}
-  .guardrail{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:20px 22px;margin:8px 0 0;}
-  .guardrail p{margin:0;font-size:.92rem;color:#3D3A30;}
-  .guardrail p strong{color:var(--bark);}
   footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
   footer .brand{font-size:1.05rem;}
   footer .brand span{color:var(--gold);}
@@ -169,73 +140,12 @@
   <div class="wrap">
     <div class="label section-eyebrow">Working together</div>
     <h2 class="section-title">If you'd like to go further</h2>
-    <p>The practices on this site are free and self-guided, and always will be — you never need to work with Jeremy to use any of them. For some people, a bit of company or conversation alongside them is worth having too.</p>
-
-    <div class="offerings">
-
-      <div class="price-card lead">
-        <div class="label section-eyebrow">Lead offering</div>
-        <h3 class="offer-kicker">The Practice Circle</h3>
-        <div class="price-figure">Koha<small>Give what feels right</small></div>
-        <p class="offer-intro">A small, recurring group that meets over Zoom, open to anyone anywhere. One unhurried hour: a guided practice done live together, followed by conversation. Cameras on or off, no obligation to speak, and no one is ever put on the spot. The sense of company is part of what makes it worthwhile — not just the practice itself.</p>
-
-        <div class="koha-box">
-          <p>"Koha is a Māori custom of voluntary giving: you give what feels right to you, in response to what you've received."</p>
-          <p>There's no set price, no suggested amount, and no expectation either way. Giving nothing is genuinely welcome — "no one will ever know the difference."</p>
-        </div>
-
-        <div class="details-card">
-          <div class="row"><div class="k">Format</div><div class="v">Small group, live over Zoom</div></div>
-          <div class="row"><div class="k">When</div><div class="v">Held regularly — email for upcoming dates</div></div>
-          <div class="row"><div class="k">Length</div><div class="v">1 hour</div></div>
-          <div class="row"><div class="k">Where</div><div class="v">Auckland, New Zealand — open worldwide</div></div>
-          <div class="row"><div class="k">Cost</div><div class="v">Koha, no set amount</div></div>
-          <div class="row"><div class="k">To join</div><div class="v">Email — no form to fill in</div></div>
-        </div>
-        <!-- OPEN ITEM: circle cadence / fixed day-time not yet confirmed — update the "When" row once set. -->
-        <!-- OPEN ITEM: koha payment mechanics (how, currency, etc.) deliberately left off this page — cover in the welcome email sent after someone gets in touch, not published here. -->
-
-        <div class="cta-links">
-          <a class="cta solid" href="mailto:jeremy@livingbeyondsci.com?subject=Practice%20Circle%20enquiry">Come and join the circle</a>
-        </div>
-      </div>
-
-      <div class="price-card">
-        <div class="label section-eyebrow">When something is more personal</div>
-        <h3 class="offer-kicker">One to one</h3>
-        <div class="price-figure">Koha<small>Give what feels right</small></div>
-        <p class="offer-intro">Some things are easier to talk about one to one than in a group. If there's something you'd rather raise privately, a one-to-one conversation in the same solution-oriented tradition is available — just the two of you. This might include things like:</p>
-        <ul class="topic-list">
-          <li>Bladder or bowel changes (autonomic symptoms)</li>
-          <li>Constipation</li>
-          <li>Sexual difficulties</li>
-          <li>Swallowing</li>
-          <li>Speech</li>
-          <li>Sleep disturbance</li>
-        </ul>
-        <!-- OPEN ITEM: confirm this Parkinson's-specific topic list with Jeremy before publishing — do not carry the SCI site's list over unchanged. -->
-
-        <div class="details-card">
-          <div class="row"><div class="k">Format</div><div class="v">One to one — just the two of us</div></div>
-          <div class="row"><div class="k">When</div><div class="v">By arrangement — email to find a time</div></div>
-          <div class="row"><div class="k">Length</div><div class="v">1 hour</div></div>
-          <div class="row"><div class="k">Where</div><div class="v">Auckland, New Zealand — open worldwide</div></div>
-          <div class="row"><div class="k">Cost</div><div class="v">Koha, no set amount</div></div>
-          <div class="row"><div class="k">To join</div><div class="v">Email — no form to fill in</div></div>
-        </div>
-
-        <div class="cta-links">
-          <a class="cta" href="mailto:jeremy@livingbeyondsci.com?subject=One-to-one%20enquiry">Ask about a one-to-one conversation</a>
-        </div>
-      </div>
-
+    <p>The practices on this site are free and self-guided, and always will be — you never need to work with Jeremy to use any of them. For some people, though, a personal, one-to-one session in the solution-oriented tradition can be a helpful complement to the recorded practices.</p>
+    <div class="placeholder">
+      <p><strong>Placeholder — for Jeremy to complete.</strong> The specifics of what working with Jeremy involves (session format, whether sessions are online or in person, availability, and any fees) haven't been set on this page yet. This section is a placeholder to be filled in with those details before the site goes live, so that nothing here overstates or invents what's on offer.</p>
     </div>
-
-    <div class="guardrail">
-      <p><strong>What this is, and isn't.</strong> Both of these are personal support, offered in the solution-oriented tradition — not medical treatment, and not a promise of recovery. Parkinson's is progressive; nothing here reverses that. The aim is more ease, calm, and a sense of agency alongside the condition as it is, not a return to how things were before.</p>
-    </div>
-
-    <div class="cta-links" style="margin-top:22px;">
+    <div class="cta-links">
+      <a class="cta solid" href="contact.html">Get in touch</a>
       <a class="cta" href="guided-imagery.html">Or start with the free practices</a>
     </div>
   </div>
