@@ -95,61 +95,12 @@
   }
   @media(max-width:480px){.hero h1{font-size:2.3rem;}}
 
-  /* ---------- BODY SECTIONS ---------- */
-  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
-  .wide{max-width:1080px;margin:0 auto;padding:0 24px;}
-  section{padding:60px 0;}
-  section + section{border-top:1px solid var(--border);}
-  h2.section-title{font-size:2rem;margin:0 0 10px;}
-  .section-eyebrow{margin-bottom:6px;}
-  p{margin:0 0 20px;}
-  .framing{background:var(--charcoal);color:var(--warm-white);border-radius:4px;padding:36px 36px 30px;margin:8px 0 0;}
-  .framing .label{color:var(--gold);}
-  .framing .pull{font-family:'Lora',serif;font-size:1.5rem;color:var(--warm-white);line-height:1.35;font-style:italic;margin:14px 0 0;}
-  .pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
-  .pillar{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:26px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;display:block;}
-  .pillar:hover{border-color:var(--gold);transform:translateY(-2px);}
-  .pillar .pn{color:var(--gold);font-variant:small-caps;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;}
-  .pillar h3{font-size:1.35rem;margin:6px 0 8px;}
-  .pillar p{font-size:.95rem;margin:0;color:#3D3A30;}
-  .pillar .go{margin-top:14px;color:var(--bark);font-size:.85rem;font-variant:small-caps;letter-spacing:.06em;}
-  @media(max-width:640px){.pillars{grid-template-columns:1fr;}}
-  .prac-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
-  .prac-card{display:block;text-decoration:none;color:inherit;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:22px 24px;transition:border-color .2s,transform .2s;}
-  .prac-card:hover{border-color:var(--gold);transform:translateY(-2px);}
-  .prac-card .pc-top{display:flex;align-items:center;justify-content:space-between;gap:10px;}
-  .prac-card .pc-no{color:var(--gold);font-size:.72rem;letter-spacing:.14em;font-variant:small-caps;text-transform:uppercase;}
-  .prac-card .pc-badge{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;color:var(--muted);font-variant:small-caps;letter-spacing:.08em;text-transform:uppercase;}
-  .prac-card .dot{width:9px;height:9px;border-radius:50%;}
-  .dot.emerging{background:var(--gold);box-shadow:0 0 0 2px rgba(200,150,60,.18);}
-  .dot.moderate{background:var(--bark);box-shadow:0 0 0 2px rgba(200,150,60,.30);}
-  .prac-card h3{font-family:'Lora',serif;font-size:1.25rem;margin:8px 0 4px;color:var(--charcoal);}
-  .prac-card .pc-dom{color:var(--muted);font-size:.86rem;}
-  @media(max-width:640px){.prac-grid{grid-template-columns:1fr;}}
-  .principles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:22px;}
-  .principle{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:24px;}
-  .principle h4{font-size:1.1rem;margin:0 0 8px;}
-  .principle p{font-size:.92rem;margin:0;color:#3D3A30;}
-  @media(max-width:760px){.principles{grid-template-columns:1fr;}}
-  .callout{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin-top:8px;}
-  .callout p{margin:0;font-size:.95rem;color:#3D3A30;}
-  .callout p strong{color:var(--bark);}
-  .cta-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;}
-  .cta{display:inline-block;text-decoration:none;border:1px solid var(--gold);color:var(--bark);border-radius:3px;padding:13px 24px;font-size:.9rem;font-variant:small-caps;letter-spacing:.06em;transition:background .2s,color .2s;}
-  .cta:hover{background:var(--gold);color:var(--warm-white);}
-  .cta.solid{background:var(--charcoal);color:var(--warm-white);border-color:var(--charcoal);}
-  .cta.solid:hover{background:var(--bark);border-color:var(--bark);}
+  /* ---------- FOOTER (matches Stroke) ---------- */
+  footer { background: #1A1810; padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); flex-wrap: wrap; gap: 1rem; }
+  .footer-brand { font-family: 'Lora', serif; font-size: 0.9rem; color: #5A5040; text-decoration: none; }
+  .footer-brand span { color: var(--gold); }
+  .footer-copy { font-size: 0.78rem; color: #444030; }
 
-  /* ---------- FOOTER ---------- */
-  footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
-  footer .brand{font-size:1.05rem;}
-  footer .brand span{color:var(--gold);}
-  footer p{margin:14px 0 0;line-height:1.6;max-width:60ch;}
-  footer a{color:var(--gold);text-decoration:none;}
-  .foot-links{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;}
-  .foot-links a{color:#C9C2B4;font-size:.8rem;font-variant:small-caps;letter-spacing:.06em;}
-  .foot-links a:hover{color:var(--gold);}
-  .free-line{color:var(--gold);font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-top:20px;}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
 </style>
@@ -177,7 +128,7 @@
     <!-- LEFT: headline + lede + CTAs -->
     <div>
       <p class="hero-credential">Jeremy Olson, MSocSc &nbsp;·&nbsp; Waikato University</p>
-      <h1>Parkinson's changes the path —<br>not the <em>possibility</em></h1>
+      <h1>Parkinson's changes the path —<br>not the <em>possibility</em></h1>
       <p class="lede">Free guided imagery practices for living well with Parkinson's — grounded in research, honest about the evidence, and offered alongside your medical care, never instead of it.</p>
       <div class="hero-ctas">
         <a class="cta solid" href="guided-imagery.html">Explore the Guided Imagery Programme</a>
@@ -200,125 +151,16 @@
   </div>
 </header>
 
-<!-- ===== BODY SECTIONS (content unchanged) ===== -->
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">What this is</div>
-    <h2 class="section-title">Not recovery. Not only acceptance.</h2>
-    <p>Parkinson's is a progressive condition, so the language of "recovery" — of getting back to how things were — doesn't belong here, and this site will never use it. But it would be too cautious to offer only comfort and acceptance, because for some Parkinson's symptoms there is real, published evidence that mental practice can help — modestly, as a complement to medical care, but genuinely.</p>
-    <div class="framing">
-      <div class="label">Where this site stands</div>
-      <p class="pull">Symptom management and quality of life, within a progressive condition — not getting better in the sense of going back, but living well, and sometimes moving with a little more ease.</p>
-    </div>
+<div class="sibling-bar" style="background:#1A1810;border-top:1px solid rgba(200,150,60,0.2);border-bottom:1px solid rgba(200,150,60,0.1);padding:1.25rem 2.5rem;">
+  <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+    <span style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#5A5040;">Other sites in this series</span>
+    <a href="https://livingbeyondsci.com/" style="font-family:'Lora',serif;font-size:0.9rem;color:#8A8070;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#C8963C'" onmouseout="this.style.color='#8A8070'">Living Beyond <span style="color:#C8963C;">SCI</span></a>
+    <a href="https://livingbeyondstroke.com/" style="font-family:'Lora',serif;font-size:0.9rem;color:#8A8070;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#C8963C'" onmouseout="this.style.color='#8A8070'">Living Beyond <span style="color:#C8963C;">Stroke</span></a>
   </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">How the site is built</div>
-    <h2 class="section-title">Two pillars</h2>
-    <div class="pillars">
-      <a class="pillar" href="research.html">
-        <div class="pn">Pillar One</div>
-        <h3>The research</h3>
-        <p>The framing, the neuroscience, and an honest, badge-by-badge account of the evidence — with every claim traceable to a named source.</p>
-        <div class="go">Read the research →</div>
-      </a>
-      <a class="pillar" href="guided-imagery.html">
-        <div class="pn">Pillar Two</div>
-        <h3>The guided imagery programme</h3>
-        <p>Five practices, each a calm three-phase guided session — a personal synthesis of an established therapeutic tradition, clearly labelled as such.</p>
-        <div class="go">Explore the practices →</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">The programme</div>
-    <h2 class="section-title">Five practices</h2>
-    <p>Each practice targets a different part of living with Parkinson's, and each carries an honest evidence badge — <em>Moderate</em> where the research is real if mixed, <em>Emerging</em> where it's early or indirect. None is a treatment; all are complements.</p>
-    <div class="prac-grid">
-      <a class="prac-card" href="walking-freely.html">
-        <div class="pc-top"><span class="pc-no">Practice 1</span><span class="pc-badge"><span class="dot moderate"></span>Moderate</span></div>
-        <h3>Walking Freely</h3>
-        <div class="pc-dom">Gait &amp; freezing</div>
-      </a>
-      <a class="prac-card" href="finding-flow.html">
-        <div class="pc-top"><span class="pc-no">Practice 2</span><span class="pc-badge"><span class="dot emerging"></span>Emerging</span></div>
-        <h3>Finding Flow</h3>
-        <div class="pc-dom">Movement initiation &amp; bradykinesia</div>
-      </a>
-      <a class="prac-card" href="steady-ground.html">
-        <div class="pc-top"><span class="pc-no">Practice 3</span><span class="pc-badge"><span class="dot emerging"></span>Emerging</span></div>
-        <h3>Steady Ground</h3>
-        <div class="pc-dom">Balance &amp; postural stability</div>
-      </a>
-      <a class="prac-card" href="the-steady-hand.html">
-        <div class="pc-top"><span class="pc-no">Practice 4</span><span class="pc-badge"><span class="dot emerging"></span>Emerging</span></div>
-        <h3>The Steady Hand</h3>
-        <div class="pc-dom">Fine motor &amp; handwriting</div>
-      </a>
-      <a class="prac-card" href="calm-beneath-the-storm.html">
-        <div class="pc-top"><span class="pc-no">Practice 5</span><span class="pc-badge"><span class="dot emerging"></span>Emerging</span></div>
-        <h3>Calm Beneath the Storm</h3>
-        <div class="pc-dom">Non-motor wellbeing</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">What you can count on</div>
-    <h2 class="section-title">The promises this site keeps</h2>
-    <div class="principles">
-      <div class="principle">
-        <h4>Free, and staying that way</h4>
-        <p>No paywall, no email required, no ads. Everything here is open, and it will stay open.</p>
-      </div>
-      <div class="principle">
-        <h4>Honest about the evidence</h4>
-        <p>Every claim is tied to a named study and badged by strength. Weak evidence is never dressed up as strong.</p>
-      </div>
-      <div class="principle">
-        <h4>A complement, never a replacement</h4>
-        <p>These practices sit alongside medication, physiotherapy, and your Parkinson's team — never in place of any of them.</p>
-      </div>
-    </div>
-    <div class="callout">
-      <p><strong>If anything here ever seems to be standing in for your medical care, that's a signal to step back, not lean in.</strong> The purpose of this site is to sit quietly beside good treatment.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">Who made this</div>
-    <h2 class="section-title">Built by Jeremy Olson</h2>
-    <p>Jeremy Olson is a psychology graduate and solution-oriented hypnosis practitioner based in Auckland, New Zealand, with a background in quality-of-life research. He does not have Parkinson's himself, and doesn't claim the authority of lived experience — this site grows out of his research training and his work in the Ericksonian therapeutic tradition, offered in good faith and openly labelled as a personal synthesis.</p>
-    <div class="cta-links">
-      <a class="cta" href="work-with-jeremy.html">More about Jeremy</a>
-    </div>
-  </div>
-</section>
-
+</div>
 <footer>
-  <div class="wide">
-    <div class="brand">Living Beyond <span>Parkinson's</span></div>
-    <p>Guided imagery and wellbeing practices for people living with Parkinson's disease. Built by Jeremy Olson, Auckland, New Zealand. This site offers supportive practices alongside medical care; it does not diagnose, treat, or replace the advice of your healthcare team.</p>
-    <nav class="foot-links" aria-label="Support and guidance">
-      <a href="newly-diagnosed.html">Just diagnosed?</a>
-      <a href="for-family-and-friends.html">For family &amp; friends</a>
-      <a href="when-nothing-happens.html">When nothing happens</a>
-      <a href="imagery-check.html">Imagery self-check</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="for-clinicians.html">For clinicians</a>
-      <a href="feedback.html">Feedback</a>
-    </nav>
-    <p class="free-line">Free · No paywall · No email required · No ads</p>
-  </div>
+  <a href="index.html" class="footer-brand">Living Beyond <span>Parkinson's</span></a>
+  <div class="footer-copy">© 2025–2026 Living Beyond Parkinson's · <a href="terms-parkinsons.html" style="color:#5A5040;text-decoration:none;border-bottom:1px solid rgba(200,150,60,0.15);">Terms of Use</a> · <a href="contact.html" style="color:#5A5040;text-decoration:none;border-bottom:1px solid rgba(200,150,60,0.15);">Contact</a></div>
 </footer>
 
 <script>
