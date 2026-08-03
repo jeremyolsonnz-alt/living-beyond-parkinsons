@@ -50,23 +50,37 @@
   .page-hero{background:var(--charcoal);border-bottom:1px solid rgba(255,255,255,.12);padding:72px 0 60px;}
   .page-hero h1{font-size:2.9rem;margin:0 0 18px;color:var(--warm-white);}
   .page-hero .lede{font-size:1.22rem;color:#C9C2B4;max-width:52ch;line-height:1.55;}
-  section{padding:52px 0;}
-  section + section{border-top:1px solid var(--border);}
-  h2.section-title{font-size:1.7rem;margin:0 0 8px;}
-  .section-eyebrow{margin-bottom:6px;}
-  p{margin:0 0 20px;}
-  .contact-card{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:28px 30px;margin:8px 0 0;text-align:center;}
-  .contact-card .k{font-variant:small-caps;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--muted);}
-  .contact-card .email{font-family:'Lora',serif;font-size:1.5rem;color:var(--bark);margin:8px 0 0;word-break:break-word;}
-  .placeholder{background:var(--cream);border:1px dashed var(--gold);border-radius:4px;padding:20px 22px;margin:14px 0 0;}
-  .placeholder p{margin:0;font-size:.9rem;color:#3D3A30;}
-  .placeholder p strong{color:var(--bark);}
-  .reassure{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin:8px 0 0;}
-  .reassure p{margin:0;font-size:.95rem;color:#3D3A30;}
-  .reassure p strong{color:var(--bark);}
-  .medical{background:var(--charcoal);color:var(--warm-white);border-radius:4px;padding:26px 28px;margin:8px 0 0;}
-  .medical .label{color:var(--gold);}
-  .medical p{color:#D8D2C6;margin:6px 0 0;font-size:.95rem;}
+
+  /* ---------- CONTACT (two-column, matches Stroke) ---------- */
+  .article-body{max-width:1080px;margin:0 auto;padding:64px 24px 80px;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+  h2.section-head{font-family:'Lora',serif;font-size:1.35rem;font-weight:500;color:var(--charcoal);margin:0 0 1.25rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);}
+  .form-group{margin-bottom:1.5rem;}
+  .form-label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;font-variant:small-caps;}
+  .form-input,.form-textarea,.form-select{width:100%;padding:.75rem 1rem;border:1px solid var(--border);background:var(--warm-white);color:var(--charcoal);font-family:'DM Sans',sans-serif;font-size:.95rem;outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:3px;}
+  .form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--gold);}
+  .form-textarea{min-height:150px;resize:vertical;line-height:1.7;}
+  .form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A7060' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;}
+  .submit-btn{background:var(--gold);color:var(--charcoal);border:none;padding:.85rem 2rem;font-family:'DM Sans',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;font-variant:small-caps;cursor:pointer;width:100%;border-radius:3px;transition:background .2s;}
+  .submit-btn:hover{background:#b5832e;}
+  .contact-detail{display:flex;flex-direction:column;gap:.3rem;margin-bottom:1.75rem;}
+  .contact-detail-label{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-variant:small-caps;}
+  .contact-detail-value{font-size:.95rem;color:var(--charcoal);}
+  .contact-detail-value a{color:var(--gold);text-decoration:none;}
+  .contact-detail-value a:hover{text-decoration:underline;}
+  .response-note{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:1.25rem 1.5rem;margin-top:1.5rem;}
+  .response-note p{font-size:.85rem;color:#5A5040;line-height:1.75;margin:0;}
+  .response-note p+p{margin-top:.75rem;}
+  .medical-note{background:var(--charcoal);color:var(--warm-white);border-radius:4px;padding:1.4rem 1.6rem;margin-top:1.5rem;}
+  .medical-note .label{color:var(--gold);}
+  .medical-note p{color:#D8D2C6;margin:.5rem 0 0;font-size:.92rem;line-height:1.75;}
+  .about-card{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:1.75rem;margin-top:1.5rem;}
+  .about-card-label{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;font-variant:small-caps;}
+  .about-card p{font-size:.88rem;color:#4A4438;line-height:1.85;margin-bottom:.75rem;}
+  .about-card p:last-child{margin-bottom:0;}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:3rem;}}
+
+  /* ---------- FOOTER (Parkinson's own, unchanged) ---------- */
   footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
   footer .brand{font-size:1.05rem;}
   footer .brand span{color:var(--gold);}
@@ -75,7 +89,6 @@
   .foot-links{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;}
   .foot-links a{color:#C9C2B4;font-size:.8rem;font-variant:small-caps;letter-spacing:.06em;}
   .foot-links a:hover{color:var(--gold);}
-
   .free-line{color:var(--gold);font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-top:20px;}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
@@ -105,34 +118,81 @@
   </div>
 </header>
 
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">Get in touch</div>
-    <h2 class="section-title">By email</h2>
-    <p>The simplest way to reach Jeremy is by email. There's no form to fill in and no account to create — just write, and he'll reply when he can.</p>
-    <div class="contact-card">
-      <div class="k">Email</div>
-      <div class="email">[ email address to be added ]</div>
-    </div>
-    <div class="placeholder">
-      <p><strong>Placeholder — for Jeremy to complete.</strong> The contact email address hasn't been added yet. Drop in the real address here (ideally as a <code>mailto:</code> link) before the site goes live. No invented address has been used, so that nothing false is published.</p>
-    </div>
-  </div>
-</section>
+<div class="article-body">
+  <div class="wide">
+    <div class="contact-grid">
 
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">A couple of notes</div>
-    <h2 class="section-title">Before you write</h2>
-    <div class="reassure">
-      <p><strong>Your privacy.</strong> This site asks nothing of you — no sign-up, no email capture, no tracking for ads. If you email, your message is used only to reply to you, and for nothing else.</p>
-    </div>
-    <div class="medical">
-      <div class="label">Please note</div>
-      <p>Jeremy can't offer medical advice, and this site isn't a place for urgent help. For anything about your symptoms, your medication, or your care, your GP, neurologist, or Parkinson's nurse is the right person to speak to. If you're in crisis or need urgent help, please contact your local emergency services or a crisis line in your country.</p>
+      <div>
+        <h2 class="section-head">Send a Message</h2>
+        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" method="POST">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none;"><label>Don't fill this in: <input name="bot-field"></label></p>
+
+          <div class="form-group">
+            <label class="form-label" for="name">Your name</label>
+            <input class="form-input" type="text" id="name" name="name" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email address</label>
+            <input class="form-input" type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reason">Reason for contact</label>
+            <select class="form-select" id="reason" name="reason">
+              <option value="">Select one…</option>
+              <option value="question">Question about the programme</option>
+              <option value="experience">Sharing my experience</option>
+              <option value="clinician">Clinician or researcher enquiry</option>
+              <option value="error">Spotted an error or broken link</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" required placeholder="Write as much or as little as you like."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+
+      <div>
+        <h2 class="section-head">Direct Contact</h2>
+
+        <div class="contact-detail">
+          <span class="contact-detail-label">Email</span>
+          <span class="contact-detail-value"><a href="mailto:jeremy@livingbeyondparkinsons.com">jeremy@livingbeyondparkinsons.com</a></span>
+        </div>
+
+        <div class="contact-detail">
+          <span class="contact-detail-label">Response time</span>
+          <span class="contact-detail-value">Usually within a few days. This is a one-person project.</span>
+        </div>
+
+        <div class="response-note">
+          <p>This site is maintained by one person alongside other commitments. Replies may take a few days, occasionally longer. Every message is read and every question is considered, even where a personal reply is not always possible.</p>
+          <p><strong>Your privacy:</strong> this site asks nothing of you — no sign-up, no email capture, no tracking for ads. If you email, your message is used only to reply to you, and for nothing else.</p>
+        </div>
+
+        <div class="medical-note">
+          <div class="label">Please note</div>
+          <p>Jeremy is an educator and researcher, not a clinician. For anything about your symptoms, your medication, or your care, your GP, neurologist, or Parkinson's nurse is the right person to speak to. If you're in crisis or need urgent help, please contact your local emergency services or a crisis line in your country.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-label">About the site's author</div>
+          <p>Jeremy Olson holds a Master of Social Sciences (Psychology) from the University of Waikato, New Zealand, with graduate-level quality-of-life research conducted at Deakin University under Professor Robert Cummins. He also holds a Diploma of Solution-Oriented Hypnosis with Dr Robert McNeilly.</p>
+          <p>Living Beyond Parkinson's was developed from the same research and educational framework as Living Beyond SCI and Living Beyond Stroke — free resources for people with spinal cord injury and stroke, respectively. Jeremy does not have Parkinson's himself; the programme is offered as an educator working in this field, not as someone with lived experience of the condition.</p>
+          <p>The programme is free and will remain free. There is no advertising, no affiliation, and no commercial interest in any of the products or approaches described.</p>
+        </div>
+      </div>
+
     </div>
   </div>
-</section>
+</div>
 
 <footer>
   <div class="wide">
