@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png">
 <title>Bibliography — Living Beyond Parkinson's</title>
-<meta name="description" content="The research behind the Living Beyond Parkinson's guided imagery programme — every source, with a plain-language note on what it shows and how strong it is.">
+<meta name="description" content="The research behind the Living Beyond Parkinson's guided imagery programme — every source cited across the site, listed alphabetically.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -36,14 +36,6 @@
   }
   h1,h2,h3,h4{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.2;color:var(--charcoal);}
   a{color:var(--bark);}
-  .label{
-    font-size:.72rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    font-variant:small-caps;
-    font-weight:600;
-    color:var(--gold);
-  }
   .nav{position:sticky;top:0;z-index:100;background:var(--charcoal);border-bottom:2px solid var(--gold);}
   .nav-inner{margin:0;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
   .brand{font-family:'Lora',serif;font-size:1.15rem;font-weight:500;color:var(--warm-white);text-decoration:none;letter-spacing:.01em;}
@@ -68,32 +60,20 @@
   .page-hero .lede{font-size:1.22rem;color:#C9C2B4;max-width:56ch;line-height:1.55;}
   section{padding:52px 0;}
   section + section{border-top:1px solid var(--border);}
-  h2.section-title{font-size:1.7rem;margin:0 0 8px;}
-  .section-eyebrow{margin-bottom:6px;}
   p{margin:0 0 20px;}
-  .dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto;margin-top:5px;}
-  .dot.emerging{background:var(--gold);box-shadow:0 0 0 3px rgba(200,150,60,.18);}
-  .dot.moderate{background:var(--bark);box-shadow:0 0 0 3px rgba(200,150,60,.30);}
-  .dot.strong{background:var(--charcoal);box-shadow:0 0 0 3px rgba(200,150,60,.42);}
-  .ref-group{margin-top:8px;}
-  .ref-group > .grp-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 4px;}
-  .ref-group .grp-head h3{font-size:1.3rem;margin:0;}
-  .ref-group .grp-head .maps{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-variant:small-caps;color:var(--muted);}
-  .ref-group .grp-intro{color:var(--muted);font-size:.95rem;margin:0 0 20px;}
-  .ref{background:var(--warm-white);border:1px solid var(--border);border-left:3px solid var(--border);border-radius:0 4px 4px 0;padding:18px 20px;margin:0 0 14px;}
-  .ref.s-emerging{border-left-color:var(--gold);}
-  .ref.s-moderate{border-left-color:var(--bark);}
-  .ref.s-strong{border-left-color:var(--charcoal);}
-  .ref .cite-txt{font-size:.9rem;color:var(--charcoal);line-height:1.55;margin:0 0 8px;}
-  .ref .cite-txt em{font-style:italic;color:var(--bark);}
-  .ref .cite-txt .doi{color:var(--muted);}
-  .ref .gloss{font-size:.92rem;color:#3D3A30;margin:0 0 8px;line-height:1.6;}
-  .ref .strength{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;color:var(--muted);}
-  .ref .strength .dot{margin-top:0;}
-  .ref .strength b{color:var(--charcoal);font-weight:600;}
-  .caveat{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:20px 22px;margin-top:8px;}
-  .caveat p{margin:0;font-size:.93rem;color:#3D3A30;}
-  .caveat p strong{color:var(--bark);}
+  h2.section-head{font-family:'Lora',serif;font-size:1.2rem;font-weight:500;color:var(--charcoal);margin:2.5rem 0 1.25rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);}
+  h2.section-head:first-child{margin-top:0;}
+  .ref-list{list-style:none;margin:0;padding:0;}
+  .ref-item{padding:1.25rem 0 1.25rem 1.5rem;border-bottom:1px solid var(--border);position:relative;font-size:.9rem;color:#4A4438;line-height:1.85;}
+  .ref-item::before{content:'';position:absolute;left:0;top:1.75rem;width:3px;height:14px;background:var(--gold);}
+  .ref-item:last-child{border-bottom:none;}
+  .ref-authors{font-weight:400;color:var(--charcoal);}
+  .ref-journal{font-style:italic;color:#6A6050;}
+  .ref-doi{font-size:.8rem;color:var(--muted);word-break:break-all;}
+  .ref-doi a{color:var(--gold);text-decoration:none;}
+  .ref-doi a:hover{text-decoration:underline;}
+  .ref-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.6rem;}
+  .ref-tag{font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .5rem;border:1px solid var(--border);color:var(--muted);}
   footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
   footer .brand{font-size:1.05rem;}
   footer .brand span{color:var(--gold);}
@@ -134,219 +114,157 @@
 
 <section>
   <div class="wrap">
-    <div class="ref-group">
-      <div class="grp-head"><h3>Foundations — why imagery is plausible in Parkinson's</h3><span class="maps">underpins the whole programme</span></div>
-      <p class="grp-intro">These sources establish the groundwork: that people with Parkinson's can generally form motor imagery, and that imagined and executed movement share brain circuitry — the reason mental rehearsal is worth exploring at all.</p>
 
-      <div class="ref s-moderate">
-        <p class="cite-txt">Readman MR, Wan MW, Poliakoff E, et al. Motor imagery vividness and symptom severity in Parkinson's disease. <em>Journal of Neuropsychology</em>. 2023;17(3):460–476. <span class="doi">doi:10.1111/jnp.12293</span></p>
-        <p class="gloss">Found that motor imagery ability is largely preserved in people with mild-to-moderate Parkinson's, with symptom presentation influencing how vivid the imagery feels. Supports the basic premise that imagery is available to work with.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — sound observational study of imagery ability, not an outcome trial.</p>
-      </div>
+    <h2 class="section-head">B</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">Bek, J., Gowen, E., Vogt, S., Crawford, T. J., &amp; Poliakoff, E.</span> (2019). Combined action observation and motor imagery influences hand movement amplitude in Parkinson's disease. <span class="ref-journal">Parkinsonism &amp; Related Disorders, 61</span>, 126–131.
+        <div class="ref-doi"><a href="https://doi.org/10.1016/j.parkreldis.2018.11.001" target="_blank" rel="noopener">doi.org/10.1016/j.parkreldis.2018.11.001</a></div>
+        <div class="ref-tags"><span class="ref-tag">The Steady Hand</span><span class="ref-tag">Clinical Evidence</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">Bek, J., Holmes, P. S., Craig, C. E., Franklin, Z. C., Sullivan, M., Webb, J., Crawford, T. J., Vogt, S., Gowen, E., &amp; Poliakoff, E.</span> (2021). Action Imagery and Observation in Neurorehabilitation for Parkinson's Disease (ACTION-PD): Development of a User-Informed Home Training Intervention to Improve Functional Hand Movements. <span class="ref-journal">Parkinson's Disease, 2021</span>, 4559519.
+        <div class="ref-doi"><a href="https://doi.org/10.1155/2021/4559519" target="_blank" rel="noopener">doi.org/10.1155/2021/4559519</a></div>
+        <div class="ref-tags"><span class="ref-tag">The Steady Hand</span><span class="ref-tag">Intervention Development</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">Bezerra, P. T., Santiago, L. M., Silva, I. A., Souza, A. A., Pegado, C. L., Damascena, C. M., Ribeiro, T. S., &amp; Lindquist, A. R. R.</span> (2022). Action observation and motor imagery have no effect on balance and freezing of gait in Parkinson's disease: A randomized controlled trial. <span class="ref-journal">European Journal of Physical and Rehabilitation Medicine, 58</span>(5), 715–722.
+        <div class="ref-doi"><a href="https://doi.org/10.23736/S1973-9087.22.07313-0" target="_blank" rel="noopener">doi.org/10.23736/S1973-9087.22.07313-0</a></div>
+        <div class="ref-tags"><span class="ref-tag">Walking Freely</span><span class="ref-tag">Steady Ground</span><span class="ref-tag">Counter-evidence</span></div>
+      </li>
+    </ul>
 
-      <div class="ref s-moderate">
-        <p class="cite-txt">Malouin F, Richards CL, Jackson PL, Lafleur MF, Durand A, Doyon J. The Kinesthetic and Visual Imagery Questionnaire (KVIQ) for assessing motor imagery in persons with physical disabilities: a reliability and construct validity study. <em>Journal of Neurologic Physical Therapy</em>. 2007;31(1):20–29. <span class="doi">doi:10.1097/01.NPT.0000260567.24122.64</span></p>
-        <p class="gloss">Introduced a clinical tool that rates movement imagery in two separate ways — how vividly a person sees a movement, and how strongly they feel it. This "seeing versus feeling" distinction is the published principle behind the site's plain-language <a href="imagery-check.html">imagery self-check</a>, which is inspired by it but does not reproduce the questionnaire itself.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — a validated assessment principle, used here only to tailor wording, not to assess anyone.</p>
-      </div>
+    <h2 class="section-head">C</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">Caligiore, D., Mustile, M., Spalletta, G., &amp; Baldassarre, G.</span> (2017). Action observation and motor imagery for rehabilitation in Parkinson's disease: A systematic review and an integrative hypothesis. <span class="ref-journal">Neuroscience &amp; Biobehavioral Reviews, 72</span>, 210–222.
+        <div class="ref-doi"><a href="https://doi.org/10.1016/j.neubiorev.2016.11.005" target="_blank" rel="noopener">doi.org/10.1016/j.neubiorev.2016.11.005</a></div>
+        <div class="ref-tags"><span class="ref-tag">Research Page</span><span class="ref-tag">Theoretical Foundation</span><span class="ref-tag">Systematic Review</span></div>
+      </li>
+    </ul>
 
-      <div class="ref s-moderate">
-        <p class="cite-txt">Caligiore D, Mustile M, Spalletta G, Baldassarre G. Action observation and motor imagery for rehabilitation in Parkinson's disease: A systematic review and an integrative hypothesis. <em>Neuroscience &amp; Biobehavioral Reviews</em>. 2017;72:210–222. <span class="doi">doi:10.1016/j.neubiorev.2016.11.005</span></p>
-        <p class="gloss">A widely-cited review arguing that action observation and motor imagery engage overlapping motor networks and may be useful adjuncts in Parkinson's rehabilitation. Frames the mechanism; does not by itself prove clinical benefit.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — review and hypothesis, not primary outcome data.</p>
-      </div>
+    <h2 class="section-head">D</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">Dissanayaka, N. N. W., Idu Jion, F., Pachana, N. A., et al.</span> (2016). Mindfulness for Motor and Nonmotor Dysfunctions in Parkinson's Disease. <span class="ref-journal">Parkinson's Disease, 2016</span>, 7109052.
+        <div class="ref-tags"><span class="ref-tag">Calm Beneath the Storm</span><span class="ref-tag">Clinical Evidence</span></div>
+      </li>
+    </ul>
 
-      <div class="ref s-moderate">
-        <p class="cite-txt">Mezzarobba S, Bonassi G, Avanzino L, Pelosin E. Action Observation and Motor Imagery as a Treatment in Patients with Parkinson's Disease. <em>Journal of Parkinson's Disease</em>. 2024. <span class="doi">doi:10.3233/JPD-230219</span></p>
-        <p class="gloss">A recent review summarising why, how, and when action observation and motor imagery might be applied in Parkinson's physiotherapy — and cautioning that study designs and training methods vary widely, so results must be read carefully.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — narrative review; useful synthesis, appropriately cautious.</p>
-      </div>
+    <h2 class="section-head">F</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">Fox, C., Ebersbach, G., Ramig, L., &amp; Sapir, S.</span> (2012). LSVT LOUD and LSVT BIG: Behavioral Treatment Programs for Speech and Body Movement in Parkinson Disease. <span class="ref-journal">Parkinson's Disease, 2012</span>, 391946.
+        <div class="ref-tags"><span class="ref-tag">Speech Context</span><span class="ref-tag">Theoretical Foundation</span></div>
+      </li>
+    </ul>
 
-      <div class="ref s-emerging">
-        <p class="cite-txt">The Role of Mental Imagery in Parkinson's Disease Rehabilitation. <em>Brain Sciences</em>. 2021;11(2):185. <span class="doi">doi:10.3390/brainsci11020185</span></p>
-        <p class="gloss">A balanced review of imagery approaches in Parkinson's, notably candid that results are mixed and that the best imagery method — content, modality, perspective — is not yet settled. Used on this site as a reminder to stay modest.</p>
-        <p class="strength"><span class="dot emerging"></span><b>Emerging</b> — synthesises a young, uneven literature.</p>
-      </div>
-    </div>
+    <h2 class="section-head">H</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">How, D., Wagner, H., &amp; Brach, M.</span> (2022). Using Motor Imagery to Access Alternative Attentional Strategies When Navigating Environmental Boundaries to Prevent Freezing of Gait — A Perspective. <span class="ref-journal">Frontiers in Human Neuroscience, 16</span>, 750612.
+        <div class="ref-doi"><a href="https://doi.org/10.3389/fnhum.2022.750612" target="_blank" rel="noopener">doi.org/10.3389/fnhum.2022.750612</a></div>
+        <div class="ref-tags"><span class="ref-tag">Walking Freely</span><span class="ref-tag">Theoretical Foundation</span></div>
+      </li>
+    </ul>
+
+    <h2 class="section-head">K</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">Kashif, M., Ahmad, A., Mohseni Bandpei, M. A., et al.</span> (2022a). Combined effects of virtual reality techniques and motor imagery on balance, motor function and activities of daily living in patients with Parkinson's disease: A randomized controlled trial. <span class="ref-journal">BMC Geriatrics, 22</span>, 381.
+        <div class="ref-doi"><a href="https://doi.org/10.1186/s12877-022-03035-1" target="_blank" rel="noopener">doi.org/10.1186/s12877-022-03035-1</a></div>
+        <div class="ref-tags"><span class="ref-tag">Finding Flow</span><span class="ref-tag">Steady Ground</span><span class="ref-tag">Clinical Evidence</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">Kashif, M., Ahmad, A., Mohseni Bandpei, M. A., et al.</span> (2022b). A Randomized Controlled Trial of Motor Imagery Combined with Virtual Reality Techniques in Patients with Parkinson's Disease. <span class="ref-journal">Journal of Personalized Medicine, 12</span>(3), 450.
+        <div class="ref-doi"><a href="https://doi.org/10.3390/jpm12030450" target="_blank" rel="noopener">doi.org/10.3390/jpm12030450</a></div>
+        <div class="ref-tags"><span class="ref-tag">Finding Flow</span><span class="ref-tag">Clinical Evidence</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">Kwok, J. Y. Y., Kwan, J. C. Y., Auyeung, M., Mok, V. C. T., Lau, C. K. Y., Choi, K. C., &amp; Chan, H. Y. L.</span> (2019). Effects of Mindfulness Yoga vs Stretching and Resistance Training Exercises on Anxiety and Depression for People With Parkinson Disease: A Randomized Clinical Trial. <span class="ref-journal">JAMA Neurology, 76</span>(7), 755–763.
+        <div class="ref-doi"><a href="https://doi.org/10.1001/jamaneurol.2019.0534" target="_blank" rel="noopener">doi.org/10.1001/jamaneurol.2019.0534</a></div>
+        <div class="ref-tags"><span class="ref-tag">Calm Beneath the Storm</span><span class="ref-tag">Clinical Evidence</span></div>
+      </li>
+    </ul>
+
+    <h2 class="section-head">M</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">Malouin, F., Richards, C. L., Jackson, P. L., Lafleur, M. F., Durand, A., &amp; Doyon, J.</span> (2007). The Kinesthetic and Visual Imagery Questionnaire (KVIQ) for assessing motor imagery in persons with physical disabilities: A reliability and construct validity study. <span class="ref-journal">Journal of Neurologic Physical Therapy, 31</span>(1), 20–29.
+        <div class="ref-doi"><a href="https://doi.org/10.1097/01.NPT.0000260567.24122.64" target="_blank" rel="noopener">doi.org/10.1097/01.NPT.0000260567.24122.64</a></div>
+        <div class="ref-tags"><span class="ref-tag">Research Page</span><span class="ref-tag">Imagery Ability</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">Mezzarobba, S., Bonassi, G., Avanzino, L., &amp; Pelosin, E.</span> (2024). Action Observation and Motor Imagery as a Treatment in Patients with Parkinson's Disease. <span class="ref-journal">Journal of Parkinson's Disease, 2024</span>.
+        <div class="ref-doi"><a href="https://doi.org/10.3233/JPD-230219" target="_blank" rel="noopener">doi.org/10.3233/JPD-230219</a></div>
+        <div class="ref-tags"><span class="ref-tag">Research Page</span><span class="ref-tag">Narrative Review</span></div>
+      </li>
+    </ul>
+
+    <h2 class="section-head">N</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">Narayana, S., Fox, P. T., Zhang, W., et al.</span> (2010). Neural correlates of efficacy of voice therapy in Parkinson's disease identified by performance–correlation analysis. <span class="ref-journal">Human Brain Mapping, 31</span>(2), 222–236.
+        <div class="ref-tags"><span class="ref-tag">Speech Context</span><span class="ref-tag">Brain Imaging</span></div>
+      </li>
+    </ul>
+
+    <h2 class="section-head">P</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">Pelosin, E., Bove, M., Ruggeri, P., Avanzino, L., &amp; Abbruzzese, G.</span> (2013). Reduction of bradykinesia of finger movements by a single session of action observation in Parkinson disease. <span class="ref-journal">Neurorehabilitation and Neural Repair, 27</span>(6), 552–560.
+        <div class="ref-tags"><span class="ref-tag">Finding Flow</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">Pettenuzzo, T. S. A., Estivalet, K. M., Cabeleira, M. E. P., Lahude, A. B., Righi, N. C., Mendes, L. O., &amp; Cechetti, F.</span> (2025). Updates on Motor Imagery and Action Observation in Parkinson's Disease Motor Rehabilitation: A Systematic Review and Meta-analysis. <span class="ref-journal">NeuroRehabilitation, 56</span>(4), 438–450.
+        <div class="ref-doi"><a href="https://doi.org/10.1177/10538135251325459" target="_blank" rel="noopener">doi.org/10.1177/10538135251325459</a></div>
+        <div class="ref-tags"><span class="ref-tag">Walking Freely</span><span class="ref-tag">Steady Ground</span><span class="ref-tag">Key Null Result</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">Pickut, B. A., Van Hecke, W., Kerckhofs, E., et al.</span> (2013). Mindfulness based intervention in Parkinson's disease leads to structural brain changes on MRI: A randomized controlled longitudinal trial. <span class="ref-journal">Clinical Neurology and Neurosurgery, 115</span>(12), 2419–2425.
+        <div class="ref-tags"><span class="ref-tag">Calm Beneath the Storm</span><span class="ref-tag">Brain Imaging</span></div>
+      </li>
+    </ul>
+
+    <h2 class="section-head">R</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">Ramig, L. O., Sapir, S., Countryman, S., et al.</span> (2001). Intensive voice treatment (LSVT) for patients with Parkinson's disease: A 2 year follow up. <span class="ref-journal">Journal of Neurology, Neurosurgery &amp; Psychiatry, 71</span>(4), 493–498.
+        <div class="ref-tags"><span class="ref-tag">Speech Context</span><span class="ref-tag">Clinical Evidence</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">Readman, M. R., Wan, M. W., Poliakoff, E., et al.</span> (2023). Motor imagery vividness and symptom severity in Parkinson's disease. <span class="ref-journal">Journal of Neuropsychology, 17</span>(3), 460–476.
+        <div class="ref-doi"><a href="https://doi.org/10.1111/jnp.12293" target="_blank" rel="noopener">doi.org/10.1111/jnp.12293</a></div>
+        <div class="ref-tags"><span class="ref-tag">Research Page</span><span class="ref-tag">Imagery Ability</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">The Role of Mental Imagery in Parkinson's Disease Rehabilitation.</span> (2021). <span class="ref-journal">Brain Sciences, 11</span>(2), 185.
+        <div class="ref-doi"><a href="https://doi.org/10.3390/brainsci11020185" target="_blank" rel="noopener">doi.org/10.3390/brainsci11020185</a></div>
+        <div class="ref-tags"><span class="ref-tag">Research Page</span><span class="ref-tag">Narrative Review</span></div>
+      </li>
+    </ul>
+
+    <h2 class="section-head">S</h2>
+    <ul class="ref-list">
+      <li class="ref-item">
+        <span class="ref-authors">Schlesinger, I., Benyakov, O., Erikh, I., Suraiya, S., &amp; Schiller, Y.</span> (2009). Parkinson's disease tremor is diminished with relaxation guided imagery. <span class="ref-journal">Movement Disorders, 24</span>(14), 2059–2062.
+        <div class="ref-tags"><span class="ref-tag">Calm Beneath the Storm</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">Schlesinger, I., Benyakov, O., Erikh, I., &amp; Nassar, M.</span> (2014). Relaxation Guided Imagery Reduces Motor Fluctuations in Parkinson's Disease. <span class="ref-journal">Journal of Parkinson's Disease, 4</span>(3), 431–436.
+        <div class="ref-doi"><a href="https://doi.org/10.3233/JPD-130338" target="_blank" rel="noopener">doi.org/10.3233/JPD-130338</a></div>
+        <div class="ref-tags"><span class="ref-tag">Calm Beneath the Storm</span><span class="ref-tag">Clinical Evidence</span></div>
+      </li>
+      <li class="ref-item">
+        <span class="ref-authors">Snijders, A. H., Leunissen, I., Bakker, M., Overeem, S., Helmich, R. C., Bloem, B. R., &amp; Toni, I.</span> (2011). Gait-related cerebral alterations in patients with Parkinson's disease with freezing of gait. <span class="ref-journal">Brain, 134</span>(1), 59–72.
+        <div class="ref-doi"><a href="https://doi.org/10.1093/brain/awq324" target="_blank" rel="noopener">doi.org/10.1093/brain/awq324</a></div>
+        <div class="ref-tags"><span class="ref-tag">Walking Freely</span><span class="ref-tag">Brain Imaging</span></div>
+      </li>
+    </ul>
+
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="ref-group">
-      <div class="grp-head"><h3>Gait &amp; freezing of gait</h3><span class="maps">supports · Walking Freely</span></div>
-      <p class="grp-intro">The most-studied imagery target in Parkinson's. The mechanistic and imaging work is the strongest part; the clinical outcome trials are genuinely mixed, which is why Walking Freely is badged Moderate rather than higher.</p>
-
-      <div class="ref s-moderate">
-        <p class="cite-txt">Snijders AH, Leunissen I, Bakker M, Overeem S, Helmich RC, Bloem BR, Toni I. Gait-related cerebral alterations in patients with Parkinson's disease with freezing of gait. <em>Brain</em>. 2011;134(1):59–72. <span class="doi">doi:10.1093/brain/awq324</span></p>
-        <p class="gloss">Using imagined walking in an MRI scanner, found altered activity in a gait-related brainstem region (the mesencephalic locomotor region) that tracked with freezing severity. A landmark demonstration that motor imagery of gait can probe the freezing circuitry — mechanistic, not a treatment study.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — strong imaging evidence for mechanism; no treatment outcome.</p>
-      </div>
-
-      <div class="ref s-emerging">
-        <p class="cite-txt">How D, Wagner H, Brach M. Using Motor Imagery to Access Alternative Attentional Strategies When Navigating Environmental Boundaries to Prevent Freezing of Gait — A Perspective. <em>Frontiers in Human Neuroscience</em>. 2022;16:750612. <span class="doi">doi:10.3389/fnhum.2022.750612</span></p>
-        <p class="gloss">The rationale behind the "line on the floor at the doorway" in Walking Freely: because freezing clusters at thresholds, imagery may let a person rehearse an attention- or cue-based route through those triggers. A reasoned perspective that is candid about the open questions — not a trial.</p>
-        <p class="strength"><span class="dot emerging"></span><b>Emerging</b> — perspective piece; provides rationale, not proof.</p>
-      </div>
-
-      <div class="ref s-moderate">
-        <p class="cite-txt">Pettenuzzo TSA, Estivalet KM, Cabeleira MEP, Lahude AB, Righi NC, Mendes LO, Cechetti F. Updates on Motor Imagery and Action Observation in Parkinson's Disease Motor Rehabilitation: A Systematic Review and Meta-analysis. <em>NeuroRehabilitation</em>. 2025;56(4):438–450. <span class="doi">doi:10.1177/10538135251325459</span></p>
-        <p class="gloss">The most recent and most direct synthesis: six trials, 152 participants, with the whole-body motor score (UPDRS-III) as the primary outcome. It found <em>no significant motor improvement</em> from motor imagery or action observation, either on medication (MD −0.81, p = 0.77) or off it (MD 0.53, p = 0.75). This is the null result that anchors the site's evidence framing and the reason no practice claims to improve overall motor symptoms.</p>
-        <p class="strength"><span class="dot emerging"></span><b>Key null result</b> — the direct measure of motor benefit came back non-significant.</p>
-      </div>
-
-      <div class="ref s-emerging">
-        <p class="cite-txt">Bezerra PT, Santiago LM, Silva IA, Souza AA, Pegado CL, Damascena CM, Ribeiro TS, Lindquist ARR. Action observation and motor imagery have no effect on balance and freezing of gait in Parkinson's disease: a randomized controlled trial. <em>European Journal of Physical and Rehabilitation Medicine</em>. 2022;58(5):715–722. <span class="doi">doi:10.23736/S1973-9087.22.07313-0</span></p>
-        <p class="gloss">Included deliberately: a well-conducted RCT that found no benefit on freezing or balance. This is the counter-evidence, and it is why the programme does not claim imagery treats freezing.</p>
-        <p class="strength"><span class="dot emerging"></span><b>Counter-evidence</b> — a null result that tempers the positive findings above.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="ref-group">
-      <div class="grp-head"><h3>Bradykinesia &amp; movement initiation</h3><span class="maps">supports · Finding Flow</span></div>
-      <p class="grp-intro">The best <em>outcome</em> signals of the motor domains — but with an important catch: the strongest trials bundle imagery with virtual reality, so imagery's own contribution can't be isolated.</p>
-
-      <div class="ref s-moderate">
-        <p class="cite-txt">Kashif M, Ahmad A, Mohseni Bandpei MA, et al. A Randomized Controlled Trial of Motor Imagery Combined with Virtual Reality Techniques in Patients with Parkinson's Disease. <em>Journal of Personalized Medicine</em>. 2022;12(3):450. <span class="doi">doi:10.3390/jpm12030450</span></p>
-        <p class="gloss">Motor imagery plus virtual reality added to routine physiotherapy improved bradykinesia, rigidity, tremor, posture, and gait more than physiotherapy alone across 12 weeks. Promising — but imagery and VR were combined, so the benefit can't be attributed to imagery on its own.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — positive RCT, but imagery confounded with VR.</p>
-      </div>
-
-      <div class="ref s-moderate">
-        <p class="cite-txt">Kashif M, Ahmad A, Mohseni Bandpei MA, et al. Combined effects of virtual reality techniques and motor imagery on balance, motor function and activities of daily living in patients with Parkinson's disease: a randomized controlled trial. <em>BMC Geriatrics</em>. 2022;22:381. <span class="doi">doi:10.1186/s12877-022-03035-1</span></p>
-        <p class="gloss">Companion trial from the same group, reporting gains in motor function, balance, and daily-living activities. Same strength and same caveat: the imagery-plus-VR bundle prevents isolating imagery's effect.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — positive RCT; imagery bundled with VR.</p>
-      </div>
-
-      <div class="ref s-emerging">
-        <p class="cite-txt">Pelosin E, Bove M, Ruggeri P, Avanzino L, Abbruzzese G. Reduction of bradykinesia of finger movements by a single session of action observation in Parkinson disease. <em>Neurorehabilitation and Neural Repair</em>. 2013;27(6):552–560.</p>
-        <p class="gloss">A single session of action observation reduced finger-movement slowness. Small and short-term, but a clean demonstration that watching (a close cousin of imagery) can nudge bradykinesia.</p>
-        <p class="strength"><span class="dot emerging"></span><b>Emerging</b> — small, single-session, action observation rather than imagery.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="ref-group">
-      <div class="grp-head"><h3>Fine motor &amp; hand movement</h3><span class="maps">supports · The Steady Hand</span></div>
-      <p class="grp-intro">Thinner than the gait or bradykinesia evidence — mostly small studies of hand amplitude and feasibility work. Honestly the lightest of the motor practices.</p>
-
-      <div class="ref s-emerging">
-        <p class="cite-txt">Bek J, Gowen E, Vogt S, Crawford TJ, Poliakoff E. Combined action observation and motor imagery influences hand movement amplitude in Parkinson's disease. <em>Parkinsonism &amp; Related Disorders</em>. 2019;61:126–131. <span class="doi">doi:10.1016/j.parkreldis.2018.11.001</span></p>
-        <p class="gloss">Combining observation and imagery affected the size of hand movements in Parkinson's — a plausible route to the reduced-amplitude problems behind small handwriting. Early and small.</p>
-        <p class="strength"><span class="dot emerging"></span><b>Emerging</b> — small experimental study.</p>
-      </div>
-
-      <div class="ref s-emerging">
-        <p class="cite-txt">Bek J, Holmes PS, Craig CE, Franklin ZC, Sullivan M, Webb J, Crawford TJ, Vogt S, Gowen E, Poliakoff E. Action Imagery and Observation in Neurorehabilitation for Parkinson's Disease (ACTION-PD): Development of a User-Informed Home Training Intervention to Improve Functional Hand Movements. <em>Parkinson's Disease</em>. 2021;2021:4559519. <span class="doi">doi:10.1155/2021/4559519</span></p>
-        <p class="gloss">Development and pilot testing of a home-based observation-and-imagery programme for functional hand movements, designed with input from people with Parkinson's. Feasibility and design, not yet a definitive efficacy result.</p>
-        <p class="strength"><span class="dot emerging"></span><b>Emerging</b> — intervention-development and pilot work.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="ref-group">
-      <div class="grp-head"><h3>Balance &amp; postural stability</h3><span class="maps">supports · Steady Ground</span></div>
-      <p class="grp-intro">Balance is usually studied alongside gait. The signals are the same low-to-moderate certainty, drawn largely from the sources already listed under gait and bradykinesia.</p>
-
-      <div class="ref s-emerging">
-        <p class="cite-txt">See also: Pettenuzzo et al. (2025) and Kashif et al. (2022), listed above, both of which report balance outcomes.</p>
-        <p class="gloss">Motor imagery showed low-certainty balance improvements in the pooled analysis, and the imagery-plus-VR trials reported balance-confidence gains. As with gait, the direction is hopeful and the certainty is limited.</p>
-        <p class="strength"><span class="dot emerging"></span><b>Emerging</b> — balance findings are secondary outcomes with low certainty.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="ref-group">
-      <div class="grp-head"><h3>Non-motor wellbeing — anxiety, mood, "off"-period distress</h3><span class="maps">supports · Calm Beneath the Storm</span></div>
-      <p class="grp-intro">Two strands, unequal in strength: a broader and firmer base for mindfulness reducing anxiety and depression, and a narrower, preliminary signal for relaxation guided imagery specifically.</p>
-
-      <div class="ref s-emerging">
-        <p class="cite-txt">Schlesinger I, Benyakov O, Erikh I, Nassar M. Relaxation Guided Imagery Reduces Motor Fluctuations in Parkinson's Disease. <em>Journal of Parkinson's Disease</em>. 2014;4(3):431–436. <span class="doi">doi:10.3233/JPD-130338</span></p>
-        <p class="gloss">A pilot (21 enrolled, 19 completed). Listening to a relaxation guided imagery recording raised the proportion of "on" time from about 48% to 63% versus baseline, where relaxing music did not — but the gain at three months did not reach statistical significance. Genuinely intriguing, and genuinely preliminary. This is why Calm Beneath the Storm never claims to lengthen "on" time or alter the medication cycle.</p>
-        <p class="strength"><span class="dot emerging"></span><b>Emerging</b> — small uncontrolled pilot; short-term signal only.</p>
-      </div>
-
-      <div class="ref s-emerging">
-        <p class="cite-txt">Schlesinger I, Benyakov O, Erikh I, Suraiya S, Schiller Y. Parkinson's disease tremor is diminished with relaxation guided imagery. <em>Movement Disorders</em>. 2009;24(14):2059–2062.</p>
-        <p class="gloss">An earlier small study from the same group in which relaxation guided imagery temporarily reduced tremor. Supportive background for a relaxation practice; not a basis for a tremor claim.</p>
-        <p class="strength"><span class="dot emerging"></span><b>Emerging</b> — small, short-lived effect.</p>
-      </div>
-
-      <div class="ref s-moderate">
-        <p class="cite-txt">Kwok JYY, Kwan JCY, Auyeung M, Mok VCT, Lau CKY, Choi KC, Chan HYL. Effects of Mindfulness Yoga vs Stretching and Resistance Training Exercises on Anxiety and Depression for People With Parkinson Disease: A Randomized Clinical Trial. <em>JAMA Neurology</em>. 2019;76(7):755–763. <span class="doi">doi:10.1001/jamaneurol.2019.0534</span></p>
-        <p class="gloss">A randomised trial in which mindfulness yoga reduced anxiety and depressive symptoms — and improved quality of life — more than conventional stretching and resistance training. The firmest evidence behind the idea of a settling practice, though it tests mindfulness yoga, not this specific imagery script.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — good RCT, but for mindfulness yoga as a category, not this practice.</p>
-      </div>
-
-      <div class="ref s-moderate">
-        <p class="cite-txt">Dissanayaka NNW, Idu Jion F, Pachana NA, et al. Mindfulness for Motor and Nonmotor Dysfunctions in Parkinson's Disease. <em>Parkinson's Disease</em>. 2016;2016:7109052.</p>
-        <p class="gloss">A tailored mindfulness programme associated with reduced anxiety and depression and some cognitive and motor gains. Part of the firmer mindfulness strand — though for mindfulness broadly, not for this specific imagery script.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — for mindfulness as a category, not this practice specifically.</p>
-      </div>
-
-      <div class="ref s-moderate">
-        <p class="cite-txt">Pickut BA, Van Hecke W, Kerckhofs E, et al. Mindfulness based intervention in Parkinson's disease leads to structural brain changes on MRI: a randomized controlled longitudinal trial. <em>Clinical Neurology and Neurosurgery</em>. 2013;115(12):2419–2425.</p>
-        <p class="gloss">A randomised trial reporting grey-matter density changes after mindfulness training in Parkinson's — evidence that the practice can register in the brain, though structural change is not the same as symptom benefit.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — RCT with imaging outcomes; mindfulness, not imagery.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="ref-group">
-      <div class="grp-head"><h3>Speech &amp; voice — why there is no imagery practice for this</h3><span class="maps">context, not a practice</span></div>
-      <p class="grp-intro">The programme deliberately has no guided-imagery voice practice. For hypophonia (soft speech), an established, effortful, gold-standard treatment already exists, and it works by a different mechanism than imagery. Sending people to it is the honest thing to do.</p>
-
-      <div class="ref s-strong">
-        <p class="cite-txt">Ramig LO, Sapir S, Countryman S, et al. Intensive voice treatment (LSVT) for patients with Parkinson's disease: a 2 year follow up. <em>Journal of Neurology, Neurosurgery &amp; Psychiatry</em>. 2001;71(4):493–498.</p>
-        <p class="gloss">A foundational trial showing that intensive voice treatment (LSVT LOUD) produced improvements in vocal loudness that were maintained at two years — a durability that behavioural speech treatments rarely achieve.</p>
-        <p class="strength"><span class="dot strong"></span><b>Strong</b> — part of the established standard of care for hypophonia in Parkinson's.</p>
-      </div>
-
-      <div class="ref s-strong">
-        <p class="cite-txt">Fox C, Ebersbach G, Ramig L, Sapir S. LSVT LOUD and LSVT BIG: Behavioral Treatment Programs for Speech and Body Movement in Parkinson Disease. <em>Parkinson's Disease</em>. 2012;2012:391946.</p>
-        <p class="gloss">Describes the mechanism and evidence base for LSVT LOUD (voice) and LSVT BIG (movement) — intensive, high-effort recalibration, a fundamentally different approach from mental rehearsal. Explains why imagery is not offered as a substitute.</p>
-        <p class="strength"><span class="dot strong"></span><b>Strong</b> — establishes LSVT LOUD as the gold-standard voice treatment.</p>
-      </div>
-
-      <div class="ref s-moderate">
-        <p class="cite-txt">Narayana S, Fox PT, Zhang W, et al. Neural correlates of efficacy of voice therapy in Parkinson's disease identified by performance–correlation analysis. <em>Human Brain Mapping</em>. 2010;31(2):222–236.</p>
-        <p class="gloss">Imaging study linking LSVT LOUD's benefit to changes in speech-related brain activity — included to show the mechanism is specific to intensive voice therapy, reinforcing why imagery is not a stand-in for it.</p>
-        <p class="strength"><span class="dot moderate"></span><b>Moderate</b> — mechanistic imaging support for LSVT LOUD.</p>
-      </div>
-
-      <div class="caveat" style="margin-top:8px;">
-        <p><strong>If soft or unclear speech is a concern,</strong> ask your neurologist or GP for a referral to a speech-language therapist and about LSVT LOUD specifically. Guided imagery has no role to play in place of it.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">A closing note</div>
-    <h2 class="section-title">On keeping this honest</h2>
-    <p>Guided imagery in Parkinson's is a young and uneven field. Some of these findings are hopeful; several are small, preliminary, or point in different directions; one is included precisely because it found nothing. Nowhere on this site is imagery offered as a replacement for medication, physiotherapy, cueing strategies, or speech therapy — it is a complement, and every practice page says so.</p>
-    <div class="caveat">
-      <p><strong>How this list is maintained.</strong> Each source above has been checked against the published record, and any finding that later fails to hold up — or is contradicted by stronger evidence — will be updated or removed rather than left standing. If you spot an error, the <a href="contact.html">contact page</a> is the place to flag it.</p>
-    </div>
-  </div>
-</section>
 
 <footer style="background:#1A1810;padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;gap:1rem;">
   <a href="index.html" style="font-family:'Lora',serif;font-size:0.9rem;color:#5A5040;text-decoration:none;">Living Beyond <span style="color:var(--gold)">Parkinson's</span></a>
