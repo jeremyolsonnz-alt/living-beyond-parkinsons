@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Living Beyond Parkinson's — Information for Clinicians &amp; Rehabilitation Teams</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  :root{
+    --cream:#F5F0E8; --warm-white:#FAF8F4; --charcoal:#2A2820; --bark:#5C4A2A;
+    --gold:#C8963C; --muted:#7A7060; --border:#E0D8C8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'DM Sans',sans-serif; background:#E8E4DC; color:var(--charcoal);
+    display:flex; flex-direction:column; align-items:center; padding:40px 20px; gap:28px;
+  }
+
+  /* Screen-only instructions */
+  .instructions{
+    background:white; border-radius:6px; padding:20px 28px; max-width:794px; width:100%;
+    font-size:13px; color:#4A4438; line-height:1.8;
+  }
+  .instructions h2{font-family:'Lora',serif; font-size:16px; margin-bottom:10px; color:var(--charcoal);}
+  .instructions ol{padding-left:18px;}
+  .print-btn{
+    margin-top:14px; display:inline-block; background:var(--gold); color:var(--charcoal);
+    border:none; padding:8px 18px; font-size:12px; letter-spacing:0.06em; text-transform:uppercase;
+    font-family:'DM Sans',sans-serif; font-weight:500; cursor:pointer; border-radius:3px;
+  }
+
+  /* A4 sheet: 210mm × 297mm at 96dpi ≈ 794 × 1123px — sized to fit exactly one page */
+  .sheet{
+    width:794px; height:1123px; background:var(--warm-white);
+    box-shadow:0 8px 32px rgba(0,0,0,0.2); display:flex; flex-direction:column; overflow:hidden;
+  }
+
+  .band{background:var(--charcoal); padding:30px 52px 24px; color:var(--cream); position:relative;}
+  .band::after{content:'';position:absolute; bottom:0; left:0; right:0; height:4px; background:var(--gold);}
+  .band-eyebrow{font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:8px;}
+  .band-title{font-family:'Lora',serif; font-size:1.75rem; font-weight:400; color:var(--cream); margin-bottom:7px;}
+  .band-title span{color:var(--gold);}
+  .band-sub{font-size:0.88rem; color:#B8AE98; line-height:1.55; max-width:590px;}
+
+  .sheet-body{padding:26px 52px 20px; flex:1; display:flex; flex-direction:column; gap:18px; min-height:0; overflow:hidden;}
+
+  .lede{
+    font-family:'Lora',serif; font-style:italic; font-size:0.95rem; color:var(--bark);
+    line-height:1.6; border-left:3px solid var(--gold); padding-left:20px;
+  }
+
+  h2.section-head{
+    font-family:'Lora',serif; font-size:0.98rem; font-weight:400; color:var(--charcoal);
+    padding-bottom:6px; border-bottom:1px solid var(--border); margin-bottom:4px;
+  }
+  p.body-text{font-size:0.8rem; color:#4A4438; line-height:1.6;}
+
+  .pillars{display:flex; flex-direction:column; gap:12px;}
+  .pillar-row{display:flex; gap:14px; align-items:flex-start;}
+  .pillar-num{font-size:0.65rem; letter-spacing:0.09em; color:var(--gold); text-transform:uppercase; white-space:nowrap; padding-top:2px; width:70px; flex-shrink:0;}
+  .pillar-txt h3{font-family:'Lora',serif; font-size:0.92rem; font-weight:400; color:var(--charcoal); margin-bottom:3px;}
+  .pillar-txt p{font-size:0.79rem; color:var(--muted); line-height:1.55;}
+
+  /* Practice list inside Pillar Two */
+  .practice-list{display:flex; flex-direction:column; gap:3px; margin-top:8px;}
+  .practice-item{display:flex; gap:8px; font-size:0.76rem; color:#4A4438; line-height:1.5;}
+  .practice-item .dash{color:var(--gold); flex-shrink:0;}
+  .practice-item .nm{white-space:nowrap;}
+  .practice-item .dom{color:var(--muted);}
+  .practice-item .ev{font-size:0.64rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); white-space:nowrap; margin-left:auto; padding-left:10px;}
+
+  .honest-note{
+    background:rgba(200,150,60,0.06); border-left:3px solid var(--gold); padding:15px 24px;
+  }
+  .honest-note-label{font-size:0.65rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--gold); margin-bottom:7px;}
+  .honest-note p{font-size:0.78rem; color:#4A4438; line-height:1.55; margin-bottom:6px;}
+  .honest-note p:last-child{margin-bottom:0;}
+
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+
+  .author-block p{font-size:0.79rem; color:#4A4438; line-height:1.58;}
+
+  .use-list{list-style:none; display:flex; flex-direction:column; gap:8px;}
+  .use-list li{font-size:0.79rem; color:#4A4438; line-height:1.5; padding-left:15px; position:relative;}
+  .use-list li::before{content:'—'; position:absolute; left:0; color:var(--gold);}
+
+  .sheet-footer{
+    margin-top:auto; border-top:1px solid var(--border); padding:16px 52px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px; background:var(--cream);
+    flex-shrink:0;
+  }
+  .footer-left{display:flex; flex-direction:column; gap:3px;}
+  .footer-left .site-name{font-family:'Lora',serif; font-size:1.02rem; color:var(--charcoal);}
+  .footer-left .site-url{font-size:0.85rem; color:var(--bark); letter-spacing:0.02em;}
+  .footer-left .free-label{font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--muted); margin-top:4px;}
+  .footer-left .contact-line{font-size:0.78rem; color:var(--muted); margin-top:2px;}
+  .qr-block{display:flex; flex-direction:column; align-items:center; flex-shrink:0;}
+  .qr-wrapper{background:white; padding:7px; border-radius:4px; width:84px; height:84px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border);}
+  .qr-wrapper canvas, .qr-wrapper img{width:70px !important; height:70px !important;}
+  .scan-label{font-size:0.65rem; letter-spacing:0.07em; text-transform:uppercase; color:var(--muted); text-align:center; margin-top:6px;}
+
+  @media print{
+    @page{ size:A4; margin:0; }
+    body{ background:white; padding:0; }
+    .instructions{ display:none; }
+    .sheet{ box-shadow:none; width:100%; height:100vh; }
+    .band{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .honest-note{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="instructions">
+    <h2>A4 Clinician Handout — print or save as PDF</h2>
+    <ol>
+      <li>Press <strong>Ctrl+P</strong> (or <strong>Cmd+P</strong> on Mac)</li>
+      <li>Destination: your printer, or <strong>Save as PDF</strong></li>
+      <li>Paper size: <strong>A4</strong>, Margins: <strong>None</strong>, Scale: <strong>100%</strong></li>
+      <li>Tick <strong>Background graphics</strong> so the colours and QR code print</li>
+      <li>Print single-sided, one copy per patient or noticeboard</li>
+    </ol>
+    <button class="print-btn" onclick="window.print()">Print this page</button>
+  </div>
+
+  <div class="sheet">
+
+    <div class="band">
+      <div class="band-eyebrow">For Clinicians &amp; Rehabilitation Teams</div>
+      <div class="band-title">Living Beyond <span>Parkinson's</span></div>
+      <div class="band-sub">A free, self-directed resource you can hand to a patient — at diagnosis, in a resource folder, or at a movement disorders clinic noticeboard.</div>
+    </div>
+
+    <div class="sheet-body">
+
+      <p class="lede">Five guided imagery practices for living well with Parkinson's — offered to the body as it is now, with no former self to chase back. There is no order to follow and nothing to complete.</p>
+
+      <div>
+        <h2 class="section-head">What the site offers</h2>
+        <div class="pillars" style="margin-top:12px;">
+          <div class="pillar-row">
+            <div class="pillar-num">Pillar One</div>
+            <div class="pillar-txt">
+              <h3>Quality of Life Research</h3>
+              <p>The research base behind the programme, written in plain language for patients and families, with every source gathered in a public bibliography.</p>
+            </div>
+          </div>
+          <div class="pillar-row">
+            <div class="pillar-num">Pillar Two</div>
+            <div class="pillar-txt">
+              <h3>Guided Imagery Programme</h3>
+              <p>Five audio-guided practices sharing one four-part structure, each carrying an honest evidence badge.</p>
+              <div class="practice-list">
+                <div class="practice-item"><span class="dash">—</span><span class="nm">Walking Freely</span><span class="dom">· gait and freezing of gait</span><span class="ev">Moderate</span></div>
+                <div class="practice-item"><span class="dash">—</span><span class="nm">Finding Flow</span><span class="dom">· movement initiation, bradykinesia</span><span class="ev">Emerging</span></div>
+                <div class="practice-item"><span class="dash">—</span><span class="nm">Steady Ground</span><span class="dom">· balance and postural stability</span><span class="ev">Emerging</span></div>
+                <div class="practice-item"><span class="dash">—</span><span class="nm">The Steady Hand</span><span class="dom">· fine motor and handwriting</span><span class="ev">Emerging</span></div>
+                <div class="practice-item"><span class="dash">—</span><span class="nm">Calm Beneath the Storm</span><span class="dom">· anxiety, "off" periods, sleep</span><span class="ev">Emerging</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="honest-note">
+        <div class="honest-note-label">Framing you can rely on</div>
+        <p>Nothing on this site claims to slow, halt, or reverse Parkinson's. The practices are a complement to medication, physiotherapy, and the person's Parkinson's team — never a replacement — and patients are directed to continue all prescribed care.</p>
+        <p>The evidence is badged honestly rather than favourably: one practice is marked Moderate and four Emerging, and the site states plainly that the most recent meta-analysis contradicts a benefit for overall motor symptoms. The four-part structure is the author's own synthesis and has not been tested as a unit in any clinical trial.</p>
+        <p>The figure a person imagines is never a pre-Parkinson's self to chase back — it is an embodiment of ease, offered to the body as it is now. The non-motor practice sets the figure aside entirely, so that nobody is asked to "become" calm.</p>
+      </div>
+
+      <div class="two-col">
+        <div class="author-block">
+          <h2 class="section-head">About the author</h2>
+          <p style="margin-top:12px;">Jeremy Olson holds a Masters of Social Sciences (Psychology) from Waikato University, NZ. His graduate quality-of-life research was conducted at Deakin University under Prof Robert Cummins. He is not a clinician and does not have Parkinson's — the site is built as a researcher and educator working alongside people who do.</p>
+        </div>
+        <div>
+          <h2 class="section-head">Why teams hand this out</h2>
+          <ul class="use-list" style="margin-top:12px;">
+            <li>Free — no login, paywall, or cost to the patient</li>
+            <li>Self-directed — any pace, any device, nothing to finish</li>
+            <li>Honest about where the evidence is thin</li>
+            <li>Something for the hard hours, not only the good days</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sheet-footer">
+      <div class="footer-left">
+        <span class="site-name">Living Beyond Parkinson's</span>
+        <span class="site-url">livingbeyondparkinsons.com</span>
+        <span class="contact-line">jeremy@livingbeyondparkinsons.com</span>
+        <span class="free-label">Free · No paywall · No email required</span>
+      </div>
+      <div class="qr-block">
+        <div class="qr-wrapper" id="qrcode"></div>
+        <p class="scan-label">Scan to visit</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://livingbeyondparkinsons.com",
+      width: 80, height: 80,
+      colorDark: "#2A2820", colorLight: "#FFFFFF",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+
+</body>
+</html>

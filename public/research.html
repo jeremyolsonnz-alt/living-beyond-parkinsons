@@ -94,16 +94,10 @@
   .cta:hover{background:var(--gold);color:var(--warm-white);}
   .cta.solid{background:var(--charcoal);color:var(--warm-white);border-color:var(--charcoal);}
   .cta.solid:hover{background:var(--bark);border-color:var(--bark);}
-  footer{background:var(--charcoal);color:#C9C2B4;padding:44px 0 40px;font-size:.86rem;}
-  footer .brand{font-size:1.05rem;}
-  footer .brand span{color:var(--gold);}
-  footer p{margin:14px 0 0;line-height:1.6;max-width:60ch;}
-  footer a{color:var(--gold);text-decoration:none;}
-  .foot-links{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;}
-  .foot-links a{color:#C9C2B4;font-size:.8rem;font-variant:small-caps;letter-spacing:.06em;}
-  .foot-links a:hover{color:var(--gold);}
-
-  .free-line{color:var(--gold);font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-top:20px;}
+  footer{background:#1A1810;padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;gap:1rem;}
+  .footer-brand{font-family:'Lora',serif;font-size:0.9rem;color:#5A5040;text-decoration:none;}
+  .footer-brand span{color:var(--gold);}
+  .footer-copy{font-size:0.78rem;color:#444030;}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
 </style>
@@ -271,20 +265,8 @@
 </section>
 
 <footer>
-  <div class="wrap wide">
-    <div class="brand">Living Beyond <span>Parkinson's</span></div>
-    <p>Guided imagery and wellbeing practices for people living with Parkinson's disease. Built by Jeremy Olson, Auckland, New Zealand. This site offers supportive practices alongside medical care; it does not diagnose, treat, or replace the advice of your healthcare team.</p>
-    <nav class="foot-links" aria-label="Support and guidance">
-      <a href="newly-diagnosed.html">Just diagnosed?</a>
-      <a href="for-family-and-friends.html">For family &amp; friends</a>
-      <a href="when-nothing-happens.html">When nothing happens</a>
-      <a href="imagery-check.html">Imagery self-check</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="for-clinicians.html">For clinicians</a>
-      <a href="feedback.html">Feedback</a>
-    </nav>
-    <p class="free-line">Free · No paywall · No email required · No ads</p>
-  </div>
+  <a href="index.html" class="footer-brand">Living Beyond <span>Parkinson's</span></a>
+  <div class="footer-copy">© 2025–2026 Living Beyond Parkinson's · <a href="terms-parkinsons.html" style="color:#5A5040;text-decoration:none;border-bottom:1px solid rgba(200,150,60,0.15);">Terms of Use</a></div>
 </footer>
 
 <script>

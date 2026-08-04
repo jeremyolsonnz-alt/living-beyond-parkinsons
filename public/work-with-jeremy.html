@@ -67,6 +67,10 @@
   .detail-key{flex:0 0 130px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding-top:.15rem;}
   .detail-val{font-size:1rem;color:#4A4438;line-height:1.7;}
   @media(max-width:600px){.detail-key{flex:0 0 100px;}}
+  footer{background:#1A1810;padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;gap:1rem;}
+  .footer-brand{font-family:'Lora',serif;font-size:0.9rem;color:#5A5040;text-decoration:none;}
+  .footer-brand span{color:var(--gold);}
+  .footer-copy{font-size:0.78rem;color:#444030;}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
 </style>
@@ -163,9 +167,9 @@
   </div>
 </section>
 
-<footer style="background:#1A1810;padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;gap:1rem;">
-  <a href="index.html" style="font-family:'Lora',serif;font-size:0.9rem;color:#5A5040;text-decoration:none;">Living Beyond <span style="color:var(--gold)">Parkinson's</span></a>
-  <span style="font-size:0.78rem;color:#444030;">Free educational resource · Not a medical service · Always work with your clinical team</span>
+<footer>
+  <a href="index.html" class="footer-brand">Living Beyond <span>Parkinson's</span></a>
+  <div class="footer-copy">© 2025–2026 Living Beyond Parkinson's · <a href="terms-parkinsons.html" style="color:#5A5040;text-decoration:none;border-bottom:1px solid rgba(200,150,60,0.15);">Terms of Use</a></div>
 </footer>
 
 <script>
