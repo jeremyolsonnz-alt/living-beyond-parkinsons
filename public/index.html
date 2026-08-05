@@ -63,7 +63,7 @@
   }
   .hero-credential::before{content:'';display:block;width:32px;height:1px;background:var(--gold);}
   .hero h1{
-    font-family:'Lora',Georgia,serif;font-size:3.6rem;font-weight:500;
+    font-family:'Lora',Georgia,serif;font-size:clamp(2.1rem, 1.3rem + 2.7vw, 3.6rem);font-weight:500;
     line-height:1.05;color:var(--warm-white);margin:0 0 22px;
   }
   .hero h1 em{font-style:italic;color:var(--gold);}
@@ -91,9 +91,7 @@
   .hero-pillar p{font-size:.9rem;color:#A9A294;margin:0;line-height:1.55;}
   @media(max-width:860px){
     .hero-inner{grid-template-columns:1fr;gap:40px;padding:0 24px;}
-    .hero h1{font-size:2.8rem;}
   }
-  @media(max-width:480px){.hero h1{font-size:2.3rem;}}
 
   /* ---------- FOOTER (matches Stroke) ---------- */
   footer { background: #1A1810; padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); flex-wrap: wrap; gap: 1rem; }
