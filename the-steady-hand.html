@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Steady Hand — Living Beyond Parkinson's</title>
+<meta name="description" content="A guided motor imagery practice for fine motor control and handwriting (micrographia) in Parkinson's disease. Mental rehearsal offered alongside — never instead of — occupational therapy and your medical care.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F0E8;
+    --warm-white:#FAF8F4;
+    --charcoal:#2A2820;
+    --bark:#5C4A2A;
+    --gold:#C8963C;
+    --muted:#7A7060;
+    --border:#E0D8C8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream);color:var(--charcoal);font-family:'DM Sans',system-ui,sans-serif;font-weight:400;line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.2;color:var(--charcoal);}
+  a{color:var(--bark);}
+  .label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-variant:small-caps;font-weight:600;color:var(--gold);}
+  .nav{position:sticky;top:0;z-index:100;background:var(--charcoal);border-bottom:2px solid var(--gold);}
+  .nav-inner{margin:0;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:'Lora',serif;font-size:1.15rem;font-weight:500;color:var(--warm-white);text-decoration:none;letter-spacing:.01em;}
+  .brand span{color:var(--gold);}
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{color:var(--warm-white);text-decoration:none;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-variant:small-caps;font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s;}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold);}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--warm-white);margin:5px 0;transition:.25s;}
+  @media(max-width:860px){
+    .hamburger{display:block;}
+    .nav-links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--charcoal);border-bottom:2px solid var(--gold);max-height:0;overflow:hidden;transition:max-height .3s ease;}
+    .nav-links.open{max-height:420px;}
+    .nav-links li{width:100%;}
+    .nav-links a{display:block;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav-links a:hover,.nav-links a[aria-current="page"]{border-bottom-color:rgba(255,255,255,.08);}
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  .wide{max-width:1080px;}
+  .page-hero{background:var(--charcoal);border-bottom:1px solid rgba(255,255,255,.12);padding:72px 0 60px;}
+  .page-hero .breadcrumb{color:#A9A294;font-size:.85rem;margin-bottom:22px;}
+  .page-hero .breadcrumb a{color:#A9A294;text-decoration:none;}
+  .page-hero .breadcrumb a:hover{color:var(--gold);}
+  .page-hero h1{font-size:2.9rem;margin:14px 0 18px;color:var(--warm-white);}
+  .page-hero .lede{font-size:1.22rem;color:#C9C2B4;max-width:52ch;line-height:1.55;}
+  .practice-index{color:#A9A294;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-variant:small-caps;}
+  .badge{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--border);border-radius:2px;background:var(--cream);padding:7px 14px;margin-top:26px;font-size:.82rem;color:var(--charcoal);}
+  .badge .dot{width:10px;height:10px;border-radius:50%;}
+  .badge.emerging .dot{background:var(--gold);box-shadow:0 0 0 3px rgba(200,150,60,.18);}
+  .badge.moderate .dot{background:var(--bark);box-shadow:0 0 0 3px rgba(200,150,60,.30);}
+  .badge.strong .dot{background:var(--charcoal);box-shadow:0 0 0 3px rgba(200,150,60,.42);}
+  .badge strong{font-weight:600;}
+  .badge .tag{font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;color:var(--muted);}
+  section{padding:52px 0;}
+  section + section{border-top:1px solid var(--border);}
+  h2.section-title{font-size:1.9rem;margin:0 0 8px;}
+  .section-eyebrow{margin-bottom:6px;}
+  p{margin:0 0 20px;}
+  .practice-console{background:var(--charcoal);color:var(--warm-white);border-radius:4px;padding:30px 30px 26px;margin:8px 0 4px;}
+  .practice-console h3{color:var(--warm-white);font-size:1.3rem;margin:0 0 4px;}
+  .practice-console .console-sub{color:#C9C2B4;font-size:.9rem;margin:0 0 22px;}
+  .audio-shell{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:16px 18px;}
+  .audio-play{flex:0 0 auto;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:transparent;color:var(--gold);display:flex;align-items:center;justify-content:center;cursor:not-allowed;}
+  .audio-play svg{width:16px;height:16px;margin-left:2px;}
+  .audio-meta{flex:1;min-width:0;}
+  .audio-meta .track{font-size:.92rem;color:var(--warm-white);margin:0 0 6px;}
+  .audio-bar{height:4px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;}
+  .audio-bar i{display:block;width:0;height:100%;background:var(--gold);}
+  .audio-time{font-size:.75rem;color:#A9A294;margin-top:8px;letter-spacing:.04em;}
+  .placeholder-flag{margin-top:16px;font-size:.8rem;color:#C9C2B4;border-top:1px solid rgba(255,255,255,.1);padding-top:14px;line-height:1.55;}
+  .placeholder-flag strong{color:var(--gold);font-weight:600;}
+  .timing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:8px 0 0;}
+  .timing-grid .cell{background:var(--warm-white);padding:18px 16px;}
+  .timing-grid .cell .ph{font-family:'Lora',serif;font-size:1.05rem;color:var(--charcoal);margin-bottom:3px;}
+  .timing-grid .cell .mins{color:var(--gold);font-size:.82rem;letter-spacing:.1em;font-variant:small-caps;text-transform:uppercase;}
+  .timing-grid .cell .note{color:var(--muted);font-size:.82rem;margin-top:6px;line-height:1.4;}
+  @media(max-width:640px){.timing-grid{grid-template-columns:1fr 1fr;}}
+  .script-intro{color:var(--muted);font-size:.92rem;margin-bottom:8px;}
+  details.script{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;margin:0 0 14px;overflow:hidden;}
+  details.script > summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;align-items:baseline;gap:14px;}
+  details.script > summary::-webkit-details-marker{display:none;}
+  details.script > summary .phase-no{font-family:'Lora',serif;color:var(--gold);font-size:1.05rem;flex:0 0 auto;}
+  details.script > summary .phase-name{font-family:'Lora',serif;font-size:1.2rem;color:var(--charcoal);flex:1;}
+  details.script > summary .chev{flex:0 0 auto;color:var(--muted);transition:transform .25s;font-size:.9rem;}
+  details.script[open] > summary .chev{transform:rotate(90deg);}
+  .script-body{padding:2px 22px 24px;border-top:1px solid var(--border);}
+  .script-body .stage{color:var(--gold);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-variant:small-caps;font-weight:600;margin:20px 0 6px;}
+  .script-body p{color:#3D3A30;line-height:1.72;margin:0 0 16px;}
+  .script-body em{color:var(--bark);font-style:italic;}
+  .anatomy{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:0;overflow:hidden;margin:6px 0 0;}
+  .anatomy .frame{background:repeating-linear-gradient(45deg,#EDE6D8,#EDE6D8 12px,#E8E0D0 12px,#E8E0D0 24px);height:240px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);}
+  .anatomy .frame span{font-size:.9rem;max-width:34ch;line-height:1.5;}
+  .anatomy .cap{padding:16px 20px;font-size:.82rem;color:var(--muted);line-height:1.55;}
+  .anatomy .cap strong{color:var(--bark);font-weight:600;}
+  .academic-note{background:var(--warm-white);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;padding:24px 26px;margin:6px 0 0;}
+  .academic-note h4{font-size:1.05rem;margin:0 0 12px;}
+  .academic-note p{font-size:.95rem;color:#3D3A30;margin:0 0 14px;}
+  .academic-note p:last-child{margin-bottom:0;}
+  .academic-note .cite{font-size:.85rem;color:var(--muted);}
+  .academic-note a{color:var(--bark);}
+  .honest-callout{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin:6px 0 0;}
+  .honest-callout p{margin:0;font-size:.95rem;color:#3D3A30;}
+  .honest-callout p strong{color:var(--bark);}
+  .honest-callout + .honest-callout{margin-top:14px;}
+  /* ---------- CUE TOGGLE (See / Feel / Both) ---------- */
+  .cue-toggle{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:14px 16px;margin:2px 0 18px;}
+  .cue-toggle .ct-label{font-size:.85rem;color:var(--muted);}
+  .cue-toggle .ct-opts{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;}
+  .cue-toggle button{border:0;background:transparent;padding:8px 15px;font:inherit;font-size:.82rem;cursor:pointer;color:var(--bark);border-right:1px solid var(--border);transition:background .15s,color .15s;}
+  .cue-toggle button:last-child{border-right:0;}
+  .cue-toggle button[aria-pressed="true"]{background:var(--gold);color:var(--warm-white);}
+  .cue-toggle .ct-hint{flex-basis:100%;font-size:.8rem;color:var(--muted);margin:2px 0 0;line-height:1.5;}
+  .cue-toggle .ct-hint a{color:var(--bark);}
+  .exercise-nav{background:var(--warm-white);border-top:1px solid var(--border);padding:52px 0;}
+  .exercise-nav .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px;}
+  .ex-card{display:block;text-decoration:none;color:inherit;background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:20px 22px;transition:border-color .2s,transform .2s;}
+  .ex-card:hover{border-color:var(--gold);transform:translateY(-2px);}
+  .ex-card .ex-no{color:var(--gold);font-size:.72rem;letter-spacing:.14em;font-variant:small-caps;text-transform:uppercase;}
+  .ex-card .ex-name{font-family:'Lora',serif;font-size:1.18rem;margin:4px 0 4px;color:var(--charcoal);}
+  .ex-card .ex-dom{color:var(--muted);font-size:.86rem;}
+  .ex-card.current{border-color:var(--gold);background:var(--warm-white);}
+  .ex-card.current .ex-name{color:var(--bark);}
+  @media(max-width:640px){.exercise-nav .grid{grid-template-columns:1fr;}}
+  footer{background:#1A1810;padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;gap:1rem;}
+  .footer-brand{font-family:'Lora',serif;font-size:0.9rem;color:#5A5040;text-decoration:none;}
+  .footer-brand span{color:var(--gold);}
+  .footer-copy{font-size:0.78rem;color:#444030;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Living Beyond <span>Parkinson's</span></a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="guided-imagery.html" aria-current="page">Guided Imagery</a></li>
+      <li><a href="work-with-jeremy.html">Work with Jeremy</a></li>
+      <li><a href="bibliography.html">Bibliography</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="guided-imagery.html">Guided Imagery Programme</a> &nbsp;/&nbsp; Practice Four</div>
+    <div class="practice-index">Practice 4 of 5 &nbsp;·&nbsp; Fine motor &amp; handwriting</div>
+    <h1>The Steady Hand</h1>
+    <p class="lede">A mental rehearsal of the hand that stays full and fluid — the writing that keeps its size, the fingers that find the button — practised in imagination, as a companion to the occupational therapy that does the practical work.</p>
+    <div class="badge emerging" title="Evidence strength for this practice">
+      <span class="dot"></span>
+      <span><strong>Emerging evidence</strong> <span class="tag">·&nbsp;the lightest of the motor practices</span></span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">What this practice is for</div>
+    <h2 class="section-title">The writing that shrinks, and the fingers that fumble</h2>
+    <p>Parkinson's often reaches the hands in small, daily ways. Handwriting can start at a normal size and then tighten and shrink across a line or a page — a pattern called <em>micrographia</em>. Buttons, zips, cutlery, and coins can turn a quick task into a slow, effortful one. None of it is dramatic, and all of it can quietly wear on the ordinary business of a day.</p>
+    <p>The Steady Hand rehearses the opposite quality: a hand that moves fluidly, and writing that keeps its full size all the way along. Because imagined and real movement share circuitry — and because reduced movement <em>amplitude</em> is a core part of the problem — mentally rehearsing large, easy, flowing hand movements may help make a little more of that fullness available.</p>
+    <div class="honest-callout">
+      <p><strong>This is mental rehearsal — picture it, don't perform it.</strong> You'll be imagining the movements while your hands rest, not writing or manipulating objects during the practice. It's a rehearsal to do at rest, then carry into the real tasks separately.</p>
+    </div>
+    <div class="honest-callout">
+      <p><strong>Occupational therapy is the practical partner here.</strong> For hand function, handwriting, and daily tasks, an occupational therapist is the professional who can help most — with amplitude and handwriting strategies, adapted tools, and tailored exercises. Ask your GP or neurologist for a referral if fine-motor difficulties affect your day. This imagery practice sits alongside that work; it doesn't replace it, and it doesn't replace your medication, which often eases hand slowness as part of your dose cycle.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The practice</div>
+    <h2 class="section-title">Around fifteen minutes, at rest</h2>
+    <p>Settle comfortably, hands resting in your lap or by your sides. You'll be picturing the hand at work, not putting it to work — nothing to hold, nothing to write.</p>
+    <div class="practice-console">
+      <h3>The Steady Hand — full narration</h3>
+      <p class="console-sub">Guided audio, approximately 15 minutes</p>
+      <div class="audio-shell">
+        <button class="audio-play" aria-label="Audio placeholder — not yet available" disabled>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="audio-meta">
+          <p class="track">audio_hand.mp3</p>
+          <div class="audio-bar"><i></i></div>
+          <div class="audio-time">00:00 &nbsp;/&nbsp; 15:00</div>
+        </div>
+      </div>
+      <p class="placeholder-flag">
+        <strong>Audio placeholder.</strong> This narration has not been recorded yet. When it is, Jeremy will record it himself, in his own voice — there is no synthesised or cloned narration anywhere in this programme. Until the audio exists, the full script below <em>is</em> the practice: read it slowly to yourself, and it works perfectly well that way.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">Shape of the session</div>
+    <h2 class="section-title">Four movements</h2>
+    <p>The same four-part shape as the rest of the programme. Phase I uses the figure technique: a figure whose hand writes and works with full, fluid ease, watched and then stepped into.</p>
+    <div class="timing-grid">
+      <div class="cell"><div class="ph">Opening</div><div class="mins">≈ 3 min</div><div class="note">Breath and Light. Settling and arriving.</div></div>
+      <div class="cell"><div class="ph">Phase I</div><div class="mins">≈ 5 min</div><div class="note">The Ideal Being. Watched writing with ease, then stepped into.</div></div>
+      <div class="cell"><div class="ph">Phase II</div><div class="mins">≈ 4 min</div><div class="note">The Working Hand. Where fine movement is shaped.</div></div>
+      <div class="cell"><div class="ph">Closing</div><div class="mins">≈ 3 min</div><div class="note">Carrying a little of the ease back with you.</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">About the figure</div>
+    <h2 class="section-title">Who the figure is — and isn't</h2>
+    <p>In Phase I, a figure is seen writing and using their hands with easy, full-sized movements. As with every practice here, this figure is <em>not</em> you before Parkinson's, and not a former hand to mourn or chase back. There's no going back, and the practice never implies it.</p>
+    <p>The figure is only an embodiment of fluid, ample hand movement — shown so you can study the quality and then feel it from the inside. When the figure steps into you, you borrow the <em>feeling</em> of a hand that stays full and easy, and find it in your own hands as they are today.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The full script</div>
+    <h2 class="section-title">Read it, or read along</h2>
+    <p class="script-intro">The words below are the script beneath the audio — read them slowly to yourself, or read along while you listen. Every line is an invitation, never a command.</p>
+
+    <div class="cue-toggle" role="group" aria-label="Choose how the script is worded">
+      <span class="ct-label">How do you imagine things?</span>
+      <span class="ct-opts">
+        <button type="button" data-mode="both" aria-pressed="true">Both</button>
+        <button type="button" data-mode="see" aria-pressed="false">Seeing</button>
+        <button type="button" data-mode="feel" aria-pressed="false">Feeling</button>
+      </span>
+      <span class="ct-hint">Some people imagine mostly by seeing pictures, some by feeling movement, many by both. This gently re-words parts of the script to suit you. Not sure which fits you? Try the <a href="imagery-check.html">2-minute imagery self-check</a>, or just leave it on <strong>Both</strong>.</span>
+    </div>
+
+    <!-- AUTO-GENERATED from build/scripts/the-steady-hand.json — do not edit by hand -->
+    <details class="script" open>
+      <summary><span class="phase-no">·</span><span class="phase-name">Opening — Breath and Light</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p>And you&#x27;re here now, settled, your hands resting and asked to do nothing at all. Let them be heavy, or light, or somewhere in between — however they happen to be is exactly right.</p>
+        <p>There&#x27;s a little time set aside, and nothing to accomplish in it. Just the rehearsing of ease, gently, while the hands themselves rest.</p>
+        <p>You&#x27;re breathing, easily and on its own. And you might let your attention drift, in a moment, down the arms and into the hands — those remarkable, expressive things that do so much of our reaching out into the world.</p>
+        <p>A soft warmth, settling into the palms and the fingers. Not a task, not a stretch — just warmth, and ease, resting in the hands like sun on a windowsill.</p>
+      </div>
+    </details>
+    <details class="script">
+      <summary><span class="phase-no">I</span><span class="phase-name">Phase I — The Ideal Being</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p data-see="A little way off, a figure comes into view — sitting at a table, writing. Watch the hand. It moves fluidly, easily, the pen gliding along without gripping or cramping. And watch, especially, the size of the writing: full and open, each letter as generous as the last, staying that way all the way along the line. Nothing shrinking, nothing tightening. The hand simply keeps its fullness, effortlessly." data-feel="A little way off, you sense someone there — sitting at a table, writing. Feel the hand. It moves fluidly, easily, the pen gliding along without gripping or cramping. And feel, especially, the size of the writing: full and open, each letter as generous as the last, staying that way all the way along the line. Nothing shrinking, nothing tightening. The hand simply keeps its fullness, effortlessly." data-agnostic="A little way off, there&#x27;s a figure — sitting at a table, writing. You may see them clearly, or simply sense them there. And notice the hand. It moves fluidly, easily, the pen gliding along without gripping or cramping. And notice, especially, the size of the writing: full and open, each letter as generous as the last, staying that way all the way along the line. Nothing shrinking, nothing tightening. The hand simply keeps its fullness, effortlessly.">A little way off, there&#x27;s a figure — sitting at a table, writing. You may see them clearly, or simply sense them there. And notice the hand. It moves fluidly, easily, the pen gliding along without gripping or cramping. And notice, especially, the size of the writing: full and open, each letter as generous as the last, staying that way all the way along the line. Nothing shrinking, nothing tightening. The hand simply keeps its fullness, effortlessly.</p>
+        <p data-see="And now the figure sets down the pen and does something ordinary — fastens a button, perhaps, or picks up a cup. Watch how the fingers find their way without fuss: smooth, unhurried, sure. Not fast, not forced. Just easy, full movements that do what they mean to." data-feel="And now the figure sets down the pen and does something ordinary — fastens a button, perhaps, or picks up a cup. Feel how the fingers find their way without fuss: smooth, unhurried, sure. Not fast, not forced. Just easy, full movements that do what they mean to." data-agnostic="And now the figure sets down the pen and does something ordinary — fastens a button, perhaps, or picks up a cup. Notice how the fingers find their way without fuss: smooth, unhurried, sure. Not fast, not forced. Just easy, full movements that do what they mean to.">And now the figure sets down the pen and does something ordinary — fastens a button, perhaps, or picks up a cup. Notice how the fingers find their way without fuss: smooth, unhurried, sure. Not fast, not forced. Just easy, full movements that do what they mean to.</p>
+        <p>This is the quality to stay with: not speed, and not precision under pressure, but fullness and flow — the hand moving at its natural, ample size, relaxed and continuous. Writing that stays large. Fingers that stay easy.</p>
+        <p data-see="And now the figure turns, and comes closer, and steps into you — gently — so that watching becomes doing, from the inside." data-feel="And now that presence turns, and draws closer, and steps into you — gently — so that sensing it becomes doing, from the inside." data-agnostic="And now the figure turns, and comes closer, and steps into you — gently — so that being near it becomes doing, from the inside.">And now the figure turns, and comes closer, and steps into you — gently — so that being near it becomes doing, from the inside.</p>
+        <p data-see="Picture your own hand moving that way. An imagined pen, gliding — the letters full and open, keeping their size across the line. An imagined button, an imagined cup — the fingers easy and sure. Not forcing anything. Just rehearsing a hand that stays full and fluid. However your hands are today, you&#x27;ve pictured the ease of them, and that&#x27;s yours to keep." data-feel="Feel your own hand moving that way. An imagined pen, gliding — the letters full and open, keeping their size across the line. An imagined button, an imagined cup — the fingers easy and sure. Not forcing anything. Just rehearsing a hand that stays full and fluid. However your hands are today, you&#x27;ve felt the ease of them, and that&#x27;s yours to keep." data-agnostic="Take in your own hand moving that way. An imagined pen, gliding — the letters full and open, keeping their size across the line. An imagined button, an imagined cup — the fingers easy and sure. Not forcing anything. Just rehearsing a hand that stays full and fluid. However your hands are today, you&#x27;ve taken in the ease of them, and that&#x27;s yours to keep.">Take in your own hand moving that way. An imagined pen, gliding — the letters full and open, keeping their size across the line. An imagined button, an imagined cup — the fingers easy and sure. Not forcing anything. Just rehearsing a hand that stays full and fluid. However your hands are today, you&#x27;ve taken in the ease of them, and that&#x27;s yours to keep.</p>
+      </div>
+    </details>
+    <details class="script">
+      <summary><span class="phase-no">II</span><span class="phase-name">Phase II — The Working Hand</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p>A great deal of the brain is given over to the hand — far more than its size would suggest. Movements of the fingers are shaped by the motor cortex, drawing on the same deep structures, the basal ganglia, that help keep any movement at its full size. In Parkinson&#x27;s, when those structures run short of dopamine, movements tend to shrink — and the hand, which trades in small, precise movements, feels it keenly. That shrinking is the micrographia, the tightening grip.</p>
+        <p>Here&#x27;s the useful part: movement size responds to intention and to attention. When you deliberately aim for large, full movements — in rehearsal, and then in practice with your therapist — you push back against the shrinking. Aiming big helps the movement land at a more normal size.</p>
+        <p data-see="So picture the full, easy hand once more — the writing keeping its size, the fingers moving amply and without cramp. Not straining. Just holding the intention of fullness, quietly, so the pattern of a generous movement stays warm and familiar, ready for the real page and the real button, and for the exercises your occupational therapist gives you." data-feel="So feel the full, easy hand once more — the writing keeping its size, the fingers moving amply and without cramp. Not straining. Just holding the intention of fullness, quietly, so the pattern of a generous movement stays warm and familiar, ready for the real page and the real button, and for the exercises your occupational therapist gives you." data-agnostic="So bring the full, easy hand to mind once more — the writing keeping its size, the fingers moving amply and without cramp. Not straining. Just holding the intention of fullness, quietly, so the pattern of a generous movement stays warm and familiar, ready for the real page and the real button, and for the exercises your occupational therapist gives you.">So bring the full, easy hand to mind once more — the writing keeping its size, the fingers moving amply and without cramp. Not straining. Just holding the intention of fullness, quietly, so the pattern of a generous movement stays warm and familiar, ready for the real page and the real button, and for the exercises your occupational therapist gives you.</p>
+      </div>
+    </details>
+    <details class="script">
+      <summary><span class="phase-no">·</span><span class="phase-name">Closing</span><span class="chev">&#9656;</span></summary>
+      <div class="script-body">
+        <p>And when you&#x27;re ready, in your own time, let the room return, your hands resting where they are. No need to test anything, and no rush to reach for a pen.</p>
+        <p>Carry a little of it with you, however much came — the sense of a hand that stays full and easy, the intention of writing that keeps its size. It&#x27;s a pattern you&#x27;ve rehearsed, and it will be here to rehearse again.</p>
+        <p>There was nothing to get back to here, and nothing to prove. This practice sits gently beside the real work of the hands — your occupational therapy, your own daily practice, your medication. It&#x27;s a rehearsal of ease, offered to your hands as they are today. And whenever you&#x27;d like it, the full, easy hand is here to bring to mind again.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">The pathway in Phase II</div>
+    <h2 class="section-title">The working hand, illustrated</h2>
+    <p>Phase II works with the hand's motor circuitry — the disproportionately large hand area of the motor cortex, and its loop through the basal ganglia that helps regulate movement size. The illustration below is a placeholder only.</p>
+    <div class="anatomy">
+      <div class="frame"><span>Placeholder — motor cortex hand region (motor homunculus) &amp; basal-ganglia loop for movement amplitude</span></div>
+      <div class="cap">
+        <strong>This image is a placeholder and must be replaced before publication.</strong> Do not use AI-generated anatomy here — automatically generated anatomical illustrations are frequently wrong in ways that look convincing, and inaccurate anatomy on a health site is worse than none. Source a correct diagram from <strong>Servier Medical Art</strong> (free, CC-licensed, clinically drawn) or licensed medical stock, and confirm the motor-cortex hand region and basal-ganglia loop are depicted accurately before use.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">What the evidence says</div>
+    <h2 class="section-title">Emerging — the lightest evidence of the motor practices</h2>
+    <div class="academic-note">
+      <h4>Where the "Emerging" badge comes from</h4>
+      <p>Of the motor practices, hand function has the least evidence behind it, and the badge is honest about that. The relevant work is small and preliminary.</p>
+      <p>A handful of studies from one research group have shown that combining action observation and motor imagery can influence the amplitude of hand movements in Parkinson's — a plausible route to the reduced-size problems behind micrographia — and have developed a home-based observation-and-imagery programme for functional hand movements, designed together with people who have Parkinson's. These are encouraging early steps: experimental and feasibility work, small samples, not yet definitive efficacy trials.</p>
+      <p>So "Emerging" here means: a reasonable, gently-supported idea, resting on a thin but real evidence base — worth offering as a complement, with no promise that it will improve handwriting or fine-motor tasks on its own. The occupational therapist remains the one who can actually help with those.</p>
+      <p class="cite">Full references — Bek et al. (2019, hand movement amplitude) and Bek et al. (2021, the ACTION-PD home programme) — are listed on the <a href="bibliography.html">Bibliography</a> page.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">A note on this method</div>
+    <h2 class="section-title">Jeremy's own synthesis</h2>
+    <p>The four-part structure used across this programme — Opening, Phase I, Phase II, Closing, with the figure watched and then stepped into — is Jeremy's own synthesis, drawn from the Ericksonian and solution-oriented tradition he trained in. It has not been tested as a unified protocol in any clinical trial. The individual ingredients (motor imagery, action observation, breath work) have research behind them, as noted above; the particular way they're combined here is a considered personal design, offered in good faith, not a validated treatment.</p>
+    <p>Please treat this as a complement to your care, never a replacement for it. Guided imagery sits alongside occupational therapy, medication, and the guidance of your Parkinson's team — it does not stand in for any of them.</p>
+  </div>
+</section>
+
+<nav class="exercise-nav">
+  <div class="wrap wide">
+    <div class="label section-eyebrow">The five practices</div>
+    <h2 class="section-title">Explore the programme</h2>
+    <div class="grid">
+      <a class="ex-card" href="walking-freely.html">
+        <span class="ex-no">Practice 1</span>
+        <div class="ex-name">Walking Freely</div>
+        <div class="ex-dom">Gait &amp; freezing</div>
+      </a>
+      <a class="ex-card" href="finding-flow.html">
+        <span class="ex-no">Practice 2</span>
+        <div class="ex-name">Finding Flow</div>
+        <div class="ex-dom">Movement initiation &amp; bradykinesia</div>
+      </a>
+      <a class="ex-card" href="steady-ground.html">
+        <span class="ex-no">Practice 3</span>
+        <div class="ex-name">Steady Ground</div>
+        <div class="ex-dom">Balance &amp; postural stability</div>
+      </a>
+      <a class="ex-card current" href="the-steady-hand.html" aria-current="page">
+        <span class="ex-no">Practice 4 · You are here</span>
+        <div class="ex-name">The Steady Hand</div>
+        <div class="ex-dom">Fine motor &amp; handwriting</div>
+      </a>
+      <a class="ex-card" href="calm-beneath-the-storm.html">
+        <span class="ex-no">Practice 5</span>
+        <div class="ex-name">Calm Beneath the Storm</div>
+        <div class="ex-dom">Non-motor wellbeing</div>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<footer>
+  <a href="index.html" class="footer-brand">Living Beyond <span>Parkinson's</span></a>
+  <div class="footer-copy">© 2025–2026 Living Beyond Parkinson's · <a href="terms-parkinsons.html" style="color:#5A5040;text-decoration:none;border-bottom:1px solid rgba(200,150,60,0.15);">Terms of Use</a></div>
+</footer>
+
+<script>
+  var btn = document.querySelector('.hamburger');
+  var links = document.getElementById('navlinks');
+  btn.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+
+<script>
+  (function(){
+    var KEY='lbp-cue-mode';
+    var toggle=document.querySelector('.cue-toggle');
+    if(!toggle) return;
+    var paras=[].slice.call(document.querySelectorAll('.script-body p[data-agnostic]'));
+    function apply(mode){
+      paras.forEach(function(p){
+        var t = mode==='see' ? p.getAttribute('data-see')
+              : mode==='feel'? p.getAttribute('data-feel')
+              : p.getAttribute('data-agnostic');
+        if(t) p.textContent=t;
+      });
+      [].forEach.call(toggle.querySelectorAll('button'),function(b){
+        b.setAttribute('aria-pressed', b.getAttribute('data-mode')===mode ? 'true':'false');
+      });
+    }
+    var saved='both';
+    try{ saved=localStorage.getItem(KEY)||'both'; }catch(e){}
+    apply(saved);
+    toggle.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      var mode=b.getAttribute('data-mode');
+      apply(mode);
+      try{ localStorage.setItem(KEY,mode); }catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>
