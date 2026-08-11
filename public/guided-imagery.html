@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png">
 <title>Guided Imagery Programme — Living Beyond Parkinson's</title>
-<meta name="description" content="Five guided imagery practices for living well with Parkinson's, each built on a calm three-phase structure. A personal synthesis of an established therapeutic tradition, offered alongside medical care.">
+<meta name="description" content="Five guided imagery practices for living well with Parkinson's, each built on a calm four-part structure. A personal synthesis of an established therapeutic tradition, offered alongside medical care.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -63,6 +63,24 @@
   .phases .cell p{font-size:.86rem;color:#3D3A30;margin:0;line-height:1.5;}
   @media(max-width:760px){.phases{grid-template-columns:1fr 1fr;}}
   @media(max-width:440px){.phases{grid-template-columns:1fr;}}
+  /* ---------- PHASE GRID (rich four-part cards) ---------- */
+  .phase-grid{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:18px 0 0;}
+  .phase-card{background:var(--warm-white);padding:26px 28px;display:grid;grid-template-columns:2.4rem 1fr;gap:20px;align-items:start;}
+  .phase-num{font-family:'Lora',serif;font-size:1.8rem;color:rgba(200,150,60,.35);line-height:1;}
+  .phase-eyebrow{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .phase-name{font-size:1.15rem;margin:0 0 8px;}
+  .phase-desc{font-size:.92rem;color:#3D3A30;line-height:1.65;margin:0;}
+  @media(max-width:600px){.phase-card{grid-template-columns:1fr;}}
+  /* ---------- WHEN TO PRACTISE GRID (overview level) ---------- */
+  .when-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:18px 0 0;}
+  .when-grid .cell{background:var(--warm-white);padding:20px 18px;}
+  .when-grid .cell .wh{font-family:'Lora',serif;font-size:1.05rem;color:var(--charcoal);margin-bottom:6px;}
+  .when-grid .cell .note{color:var(--muted);font-size:.86rem;line-height:1.5;}
+  @media(max-width:640px){.when-grid{grid-template-columns:1fr;}}
+  .divider{border:none;border-top:1px solid var(--border);margin:0;}
+  .cta-begin{display:block;text-align:center;margin-top:32px;padding-top:28px;border-top:1px solid var(--border);}
+  .cta-begin a{display:inline-block;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;font-variant:small-caps;color:var(--gold);text-decoration:none;border:1px solid rgba(200,150,60,.35);border-radius:3px;padding:13px 26px;transition:background .2s;}
+  .cta-begin a:hover{background:rgba(200,150,60,.08);}
   .disclosure{background:var(--charcoal);color:var(--warm-white);border-radius:4px;padding:28px 30px;margin:8px 0 0;}
   .disclosure .label{color:var(--gold);}
   .disclosure h3{color:var(--warm-white);font-size:1.3rem;margin:6px 0 12px;}
@@ -76,10 +94,6 @@
   .prac-card:hover{border-color:var(--gold);transform:translateY(-2px);}
   .prac-card .pc-top{display:flex;align-items:center;justify-content:space-between;gap:10px;}
   .prac-card .pc-no{color:var(--gold);font-size:.72rem;letter-spacing:.14em;font-variant:small-caps;text-transform:uppercase;}
-  .prac-card .pc-badge{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;color:var(--muted);font-variant:small-caps;letter-spacing:.08em;text-transform:uppercase;}
-  .prac-card .dot{width:9px;height:9px;border-radius:50%;}
-  .dot.emerging{background:var(--gold);box-shadow:0 0 0 2px rgba(200,150,60,.18);}
-  .dot.moderate{background:var(--bark);box-shadow:0 0 0 2px rgba(200,150,60,.30);}
   .prac-card h3{font-family:'Lora',serif;font-size:1.3rem;margin:8px 0 4px;color:var(--charcoal);}
   .prac-card .pc-dom{color:var(--muted);font-size:.9rem;margin-bottom:8px;}
   .prac-card .pc-desc{font-size:.92rem;color:#3D3A30;margin:0;}
@@ -111,79 +125,142 @@
 <header class="page-hero">
   <div class="wrap">
     <h1>The Guided Imagery Programme</h1>
-    <p class="lede">Five practices for living well with Parkinson's, each built on the same calm, four-part structure. You can begin with whichever one speaks to your day — there's no order to follow and nothing to complete.</p>
+    <p class="lede">Five practices. One method. It's built on research showing that imagining a movement switches on many of the same brain networks as actually doing it — which may help make that movement a little more available, alongside your medication and physiotherapy.</p>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <div class="label section-eyebrow">How each practice is shaped</div>
-    <h2 class="section-title">A four-part structure</h2>
-    <p>Every practice moves through the same four phases. The shape is meant to be gentle and familiar, so that once you've done one, you know your way around all of them.</p>
-    <div class="phases">
-      <div class="cell"><div class="pn">Opening</div><h4>Breath and Light</h4><p>Settling and arriving — an unhurried start that lets the body ease.</p></div>
-      <div class="cell"><div class="pn">Phase I</div><h4>The Ideal Being</h4><p>A figure of easeful movement is watched, then steps into you — so watching becomes doing.</p></div>
-      <div class="cell"><div class="pn">Phase II</div><h4>The Pathway</h4><p>A gentle picture of the body's own workings for that movement or state.</p></div>
-      <div class="cell"><div class="pn">Closing</div><h4>Coming Back</h4><p>A soft return, carrying a little of the ease with you — nothing owed, nothing to prove.</p></div>
+    <p>Guided imagery is a set of mental practices you do alongside your usual Parkinson's care. In each one, you imagine a movement or state in detail — from the inside, with the feeling of it actually happening — and, in most practices, follow the pathway involved in the body. Here's why that may help: when you imagine a movement clearly, your brain switches on many of the same networks it uses to actually make that movement. Rehearsing this way, again and again, may help keep an easier, fuller version of that movement a little more available to your body — not by reversing Parkinson's, but by keeping a pattern of ease warm and familiar.</p>
+    <p>The practices are free. They are not a treatment, and they don't replace medication, physiotherapy, or the guidance of your Parkinson's team. They sit alongside those — something you can do on your own, in the gaps between appointments, or on the days when movement itself is harder.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">How the method works</div>
+    <h2 class="section-title" id="four-parts">The Four Parts</h2>
+    <p>Every practice follows the same four parts, in the same order. The order matters — each part sets up the one after it.</p>
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="phase-num">I</div>
+        <div>
+          <div class="phase-eyebrow">Part I · Breath and Light</div>
+          <h4 class="phase-name">Settling down</h4>
+          <p class="phase-desc">Every practice starts by settling you. You bring your attention to your body, slow your breathing, and let a soft warmth or light rest wherever it's easy. This calms the nervous system — worth doing deliberately in Parkinson's, where hurry and anxiety are common triggers for symptoms like freezing. Around three minutes.</p>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">II</div>
+        <div>
+          <div class="phase-eyebrow">Part II · The Ideal Being</div>
+          <h4 class="phase-name">Watch, then become</h4>
+          <p class="phase-desc">A figure appears — or you simply sense one — moving easily, doing the movement you're working on. First you watch them, and notice how smooth and easy it looks. Then the figure steps into you, and you become them. What you were watching, you now feel from the inside. Watching a movement wakes up many of the same brain areas as doing it; stepping in lets you rehearse the feeling of it yourself. Around four to five minutes.</p>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">III</div>
+        <div>
+          <div class="phase-eyebrow">Part III · The Pathway</div>
+          <h4 class="phase-name">Understand the pathway</h4>
+          <p class="phase-desc">Now the practice moves inward, to a plain-language picture of what's happening in the body — different for each practice, since Parkinson's affects several different systems. It's not a diagram to memorise, just enough to make the rehearsal make sense. Around four minutes.</p>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">IV</div>
+        <div>
+          <div class="phase-eyebrow">Part IV · Closing</div>
+          <h4 class="phase-name">Carry it back</h4>
+          <p class="phase-desc">You come back to your breath and let the images settle, carrying a little of the practised ease with you. Nothing to prove and no test passed or failed — then you bring yourself gently back to the room. Around two to three minutes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:18px;">
+      <div class="label" style="margin-bottom:8px;">Why this order?</div>
+      <p>Each part sets up the next. Part I settles the nervous system and gets you ready to focus. Part II wakes the movement system by watching, before you step in and feel it from the inside. Part III aims that rehearsal at the specific pathway this practice is working with. Part IV lets it settle before you return to the room. The parts are designed to build on one another, so doing them in order is how the practice is intended to work — though, like the four-part structure itself, that sequencing hasn't been tested on its own in any trial.</p>
     </div>
 
     <h3 class="sub">The figure, and one deliberate exception</h3>
-    <p>The heart of each motor practice is Phase I: a figure appears at a distance, is watched moving with ease, and then "steps into you," so that the feeling of easeful movement is borrowed from the inside. The figure is never a pre-Parkinson's self to chase back — there's no going back, and the practices never imply it. It's simply an embodiment of ease, offered to the body as it is now.</p>
+    <p>The heart of each motor practice is Part II: a figure appears at a distance, is watched moving with ease, and then "steps into you," so that the feeling of easeful movement is borrowed from the inside. The figure is never a pre-Parkinson's self to chase back — there's no going back, and the practices never imply it. It's simply an embodiment of ease, offered to the body as it is now.</p>
     <p>The one exception is <a href="calm-beneath-the-storm.html">Calm Beneath the Storm</a>, the non-motor practice. Calm isn't an action to rehearse, and asking you to "become" a serene figure could carry an unwanted message that where you are now is wrong. So that practice sets the figure aside and simply arrives at a settled place directly — a restorative exception, made on purpose.</p>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">Two things to know before you begin</div>
-    <h2 class="section-title">Honesty about the method</h2>
-    <div class="disclosure">
-      <div class="label">On the recordings</div>
-      <h3>A synthesised version of a real voice</h3>
-      <p>The guided audio is not recorded yet. When it is, the narration will use an ElevenLabs voice clone of Jeremy's own voice — a synthesised version of a real person's voice. That will be disclosed on every practice page, so you always know what you're listening to. Until then, each practice shows its full script to read instead.</p>
-    </div>
-    <div class="callout" style="margin-top:14px;">
-      <p><strong>This four-part structure is Jeremy's own synthesis.</strong> It draws on the Ericksonian and solution-oriented tradition he trained in, and its individual ingredients — motor imagery, action observation, relaxation and breath work — each have research behind them, gathered in the <a href="bibliography.html">bibliography</a>. But the combined protocol has not been tested as a unit in any clinical trial, and every practice says so. It's offered in good faith as a considered personal design, not as a proven treatment — and always as a complement to medication, physiotherapy, and your Parkinson's team, never a replacement.</p>
-    </div>
-  </div>
-</section>
+<hr class="divider">
 
 <section>
   <div class="wrap">
-    <div class="label section-eyebrow">The five practices</div>
-    <h2 class="section-title">Choose where to begin</h2>
-    <p>Each carries an honest evidence badge. One is <em>Moderate</em> — the research is real but heavily qualified; four are <em>Emerging</em> — early, indirect, or, in the case of overall motor symptoms, contradicted by the most recent meta-analysis. The badge describes the science, not how helpful you might personally find the practice.</p>
+    <div class="label section-eyebrow">The practices</div>
+    <h2 class="section-title">Five Areas, Five Practices</h2>
+    <p>Pick the practice that fits where you are right now. You can do more than one, but it's usually best to get comfortable with a single practice for a week or two before adding another. They're separate — you don't have to do them in order.</p>
     <div class="prac-list">
       <a class="prac-card" href="walking-freely.html">
-        <div class="pc-top"><span class="pc-no">Practice 1</span><span class="pc-badge"><span class="dot moderate"></span>Moderate</span></div>
+        <div class="pc-top"><span class="pc-no">Practice 1</span></div>
         <h3>Walking Freely</h3>
         <div class="pc-dom">Gait &amp; freezing of gait</div>
         <p class="pc-desc">Rehearsing the smooth approach and the way through a doorway, for the step that catches.</p>
       </a>
       <a class="prac-card" href="finding-flow.html">
-        <div class="pc-top"><span class="pc-no">Practice 2</span><span class="pc-badge"><span class="dot emerging"></span>Emerging</span></div>
+        <div class="pc-top"><span class="pc-no">Practice 2</span></div>
         <h3>Finding Flow</h3>
         <div class="pc-dom">Movement initiation &amp; bradykinesia</div>
         <p class="pc-desc">For the pause before movement and the shrinking of it — rehearsing an easy, full-sized start.</p>
       </a>
       <a class="prac-card" href="steady-ground.html">
-        <div class="pc-top"><span class="pc-no">Practice 3</span><span class="pc-badge"><span class="dot emerging"></span>Emerging</span></div>
+        <div class="pc-top"><span class="pc-no">Practice 3</span></div>
         <h3>Steady Ground</h3>
         <div class="pc-dom">Balance &amp; postural stability</div>
         <p class="pc-desc">A gentle, seated rehearsal of calm, unhurried steadiness — a quiet companion to physiotherapy.</p>
       </a>
       <a class="prac-card" href="the-steady-hand.html">
-        <div class="pc-top"><span class="pc-no">Practice 4</span><span class="pc-badge"><span class="dot emerging"></span>Emerging</span></div>
+        <div class="pc-top"><span class="pc-no">Practice 4</span></div>
         <h3>The Steady Hand</h3>
         <div class="pc-dom">Fine motor &amp; handwriting</div>
         <p class="pc-desc">For writing that shrinks and fingers that fumble — rehearsing a hand that stays full and fluid.</p>
       </a>
       <a class="prac-card" href="calm-beneath-the-storm.html">
-        <div class="pc-top"><span class="pc-no">Practice 5</span><span class="pc-badge"><span class="dot emerging"></span>Emerging</span></div>
+        <div class="pc-top"><span class="pc-no">Practice 5</span></div>
         <h3>Calm Beneath the Storm</h3>
         <div class="pc-dom">Non-motor wellbeing — anxiety, "off"-period distress, sleep</div>
         <p class="pc-desc">A settling practice for the hard hours — meeting the storm differently, not making it disappear.</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">When to practise</div>
+    <h2 class="section-title">How Often — and the Best Times</h2>
+    <p>There's no required schedule. Once a day is a reasonable place to start, fitting the practice wherever it fits in your day. But the full fifteen-minute session isn't the only time it can help — three moments in the day tend to work especially well for rehearsing ease, and even a few slow breaths returning to a practice's main image, without doing the whole session, keeps the pattern close at hand.</p>
+    <div class="when-grid">
+      <div class="cell"><div class="wh">On Waking</div><div class="note">Stiffness and slower movement are often strongest first thing, before your morning medication has settled in. A few unhurried minutes here, before you're up, is a gentle way to rehearse ease before the day begins.</div></div>
+      <div class="cell"><div class="wh">Throughout the Day</div><div class="note">Any pause before you know you'll be doing the thing a practice rehearses — moving through a doorway, starting to write, standing up. A few slow breaths back to that image keeps it close at hand.</div></div>
+      <div class="cell"><div class="wh">Before Sleep</div><div class="note">A calm way to close the day. Not about tomorrow's movements — just a settling practice, and a natural place for the mind to rest on something easy.</div></div>
+    </div>
+    <div class="callout" style="margin-top:18px;">
+      <p>If you've been practising <strong>Walking Freely</strong>, come back to the line on the floor and the step over it, for two or three breaths. If you've been practising <strong>Finding Flow</strong>, come back to the feeling of a movement starting the moment you intend it. If you've been practising <strong>Steady Ground</strong>, come back to the easy sway and settle of standing. If you've been practising <strong>The Steady Hand</strong>, come back to the full, open feeling of the hand at rest. If you've been practising <strong>Calm Beneath the Storm</strong>, come back to the settled place you found there. These small moments add up.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="wrap">
+    <div class="label section-eyebrow">Getting started</div>
+    <h2 class="section-title">How to Begin</h2>
+    <p>Pick one practice. Play the audio if that helps — or read the script to yourself, or have someone read it to you. Get into a comfortable, supported position — seated or lying down both work well; this is mental rehearsal, not movement, so there's no wrong position to start from. Most people close their eyes; softly gazing at a point in the distance also works.</p>
+    <p>The first session may feel unfamiliar, and that's completely normal — it often takes a few tries before guided imagery starts to feel more natural. If the imagery feels faint, effortful, or simply doesn't arrive at first, that's a known feature of the territory, not a failure on your part — most studies of motor imagery only recruit people who can already form vivid mental pictures, and you haven't been screened that way.</p>
+    <p>If you're working with a physiotherapist, occupational therapist, or your wider Parkinson's team, it's worth telling them you're doing this. Many will know about motor imagery and can help you pair it with the exercises and strategies they've already given you.</p>
+
+    <div class="cta-begin">
+      <a href="walking-freely.html">Begin with Practice 01: Walking Freely &rarr;</a>
     </div>
   </div>
 </section>
