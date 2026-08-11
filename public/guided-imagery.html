@@ -81,6 +81,22 @@
   .cta-begin{display:block;text-align:center;margin-top:32px;padding-top:28px;border-top:1px solid var(--border);}
   .cta-begin a{display:inline-block;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;font-variant:small-caps;color:var(--gold);text-decoration:none;border:1px solid rgba(200,150,60,.35);border-radius:3px;padding:13px 26px;transition:background .2s;}
   .cta-begin a:hover{background:rgba(200,150,60,.08);}
+
+  /* ---------- AUDIO OVERVIEW ---------- */
+  .audio-overview{background:var(--warm-white);border:1px solid var(--border);border-radius:6px;padding:32px 34px;margin:8px 0 0;}
+  .audio-overview h2{font-size:1.6rem;margin:8px 0 14px;}
+  .audio-overview > p{margin:0 0 22px;}
+  .audio-shell-light{display:flex;align-items:center;gap:14px;background:var(--cream);border:1px solid var(--border);border-radius:30px;padding:10px 18px;}
+  .ao-play{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:none;background:var(--charcoal);color:var(--warm-white);display:flex;align-items:center;justify-content:center;cursor:pointer;}
+  .ao-play svg{width:14px;height:14px;}
+  .ao-time{font-size:.82rem;color:var(--muted);flex:0 0 auto;font-variant-numeric:tabular-nums;min-width:2.4em;}
+  .ao-time.dur{text-align:right;}
+  .ao-track{flex:1;height:5px;background:var(--border);border-radius:3px;position:relative;cursor:pointer;}
+  .ao-fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--gold);border-radius:3px;}
+  .ao-vol{flex:0 0 auto;background:none;border:none;color:var(--muted);cursor:pointer;padding:4px;display:flex;transition:opacity .15s;}
+  .ao-vol svg{width:18px;height:18px;}
+  .ao-disclosure{margin-top:22px;background:var(--cream);border-left:3px solid var(--border);padding:18px 22px;border-radius:0 4px 4px 0;}
+  .ao-disclosure p{margin:0;font-style:italic;font-size:.92rem;color:var(--muted);line-height:1.6;}
   .disclosure{background:var(--charcoal);color:var(--warm-white);border-radius:4px;padding:28px 30px;margin:8px 0 0;}
   .disclosure .label{color:var(--gold);}
   .disclosure h3{color:var(--warm-white);font-size:1.3rem;margin:6px 0 12px;}
@@ -133,6 +149,30 @@
   <div class="wrap">
     <p>Guided imagery is a set of mental practices you do alongside your usual Parkinson's care. In each one, you imagine a movement or state in detail — from the inside, with the feeling of it actually happening — and, in most practices, follow the pathway involved in the body. Here's why that may help: when you imagine a movement clearly, your brain switches on many of the same networks it uses to actually make that movement. Rehearsing this way, again and again, may help keep an easier, fuller version of that movement a little more available to your body — not by reversing Parkinson's, but by keeping a pattern of ease warm and familiar.</p>
     <p>The practices are free. They are not a treatment, and they don't replace medication, physiotherapy, or the guidance of your Parkinson's team. They sit alongside those — something you can do on your own, in the gaps between appointments, or on the days when movement itself is harder.</p>
+
+    <div class="audio-overview">
+      <div class="label">Listen</div>
+      <h2>Guided Imagery for Parkinson's — An Audio Overview</h2>
+      <p>A spoken introduction to what's on this page — what the programme is, the research behind it, and how the practices work — for a listen instead of a read. Around twenty minutes. Useful for yourself, for a family member, or to share with a clinician.</p>
+
+      <div class="audio-shell-light">
+        <button class="ao-play" id="aoPlay" aria-label="Play audio overview" type="button">
+          <svg class="ao-icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="ao-icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        </button>
+        <div class="ao-time" id="aoCurrent">0:00</div>
+        <div class="ao-track" id="aoTrack" role="slider" aria-label="Seek" tabindex="0"><div class="ao-fill" id="aoFill"></div></div>
+        <div class="ao-time dur" id="aoDuration">19:48</div>
+        <button class="ao-vol" id="aoVol" aria-label="Mute" type="button">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+        </button>
+        <audio id="aoAudio" src="audio_overview.m4a" preload="metadata"></audio>
+      </div>
+
+      <div class="ao-disclosure">
+        <p>This overview is AI-generated: two synthetic voices discussing the material on this page, not Jeremy's own voice and not his direct recordings used in the five practices below. It's offered as an accessible way in, not as a word-for-word reading of the site. If anything in it seems to go further than the written page, the written page is the accurate version.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -277,6 +317,67 @@
     var open = links.classList.toggle('open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+</script>
+
+<script>
+  (function(){
+    var audio = document.getElementById('aoAudio');
+    if(!audio) return;
+    var playBtn = document.getElementById('aoPlay');
+    var iconPlay = playBtn.querySelector('.ao-icon-play');
+    var iconPause = playBtn.querySelector('.ao-icon-pause');
+    var track = document.getElementById('aoTrack');
+    var fill = document.getElementById('aoFill');
+    var curEl = document.getElementById('aoCurrent');
+    var durEl = document.getElementById('aoDuration');
+    var volBtn = document.getElementById('aoVol');
+
+    function fmt(s){
+      if(!isFinite(s) || s < 0) return '0:00';
+      var m = Math.floor(s/60), sec = Math.floor(s%60);
+      return m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    audio.addEventListener('loadedmetadata', function(){
+      durEl.textContent = fmt(audio.duration);
+    });
+    playBtn.addEventListener('click', function(){
+      if(audio.paused){ audio.play(); } else { audio.pause(); }
+    });
+    audio.addEventListener('play', function(){
+      iconPlay.style.display = 'none';
+      iconPause.style.display = 'block';
+    });
+    audio.addEventListener('pause', function(){
+      iconPlay.style.display = 'block';
+      iconPause.style.display = 'none';
+    });
+    audio.addEventListener('ended', function(){
+      iconPlay.style.display = 'block';
+      iconPause.style.display = 'none';
+    });
+    audio.addEventListener('timeupdate', function(){
+      curEl.textContent = fmt(audio.currentTime);
+      if(audio.duration){
+        fill.style.width = (audio.currentTime / audio.duration * 100) + '%';
+      }
+    });
+    function seek(clientX){
+      var rect = track.getBoundingClientRect();
+      var pct = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+      if(audio.duration) audio.currentTime = pct * audio.duration;
+    }
+    track.addEventListener('click', function(e){ seek(e.clientX); });
+    track.addEventListener('keydown', function(e){
+      if(!audio.duration) return;
+      if(e.key === 'ArrowRight') audio.currentTime = Math.min(audio.duration, audio.currentTime + 5);
+      if(e.key === 'ArrowLeft') audio.currentTime = Math.max(0, audio.currentTime - 5);
+    });
+    volBtn.addEventListener('click', function(){
+      audio.muted = !audio.muted;
+      volBtn.style.opacity = audio.muted ? '.4' : '1';
+    });
+  })();
 </script>
 
 </body>
