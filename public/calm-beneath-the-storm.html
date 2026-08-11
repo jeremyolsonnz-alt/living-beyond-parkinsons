@@ -99,18 +99,11 @@
   .page-hero .breadcrumb a:hover{color:var(--gold);}
   .page-hero h1{font-size:2.9rem;margin:14px 0 18px;color:var(--warm-white);}
   .page-hero .lede{font-size:1.22rem;color:#C9C2B4;max-width:52ch;line-height:1.55;}
-  .practice-index{color:#A9A294;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-variant:small-caps;}
+  .practice-index{color:var(--gold);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-variant:small-caps;margin-top:4px;}
 
-  /* ---------- EVIDENCE BADGE ---------- */
-  .badge{
-    display:inline-flex;align-items:center;gap:9px;
-    border:1px solid var(--border);border-radius:2px;background:var(--cream);
-    padding:7px 14px;margin-top:26px;font-size:.82rem;color:var(--charcoal);
-  }
-  .badge .dot{width:10px;height:10px;border-radius:50%;}
-  .badge.emerging .dot{background:var(--gold);box-shadow:0 0 0 3px rgba(200,150,60,.18);}
-  .badge strong{font-weight:600;}
-  .badge .tag{font-variant:small-caps;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;color:var(--muted);}
+  /* ---------- META ROW ---------- */
+  .meta-row{display:flex;flex-wrap:wrap;gap:26px;margin-top:26px;font-size:.85rem;color:#C9C2B4;}
+  .meta-row strong{color:var(--warm-white);font-weight:600;}
 
   section{padding:52px 0;}
   section + section{border-top:1px solid var(--border);}
@@ -141,46 +134,26 @@
   .audio-bar{height:4px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;}
   .audio-bar i{display:block;width:0;height:100%;background:var(--gold);}
   .audio-time{font-size:.75rem;color:#A9A294;margin-top:8px;letter-spacing:.04em;}
-  .placeholder-flag{
-    margin-top:16px;font-size:.8rem;color:#C9C2B4;
-    border-top:1px solid rgba(255,255,255,.1);padding-top:14px;line-height:1.55;
-  }
-  .placeholder-flag strong{color:var(--gold);font-weight:600;}
 
-  /* ---------- TIMING GRID ---------- */
-  .timing-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-    background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:8px 0 0;
-  }
-  .timing-grid .cell{background:var(--warm-white);padding:18px 16px;}
-  .timing-grid .cell .ph{font-family:'Lora',serif;font-size:1.05rem;color:var(--charcoal);margin-bottom:3px;}
-  .timing-grid .cell .mins{color:var(--gold);font-size:.82rem;letter-spacing:.1em;font-variant:small-caps;text-transform:uppercase;}
-  .timing-grid .cell .note{color:var(--muted);font-size:.82rem;margin-top:6px;line-height:1.4;}
-  @media(max-width:640px){.timing-grid{grid-template-columns:1fr 1fr;}}
-
-  /* ---------- SCRIPT / COLLAPSIBLE ---------- */
+  /* ---------- FULL SCRIPT (single toggle) ---------- */
   .script-intro{color:var(--muted);font-size:.92rem;margin-bottom:8px;}
-  details.script{
+  details.full-script{
     background:var(--warm-white);border:1px solid var(--border);
-    border-radius:4px;margin:0 0 14px;overflow:hidden;
+    border-radius:4px;overflow:hidden;
   }
-  details.script > summary{
-    list-style:none;cursor:pointer;padding:20px 22px;display:flex;align-items:baseline;gap:14px;
+  details.full-script > summary{
+    list-style:none;cursor:pointer;padding:20px 22px;
+    color:var(--gold);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-variant:small-caps;font-weight:600;
+    display:flex;align-items:center;gap:10px;
   }
-  details.script > summary::-webkit-details-marker{display:none;}
-  details.script > summary .phase-no{
-    font-family:'Lora',serif;color:var(--gold);font-size:1.05rem;flex:0 0 auto;
-  }
-  details.script > summary .phase-name{font-family:'Lora',serif;font-size:1.2rem;color:var(--charcoal);flex:1;}
-  details.script > summary .chev{flex:0 0 auto;color:var(--muted);transition:transform .25s;font-size:.9rem;}
-  details.script[open] > summary .chev{transform:rotate(90deg);}
-  .script-body{padding:2px 22px 24px;border-top:1px solid var(--border);}
-  .script-body .stage{
-    color:var(--gold);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
-    font-variant:small-caps;font-weight:600;margin:20px 0 6px;
-  }
-  .script-body p{color:#3D3A30;line-height:1.72;margin:0 0 16px;}
-  .script-body em{color:var(--bark);font-style:italic;}
+  details.full-script > summary::-webkit-details-marker{display:none;}
+  details.full-script > summary::before{content:'\25B8';transition:transform .25s;}
+  details.full-script[open] > summary::before{transform:rotate(90deg);}
+  .full-script-body{padding:4px 24px 26px;border-top:1px solid var(--border);}
+  .full-script-body h4{font-size:1rem;color:var(--gold);margin:26px 0 10px;}
+  .full-script-body h4:first-child{margin-top:0;}
+  .full-script-body p{color:#3D3A30;line-height:1.72;margin:0 0 16px;}
+  .practice-console .audio-footnote{margin-top:16px;font-size:.8rem;color:#A9A294;font-style:italic;line-height:1.5;}
 
   /* ---------- ANATOMY PLACEHOLDER ---------- */
   .anatomy{
@@ -195,17 +168,6 @@
   .anatomy .cap{padding:16px 20px;font-size:.82rem;color:var(--muted);line-height:1.55;}
   .anatomy .cap strong{color:var(--bark);font-weight:600;}
 
-  /* ---------- ACADEMIC NOTE ---------- */
-  .academic-note{
-    background:var(--warm-white);border-left:3px solid var(--gold);
-    border-radius:0 4px 4px 0;padding:24px 26px;margin:6px 0 0;
-  }
-  .academic-note h4{font-size:1.05rem;margin:0 0 12px;}
-  .academic-note p{font-size:.95rem;color:#3D3A30;margin:0 0 14px;}
-  .academic-note p:last-child{margin-bottom:0;}
-  .academic-note .cite{font-size:.85rem;color:var(--muted);}
-  .academic-note a{color:var(--bark);}
-
   .honest-callout{
     background:var(--cream);border:1px solid var(--border);border-radius:4px;
     padding:22px 24px;margin:6px 0 0;
@@ -213,30 +175,34 @@
   .honest-callout p{margin:0;font-size:.95rem;color:#3D3A30;}
   .honest-callout p strong{color:var(--bark);}
 
+  /* ---------- FOUR PARTS CARDS ---------- */
+  .four-parts-link{font-size:.88rem;color:var(--muted);margin:0 0 18px;}
+  .four-parts-link a{color:var(--bark);}
+  .parts-list{display:flex;flex-direction:column;gap:14px;margin-top:4px;}
+  .part-card{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:24px 26px;}
+  .part-card .pc-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:2px;}
+  .part-card .pc-eyebrow{color:var(--gold);font-variant:small-caps;text-transform:uppercase;letter-spacing:.12em;font-size:.74rem;}
+  .part-card .pc-mins{color:var(--muted);font-size:.78rem;letter-spacing:.04em;flex:0 0 auto;}
+  .part-card h3{font-size:1.25rem;margin:2px 0 14px;}
+  .part-card .pc-block{margin:0 0 14px;}
+  .part-card .pc-block:last-child{margin-bottom:0;}
+  .part-card .pc-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bark);font-weight:600;margin-bottom:4px;}
+  .part-card .pc-block p{margin:0;font-size:.94rem;color:#3D3A30;line-height:1.6;}
+  .part-card .anatomy{margin-top:6px;}
+  .when-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:8px 0 0;}
+  .when-grid.two-col{grid-template-columns:repeat(2,1fr);}
+  .when-grid .cell{background:var(--warm-white);padding:20px 18px;}
+  .when-grid .cell .wh{font-family:'Lora',serif;font-size:1.05rem;color:var(--charcoal);margin-bottom:6px;}
+  .when-grid .cell .note{color:var(--muted);font-size:.86rem;line-height:1.5;}
+  @media(max-width:640px){.when-grid{grid-template-columns:1fr;}}
+
   /* ---------- EXERCISE NAV ---------- */
-  /* ---------- CUE TOGGLE (See / Feel / Both) ---------- */
-  .cue-toggle{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:14px 16px;margin:2px 0 18px;}
-  .cue-toggle .ct-label{font-size:.85rem;color:var(--muted);}
-  .cue-toggle .ct-opts{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;}
-  .cue-toggle button{border:0;background:transparent;padding:8px 15px;font:inherit;font-size:.82rem;cursor:pointer;color:var(--bark);border-right:1px solid var(--border);transition:background .15s,color .15s;}
-  .cue-toggle button:last-child{border-right:0;}
-  .cue-toggle button[aria-pressed="true"]{background:var(--gold);color:var(--warm-white);}
-  .cue-toggle .ct-hint{flex-basis:100%;font-size:.8rem;color:var(--muted);margin:2px 0 0;line-height:1.5;}
-  .cue-toggle .ct-hint a{color:var(--bark);}
-  .exercise-nav{background:var(--warm-white);border-top:1px solid var(--border);padding:52px 0;}
-  .exercise-nav .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px;}
-  .ex-card{
-    display:block;text-decoration:none;color:inherit;
-    background:var(--cream);border:1px solid var(--border);border-radius:4px;
-    padding:20px 22px;transition:border-color .2s,transform .2s;
-  }
-  .ex-card:hover{border-color:var(--gold);transform:translateY(-2px);}
-  .ex-card .ex-no{color:var(--gold);font-size:.72rem;letter-spacing:.14em;font-variant:small-caps;text-transform:uppercase;}
-  .ex-card .ex-name{font-family:'Lora',serif;font-size:1.18rem;margin:4px 0 4px;color:var(--charcoal);}
-  .ex-card .ex-dom{color:var(--muted);font-size:.86rem;}
-  .ex-card.current{border-color:var(--gold);background:var(--warm-white);}
-  .ex-card.current .ex-name{color:var(--bark);}
-  @media(max-width:640px){.exercise-nav .grid{grid-template-columns:1fr;}}
+  .exercise-nav{background:var(--warm-white);border-top:1px solid var(--border);padding:32px 0;}
+  .ex-links{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;}
+  .ex-links .ex-link{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-variant:small-caps;font-weight:600;color:var(--gold);text-decoration:none;}
+  .ex-links a.ex-link:hover{color:var(--bark);}
+  .ex-links .ex-link.disabled{color:var(--muted);}
+  @media(max-width:600px){.ex-links{justify-content:center;text-align:center;}}
 
   /* ---------- FOOTER ---------- */
   footer{background:#1A1810;padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;gap:1rem;}
@@ -271,13 +237,14 @@
 <!-- ================= HERO ================= -->
 <header class="page-hero">
   <div class="wrap">
-    <div class="breadcrumb"><a href="guided-imagery.html">Guided Imagery Programme</a> &nbsp;/&nbsp; Practice Five</div>
-    <div class="practice-index">Practice 5 of 5 &nbsp;·&nbsp; Non-motor wellbeing</div>
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="guided-imagery.html">Guided Imagery</a> &nbsp;/&nbsp; Practice 5</div>
+    <div class="practice-index">— &nbsp;Practice 5 &nbsp;·&nbsp; A Wellbeing Practice, Not A Motor One</div>
     <h1>Calm Beneath the Storm</h1>
     <p class="lede">A practice for the anxious hours, the restless nights, and the distress that can come when a dose wears off — a way of meeting the hard moments differently, not a way of making them disappear.</p>
-    <div class="badge emerging" title="Evidence strength for this practice">
-      <span class="dot"></span>
-      <span><strong>Emerging evidence</strong> <span class="tag">·&nbsp;wellbeing practice</span></span>
+    <div class="meta-row">
+      <span><strong>Duration</strong> &nbsp;·&nbsp; 15 minutes</span>
+      <span><strong>Frequency</strong> &nbsp;·&nbsp; Whenever you need it</span>
+      <span><strong>Evidence</strong> &nbsp;·&nbsp; Emerging — indirect, borrowed from broader mindfulness research</span>
     </div>
   </div>
 </header>
@@ -285,8 +252,8 @@
 <!-- ================= WHAT THIS IS ================= -->
 <section>
   <div class="wrap">
-    <div class="label section-eyebrow">What this practice is for</div>
-    <h2 class="section-title">Being with the storm, not commanding it</h2>
+    <div class="label section-eyebrow">What this practice helps with</div>
+    <h2 class="section-title">Anxiety, "off"-period distress, and restless sleep</h2>
     <p>Parkinson's carries more than movement. Many people live with anxiety, with the low grey pull of a difficult day, with sleep that won't settle, and with the particular distress of an <em>"off"</em> period — those stretches when medication has worn thin and the body feels least like your own.</p>
     <p>This practice does not try to fix any of that. It offers something quieter: a familiar, repeatable place to return to when the day is loud — a way of loosening the grip of a hard moment so that it can be lived through rather than fought.</p>
     <div class="honest-callout">
@@ -295,16 +262,72 @@
   </div>
 </section>
 
-<!-- ================= THE PRACTICE CONSOLE ================= -->
+<!-- ================= THE FOUR PARTS ================= -->
 <section>
   <div class="wrap">
-    <div class="label section-eyebrow">The practice</div>
-    <h2 class="section-title">Fifteen minutes, whenever you need them</h2>
-    <p>You can do this sitting or lying down, eyes open or closed, at any point in your day or night. There is nothing to perform and nothing to get right.</p>
+    <div class="label section-eyebrow">Shape of the session</div>
+    <h2 class="section-title">The four parts of this practice</h2>
+    <p class="four-parts-link">For why this method works and how the four parts fit together, see <a href="guided-imagery.html#four-parts">The Four Parts</a> on the Guided Imagery page.</p>
+    <div class="parts-list">
+      <div class="part-card">
+        <div class="pc-head"><div class="pc-eyebrow">Part I · Breath and Light</div><div class="pc-mins">≈ 3 min</div></div>
+        <div class="pc-block">
+          <div class="pc-label">What it's for</div>
+          <p>For anxious or overwhelmed moments, this settling isn't a warm-up for what's coming — it's already most of the point.</p>
+        </div>
+        <div class="pc-block">
+          <div class="pc-label">How it works</div>
+          <p>A few unhurried minutes of noticing the breath as it already is, and letting a soft warmth or light rest wherever it's easy — no figure yet, nothing to become.</p>
+        </div>
+      </div>
+      <div class="part-card">
+        <div class="pc-head"><div class="pc-eyebrow">Part II · The Settled Place</div><div class="pc-mins">≈ 5 min</div></div>
+        <div class="pc-block">
+          <div class="pc-label">What it's for</div>
+          <p>Calm isn't an action to rehearse, so unlike the other four practices, this one doesn't ask you to watch a figure and become a calmer version of yourself — that could carry the unwanted message that where you are now is wrong. Instead, it simply arrives at a settledness that's already yours.</p>
+        </div>
+        <div class="pc-block">
+          <div class="pc-label">How it works</div>
+          <p>A place that's already calm — real or imagined — is brought to mind, and you simply notice you're already there. If the storm is still going on, it's allowed to carry on at the edge of things, like weather outside a window, while you rest beneath it.</p>
+        </div>
+      </div>
+      <div class="part-card">
+        <div class="pc-head"><div class="pc-eyebrow">Part III · The Quieting Body</div><div class="pc-mins">≈ 4 min</div></div>
+        <div class="pc-block">
+          <div class="pc-label">What it's for</div>
+          <p>Knowing that the body has its own built-in quieting system — one that responds to breath, not effort — makes this rehearsal make sense as something physiological, not just comforting words.</p>
+        </div>
+        <div class="pc-block">
+          <div class="pc-label">How it works</div>
+          <p>A plain-language look at how a slow out-breath signals the nervous system to ease off — the same quieting response this practice is inviting, made a little more understandable.</p>
+        </div>
+        <div class="anatomy">
+          <div class="frame">
+            <span>Placeholder — conceptual diagram: the breath's link to the body's quieting response (not an anatomical pathway)</span>
+          </div>
+          <div class="cap">
+            <strong>This is a conceptual diagram, not an anatomical illustration.</strong> Unlike the movement practices, there's no single nerve route to trace here — do not depict this as a nerve running through the body. It should show, simply, how a slow out-breath connects to the body's own quieting response: an idea, not an anatomy lesson. Do not use AI-generated imagery — automatically generated diagrams are often confidently wrong. Source something simple and honestly diagrammatic, such as from <strong>Servier Medical Art</strong>, rather than detailed neuroanatomy that would overstate what's actually being shown.
+          </div>
+        </div>
+      </div>
+      <div class="part-card">
+        <div class="pc-head"><div class="pc-eyebrow">Part IV · Closing</div><div class="pc-mins">≈ 3 min</div></div>
+        <div class="pc-block">
+          <div class="pc-label">How it works</div>
+          <p>A slow return to the ordinary sounds of the room. Nothing to achieve and nothing to get back to — you met a hard moment and stayed with yourself through it, which is the whole of it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ================= GUIDED AUDIO NARRATION ================= -->
+<section>
+  <div class="wrap">
     <div class="practice-console">
-      <h3>Calm Beneath the Storm — full narration</h3>
-      <p class="console-sub">Guided audio, approximately 15 minutes</p>
+      <div class="label" style="color:var(--gold);">— &nbsp;Guided Audio Narration</div>
+      <h3>Calm Beneath the Storm Practice</h3>
+      <p class="console-sub">15 minutes &nbsp;·&nbsp; Four parts</p>
       <div class="audio-shell">
         <button class="audio-play" aria-label="Audio placeholder — not yet available" disabled>
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
@@ -315,89 +338,46 @@
           <div class="audio-time">00:00 &nbsp;/&nbsp; 15:00</div>
         </div>
       </div>
-      <p class="placeholder-flag">
-        <strong>Audio placeholder.</strong> This narration has not been recorded yet. The finished recordings will use an ElevenLabs voice clone of Jeremy's own voice, and that will be disclosed here and on every practice page — so that you always know you're hearing a synthesised version of a real person's voice, not a stranger and not a hidden machine.
-      </p>
+      <p class="audio-footnote">Audio file to be recorded. The full written script is available below and is equally effective to read quietly to yourself. You can do this sitting or lying down, eyes open or closed, at any point in your day or night.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= TIMING GRID ================= -->
+<!-- ================= NOTE ON AUDIO + FULL SCRIPT ================= -->
 <section>
   <div class="wrap">
-    <div class="label section-eyebrow">Shape of the session</div>
-    <h2 class="section-title">Four movements</h2>
-    <p>The programme follows the same four-part shape across every practice. In this one — the only non-motor practice in the set — the middle movement is handled a little differently, and it's worth knowing why before you begin.</p>
-    <div class="timing-grid">
-      <div class="cell"><div class="ph">Opening</div><div class="mins">≈ 3 min</div><div class="note">Breath and Light. Settling and arriving.</div></div>
-      <div class="cell"><div class="ph">Phase I</div><div class="mins">≈ 5 min</div><div class="note">The Settled Place. A restorative state, entered directly.</div></div>
-      <div class="cell"><div class="ph">Phase II</div><div class="mins">≈ 4 min</div><div class="note">The Quieting Body. The nervous system's own calm.</div></div>
-      <div class="cell"><div class="ph">Closing</div><div class="mins">≈ 3 min</div><div class="note">Carrying a little of it back with you.</div></div>
+    <div class="honest-callout">
+      <p><strong>A note on the audio.</strong> The audio narration will be recorded by Jeremy, in his own voice. The words and pacing are his, and no synthesised or computer-generated voice is used. If listening doesn't suit you, the written script below is equally effective — read it quietly to yourself, or have someone read it to you. Many people find their own inner voice the most effective narrator.</p>
     </div>
-  </div>
-</section>
 
-<!-- ================= WHY NO FIGURE ================= -->
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">A deliberate difference</div>
-    <h2 class="section-title">Why this practice has no "ideal figure"</h2>
-    <p>The four movement practices in this programme — Walking Freely, Finding Flow, Steady Ground, and The Steady Hand — share a technique in their middle movement. A figure appears at a distance, is watched moving with ease, and then steps into you, so that watching becomes doing. It's a way of rehearsing an action from the inside.</p>
-    <p>This practice sets that device aside on purpose. Calm is not an action to rehearse, and there is no performance to step into. Placing a serene figure in front of you and asking you to <em>become</em> them can carry a quiet, unwanted message — that where you are now is wrong, and that you're falling short of some better version of yourself. On an anxious day, that's the last thing worth adding.</p>
-    <p>So instead of watching and merging, this practice simply arrives — at a place of settledness that is already yours, or that you can imagine into being, and then rests there. It's a restorative exception, and it's the more honest fit for what this practice is actually for.</p>
-  </div>
-</section>
-
-<!-- ================= THE SCRIPT ================= -->
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">The full script</div>
-    <h2 class="section-title">Read it, or read along</h2>
-    <p class="script-intro">The words below are the script beneath the audio — read them slowly to yourself, or read along while you listen. Every line is an invitation, never a command.</p>
-
-    <div class="cue-toggle" role="group" aria-label="Choose how the script is worded">
-      <span class="ct-label">How do you imagine things?</span>
-      <span class="ct-opts">
-        <button type="button" data-mode="both" aria-pressed="true">Both</button>
-        <button type="button" data-mode="see" aria-pressed="false">Seeing</button>
-        <button type="button" data-mode="feel" aria-pressed="false">Feeling</button>
-      </span>
-      <span class="ct-hint">Some people imagine mostly by seeing pictures, some by feeling movement, many by both. This gently re-words parts of the script to suit you. Not sure which fits you? Try the <a href="imagery-check.html">2-minute imagery self-check</a>, or just leave it on <strong>Both</strong>.</span>
-    </div>
+    <h2 class="section-title" style="margin-top:38px;">The Full Script</h2>
+    <p class="script-intro">Read this to yourself slowly — allow about 30–45 seconds per paragraph — or use it as the text for the audio narration above.</p>
 
     <!-- AUTO-GENERATED from build/scripts/calm-beneath-the-storm.json — do not edit by hand -->
-    <details class="script" open>
-      <summary><span class="phase-no">·</span><span class="phase-name">Opening — Breath and Light</span><span class="chev">&#9656;</span></summary>
-      <div class="script-body">
+    <details class="full-script">
+      <summary>Read the Full Script</summary>
+      <div class="full-script-body">
+        <h4>Part I — Breath and Light</h4>
         <p>And you&#x27;re here now, reading or listening. You&#x27;ve already taken the time to be here, which is its own small kindness, and there&#x27;s nothing more you need to do to have begun.</p>
         <p>Perhaps you&#x27;re sitting. Perhaps you&#x27;re lying down. Perhaps your eyes are still open, and perhaps in a moment they&#x27;ll feel like closing on their own. There&#x27;s no hurry in any of it — you can take this at exactly the pace that suits you.</p>
         <p>You&#x27;re breathing. You&#x27;ve been breathing all along, without having to think about it — the body has been quietly doing that for you the whole time. And now, if you like, you might just notice it. Not changing anything. Only noticing the breath that&#x27;s already there.</p>
         <p>And you may find, as people often do, that simply letting the breath be noticed lets it lengthen a little on its own. The out-breath, especially — long, and unhurried, like something being set down.</p>
-        <p data-see="And somewhere — in the room, behind your eyes, or in a memory of a warm afternoon — there&#x27;s a soft light. You don&#x27;t have to make the picture sharp. Just let it rest somewhere it&#x27;s easy to rest: the shoulders, perhaps, or the hands, or the slow rise and fall of the chest." data-feel="And somewhere — in the room, or in the memory of a warm afternoon — there&#x27;s a soft warmth. You don&#x27;t have to picture it at all. Just let the feeling of it rest somewhere it&#x27;s easy to rest: the shoulders, perhaps, or the hands, or the slow rise and fall of the chest." data-agnostic="And somewhere — in the room, behind your eyes, or in a memory of a warm afternoon — there&#x27;s a soft light and warmth. You don&#x27;t have to summon it sharply. Just let it rest somewhere it&#x27;s easy to rest: the shoulders, perhaps, or the hands, or the slow rise and fall of the chest.">And somewhere — in the room, behind your eyes, or in a memory of a warm afternoon — there&#x27;s a soft light and warmth. You don&#x27;t have to summon it sharply. Just let it rest somewhere it&#x27;s easy to rest: the shoulders, perhaps, or the hands, or the slow rise and fall of the chest.</p>
-      </div>
-    </details>
-    <details class="script">
-      <summary><span class="phase-no">I</span><span class="phase-name">Phase I — The Settled Place</span><span class="chev">&#9656;</span></summary>
-      <div class="script-body">
-        <p data-see="Somewhere in you — or somewhere you can picture — there&#x27;s a place that is already calm. It doesn&#x27;t need building. It&#x27;s more like a room you already have, that&#x27;s been quietly waiting, with the light already on." data-feel="Somewhere in you — or somewhere you can call up the feeling of — there&#x27;s a place that is already calm. It doesn&#x27;t need building. It&#x27;s more like a room you already have, that&#x27;s been quietly waiting, warm and settled." data-agnostic="Somewhere in you — or somewhere you can bring to mind — there&#x27;s a place that is already calm. It doesn&#x27;t need building. It&#x27;s more like a room you already have, that&#x27;s been quietly waiting, with the light already on.">Somewhere in you — or somewhere you can bring to mind — there&#x27;s a place that is already calm. It doesn&#x27;t need building. It&#x27;s more like a room you already have, that&#x27;s been quietly waiting, with the light already on.</p>
-        <p data-see="It might be a real place you&#x27;ve been: a shoreline, a garden, a kitchen at a certain hour, a seat by a window. Picture as much or as little of it as comes — or none of it, just the sense of a place where nothing is being asked of you." data-feel="It might be a real place you&#x27;ve been, or nowhere in particular. You don&#x27;t need to see it — just let there be the feeling of a place where nothing is being asked of you." data-agnostic="It might be a real place you&#x27;ve been: a shoreline, a garden, a kitchen at a certain hour, a seat by a window. Or it might be nowhere in particular — just the feeling of a place where nothing is being asked of you.">It might be a real place you&#x27;ve been: a shoreline, a garden, a kitchen at a certain hour, a seat by a window. Or it might be nowhere in particular — just the feeling of a place where nothing is being asked of you.</p>
+        <p>And somewhere — in the room, behind your eyes, or in a memory of a warm afternoon — there&#x27;s a soft light and warmth. You don&#x27;t have to summon it sharply. Just let it rest somewhere it&#x27;s easy to rest: the shoulders, perhaps, or the hands, or the slow rise and fall of the chest.</p>
+
+        <h4>Part II — The Settled Place</h4>
+        <p>Somewhere in you — or somewhere you can bring to mind — there&#x27;s a place that is already calm. It doesn&#x27;t need building. It&#x27;s more like a room you already have, that&#x27;s been quietly waiting, with the light already on.</p>
+        <p>It might be a real place you&#x27;ve been: a shoreline, a garden, a kitchen at a certain hour, a seat by a window. Or it might be nowhere in particular — just the feeling of a place where nothing is being asked of you.</p>
         <p>And you don&#x27;t have to travel to it, or earn your way in. You can simply notice that you&#x27;re already there. The ground holding you. The air a comfortable temperature. The quiet not empty, but easy.</p>
         <p>If the storm is still going on somewhere — the anxious thought, the tremor, the difficult hour — you can let it carry on at the edge of things, the way weather carries on outside a window. You don&#x27;t have to make it stop to be here. You&#x27;re beneath it now, in the settled place, and it can do what it does without needing your hand on it.</p>
         <p>So you rest here for a while. Nothing to reach for. Nothing to fix. Just a person, in a calm place, breathing — which turns out to be enough.</p>
-      </div>
-    </details>
-    <details class="script">
-      <summary><span class="phase-no">II</span><span class="phase-name">Phase II — The Quieting Body</span><span class="chev">&#9656;</span></summary>
-      <div class="script-body">
+
+        <h4>Part III — The Quieting Body</h4>
         <p>The body has a quieting system of its own — one that doesn&#x27;t need instructions, only a little space to work. As the breath slows, that system begins, gently, to answer.</p>
         <p>There&#x27;s a long nerve that runs from the base of the brain, down through the throat, past the heart, and into the belly — a kind of quiet wire threaded through the middle of you. When the out-breath lengthens, it&#x27;s this pathway that carries the message inward: you can ease now. The heart slows a touch. The muscles that were braced let go a fraction. The alarm turns itself down.</p>
         <p>You don&#x27;t have to make this happen. You couldn&#x27;t force it if you tried — that&#x27;s rather the point of it. All you&#x27;re doing is giving it room: one slow breath, and then another, each long out-breath a small signal travelling down that quiet wire, and the body, in its own time, beginning to answer back.</p>
         <p>And whatever is difficult in the body today — the stiffness, the restlessness, the wearing-off — you&#x27;re not fighting it here. You&#x27;re just letting the quieting system do the one thing it knows how to do, alongside everything else that&#x27;s going on.</p>
-      </div>
-    </details>
-    <details class="script">
-      <summary><span class="phase-no">·</span><span class="phase-name">Closing</span><span class="chev">&#9656;</span></summary>
-      <div class="script-body">
+
+        <h4>Part IV — Closing</h4>
         <p>And when you&#x27;re ready — in your own time, with no signal to wait for — you can let the ordinary sounds of the room come back. The surface beneath you. The light in the space you&#x27;re actually in.</p>
         <p>You don&#x27;t have to carry the whole calm out with you. Just a little of it, however much came — a slightly longer breath, a slightly looser shoulder, a sense that the settled place is still there and can be returned to whenever the day gets loud again.</p>
         <p>There was nothing to achieve here, and nothing to get back to. You didn&#x27;t fail if the storm kept going, and you didn&#x27;t have to fix anything to have done this well. You met a hard moment, and you stayed with yourself through it — which is the whole of it.</p>
@@ -407,79 +387,31 @@
   </div>
 </section>
 
-<!-- ================= ANATOMY PLACEHOLDER ================= -->
+<!-- ================= WHEN TO PRACTISE + HONEST NOTE ================= -->
 <section>
   <div class="wrap">
-    <div class="label section-eyebrow">The pathway in Phase II</div>
-    <h2 class="section-title">The quieting system, illustrated</h2>
-    <p>Phase II works with the parasympathetic nervous system — the body's "rest and settle" branch, carried largely by the vagus nerve. The illustration below is a placeholder only.</p>
-    <div class="anatomy">
-      <div class="frame">
-        <span>Placeholder — vagus nerve &amp; parasympathetic pathway<br>(brainstem → throat → heart → abdomen)</span>
-      </div>
-      <div class="cap">
-        <strong>This image is a placeholder and must be replaced before publication.</strong> Do not use AI-generated anatomy here — automatically generated anatomical illustrations are frequently wrong in ways that look convincing, and inaccurate anatomy on a health site is worse than none. Source a correct diagram from <strong>Servier Medical Art</strong> (free, CC-licensed, clinically drawn) or licensed medical stock, and confirm the parasympathetic/vagal pathway is depicted accurately.
-      </div>
+    <h2 class="section-title">When to Practise</h2>
+    <p>This practice is different from the other four in one more way: there's no on-waking window suggested for it. Rest and downregulation aren't something to prescribe first thing, before the day's demands have even arrived — this is a practice for when you actually need settling, not a morning routine. Two windows tend to work especially well.</p>
+    <div class="when-grid two-col">
+      <div class="cell"><div class="wh">Throughout the Day</div><div class="note">Every 90 minutes or so, attention naturally softens — you might notice it as a dip in focus or a pull to pause. When you notice that drift, or whenever the day gets loud, spend two or three breaths returning to the settled place. It takes less than a minute and it counts.</div></div>
+      <div class="cell"><div class="wh">Before Sleep</div><div class="note">The minutes before sleep are when the mind is most receptive, and this is often the most natural time for this particular practice. Bring the settled place to those minutes — whatever you're holding in mind can carry on quietly working while you rest.</div></div>
     </div>
-  </div>
-</section>
 
-<!-- ================= EVIDENCE ================= -->
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">What the evidence says</div>
-    <h2 class="section-title">Emerging — and honestly badged</h2>
-    <div class="academic-note">
-      <h4>Where the "Emerging" badge comes from</h4>
-      <p>Two strands of research sit behind this practice, and they're not equally strong. The clearer one is for mindfulness and meditation broadly: several randomised trials in Parkinson's have found reductions in anxiety and depressive symptoms, which are among the most common and most under-treated non-motor features of the condition. That evidence is for mindfulness programmes as a category — not for this specific guided-imagery script — so it supports the <em>idea</em> of a settling practice more than it validates these exact words.</p>
-      <p>The second strand is thinner and more specific: a small home-based study reported that listening to relaxation guided imagery (but not to relaxing music) was associated with more daily "on" time. It's an intriguing signal, but it's small and preliminary, and it should not be read as proof that imagery increases on-time or replaces any part of medical management.</p>
-      <p>Taken together, that's why the badge reads <strong>Emerging</strong> rather than Moderate or Strong: a real and encouraging basis for offering this as a wellbeing practice, and no basis at all for promising it changes the course of the disease.</p>
-      <p class="cite">Full references — Dissanayaka et al. (mindfulness for anxiety/depression in PD), Kwok et al. (meditation RCT), and the relaxation-guided-imagery / "on"-time work — are listed on the <a href="bibliography.html">Bibliography</a> page.</p>
+    <div class="honest-callout" style="margin-top:22px;">
+      <p><strong>An honest note.</strong> Two strands of research sit behind this practice, and they're not equally strong. The clearer one is for mindfulness and meditation broadly: several randomised trials in Parkinson's have found reductions in anxiety and depressive symptoms. That evidence is for mindfulness programmes as a category, not for this specific guided-imagery script, so it supports the idea of a settling practice more than it validates these exact words. The second strand is thinner: a small home-based study found relaxation guided imagery (but not relaxing music) was associated with more daily "on" time — an intriguing but small and preliminary signal, not proof that imagery increases on-time or replaces any part of medical management. Full references are listed on the <a href="bibliography.html">Bibliography</a> page.</p>
+      <p style="margin-top:14px;">The specific four-part structure used here — Part I (breath and light), Part II (the Settled Place), Part III (the Quieting Body), and Part IV (closing) — is Jeremy's own creation. Nobody has tested this exact combination in a clinical trial. Each piece on its own is backed by research; putting them together like this is a reasoned choice, not a proven method.</p>
+      <p style="margin-top:14px;">This is not a treatment. It's a free practice, meant to sit alongside — never replace — your medication, physiotherapy, speech therapy, and the guidance of your Parkinson's team.</p>
     </div>
-  </div>
-</section>
-
-<!-- ================= SYNTHESIS DISCLAIMER ================= -->
-<section>
-  <div class="wrap">
-    <div class="label section-eyebrow">A note on this method</div>
-    <h2 class="section-title">Jeremy's own synthesis</h2>
-    <p>The four-part structure used across this programme — Opening, Phase I, Phase II, Closing — is Jeremy's own synthesis, drawn from the Ericksonian and solution-oriented tradition he trained in. It has not been tested as a unified protocol in any clinical trial. The individual ingredients (imagery, breath work, relaxation) have research behind them, as noted above; the particular way they're combined here is a considered personal design, offered in good faith, not a validated treatment.</p>
-    <p>Please treat this as a complement to your care, never a replacement for it. Guided imagery sits alongside medication, physiotherapy, speech therapy, and the guidance of your Parkinson's team — it does not stand in for any of them.</p>
   </div>
 </section>
 
 <!-- ================= EXERCISE NAV ================= -->
 <nav class="exercise-nav">
   <div class="wrap wide">
-    <div class="label section-eyebrow">The five practices</div>
-    <h2 class="section-title">Explore the programme</h2>
-    <div class="grid">
-      <a class="ex-card" href="walking-freely.html">
-        <span class="ex-no">Practice 1</span>
-        <div class="ex-name">Walking Freely</div>
-        <div class="ex-dom">Gait &amp; freezing</div>
-      </a>
-      <a class="ex-card" href="finding-flow.html">
-        <span class="ex-no">Practice 2</span>
-        <div class="ex-name">Finding Flow</div>
-        <div class="ex-dom">Movement initiation &amp; bradykinesia</div>
-      </a>
-      <a class="ex-card" href="steady-ground.html">
-        <span class="ex-no">Practice 3</span>
-        <div class="ex-name">Steady Ground</div>
-        <div class="ex-dom">Balance &amp; postural stability</div>
-      </a>
-      <a class="ex-card" href="the-steady-hand.html">
-        <span class="ex-no">Practice 4</span>
-        <div class="ex-name">The Steady Hand</div>
-        <div class="ex-dom">Fine motor &amp; handwriting</div>
-      </a>
-      <a class="ex-card current" href="calm-beneath-the-storm.html" aria-current="page">
-        <span class="ex-no">Practice 5 · You are here</span>
-        <div class="ex-name">Calm Beneath the Storm</div>
-        <div class="ex-dom">Non-motor wellbeing</div>
-      </a>
+    <div class="ex-links">
+      <a class="ex-link" href="the-steady-hand.html">&larr; Practice 4: The Steady Hand</a>
+      <a class="ex-link" href="guided-imagery.html">All Practices</a>
+      <span class="ex-link disabled">Last Practice</span>
     </div>
   </div>
 </nav>
@@ -497,35 +429,6 @@
     var open = links.classList.toggle('open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-</script>
-
-<script>
-  (function(){
-    var KEY='lbp-cue-mode';
-    var toggle=document.querySelector('.cue-toggle');
-    if(!toggle) return;
-    var paras=[].slice.call(document.querySelectorAll('.script-body p[data-agnostic]'));
-    function apply(mode){
-      paras.forEach(function(p){
-        var t = mode==='see' ? p.getAttribute('data-see')
-              : mode==='feel'? p.getAttribute('data-feel')
-              : p.getAttribute('data-agnostic');
-        if(t) p.textContent=t;
-      });
-      [].forEach.call(toggle.querySelectorAll('button'),function(b){
-        b.setAttribute('aria-pressed', b.getAttribute('data-mode')===mode ? 'true':'false');
-      });
-    }
-    var saved='both';
-    try{ saved=localStorage.getItem(KEY)||'both'; }catch(e){}
-    apply(saved);
-    toggle.addEventListener('click',function(e){
-      var b=e.target.closest('button'); if(!b) return;
-      var mode=b.getAttribute('data-mode');
-      apply(mode);
-      try{ localStorage.setItem(KEY,mode); }catch(e){}
-    });
-  })();
 </script>
 </body>
 </html>
