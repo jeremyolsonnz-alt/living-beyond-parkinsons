@@ -84,10 +84,32 @@
   .full-script-body p{color:#3D3A30;line-height:1.72;margin:0 0 16px;}
   .practice-console .audio-footnote{margin-top:16px;font-size:.8rem;color:#A9A294;font-style:italic;line-height:1.5;}
   .anatomy{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:0;overflow:hidden;margin:6px 0 0;}
-  .anatomy .frame{background:repeating-linear-gradient(45deg,#EDE6D8,#EDE6D8 12px,#E8E0D0 12px,#E8E0D0 24px);height:240px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);}
-  .anatomy .frame span{font-size:.9rem;max-width:34ch;line-height:1.5;}
+  .anatomy figure{margin:0;padding:22px 20px 2px;}
+  .anatomy svg{width:100%;height:auto;display:block;margin:0 auto .9rem;}
+  .anatomy figcaption{font-size:.85rem;color:var(--muted);line-height:1.65;font-style:italic;text-align:center;max-width:54ch;margin:0 auto;}
   .anatomy .cap{padding:16px 20px;font-size:.82rem;color:var(--muted);line-height:1.55;}
   .anatomy .cap strong{color:var(--bark);font-weight:600;}
+  .diagram-label{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;fill:var(--muted);}
+  .diagram-note{font-family:'DM Sans',system-ui,sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;fill:var(--gold);}
+  .legend-label{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;letter-spacing:.04em;fill:var(--muted);}
+  .route{fill:none;stroke:var(--gold);stroke-linecap:round;stroke-linejoin:round;}
+  .route-trunk{stroke-width:2.6;}
+  .route-branch{stroke-width:1.7;}
+  .route-segment{stroke-width:5;}
+  .route-faded{fill:none;stroke:#C9C0AE;stroke-width:2;stroke-dasharray:3 6;stroke-linecap:round;}
+  .cue-link{fill:none;stroke:var(--gold);stroke-width:1.3;stroke-dasharray:2 5;stroke-linecap:round;}
+  @media(prefers-reduced-motion:no-preference){
+    .route{stroke-dasharray:900;stroke-dashoffset:900;animation:trace 3s cubic-bezier(.4,0,.2,1) forwards;}
+    .route-branch{animation-delay:1.2s;}
+    .terminus{opacity:0;animation:settle 1.2s ease forwards;animation-delay:2.6s;}
+  }
+  @keyframes trace{to{stroke-dashoffset:0;}}
+  @keyframes settle{to{opacity:1;}}
+  @media(max-width:780px){
+    .diagram-label{font-size:17px;letter-spacing:.06em;}
+    .diagram-note{font-size:16px;letter-spacing:.08em;}
+    .legend-label{font-size:17px;}
+  }
   .honest-callout{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin:6px 0 0;}
   .honest-callout p{margin:0;font-size:.95rem;color:#3D3A30;}
   .honest-callout p strong{color:var(--bark);}
@@ -211,9 +233,102 @@
           <p>A plain-language look at how the brain launches movement, why that launching can falter in Parkinson's, and how deliberately rehearsing an easy, full-sized start can help keep that pattern warm.</p>
         </div>
         <div class="anatomy">
-          <div class="frame"><span>Placeholder — basal ganglia (striatum, globus pallidus, substantia nigra) &amp; loop to supplementary motor area</span></div>
+          <figure>
+            <svg viewBox="0 0 720 730" role="img" aria-labelledby="flow-title flow-desc" xmlns="http://www.w3.org/2000/svg">
+              <title id="flow-title">Simplified schematic of the loop that launches a movement, and of rehearsal arriving ahead of it</title>
+              <desc id="flow-desc">A head shown in profile facing right. A gold loop runs from the area where a movement is prepared, back to deep clusters in the middle of the brain, up to the movement area along the top, and then down through the brainstem and out. A faint dashed line rising into the deep clusters carries two small marks across it, showing the supply that runs short in Parkinson's. A fine dashed gold line arrives from outside the head at the area where movement is prepared. Beneath, a simple timeline shows a stretch of preparing in rehearsal before the moment a movement begins, and the movement itself following it.</desc>
+
+              <g transform="translate(40,30)">
+                <path d="M 300 62
+                         C 350 62, 394 96, 398 140
+                         C 400 156, 394 166, 388 172
+                         L 400 186
+                         C 406 192, 404 198, 396 200
+                         L 384 202
+                         C 382 212, 386 218, 380 222
+                         C 374 228, 368 232, 366 244
+                         C 364 258, 354 266, 336 268
+                         C 300 272, 260 262, 234 240
+                         C 208 218, 202 186, 206 156
+                         C 212 106, 252 62, 300 62 Z"
+                      fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+
+                <path d="M 292 262 C 292 282, 288 294, 284 306 L 358 306 C 354 292, 352 276, 354 256 Z"
+                      fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+
+                <ellipse cx="296" cy="134" rx="74" ry="56" fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2"/>
+
+                <path d="M 292 190 C 300 210, 302 232, 298 254 C 308 250, 314 232, 314 212 C 314 200, 306 190, 298 188 Z"
+                      fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2"/>
+
+                <path d="M 256 86 C 270 78, 288 75, 306 78" fill="none" stroke="#C4BAA4" stroke-width="8" stroke-linecap="round"/>
+
+                <ellipse cx="330" cy="96" rx="24" ry="16" fill="#D8CFBC" stroke="#C4BAA4" stroke-width="1.2"/>
+                <ellipse cx="290" cy="148" rx="26" ry="16" fill="#D8CFBC" stroke="#C4BAA4" stroke-width="1.2"/>
+
+                <path class="route-faded" stroke="#BCB29C" stroke-width="2.4" d="M 288 208 C 288 188, 288 172, 290 160"/>
+                <g stroke="#A89C84" stroke-width="2" stroke-linecap="round">
+                  <line x1="279" y1="192" x2="297" y2="186"/>
+                  <line x1="281" y1="203" x2="299" y2="197"/>
+                </g>
+
+                <path class="route route-branch" d="M 316 108 C 308 120, 300 132, 294 140"/>
+                <path class="route route-trunk" d="M 276 138 C 266 118, 262 100, 270 86"/>
+                <path class="route route-trunk" d="M 300 90 C 312 116, 314 150, 310 182 C 308 212, 304 240, 302 298"/>
+
+                <circle class="terminus" cx="302" cy="298" r="3.2" fill="#C8963C"/>
+              </g>
+
+              <path class="cue-link" d="M 500 232 C 452 210, 412 162, 400 132"/>
+              <g fill="none" stroke="#C8963C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 390 138 L 400 131 L 405 145"/>
+              </g>
+
+              <g stroke="#D0C6B2" stroke-width="1" fill="none">
+                <line x1="236" y1="126" x2="296" y2="118"/>
+                <line x1="236" y1="192" x2="306" y2="180"/>
+                <line x1="236" y1="276" x2="322" y2="222"/>
+                <line x1="470" y1="118" x2="392" y2="124"/>
+              </g>
+
+              <g class="diagram-label">
+                <text x="228" y="130" text-anchor="end">The movement area</text>
+                <text x="228" y="188" text-anchor="end">Deep clusters that</text>
+                <text x="228" y="206" text-anchor="end">launch the movement</text>
+                <text x="228" y="272" text-anchor="end">The supply that</text>
+                <text x="228" y="290" text-anchor="end">runs short</text>
+                <text x="478" y="114" text-anchor="start">Where a movement</text>
+                <text x="478" y="132" text-anchor="start">is prepared</text>
+                <text x="510" y="240" text-anchor="start">Rehearsal, arriving</text>
+                <text x="510" y="258" text-anchor="start">ahead of time</text>
+              </g>
+
+              <text class="diagram-note" x="370" y="398" text-anchor="middle">The running start</text>
+
+              <line x1="370" y1="426" x2="370" y2="492" stroke="#C9C0AE" stroke-width="1" stroke-dasharray="3 5"/>
+
+              <path class="route" stroke-width="9" stroke-linecap="round" d="M 208 458 L 360 458"/>
+              <line x1="380" y1="458" x2="536" y2="458" stroke="#D0C6B2" stroke-width="9" stroke-linecap="round"/>
+
+              <g class="diagram-label">
+                <text x="284" y="442" text-anchor="middle">Preparing</text>
+                <text x="458" y="442" text-anchor="middle">The movement</text>
+                <text x="370" y="516" text-anchor="middle">The moment it begins</text>
+              </g>
+
+              <g transform="translate(180, 596)">
+                <line x1="0" y1="0" x2="34" y2="0" stroke="#C8963C" stroke-width="2.6" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="4">The loop that launches a movement</text>
+                <line x1="0" y1="26" x2="34" y2="26" stroke="#C8963C" stroke-width="1.3" stroke-dasharray="2 5" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="30">Rehearsal, arriving ahead of the movement</text>
+                <line x1="0" y1="52" x2="34" y2="52" stroke="#C9C0AE" stroke-width="2" stroke-dasharray="3 6" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="56">The supply that runs short in Parkinson&#8217;s</text>
+              </g>
+            </svg>
+            <figcaption>The loop that launches a movement, the supply that runs short in Parkinson&rsquo;s, and where rehearsal comes in &mdash; arriving ahead of the movement rather than replacing anything.</figcaption>
+          </figure>
           <div class="cap">
-            <strong>This image is a placeholder and must be replaced before publication.</strong> Do not use AI-generated anatomy here — automatically generated anatomical illustrations are frequently wrong in ways that look convincing, and inaccurate anatomy on a health site is worse than none. Source a correct diagram from <strong>Servier Medical Art</strong> (free, CC-licensed, clinically drawn) or licensed medical stock, and confirm the basal-ganglia / SMA circuit is depicted accurately before use.
+            <strong>A simplified schematic, not an anatomical illustration.</strong> The clusters and areas shown stand for systems involving many structures on both sides of the brain, and the timeline beneath is illustrative rather than measured. Your medication does much of this work in the body; rehearsal is offered alongside it, never instead of it.
           </div>
         </div>
       </div>

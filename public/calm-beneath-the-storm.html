@@ -155,18 +155,34 @@
   .full-script-body p{color:#3D3A30;line-height:1.72;margin:0 0 16px;}
   .practice-console .audio-footnote{margin-top:16px;font-size:.8rem;color:#A9A294;font-style:italic;line-height:1.5;}
 
-  /* ---------- ANATOMY PLACEHOLDER ---------- */
-  .anatomy{
-    background:var(--warm-white);border:1px solid var(--border);border-radius:4px;
-    padding:0;overflow:hidden;margin:6px 0 0;
-  }
-  .anatomy .frame{
-    background:repeating-linear-gradient(45deg,#EDE6D8,#EDE6D8 12px,#E8E0D0 12px,#E8E0D0 24px);
-    height:240px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);
-  }
-  .anatomy .frame span{font-size:.9rem;max-width:34ch;line-height:1.5;}
+  /* ---------- ANATOMY DIAGRAM ---------- */
+  .anatomy{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:0;overflow:hidden;margin:6px 0 0;}
+  .anatomy figure{margin:0;padding:22px 20px 2px;}
+  .anatomy svg{width:100%;height:auto;display:block;margin:0 auto .9rem;}
+  .anatomy figcaption{font-size:.85rem;color:var(--muted);line-height:1.65;font-style:italic;text-align:center;max-width:54ch;margin:0 auto;}
   .anatomy .cap{padding:16px 20px;font-size:.82rem;color:var(--muted);line-height:1.55;}
   .anatomy .cap strong{color:var(--bark);font-weight:600;}
+  .diagram-label{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;fill:var(--muted);}
+  .diagram-note{font-family:'DM Sans',system-ui,sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;fill:var(--gold);}
+  .legend-label{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;letter-spacing:.04em;fill:var(--muted);}
+  .route{fill:none;stroke:var(--gold);stroke-linecap:round;stroke-linejoin:round;}
+  .route-trunk{stroke-width:2.6;}
+  .route-branch{stroke-width:1.7;}
+  .route-segment{stroke-width:5;}
+  .route-faded{fill:none;stroke:#C9C0AE;stroke-width:2;stroke-dasharray:3 6;stroke-linecap:round;}
+  .cue-link{fill:none;stroke:var(--gold);stroke-width:1.3;stroke-dasharray:2 5;stroke-linecap:round;}
+  @media(prefers-reduced-motion:no-preference){
+    .route{stroke-dasharray:900;stroke-dashoffset:900;animation:trace 3s cubic-bezier(.4,0,.2,1) forwards;}
+    .route-branch{animation-delay:1.2s;}
+    .terminus{opacity:0;animation:settle 1.2s ease forwards;animation-delay:2.6s;}
+  }
+  @keyframes trace{to{stroke-dashoffset:0;}}
+  @keyframes settle{to{opacity:1;}}
+  @media(max-width:780px){
+    .diagram-label{font-size:17px;letter-spacing:.06em;}
+    .diagram-note{font-size:16px;letter-spacing:.08em;}
+    .legend-label{font-size:17px;}
+  }
 
   .honest-callout{
     background:var(--cream);border:1px solid var(--border);border-radius:4px;
@@ -299,14 +315,93 @@
         </div>
         <div class="pc-block">
           <div class="pc-label">How it works</div>
-          <p>A plain-language look at how a slow out-breath signals the nervous system to ease off — the same quieting response this practice is inviting, made a little more understandable.</p>
+          <p>A plain-language look at how a slow, long out-breath invites the body&#x27;s own quieting response — shown as something that spreads, rather than as a route traced through the body.</p>
         </div>
         <div class="anatomy">
-          <div class="frame">
-            <span>Placeholder — conceptual diagram: the breath's link to the body's quieting response (not an anatomical pathway)</span>
-          </div>
+          <figure>
+            <svg viewBox="0 0 720 760" role="img" aria-labelledby="calm-title calm-desc" xmlns="http://www.w3.org/2000/svg">
+              <title id="calm-title">Conceptual diagram of a long out-breath and the body's own quieting response</title>
+              <desc id="calm-desc">A front view of a head and torso outline, drawn faintly. A gold line leaves the mouth and sweeps outward, thinning as it goes, standing for a long slow out-breath. Faint dashed gold rings spread outward from the middle of the chest, standing for the body's quieting response rather than any particular nerve or structure. Small gold marks sit at the shoulders, the heart and the belly. To the right, a simple upright gauge shows a gold arrow moving downward, standing for an alarm turning itself down. Nothing in the drawing traces a route through the body.</desc>
+
+              <ellipse cx="320" cy="100" rx="50" ry="62" fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+              <path d="M 297 160
+                       L 297 190
+                       C 297 196, 285 200, 262 206
+                       C 232 214, 208 222, 198 238
+                       C 190 252, 194 280, 199 320
+                       C 204 356, 208 380, 210 410
+                       C 212 440, 208 462, 206 492
+                       C 204 524, 208 552, 212 582
+                       L 428 582
+                       C 432 552, 436 524, 434 492
+                       C 432 462, 428 440, 430 410
+                       C 432 380, 436 356, 441 320
+                       C 446 280, 450 252, 442 238
+                       C 432 222, 408 214, 378 206
+                       C 355 200, 343 196, 343 190
+                       L 343 160 Z"
+                    fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+
+              <path d="M 216 358 Q 320 398, 424 358" fill="none" stroke="#D0C6B2" stroke-width="1.6" stroke-linecap="round"/>
+
+              <path d="M 300 232 C 282 240, 268 264, 266 296 C 265 316, 274 326, 286 322 C 298 318, 304 294, 304 262 C 304 242, 304 232, 300 232 Z"
+                    fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2"/>
+              <path d="M 340 232 C 358 240, 372 264, 374 296 C 375 316, 366 326, 354 322 C 342 318, 336 294, 336 262 C 336 242, 336 232, 340 232 Z"
+                    fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2"/>
+
+              <path d="M 322 268 C 328 260, 340 262, 340 274 C 340 286, 328 296, 320 304 C 312 296, 300 286, 300 274 C 300 262, 314 260, 320 268 Z"
+                    fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2"/>
+
+              <g fill="none" stroke="#C8963C" stroke-dasharray="2 7" stroke-linecap="round">
+                <circle cx="320" cy="286" r="66" stroke-width="1.3" opacity="0.6"/>
+                <circle cx="320" cy="286" r="98" stroke-width="1.2" opacity="0.42"/>
+                <circle cx="320" cy="286" r="132" stroke-width="1.1" opacity="0.28"/>
+              </g>
+
+              <path class="route route-trunk" d="M 328 150 C 368 146, 402 134, 428 116"/>
+              <path class="route route-branch" d="M 428 116 C 452 104, 470 96, 488 92"/>
+              <path class="cue-link" d="M 488 92 C 506 88, 520 86, 534 86"/>
+
+              <circle class="terminus" cx="320" cy="284" r="3.4" fill="#C8963C"/>
+              <circle class="terminus" cx="248" cy="212" r="3.2" fill="#C8963C"/>
+              <circle class="terminus" cx="392" cy="212" r="3.2" fill="#C8963C"/>
+              <circle class="terminus" cx="318" cy="404" r="3.2" fill="#C8963C"/>
+
+              <g fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2">
+                <rect x="520" y="424" width="16" height="152" rx="8"/>
+              </g>
+              <line x1="512" y1="450" x2="544" y2="450" stroke="#C9C0AE" stroke-width="2" stroke-dasharray="3 5" stroke-linecap="round"/>
+              <path class="route route-trunk" d="M 528 458 L 528 536"/>
+              <path fill="none" stroke="#C8963C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M 520 528 L 528 540 L 536 528"/>
+
+              <g stroke="#D0C6B2" stroke-width="1" fill="none">
+                <line x1="188" y1="218" x2="242" y2="212"/>
+                <line x1="188" y1="404" x2="312" y2="404"/>
+                <line x1="486" y1="286" x2="330" y2="284"/>
+              </g>
+
+              <g class="diagram-label">
+                <text x="180" y="214" text-anchor="end">Braced muscles</text>
+                <text x="180" y="232" text-anchor="end">let go a fraction</text>
+                <text x="180" y="408" text-anchor="end">The belly softens</text>
+                <text x="494" y="282" text-anchor="start">The heart slows</text>
+                <text x="494" y="300" text-anchor="start">a touch</text>
+                <text x="528" y="604" text-anchor="middle">The alarm turns down</text>
+              </g>
+
+              <text class="diagram-note" x="470" y="62" text-anchor="middle">The long out-breath</text>
+
+              <g transform="translate(180, 656)">
+                <line x1="0" y1="0" x2="34" y2="0" stroke="#C8963C" stroke-width="2.6" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="4">The long out-breath, thinning as it goes</text>
+                <line x1="0" y1="26" x2="34" y2="26" stroke="#C8963C" stroke-width="1.3" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.6"/>
+                <text class="legend-label" x="46" y="30">The quieting response, spreading &#8212; not a route</text>
+              </g>
+            </svg>
+            <figcaption>A conceptual picture of what a long out-breath sets off: the body&rsquo;s own quieting response spreading, the heart easing, braced muscles letting go a little, the alarm turning itself down.</figcaption>
+          </figure>
           <div class="cap">
-            <strong>This is a conceptual diagram, not an anatomical illustration.</strong> Unlike the movement practices, there's no single nerve route to trace here — do not depict this as a nerve running through the body. It should show, simply, how a slow out-breath connects to the body's own quieting response: an idea, not an anatomy lesson. Do not use AI-generated imagery — automatically generated diagrams are often confidently wrong. Source something simple and honestly diagrammatic, such as from <strong>Servier Medical Art</strong>, rather than detailed neuroanatomy that would overstate what's actually being shown.
+            <strong>This is a conceptual diagram, not an anatomical illustration.</strong> Nothing in it traces a nerve or a route through the body, because that isn&rsquo;t what is being shown. The rings stand for a response that spreads rather than travels, and the gauge is a figure of speech drawn out. None of it is under voluntary control: the practice makes room for the response, it doesn&rsquo;t perform it.
           </div>
         </div>
       </div>
@@ -373,8 +468,8 @@
 
         <h4>Part III — The Quieting Body</h4>
         <p>The body has a quieting system of its own — one that doesn&#x27;t need instructions, only a little space to work. As the breath slows, that system begins, gently, to answer.</p>
-        <p>There&#x27;s a long nerve that runs from the base of the brain, down through the throat, past the heart, and into the belly — a kind of quiet wire threaded through the middle of you. When the out-breath lengthens, it&#x27;s this pathway that carries the message inward: you can ease now. The heart slows a touch. The muscles that were braced let go a fraction. The alarm turns itself down.</p>
-        <p>You don&#x27;t have to make this happen. You couldn&#x27;t force it if you tried — that&#x27;s rather the point of it. All you&#x27;re doing is giving it room: one slow breath, and then another, each long out-breath a small signal travelling down that quiet wire, and the body, in its own time, beginning to answer back.</p>
+        <p>And it seems to be the out-breath that matters most — not the drawing in, but the letting go. A long, unhurried out-breath is read by the body as a sign that there&#x27;s no emergency here, and the body answers it in its own quiet way. The heart slows a touch. The muscles that were braced let go a fraction. The belly softens. The alarm turns itself down.</p>
+        <p>You don&#x27;t have to make this happen. You couldn&#x27;t force it if you tried — that&#x27;s rather the point of it. All you&#x27;re doing is giving it room: one slow breath, and then another, each long out-breath making a little more space, and the body, in its own time, beginning to answer back.</p>
         <p>And whatever is difficult in the body today — the stiffness, the restlessness, the wearing-off — you&#x27;re not fighting it here. You&#x27;re just letting the quieting system do the one thing it knows how to do, alongside everything else that&#x27;s going on.</p>
 
         <h4>Part IV — Closing</h4>

@@ -96,17 +96,33 @@
   .part-card .pc-block:last-child{margin-bottom:0;}
   .part-card .pc-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bark);font-weight:600;margin-bottom:4px;}
   .part-card .pc-block p{margin:0;font-size:.94rem;color:#3D3A30;line-height:1.6;}
-  .part-card .anatomy{margin-top:6px;}
-  .when-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:8px 0 0;}
-  .when-grid .cell{background:var(--warm-white);padding:20px 18px;}
-  .when-grid .cell .wh{font-family:'Lora',serif;font-size:1.05rem;color:var(--charcoal);margin-bottom:6px;}
-  .when-grid .cell .note{color:var(--muted);font-size:.86rem;line-height:1.5;}
-  @media(max-width:640px){.when-grid{grid-template-columns:1fr;}}
-  .anatomy{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:0;overflow:hidden;margin:6px 0 0;}
-  .anatomy .frame{background:repeating-linear-gradient(45deg,#EDE6D8,#EDE6D8 12px,#E8E0D0 12px,#E8E0D0 24px);height:240px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);}
-  .anatomy .frame span{font-size:.9rem;max-width:34ch;line-height:1.5;}
+  .part-card .anatomy{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:0;overflow:hidden;margin:6px 0 0;}
+  .anatomy figure{margin:0;padding:22px 20px 2px;}
+  .anatomy svg{width:100%;height:auto;display:block;margin:0 auto .9rem;}
+  .anatomy figcaption{font-size:.85rem;color:var(--muted);line-height:1.65;font-style:italic;text-align:center;max-width:54ch;margin:0 auto;}
   .anatomy .cap{padding:16px 20px;font-size:.82rem;color:var(--muted);line-height:1.55;}
   .anatomy .cap strong{color:var(--bark);font-weight:600;}
+  .diagram-label{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;fill:var(--muted);}
+  .diagram-note{font-family:'DM Sans',system-ui,sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;fill:var(--gold);}
+  .legend-label{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;letter-spacing:.04em;fill:var(--muted);}
+  .route{fill:none;stroke:var(--gold);stroke-linecap:round;stroke-linejoin:round;}
+  .route-trunk{stroke-width:2.6;}
+  .route-branch{stroke-width:1.7;}
+  .route-segment{stroke-width:5;}
+  .route-faded{fill:none;stroke:#C9C0AE;stroke-width:2;stroke-dasharray:3 6;stroke-linecap:round;}
+  .cue-link{fill:none;stroke:var(--gold);stroke-width:1.3;stroke-dasharray:2 5;stroke-linecap:round;}
+  @media(prefers-reduced-motion:no-preference){
+    .route{stroke-dasharray:900;stroke-dashoffset:900;animation:trace 3s cubic-bezier(.4,0,.2,1) forwards;}
+    .route-branch{animation-delay:1.2s;}
+    .terminus{opacity:0;animation:settle 1.2s ease forwards;animation-delay:2.6s;}
+  }
+  @keyframes trace{to{stroke-dashoffset:0;}}
+  @keyframes settle{to{opacity:1;}}
+  @media(max-width:780px){
+    .diagram-label{font-size:17px;letter-spacing:.06em;}
+    .diagram-note{font-size:16px;letter-spacing:.08em;}
+    .legend-label{font-size:17px;}
+  }
   .honest-callout{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin:6px 0 0;}
   .honest-callout p{margin:0;font-size:.95rem;color:#3D3A30;}
   .honest-callout p strong{color:var(--bark);}
@@ -220,9 +236,122 @@
           <p>A plain-language look at how the feet, inner ear, and eyes constantly report to the brain, and how Parkinson's can slow that automatic answering — the real reason physiotherapy and a falls assessment matter so much.</p>
         </div>
         <div class="anatomy">
-          <div class="frame"><span>Placeholder — vestibular system, proprioceptive feedback &amp; postural-control integration</span></div>
+          <figure>
+            <svg viewBox="0 0 720 820" role="img" aria-labelledby="balance-title balance-desc" xmlns="http://www.w3.org/2000/svg">
+              <title id="balance-title">Simplified schematic of the conversation that keeps the body upright</title>
+              <desc id="balance-desc">A front view of a standing figure. Gold lines run from sensors in the feet and joints up both legs, join in the spinal cord, and travel up to the brain; shorter gold lines run from the eyes and from the inner ear to the same place. Further gold lines run back out from the cord to the muscles that hold the body upright. Small chevrons on the cord point both up and down, showing that information travels in and corrections travel out. Inside the brain, a faint dashed arc with two small marks across it shows where that answering can slow in Parkinson's.</desc>
+
+              <ellipse cx="340" cy="88" rx="50" ry="58" fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+              <ellipse cx="340" cy="66" rx="38" ry="32" fill="#E4DCCB" stroke="#C4BAA4" stroke-width="1.2"/>
+
+              <ellipse cx="322" cy="114" rx="8" ry="5" fill="#FAF8F4" stroke="#D0C6B2" stroke-width="1.1"/>
+              <ellipse cx="358" cy="114" rx="8" ry="5" fill="#FAF8F4" stroke="#D0C6B2" stroke-width="1.1"/>
+              <circle cx="384" cy="106" r="7" fill="#D8CFBC" stroke="#C4BAA4" stroke-width="1.2"/>
+              <circle cx="296" cy="106" r="7" fill="#D8CFBC" stroke="#C4BAA4" stroke-width="1.2"/>
+
+              <path class="route-faded" stroke="#BCB29C" stroke-width="2.4" d="M 320 58 C 330 44, 350 44, 360 58"/>
+              <g stroke="#A89C84" stroke-width="2" stroke-linecap="round">
+                <line x1="332" y1="42" x2="326" y2="56"/>
+                <line x1="348" y1="42" x2="342" y2="56"/>
+              </g>
+
+              <g stroke="#DCD3C2" stroke-width="26" fill="none" stroke-linecap="round">
+                <path d="M 268 210 C 258 256, 253 300, 252 344"/>
+                <path d="M 412 210 C 422 256, 427 300, 428 344"/>
+              </g>
+              <g stroke="#EFE9DD" stroke-width="23" fill="none" stroke-linecap="round">
+                <path d="M 268 210 C 258 256, 253 300, 252 344"/>
+                <path d="M 412 210 C 422 256, 427 300, 428 344"/>
+              </g>
+
+              <g stroke="#DCD3C2" stroke-width="36" fill="none" stroke-linecap="round">
+                <path d="M 302 404 C 297 470, 299 548, 302 622"/>
+                <path d="M 378 404 C 383 470, 381 548, 378 622"/>
+              </g>
+              <g stroke="#EFE9DD" stroke-width="33" fill="none" stroke-linecap="round">
+                <path d="M 302 404 C 297 470, 299 548, 302 622"/>
+                <path d="M 378 404 C 383 470, 381 548, 378 622"/>
+              </g>
+
+              <path d="M 320 144 C 320 158, 310 164, 294 170
+                       C 274 178, 262 188, 257 202
+                       C 252 216, 255 242, 258 272
+                       C 261 302, 263 330, 263 356
+                       L 264 410
+                       L 416 410
+                       L 417 356
+                       C 417 330, 419 302, 422 272
+                       C 425 242, 428 216, 423 202
+                       C 418 188, 406 178, 386 170
+                       C 370 164, 360 158, 360 144 Z"
+                    fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+
+              <g fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.4">
+                <rect x="274" y="626" width="56" height="18" rx="8"/>
+                <rect x="350" y="626" width="56" height="18" rx="8"/>
+              </g>
+              <line x1="190" y1="648" x2="600" y2="648" stroke="#D0C6B2" stroke-width="1.4"/>
+
+              <path class="route route-branch" d="M 302 616 C 298 552, 296 490, 302 452 C 310 428, 324 412, 334 402"/>
+              <path class="route route-branch" d="M 378 616 C 382 552, 384 490, 378 452 C 370 428, 356 412, 346 402"/>
+              <path class="route route-trunk" d="M 340 400 C 340 320, 340 240, 340 150"/>
+              <path class="route route-branch" d="M 328 110 C 332 100, 334 88, 336 76"/>
+              <path class="route route-branch" d="M 378 106 C 366 98, 354 88, 344 78"/>
+
+              <path class="route route-branch" d="M 340 296 C 322 302, 306 314, 296 328"/>
+              <path class="route route-branch" d="M 340 296 C 358 302, 374 314, 384 328"/>
+
+              <g class="flow-mark" fill="none" stroke="#C8963C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 350 248 L 356 239 L 362 248"/>
+                <path d="M 350 344 L 356 353 L 362 344"/>
+              </g>
+
+              <circle class="terminus" cx="302" cy="616" r="3.2" fill="#C8963C"/>
+              <circle class="terminus" cx="378" cy="616" r="3.2" fill="#C8963C"/>
+              <circle class="terminus" cx="296" cy="328" r="3" fill="#C8963C"/>
+              <circle class="terminus" cx="384" cy="328" r="3" fill="#C8963C"/>
+              <circle class="terminus" cx="336" cy="76" r="3" fill="#C8963C"/>
+
+              <g stroke="#D0C6B2" stroke-width="1" fill="none">
+                <line x1="198" y1="152" x2="312" y2="116"/>
+                <line x1="198" y1="258" x2="332" y2="256"/>
+                <line x1="198" y1="350" x2="290" y2="332"/>
+                <line x1="198" y1="620" x2="288" y2="616"/>
+                <line x1="540" y1="54"  x2="362" y2="52"/>
+                <line x1="540" y1="106" x2="392" y2="106"/>
+                <line x1="540" y1="176" x2="370" y2="78"/>
+              </g>
+
+              <g class="diagram-label">
+                <text x="190" y="154" text-anchor="end">The eyes</text>
+                <text x="190" y="262" text-anchor="end">Spinal cord</text>
+                <text x="190" y="346" text-anchor="end">Muscles that hold</text>
+                <text x="190" y="364" text-anchor="end">you upright</text>
+                <text x="190" y="616" text-anchor="end">Sensors in the feet</text>
+                <text x="190" y="634" text-anchor="end">and joints</text>
+                <text x="548" y="50"  text-anchor="start">Where the</text>
+                <text x="548" y="68"  text-anchor="start">answering slows</text>
+                <text x="548" y="110" text-anchor="start">Inner ear</text>
+                <text x="548" y="176" text-anchor="start">Where it all</text>
+                <text x="548" y="194" text-anchor="start">comes together</text>
+              </g>
+
+              <g transform="translate(190, 726)">
+                <line x1="0" y1="0" x2="34" y2="0" stroke="#C8963C" stroke-width="2.6" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="4">Information in, small corrections out</text>
+                <g fill="none" stroke="#C8963C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M 8 32 L 14 26 L 20 32"/>
+                  <path d="M 14 46 L 20 52 L 26 46"/>
+                </g>
+                <text class="legend-label" x="46" y="42">Signal travels in both directions</text>
+                <line x1="0" y1="70" x2="34" y2="70" stroke="#C9C0AE" stroke-width="2" stroke-dasharray="3 6" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="74">Where the answering can slow in Parkinson&#8217;s</text>
+              </g>
+            </svg>
+            <figcaption>Staying upright as a constant conversation: information arriving from the feet and joints, the inner ear and the eyes, and small corrections travelling back out to the muscles that hold you up.</figcaption>
+          </figure>
           <div class="cap">
-            <strong>This image is a placeholder and must be replaced before publication.</strong> Do not use AI-generated anatomy here — automatically generated anatomical illustrations are frequently wrong in ways that look convincing, and inaccurate anatomy on a health site is worse than none. Source a correct diagram from <strong>Servier Medical Art</strong> (free, CC-licensed, clinically drawn) or licensed medical stock, and confirm the vestibular and postural-control anatomy is depicted accurately before use.
+            <strong>A simplified schematic, not an anatomical illustration.</strong> Each line stands for many pathways running on both sides of the body, and balance draws on far more than the three sources shown. The real steadying happens on your feet, with your physiotherapist and your supports; this drawing only shows the conversation whose calm the practice rehearses.
           </div>
         </div>
       </div>

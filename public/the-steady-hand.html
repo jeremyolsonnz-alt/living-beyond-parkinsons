@@ -92,17 +92,33 @@
   .part-card .pc-block:last-child{margin-bottom:0;}
   .part-card .pc-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bark);font-weight:600;margin-bottom:4px;}
   .part-card .pc-block p{margin:0;font-size:.94rem;color:#3D3A30;line-height:1.6;}
-  .part-card .anatomy{margin-top:6px;}
-  .when-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:8px 0 0;}
-  .when-grid .cell{background:var(--warm-white);padding:20px 18px;}
-  .when-grid .cell .wh{font-family:'Lora',serif;font-size:1.05rem;color:var(--charcoal);margin-bottom:6px;}
-  .when-grid .cell .note{color:var(--muted);font-size:.86rem;line-height:1.5;}
-  @media(max-width:640px){.when-grid{grid-template-columns:1fr;}}
-  .anatomy{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:0;overflow:hidden;margin:6px 0 0;}
-  .anatomy .frame{background:repeating-linear-gradient(45deg,#EDE6D8,#EDE6D8 12px,#E8E0D0 12px,#E8E0D0 24px);height:240px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);}
-  .anatomy .frame span{font-size:.9rem;max-width:34ch;line-height:1.5;}
+  .part-card .anatomy{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:0;overflow:hidden;margin:6px 0 0;}
+  .anatomy figure{margin:0;padding:22px 20px 2px;}
+  .anatomy svg{width:100%;height:auto;display:block;margin:0 auto .9rem;}
+  .anatomy figcaption{font-size:.85rem;color:var(--muted);line-height:1.65;font-style:italic;text-align:center;max-width:54ch;margin:0 auto;}
   .anatomy .cap{padding:16px 20px;font-size:.82rem;color:var(--muted);line-height:1.55;}
   .anatomy .cap strong{color:var(--bark);font-weight:600;}
+  .diagram-label{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;fill:var(--muted);}
+  .diagram-note{font-family:'DM Sans',system-ui,sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;fill:var(--gold);}
+  .legend-label{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;letter-spacing:.04em;fill:var(--muted);}
+  .route{fill:none;stroke:var(--gold);stroke-linecap:round;stroke-linejoin:round;}
+  .route-trunk{stroke-width:2.6;}
+  .route-branch{stroke-width:1.7;}
+  .route-segment{stroke-width:5;}
+  .route-faded{fill:none;stroke:#C9C0AE;stroke-width:2;stroke-dasharray:3 6;stroke-linecap:round;}
+  .cue-link{fill:none;stroke:var(--gold);stroke-width:1.3;stroke-dasharray:2 5;stroke-linecap:round;}
+  @media(prefers-reduced-motion:no-preference){
+    .route{stroke-dasharray:900;stroke-dashoffset:900;animation:trace 3s cubic-bezier(.4,0,.2,1) forwards;}
+    .route-branch{animation-delay:1.2s;}
+    .terminus{opacity:0;animation:settle 1.2s ease forwards;animation-delay:2.6s;}
+  }
+  @keyframes trace{to{stroke-dashoffset:0;}}
+  @keyframes settle{to{opacity:1;}}
+  @media(max-width:780px){
+    .diagram-label{font-size:17px;letter-spacing:.06em;}
+    .diagram-note{font-size:16px;letter-spacing:.08em;}
+    .legend-label{font-size:17px;}
+  }
   .honest-callout{background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin:6px 0 0;}
   .honest-callout p{margin:0;font-size:.95rem;color:#3D3A30;}
   .honest-callout p strong{color:var(--bark);}
@@ -207,9 +223,126 @@
           <p>A plain-language look at how much of the brain is devoted to the hand, why movements tend to shrink in Parkinson's, and how deliberately rehearsing large, full movements can help push back against that shrinking.</p>
         </div>
         <div class="anatomy">
-          <div class="frame"><span>Placeholder — motor cortex hand region (motor homunculus) &amp; basal-ganglia loop for movement amplitude</span></div>
+          <figure>
+            <svg viewBox="0 0 720 860" role="img" aria-labelledby="hand-title hand-desc" xmlns="http://www.w3.org/2000/svg">
+              <title id="hand-title">Simplified schematic of the route from the movement map to the hand, and what happens to movement size</title>
+              <desc id="hand-desc">A front view of a head and upper body with one arm at the side. Along the top of the brain runs the movement map, with a thicker segment marking the unusually large share of it given over to the hand. A faint dashed loop links deep structures in the middle of the brain to that map, and two small marks across the loop show where the supply falls short in Parkinson's. A gold route runs from the hand's part of the map, down through the brain and spinal cord, out along the arm to the hand. Beneath, an enlargement shows two lines of handwriting: a faint one whose loops grow steadily smaller, and a gold one whose loops stay the same full size throughout.</desc>
+
+              <ellipse cx="330" cy="102" rx="58" ry="64" fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+              <ellipse cx="330" cy="94" rx="46" ry="44" fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2"/>
+              <line x1="330" y1="52" x2="330" y2="136" stroke="#D0C6B2" stroke-width="1.1"/>
+
+              <path d="M 292 62 C 300 76, 302 96, 298 116" fill="none" stroke="#D0C6B2" stroke-width="1.4"/>
+              <path d="M 368 62 C 360 76, 358 96, 362 116" fill="none" stroke="#D0C6B2" stroke-width="1.4"/>
+
+              <path d="M 294 66 C 301 78, 302 90, 300 100" fill="none" stroke="#B0A48A" stroke-width="8" stroke-linecap="round"/>
+
+              <ellipse cx="330" cy="106" rx="21" ry="12" fill="#D8CFBC" stroke="#C4BAA4" stroke-width="1.2"/>
+
+              <path d="M 320 138 C 326 152, 326 168, 322 182 C 334 182, 340 168, 340 152 C 340 144, 336 138, 330 136 Z"
+                    fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2"/>
+
+              <path d="M 306 160
+                       C 306 172, 294 178, 274 186
+                       C 250 194, 232 204, 226 220
+                       C 220 238, 226 268, 232 300
+                       C 238 336, 240 380, 240 430
+                       L 240 486
+                       L 420 486
+                       C 420 430, 424 384, 430 344
+                       C 436 306, 442 274, 440 250
+                       L 452 300
+                       C 460 340, 466 372, 470 404
+                       L 470 452
+                       L 508 452
+                       L 508 400
+                       C 506 366, 498 320, 486 276
+                       C 476 238, 464 210, 446 198
+                       C 428 186, 406 178, 386 170
+                       C 370 166, 356 162, 356 160
+                       Z"
+                    fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+
+              <path d="M 470 450 C 470 472, 482 486, 500 486 C 518 486, 528 472, 526 456
+                       C 524 446, 516 442, 508 444 L 508 450 Z"
+                    fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.4"/>
+              <g fill="none" stroke="#D0C6B2" stroke-width="5" stroke-linecap="round">
+                <path d="M 512 462 C 522 462, 526 470, 520 476"/>
+                <path d="M 510 472 C 519 473, 522 480, 515 485"/>
+              </g>
+
+              <path class="route-faded" stroke="#BCB29C" stroke-width="2.4" d="M 320 96 C 312 86, 306 78, 302 70"/>
+              <path class="route-faded" stroke="#BCB29C" stroke-width="2.4" d="M 340 96 C 350 86, 356 78, 360 70"/>
+              <g stroke="#A89C84" stroke-width="2" stroke-linecap="round">
+                <line x1="302" y1="86" x2="316" y2="79"/>
+                <line x1="310" y1="95" x2="324" y2="88"/>
+              </g>
+
+              <path class="route route-trunk" d="M 298 76 C 294 100, 300 122, 312 140"/>
+              <path class="route route-trunk" d="M 312 140 C 320 158, 330 170, 340 182 C 344 190, 344 200, 343 212"/>
+              <path class="route route-trunk" d="M 343 212 C 342 232, 342 246, 341 256"/>
+              <path class="route route-branch" d="M 341 254 C 368 258, 392 266, 406 276"/>
+              <path class="route route-trunk" d="M 406 276 C 428 290, 444 318, 456 354 C 466 384, 474 412, 480 442"/>
+
+              <circle class="terminus" cx="298" cy="74" r="4.5" fill="#C8963C"/>
+              <circle class="terminus" cx="480" cy="442" r="3.4" fill="#C8963C"/>
+
+              <circle cx="492" cy="452" r="46" fill="none" stroke="#D0C6B2" stroke-width="1" stroke-dasharray="3 5"/>
+              <g stroke="#D0C6B2" stroke-width="1" fill="none">
+                <line x1="458" y1="484" x2="288" y2="560"/>
+                <line x1="528" y1="482" x2="556" y2="560"/>
+              </g>
+
+              <text class="diagram-note" x="420" y="556" text-anchor="middle">Writing, enlarged</text>
+
+              <line x1="286" y1="622" x2="500" y2="622" stroke="#E0D8C8" stroke-width="1" stroke-dasharray="3 5"/>
+              <path fill="none" stroke="#C9C0AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
+                    d="M 290 622 c 8 -26 20 -26 28 0 c 8 -21 20 -21 28 0 c 7 -16 18 -16 25 0 c 6 -12 15 -12 21 0 c 5 -8 13 -8 18 0 c 4 -5 10 -5 14 0"/>
+
+              <line x1="286" y1="706" x2="500" y2="706" stroke="#E0D8C8" stroke-width="1" stroke-dasharray="3 5"/>
+              <path class="route" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"
+                    d="M 290 706 c 8 -26 20 -26 28 0 c 8 -26 20 -26 28 0 c 8 -26 20 -26 28 0 c 8 -26 20 -26 28 0 c 8 -26 20 -26 28 0 c 8 -26 20 -26 28 0"/>
+
+              <g stroke="#D0C6B2" stroke-width="1" fill="none">
+                <line x1="188" y1="72"  x2="286" y2="70"/>
+                <line x1="188" y1="122" x2="292" y2="88"/>
+                <line x1="188" y1="204" x2="310" y2="108"/>
+                <line x1="188" y1="316" x2="336" y2="306"/>
+                <line x1="540" y1="118" x2="352" y2="86"/>
+                <line x1="540" y1="440" x2="502" y2="446"/>
+                <line x1="270" y1="606" x2="288" y2="612"/>
+                <line x1="270" y1="690" x2="288" y2="696"/>
+              </g>
+
+              <g class="diagram-label">
+                <text x="180" y="76"  text-anchor="end">The movement map</text>
+                <text x="180" y="116" text-anchor="end">The hand&#8217;s share</text>
+                <text x="180" y="134" text-anchor="end">of it</text>
+                <text x="180" y="196" text-anchor="end">Deep systems that keep</text>
+                <text x="180" y="214" text-anchor="end">movement at full size</text>
+                <text x="180" y="312" text-anchor="end">Down through the</text>
+                <text x="180" y="330" text-anchor="end">brain and cord</text>
+                <text x="548" y="114" text-anchor="start">Where the supply</text>
+                <text x="548" y="132" text-anchor="start">falls short</text>
+                <text x="548" y="436" text-anchor="start">The muscles that</text>
+                <text x="548" y="454" text-anchor="start">move the fingers</text>
+                <text x="262" y="602" text-anchor="end">Movement</text>
+                <text x="262" y="620" text-anchor="end">shrinking</text>
+                <text x="262" y="686" text-anchor="end">Aiming for</text>
+                <text x="262" y="704" text-anchor="end">full size</text>
+              </g>
+
+              <g transform="translate(190, 776)">
+                <line x1="0" y1="0" x2="34" y2="0" stroke="#C8963C" stroke-width="2.6" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="4">The route from the movement map to the hand</text>
+                <line x1="0" y1="26" x2="34" y2="26" stroke="#C9C0AE" stroke-width="2" stroke-dasharray="3 6" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="30">The supply that runs short in Parkinson&#8217;s</text>
+              </g>
+            </svg>
+            <figcaption>The hand&rsquo;s unusually large share of the movement map, the route from there down to the fingers, and the thing this practice works against: movement quietly shrinking as it goes.</figcaption>
+          </figure>
           <div class="cap">
-            <strong>This image is a placeholder and must be replaced before publication.</strong> Do not use AI-generated anatomy here — automatically generated anatomical illustrations are frequently wrong in ways that look convincing, and inaccurate anatomy on a health site is worse than none. Source a correct diagram from <strong>Servier Medical Art</strong> (free, CC-licensed, clinically drawn) or licensed medical stock, and confirm the motor-cortex hand region and basal-ganglia loop are depicted accurately before use.
+            <strong>A simplified schematic, not an anatomical illustration.</strong> One line stands for routes that involve many structures and cross between the sides of the body, and the small muscles within the hand itself are not shown. The two lines of writing are illustrative rather than a measure of anything &mdash; the shrinking of handwriting in Parkinson&rsquo;s is called micrographia, and deliberately aiming for full-sized movement is a strategy your occupational therapist will already know well.
           </div>
         </div>
       </div>

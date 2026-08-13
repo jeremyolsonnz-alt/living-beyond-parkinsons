@@ -161,18 +161,34 @@
   .full-script-body p{color:#3D3A30;line-height:1.72;margin:0 0 16px;}
   .practice-console .audio-footnote{margin-top:16px;font-size:.8rem;color:#A9A294;font-style:italic;line-height:1.5;}
 
-  /* ---------- ANATOMY PLACEHOLDER ---------- */
-  .anatomy{
-    background:var(--warm-white);border:1px solid var(--border);border-radius:4px;
-    padding:0;overflow:hidden;margin:6px 0 0;
-  }
-  .anatomy .frame{
-    background:repeating-linear-gradient(45deg,#EDE6D8,#EDE6D8 12px,#E8E0D0 12px,#E8E0D0 24px);
-    height:240px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);
-  }
-  .anatomy .frame span{font-size:.9rem;max-width:34ch;line-height:1.5;}
+  /* ---------- ANATOMY DIAGRAM ---------- */
+  .anatomy{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:0;overflow:hidden;margin:6px 0 0;}
+  .anatomy figure{margin:0;padding:22px 20px 2px;}
+  .anatomy svg{width:100%;height:auto;display:block;margin:0 auto .9rem;}
+  .anatomy figcaption{font-size:.85rem;color:var(--muted);line-height:1.65;font-style:italic;text-align:center;max-width:54ch;margin:0 auto;}
   .anatomy .cap{padding:16px 20px;font-size:.82rem;color:var(--muted);line-height:1.55;}
   .anatomy .cap strong{color:var(--bark);font-weight:600;}
+  .diagram-label{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;fill:var(--muted);}
+  .diagram-note{font-family:'DM Sans',system-ui,sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;fill:var(--gold);}
+  .legend-label{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;letter-spacing:.04em;fill:var(--muted);}
+  .route{fill:none;stroke:var(--gold);stroke-linecap:round;stroke-linejoin:round;}
+  .route-trunk{stroke-width:2.6;}
+  .route-branch{stroke-width:1.7;}
+  .route-segment{stroke-width:5;}
+  .route-faded{fill:none;stroke:#C9C0AE;stroke-width:2;stroke-dasharray:3 6;stroke-linecap:round;}
+  .cue-link{fill:none;stroke:var(--gold);stroke-width:1.3;stroke-dasharray:2 5;stroke-linecap:round;}
+  @media(prefers-reduced-motion:no-preference){
+    .route{stroke-dasharray:900;stroke-dashoffset:900;animation:trace 3s cubic-bezier(.4,0,.2,1) forwards;}
+    .route-branch{animation-delay:1.2s;}
+    .terminus{opacity:0;animation:settle 1.2s ease forwards;animation-delay:2.6s;}
+  }
+  @keyframes trace{to{stroke-dashoffset:0;}}
+  @keyframes settle{to{opacity:1;}}
+  @media(max-width:780px){
+    .diagram-label{font-size:17px;letter-spacing:.06em;}
+    .diagram-note{font-size:16px;letter-spacing:.08em;}
+    .legend-label{font-size:17px;}
+  }
 
   .honest-callout{
     background:var(--cream);border:1px solid var(--border);border-radius:4px;
@@ -310,11 +326,153 @@
           <p>A plain-language look at how the automatic walking rhythm can be handed to a different, cue-driven route when it stalls — the same idea behind the doorway line.</p>
         </div>
         <div class="anatomy">
-          <div class="frame">
-            <span>Placeholder — basal ganglia &amp; supplementary motor area gait loop, with cue-driven cortical route</span>
-          </div>
+          <figure>
+            <svg viewBox="0 0 720 900" role="img" aria-labelledby="gait-title gait-desc" xmlns="http://www.w3.org/2000/svg">
+              <title id="gait-title">Simplified schematic of the two routes a walking step can take</title>
+              <desc id="gait-desc">At the top, a head is shown in profile facing right, enlarged. Inside it, a faint dashed loop runs between deep structures near the middle of the brain and the movement area along the top; two small marks across the loop show where the automatic supply falters in Parkinson's. Separately, a gold route runs from the eye back to the area that handles seeing and attending, forward to the movement area, and down into the brainstem. Below, a small standing figure in profile faces a doorway with a gold line marked on the floor. A gold route runs down the figure's spine and out into both legs, and a fine dashed gold line links the line on the floor up to the figure's eye.</desc>
+
+              <g transform="translate(40,40)">
+                <path d="M 300 62
+                         C 350 62, 394 96, 398 140
+                         C 400 156, 394 166, 388 172
+                         L 400 186
+                         C 406 192, 404 198, 396 200
+                         L 384 202
+                         C 382 212, 386 218, 380 222
+                         C 374 228, 368 232, 366 244
+                         C 364 258, 354 266, 336 268
+                         C 300 272, 260 262, 234 240
+                         C 208 218, 202 186, 206 156
+                         C 212 106, 252 62, 300 62 Z"
+                      fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+
+                <path d="M 292 262 C 292 282, 288 294, 284 306 L 358 306 C 354 292, 352 276, 354 256 Z"
+                      fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+                <ellipse cx="296" cy="134" rx="74" ry="56" fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2"/>
+
+                <path d="M 292 190 C 300 210, 302 232, 298 254 C 308 250, 314 232, 314 212 C 314 200, 306 190, 298 188 Z"
+                      fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2"/>
+
+                <path d="M 256 86 C 270 78, 288 75, 306 78" fill="none" stroke="#C4BAA4" stroke-width="8" stroke-linecap="round"/>
+
+                <ellipse cx="292" cy="150" rx="28" ry="17" fill="#D8CFBC" stroke="#C4BAA4" stroke-width="1.2"/>
+                <ellipse cx="238" cy="162" rx="22" ry="16" fill="#D8CFBC" stroke="#C4BAA4" stroke-width="1.2"/>
+
+                <ellipse cx="372" cy="170" rx="9" ry="5.5" fill="#FAF8F4" stroke="#D0C6B2" stroke-width="1.2"/>
+                <circle cx="374" cy="170" r="2.4" fill="#C4BAA4"/>
+
+                <path class="route-faded" d="M 282 136 C 272 118, 272 100, 280 88"/>
+                <path class="route-faded" d="M 306 86 C 316 102, 318 124, 310 140"/>
+                <g stroke="#A89C84" stroke-width="2" stroke-linecap="round">
+                  <line x1="264" y1="108" x2="282" y2="102"/>
+                  <line x1="266" y1="122" x2="284" y2="116"/>
+                </g>
+
+                <path class="route route-branch" d="M 362 170 C 326 178, 286 175, 258 166"/>
+                <path class="route route-trunk" d="M 236 145 C 240 116, 260 94, 280 85"/>
+                <path class="route route-trunk" d="M 304 88 C 314 108, 316 142, 312 176 C 310 200, 306 226, 302 296"/>
+
+                <circle class="terminus" cx="362" cy="170" r="3.6" fill="#C8963C"/>
+                <circle class="terminus" cx="302" cy="296" r="3.2" fill="#C8963C"/>
+              </g>
+
+              <g stroke="#D0C6B2" stroke-width="1" fill="none">
+                <line x1="236" y1="126" x2="296" y2="122"/>
+                <line x1="236" y1="180" x2="306" y2="152"/>
+                <line x1="236" y1="250" x2="258" y2="208"/>
+                <line x1="470" y1="186" x2="360" y2="192"/>
+                <line x1="470" y1="256" x2="418" y2="216"/>
+              </g>
+
+              <g class="diagram-label">
+                <text x="228" y="130" text-anchor="end">The movement area</text>
+                <text x="228" y="176" text-anchor="end">Where the automatic</text>
+                <text x="228" y="194" text-anchor="end">supply falters</text>
+                <text x="228" y="246" text-anchor="end">Seeing and</text>
+                <text x="228" y="264" text-anchor="end">attending</text>
+                <text x="478" y="182" text-anchor="start">Deep structures that</text>
+                <text x="478" y="200" text-anchor="start">keep the rhythm going</text>
+                <text x="478" y="260" text-anchor="start">The eye</text>
+              </g>
+
+              <text class="diagram-note" x="340" y="386" text-anchor="middle">The head, enlarged</text>
+
+              <g stroke="#D0C6B2" stroke-width="1" fill="none">
+                <line x1="278" y1="438" x2="252" y2="400"/>
+                <line x1="328" y1="440" x2="428" y2="400"/>
+              </g>
+              <circle cx="302" cy="462" r="34" fill="none" stroke="#D0C6B2" stroke-width="1" stroke-dasharray="3 5"/>
+
+              <line x1="200" y1="700" x2="640" y2="700" stroke="#D0C6B2" stroke-width="1.4"/>
+
+              <g fill="#E4DCCB" stroke="#D0C6B2" stroke-width="1.2">
+                <rect x="470" y="520" width="8" height="180"/>
+                <rect x="560" y="520" width="8" height="180"/>
+                <rect x="470" y="512" width="98" height="8"/>
+              </g>
+
+              <g stroke="#DCD3C2" stroke-width="22" fill="none" stroke-linecap="round">
+                <path d="M 282 586 C 278 630, 274 666, 272 690"/>
+                <path d="M 306 588 C 322 622, 338 658, 348 686"/>
+              </g>
+              <g stroke="#EFE9DD" stroke-width="19" fill="none" stroke-linecap="round">
+                <path d="M 282 586 C 278 630, 274 666, 272 690"/>
+                <path d="M 306 588 C 322 622, 338 658, 348 686"/>
+              </g>
+
+              <path d="M 288 486 C 274 492, 266 502, 264 518 C 262 536, 266 558, 270 576
+                       L 270 592 L 324 592 L 324 576 C 328 558, 332 536, 330 518
+                       C 328 502, 320 492, 306 486 Z"
+                    fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+
+              <g stroke="#DCD3C2" stroke-width="15" fill="none" stroke-linecap="round">
+                <path d="M 316 500 C 328 524, 336 544, 340 562"/>
+              </g>
+              <g stroke="#EFE9DD" stroke-width="12" fill="none" stroke-linecap="round">
+                <path d="M 316 500 C 328 524, 336 544, 340 562"/>
+              </g>
+
+              <ellipse cx="300" cy="462" rx="17" ry="21" fill="#EFE9DD" stroke="#DCD3C2" stroke-width="1.5"/>
+              <circle cx="311" cy="457" r="2.4" fill="#C4BAA4"/>
+
+              <path class="route route-trunk" d="M 302 480 C 298 512, 294 546, 292 578"/>
+              <path class="route route-branch" d="M 292 578 C 300 606, 316 640, 330 666"/>
+              <path class="route route-branch" d="M 291 580 C 286 614, 282 648, 278 674"/>
+              <circle class="terminus" cx="330" cy="666" r="3" fill="#C8963C"/>
+              <circle class="terminus" cx="278" cy="674" r="3" fill="#C8963C"/>
+
+              <path class="route route-segment" d="M 515 692 L 515 708"/>
+              <path class="cue-link" d="M 510 686 C 440 620, 400 520, 320 460"/>
+
+              <g stroke="#D0C6B2" stroke-width="1" fill="none">
+                <line x1="236" y1="546" x2="286" y2="542"/>
+                <line x1="236" y1="668" x2="270" y2="662"/>
+                <line x1="582" y1="530" x2="570" y2="530"/>
+                <line x1="515" y1="714" x2="515" y2="734"/>
+              </g>
+
+              <g class="diagram-label">
+                <text x="228" y="542" text-anchor="end">Down the</text>
+                <text x="228" y="560" text-anchor="end">spinal cord</text>
+                <text x="228" y="664" text-anchor="end">To the muscles</text>
+                <text x="228" y="682" text-anchor="end">of the leg</text>
+                <text x="590" y="534" text-anchor="start">Doorway</text>
+                <text x="515" y="752" text-anchor="middle">A line on the floor</text>
+              </g>
+
+              <g transform="translate(180, 800)">
+                <line x1="0" y1="0" x2="34" y2="0" stroke="#C8963C" stroke-width="2.6" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="4">The cue-driven route: seeing, attending, stepping</text>
+                <line x1="0" y1="26" x2="34" y2="26" stroke="#C9C0AE" stroke-width="2" stroke-dasharray="3 6" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="30">The automatic rhythm, less reliable in Parkinson&#8217;s</text>
+                <line x1="0" y1="52" x2="34" y2="52" stroke="#C8963C" stroke-width="1.3" stroke-dasharray="2 5" stroke-linecap="round"/>
+                <text class="legend-label" x="46" y="56">The cue itself, out in the room</text>
+              </g>
+            </svg>
+            <figcaption>Two routes to the same step: the automatic rhythm that falters in Parkinson&rsquo;s, and the cue-driven route &mdash; seeing a line on the floor, attending to it, and letting that carry the step through.</figcaption>
+          </figure>
           <div class="cap">
-            <strong>This image is a placeholder and must be replaced before publication.</strong> Do not use AI-generated anatomy here — automatically generated anatomical illustrations are frequently wrong in ways that look convincing, and inaccurate anatomy on a health site is worse than none. Source a correct diagram from <strong>Servier Medical Art</strong> (free, CC-licensed, clinically drawn) or licensed medical stock, and confirm the basal-ganglia / SMA gait circuit is depicted accurately before use.
+            <strong>A simplified schematic, not an anatomical illustration.</strong> Drawn from the side, with single lines standing for routes that in fact involve many structures and run on both sides of the body. The doorway and the line on the floor stand for any cue &mdash; a beat to walk to, a counted rhythm, a mark on the ground. The drawing shows why cueing is thought to help; it is not a claim that this practice will stop a freeze.
           </div>
         </div>
       </div>
