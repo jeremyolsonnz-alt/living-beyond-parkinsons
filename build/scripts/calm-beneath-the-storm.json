@@ -1,0 +1,113 @@
+{
+  "id": "calm-beneath-the-storm",
+  "title": "Calm Beneath the Storm",
+  "domain": "Non-motor wellbeing",
+  "badge": "emerging",
+  "audio_file": "audio_calm.mp3",
+  "approx_minutes": 15,
+  "note": "Channel-agnostic script. Restorative exception — no figure-merge. Arrives at a settled state directly. Does not shorten 'off' periods or change the medication cycle. Part III deliberately avoids naming a nerve or tracing a route through the body; the Part III diagram is conceptual and the two must stay consistent.",
+  "phases": [
+    {
+      "id": "opening",
+      "label": "Part I — Breath and Light",
+      "paragraphs": [
+        {
+          "id": "op1",
+          "agnostic": "And you're here now, reading or listening. You've already taken the time to be here, which is its own small kindness, and there's nothing more you need to do to have begun."
+        },
+        {
+          "id": "op2",
+          "agnostic": "Perhaps you're sitting. Perhaps you're lying down. Perhaps your eyes are still open, and perhaps in a moment they'll feel like closing on their own. There's no hurry in any of it — you can take this at exactly the pace that suits you."
+        },
+        {
+          "id": "op3",
+          "agnostic": "You're breathing. You've been breathing all along, without having to think about it — the body has been quietly doing that for you the whole time. And now, if you like, you might just notice it. Not changing anything. Only noticing the breath that's already there."
+        },
+        {
+          "id": "op4",
+          "agnostic": "And you may find, as people often do, that simply letting the breath be noticed lets it lengthen a little on its own. The out-breath, especially — long, and unhurried, like something being set down."
+        },
+        {
+          "id": "op5",
+          "agnostic": "And somewhere — in the room, behind your eyes, or in a memory of a warm afternoon — there's a soft light and warmth. You don't have to summon it sharply. Just let it rest somewhere it's easy to rest: the shoulders, perhaps, or the hands, or the slow rise and fall of the chest.",
+          "see": "And somewhere — in the room, behind your eyes, or in a memory of a warm afternoon — there's a soft light. You don't have to make the picture sharp. Just let it rest somewhere it's easy to rest: the shoulders, perhaps, or the hands, or the slow rise and fall of the chest.",
+          "feel": "And somewhere — in the room, or in the memory of a warm afternoon — there's a soft warmth. You don't have to picture it at all. Just let the feeling of it rest somewhere it's easy to rest: the shoulders, perhaps, or the hands, or the slow rise and fall of the chest."
+        }
+      ]
+    },
+    {
+      "id": "phase1",
+      "label": "Part II — The Settled Place",
+      "paragraphs": [
+        {
+          "id": "p1a",
+          "agnostic": "Somewhere in you — or somewhere you can bring to mind — there's a place that is already calm. It doesn't need building. It's more like a room you already have, that's been quietly waiting, with the light already on.",
+          "see": "Somewhere in you — or somewhere you can picture — there's a place that is already calm. It doesn't need building. It's more like a room you already have, that's been quietly waiting, with the light already on.",
+          "feel": "Somewhere in you — or somewhere you can call up the feeling of — there's a place that is already calm. It doesn't need building. It's more like a room you already have, that's been quietly waiting, warm and settled."
+        },
+        {
+          "id": "p1b",
+          "agnostic": "It might be a real place you've been: a shoreline, a garden, a kitchen at a certain hour, a seat by a window. Or it might be nowhere in particular — just the feeling of a place where nothing is being asked of you.",
+          "see": "It might be a real place you've been: a shoreline, a garden, a kitchen at a certain hour, a seat by a window. Picture as much or as little of it as comes — or none of it, just the sense of a place where nothing is being asked of you.",
+          "feel": "It might be a real place you've been, or nowhere in particular. You don't need to see it — just let there be the feeling of a place where nothing is being asked of you."
+        },
+        {
+          "id": "p1c",
+          "agnostic": "And you don't have to travel to it, or earn your way in. You can simply notice that you're already there. The ground holding you. The air a comfortable temperature. The quiet not empty, but easy."
+        },
+        {
+          "id": "p1d",
+          "agnostic": "If the storm is still going on somewhere — the anxious thought, the tremor, the difficult hour — you can let it carry on at the edge of things, the way weather carries on outside a window. You don't have to make it stop to be here. You're beneath it now, in the settled place, and it can do what it does without needing your hand on it."
+        },
+        {
+          "id": "p1e",
+          "agnostic": "So you rest here for a while. Nothing to reach for. Nothing to fix. Just a person, in a calm place, breathing — which turns out to be enough."
+        }
+      ]
+    },
+    {
+      "id": "phase2",
+      "label": "Part III — The Quieting Body",
+      "paragraphs": [
+        {
+          "id": "p2a",
+          "agnostic": "The body has a quieting system of its own — one that doesn't need instructions, only a little space to work. As the breath slows, that system begins, gently, to answer."
+        },
+        {
+          "id": "p2b",
+          "agnostic": "And it seems to be the out-breath that matters most — not the drawing in, but the letting go. A long, unhurried out-breath is read by the body as a sign that there's no emergency here, and the body answers it in its own quiet way. The heart slows a touch. The muscles that were braced let go a fraction. The belly softens. The alarm turns itself down."
+        },
+        {
+          "id": "p2c",
+          "agnostic": "You don't have to make this happen. You couldn't force it if you tried — that's rather the point of it. All you're doing is giving it room: one slow breath, and then another, each long out-breath making a little more space, and the body, in its own time, beginning to answer back."
+        },
+        {
+          "id": "p2d",
+          "agnostic": "And whatever is difficult in the body today — the stiffness, the restlessness, the wearing-off — you're not fighting it here. You're just letting the quieting system do the one thing it knows how to do, alongside everything else that's going on."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "label": "Part IV — Closing",
+      "paragraphs": [
+        {
+          "id": "cl1",
+          "agnostic": "And when you're ready — in your own time, with no signal to wait for — you can let the ordinary sounds of the room come back. The surface beneath you. The light in the space you're actually in."
+        },
+        {
+          "id": "cl2",
+          "agnostic": "You don't have to carry the whole calm out with you. Just a little of it, however much came — a slightly longer breath, a slightly looser shoulder, a sense that the settled place is still there and can be returned to whenever the day gets loud again."
+        },
+        {
+          "id": "cl3",
+          "agnostic": "There was nothing to achieve here, and nothing to get back to. You didn't fail if the storm kept going, and you didn't have to fix anything to have done this well. You met a hard moment, and you stayed with yourself through it — which is the whole of it."
+        },
+        {
+          "id": "cl4",
+          "agnostic": "And whenever you need it, the settled place will be here. It doesn't run out."
+        }
+      ]
+    }
+  ]
+}
