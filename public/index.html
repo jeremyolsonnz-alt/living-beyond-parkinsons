@@ -94,7 +94,7 @@
   .hero-pillars{display:flex;flex-direction:column;gap:16px;}
   .hero-pillar{
     background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
-    border-radius:4px;padding:24px 26px;text-decoration:none;cursor:pointer;
+    border-radius:4px;padding:24px 26px;text-decoration:none;
     transition:border-color .2s,background .2s;display:block;
   }
   .hero-pillar:hover{background:rgba(255,255,255,.1);border-color:rgba(200,150,60,.5);}
@@ -116,6 +116,31 @@
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Living Beyond Parkinson's",
+  "url": "https://www.livingbeyondparkinsons.com/",
+  "description": "Free guided imagery and wellbeing practices for people living with Parkinson's disease \u2014 grounded in research, honest about the evidence, and offered alongside medical care, never instead of it.",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "name": "Jeremy Olson",
+    "url": "https://www.livingbeyondparkinsons.com/work-with-jeremy.html",
+    "jobTitle": "Guided imagery practitioner",
+    "description": "MSocSc (Psychology), Waikato University. Graduate quality-of-life research at Deakin University. Diploma of Solution-Oriented Hypnosis (Ericksonian tradition)."
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Jeremy Olson",
+    "url": "https://www.livingbeyondparkinsons.com/work-with-jeremy.html",
+    "jobTitle": "Guided imagery practitioner",
+    "description": "MSocSc (Psychology), Waikato University. Graduate quality-of-life research at Deakin University. Diploma of Solution-Oriented Hypnosis (Ericksonian tradition)."
+  }
+}
+</script>
 </head>
 <body>
 
@@ -150,14 +175,12 @@
         <h3>The Research Foundation</h3>
         <p>What the science says about mental practice and Parkinson's. Plain language, cited throughout.</p>
       </a>
-      <div class="hero-pillar" role="link" tabindex="0"
-           onclick="if(!event.target.closest('a')){window.location.href='guided-imagery.html';}"
-           onkeydown="if((event.key==='Enter'||event.key===' ')&&!event.target.closest('a')){event.preventDefault();window.location.href='guided-imagery.html';}">
+      <a class="hero-pillar" href="guided-imagery.html#video-overview">
         <div class="pn">Pillar 02 &nbsp;·&nbsp; Mind-Body Practice</div>
         <h3>Guided Imagery Programme</h3>
         <p>Five practices targeting gait, movement, balance, fine motor, and wellbeing. Free to use.</p>
-        <a href="guided-imagery.html#video-overview" class="hero-pillar-video" style="text-decoration:none;display:inline-block;" onclick="event.stopPropagation()">&#9658; Watch a short video overview</a>
-      </div>
+        <div class="hero-pillar-video">▶ Watch a short video overview</div>
+      </a>
     </div>
   </div>
 </header>
