@@ -9,6 +9,18 @@
 <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png">
 <title>Living Beyond Parkinson's — guided imagery for living well with Parkinson's</title>
 <meta name="description" content="Free guided imagery and wellbeing practices for people living with Parkinson's disease — grounded in research, honest about the evidence, and offered alongside medical care, never instead of it.">
+<link rel="canonical" href="https://www.livingbeyondparkinsons.com/">
+<meta name="author" content="Jeremy Olson">
+<meta property="og:title" content="Living Beyond Parkinson's — guided imagery for living well with Parkinson's">
+<meta property="og:description" content="Free guided imagery and wellbeing practices for people living with Parkinson's disease — grounded in research, honest about the evidence, and offered alongside medical care, never instead of it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.livingbeyondparkinsons.com/">
+<meta property="og:image" content="https://www.livingbeyondparkinsons.com/images/og-image.png">
+<meta property="og:site_name" content="Living Beyond Parkinson's">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Living Beyond Parkinson's — guided imagery for living well with Parkinson's">
+<meta name="twitter:description" content="Free guided imagery and wellbeing practices for people living with Parkinson's disease — grounded in research, honest about the evidence, and offered alongside medical care, never instead of it.">
+<meta name="twitter:image" content="https://www.livingbeyondparkinsons.com/images/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -82,7 +94,7 @@
   .hero-pillars{display:flex;flex-direction:column;gap:16px;}
   .hero-pillar{
     background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
-    border-radius:4px;padding:24px 26px;text-decoration:none;
+    border-radius:4px;padding:24px 26px;text-decoration:none;cursor:pointer;
     transition:border-color .2s,background .2s;display:block;
   }
   .hero-pillar:hover{background:rgba(255,255,255,.1);border-color:rgba(200,150,60,.5);}
@@ -138,12 +150,14 @@
         <h3>The Research Foundation</h3>
         <p>What the science says about mental practice and Parkinson's. Plain language, cited throughout.</p>
       </a>
-      <a class="hero-pillar" href="guided-imagery.html#video-overview">
+      <div class="hero-pillar" role="link" tabindex="0"
+           onclick="if(!event.target.closest('a')){window.location.href='guided-imagery.html';}"
+           onkeydown="if((event.key==='Enter'||event.key===' ')&&!event.target.closest('a')){event.preventDefault();window.location.href='guided-imagery.html';}">
         <div class="pn">Pillar 02 &nbsp;·&nbsp; Mind-Body Practice</div>
         <h3>Guided Imagery Programme</h3>
         <p>Five practices targeting gait, movement, balance, fine motor, and wellbeing. Free to use.</p>
-        <div class="hero-pillar-video">▶ Watch a short video overview</div>
-      </a>
+        <a href="guided-imagery.html#video-overview" class="hero-pillar-video" style="text-decoration:none;display:inline-block;" onclick="event.stopPropagation()">&#9658; Watch a short video overview</a>
+      </div>
     </div>
   </div>
 </header>
