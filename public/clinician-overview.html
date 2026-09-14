@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Living Beyond Parkinson's — For Clinicians &amp; Rehabilitation Teams</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F0E8;
+    --warm-white:#FAF8F4;
+    --charcoal:#2A2820;
+    --bark:#5C4A2A;
+    --gold:#C8963C;
+    --muted:#7A7060;
+    --border:#E0D8C8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--warm-white);
+    color:var(--charcoal);
+    font-family:'DM Sans',system-ui,sans-serif;
+    font-size:9.6pt;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:210mm;margin:0 auto;background:var(--warm-white);}
+  .page-two{page-break-before:always;padding-top:14mm;}
+
+  /* ---- masthead ---- */
+  .masthead{background:var(--charcoal);padding:13mm 14mm 11mm;border-bottom:3px solid var(--gold);}
+  .eyebrow{font-size:7.2pt;letter-spacing:.19em;text-transform:uppercase;color:var(--gold);margin-bottom:5mm;}
+  .masthead h1{font-family:'Lora',Georgia,serif;font-size:24pt;font-weight:500;color:var(--warm-white);line-height:1.1;margin-bottom:3.5mm;}
+  .masthead h1 span{color:var(--gold);}
+  .masthead .sub{font-size:9.6pt;color:#C0B9AB;line-height:1.55;max-width:150mm;}
+
+  .body{padding:9mm 14mm 0;}
+
+  .pull{
+    border-left:3px solid var(--gold);
+    padding:1mm 0 1mm 6mm;
+    margin:0 0 8mm;
+    font-family:'Lora',Georgia,serif;
+    font-style:italic;
+    font-size:11pt;
+    line-height:1.5;
+    color:var(--bark);
+  }
+
+  h2{
+    font-family:'Lora',Georgia,serif;
+    font-size:13pt;
+    font-weight:500;
+    margin:0 0 3mm;
+    padding-bottom:1.6mm;
+    border-bottom:1px solid var(--border);
+  }
+  h3{font-family:'Lora',Georgia,serif;font-size:10.5pt;font-weight:500;margin:0 0 1mm;}
+  p{margin:0 0 3mm;}
+  .block{margin-bottom:7mm;}
+
+  /* ---- pillars ---- */
+  .pillar{display:flex;gap:6mm;margin-bottom:4.5mm;}
+  .pillar .tag{
+    flex:0 0 24mm;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--gold);padding-top:1.4mm;
+  }
+  .pillar .detail{flex:1;}
+  .pillar p{color:#4A4438;margin:0;font-size:9.2pt;}
+
+  /* ---- practice list ---- */
+  .practices{margin:3.5mm 0 0;list-style:none;}
+  .practices li{
+    display:flex;align-items:baseline;gap:3mm;
+    padding:1.5mm 0;border-bottom:1px solid var(--border);font-size:9.2pt;
+  }
+  .practices li:last-child{border-bottom:none;}
+  .practices .nm{font-weight:500;flex:0 0 36mm;}
+  .practices .ds{flex:1;color:var(--muted);}
+  .practices .bg{
+    flex:0 0 auto;font-size:7pt;letter-spacing:.11em;text-transform:uppercase;
+    color:var(--bark);
+  }
+
+  /* ---- panels ---- */
+  .panel{
+    background:var(--cream);
+    border-left:3px solid var(--gold);
+    padding:5mm 6mm;
+    margin:0 0 7mm;
+    page-break-inside:avoid;
+  }
+  .panel .lbl{font-size:7pt;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:2.5mm;}
+  .panel p{font-size:8.9pt;color:#4A4438;margin-bottom:2.5mm;}
+  .panel p:last-child{margin-bottom:0;}
+
+  .panel.plain{background:#FBF8F2;border-left-color:var(--muted);}
+
+  /* ---- two column ---- */
+  .cols{display:flex;gap:10mm;margin-bottom:7mm;}
+  .cols > div{flex:1;}
+  .cols p{font-size:9pt;color:#4A4438;}
+  ul.ticks{list-style:none;}
+  ul.ticks li{font-size:9pt;color:#4A4438;padding:1.3mm 0 1.3mm 5mm;position:relative;line-height:1.45;}
+  ul.ticks li::before{content:'—';position:absolute;left:0;color:var(--gold);}
+
+  /* ---- evidence table ---- */
+  table.ev{width:100%;border-collapse:collapse;font-size:8.6pt;margin-top:2mm;}
+  table.ev th{
+    text-align:left;font-family:'DM Sans',sans-serif;font-size:7pt;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);
+    padding:0 3mm 1.6mm 0;font-weight:600;
+  }
+  table.ev td{padding:2mm 3mm 2mm 0;border-bottom:1px solid var(--border);vertical-align:top;color:#4A4438;}
+  table.ev td:first-child{font-weight:500;color:var(--charcoal);white-space:nowrap;}
+
+  /* ---- footer ---- */
+  .footer{
+    background:var(--charcoal);
+    padding:7mm 14mm;
+    margin-top:8mm;
+  }
+  .footer .brand{font-family:'Lora',Georgia,serif;font-size:12pt;color:var(--warm-white);margin-bottom:1.5mm;}
+  .footer .brand span{color:var(--gold);}
+  .footer a, .footer .line{display:block;font-size:9pt;color:#C0B9AB;text-decoration:none;}
+  .footer .tagline{font-size:7pt;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-top:2.5mm;}
+  .note{font-size:8pt;color:var(--muted);font-style:italic;margin-top:2mm;}
+
+  @page{size:A4;margin:0;}
+  @media print{
+    body{background:#fff;}
+    .page{max-width:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE ONE ================= -->
+<div class="page">
+
+  <div class="masthead">
+    <div class="eyebrow">For clinicians &amp; rehabilitation teams</div>
+    <h1>Living Beyond <span>Parkinson's</span></h1>
+    <p class="sub">A free, self-directed resource you can hand to a patient — at diagnosis, in a resource folder, or on a movement disorders clinic noticeboard.</p>
+  </div>
+
+  <div class="body">
+
+    <p class="pull">Five guided imagery practices for living well with Parkinson's — offered to the body as it is now, with no former self to chase back. There is no order to follow and nothing to complete.</p>
+
+    <div class="block">
+      <h2>What the site offers</h2>
+
+      <div class="pillar">
+        <div class="tag">Pillar one</div>
+        <div class="detail">
+          <h3>The Research Foundation</h3>
+          <p>Neuroplasticity and motor imagery evidence specific to Parkinson's, written in plain language for patients and families, with every source gathered in a public bibliography.</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="tag">Pillar two</div>
+        <div class="detail">
+          <h3>Guided Imagery Programme</h3>
+          <p>Five audio-guided practices sharing one four-part structure, each carrying an honest evidence badge.</p>
+          <ul class="practices">
+            <li><span class="nm">Walking Freely</span><span class="ds">gait and freezing of gait</span><span class="bg">Moderate</span></li>
+            <li><span class="nm">Finding Flow</span><span class="ds">movement initiation, bradykinesia</span><span class="bg">Emerging</span></li>
+            <li><span class="nm">Steady Ground</span><span class="ds">balance and postural stability</span><span class="bg">Emerging</span></li>
+            <li><span class="nm">The Steady Hand</span><span class="ds">fine motor and handwriting</span><span class="bg">Emerging</span></li>
+            <li><span class="nm">Calm Beneath the Storm</span><span class="ds">anxiety, "off"-period distress, sleep</span><span class="bg">Emerging</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="lbl">Framing you can rely on</div>
+      <p>Nothing on this site claims to slow, halt, or reverse Parkinson's. The practices are a complement to medication, physiotherapy, speech therapy and the person's Parkinson's team — never a replacement — and patients are directed to continue all prescribed care.</p>
+      <p>The evidence is badged honestly rather than favourably. The site states plainly, on its research page, that the most recent meta-analysis found no benefit for overall motor symptoms, and that the largest evidence base in Parkinson's rehabilitation belongs to physical exercise, not to imagery. The four-part session structure is the author's own synthesis and has not been tested as a unit in any clinical trial.</p>
+      <p>The figure a person imagines is never a pre-Parkinson's self to chase back — it is an embodiment of ease, offered to the body as it is now. The non-motor practice sets the figure aside entirely, so that nobody is asked to "become" calm.</p>
+    </div>
+
+    <div class="cols">
+      <div>
+        <h2>About the author</h2>
+        <p>Jeremy Olson holds a Masters of Social Sciences (Psychology) from Waikato University, New Zealand. His graduate quality-of-life research was conducted at Deakin University under Professor Robert Cummins. He also holds a Diploma of Solution-Oriented Hypnosis (Ericksonian tradition). He is not a clinician and does not have Parkinson's — the site is built as a researcher and educator working alongside people who do.</p>
+      </div>
+      <div>
+        <h2>Why teams hand this out</h2>
+        <ul class="ticks">
+          <li>Free — no login, paywall, advertising, or cost to the patient</li>
+          <li>Self-directed — any pace, any device, nothing to finish</li>
+          <li>Honest about where the evidence is thin, and about what it does not show</li>
+          <li>Something for the hard hours, not only the good days</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= PAGE TWO ================= -->
+<div class="page page-two">
+  <div class="body">
+
+    <div class="block">
+      <h2>Where the evidence actually stands</h2>
+      <p>The research page sets this out in full. In summary:</p>
+      <table class="ev">
+        <tr><th>Domain</th><th>What the evidence shows</th></tr>
+        <tr>
+          <td>Overall motor<br>symptoms</td>
+          <td>The most recent meta-analysis of imagery and observation trials using UPDRS-III as the primary outcome found no significant difference — six studies, 152 participants, null on and off medication. An earlier multicentre randomised trial found mental practice no better than relaxation for mobility. The site leads with both.</td>
+        </tr>
+        <tr>
+          <td>Gait and<br>freezing</td>
+          <td>Mixed, and the distinction matters. The encouraging freezing results come from <em>action observation</em> protocols — watching movement on video. The one randomised trial combining observation <em>with</em> imagery found no effect on freezing or balance. This site's practices are imagery. The research page says so, and directs anyone whose main concern is freezing toward physiotherapist cueing strategies and observation-based training instead.</td>
+        </tr>
+        <tr>
+          <td>Bradykinesia,<br>amplitude</td>
+          <td>Short-term laboratory signals only — increased finger movement speed after a single observation session, persisting 48 hours; increased hand movement amplitude when imagery is added to observation. Kinematic outcomes, not clinical scales or daily function.</td>
+        </tr>
+        <tr>
+          <td>Tremor, fluctuations,<br>anxiety and mood</td>
+          <td>The firmest ground. A randomised trial in a major neurology journal found a structured mind-body practice reduced anxiety and depression more than conventional exercise. Relaxation guided imagery has been shown to reduce tremor substantially on accelerometer measurement, and to increase "on" time in a pilot study — though both come from one small research group, with the pilot's three-month follow-up not reaching significance.</td>
+        </tr>
+        <tr>
+          <td>Comparison with<br>exercise</td>
+          <td>A Cochrane review of 154 trials and 7,837 participants — 60 trials and 2,721 participants for motor outcomes — found benefit across almost every exercise type. Set against six trials for imagery, the comparison is not close, and the site says so. Mind-body training appears in that review as its own category, with a small effect at low confidence.</td>
+        </tr>
+        <tr>
+          <td>Speech</td>
+          <td>Deliberately excluded. LSVT LOUD is the established treatment with outcomes demonstrated to two years, and the site cites it specifically to direct people away from its own material.</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="panel">
+      <div class="lbl">A limitation of the method, stated on the site</div>
+      <p>Three studies now suggest that motor imagery in Parkinson's may not work the way it does in people without the condition. Imagined movement is slowed in proportion to physical slowing; external cueing reduces that and improves vividness. But in a study comparing people with Parkinson's to healthy controls, only the controls reported increased vividness after imagery instruction, and the Parkinson's group's gains tracked <em>visual</em> rather than <em>kinaesthetic</em> imagery. In a six-week home training study from the same group, imagery vividness did not improve and slipped slightly, while task performance improved substantially.</p>
+      <p>The scripts on this site are written in kinaesthetic language. The research page states this tension openly, and tells users that if they find themselves seeing rather than feeling the movement, they are not doing it wrong.</p>
+    </div>
+
+    <div class="panel plain">
+      <div class="lbl">Safety and precautions</div>
+      <p>No harm has been reported from imagery practice in any of the trials cited. The site nonetheless carries a plain statement covering three situations, and would welcome correction if a clinician considers it insufficient.</p>
+      <p><strong>Freezing and falls.</strong> All practices are done seated or lying. The site states that imagining an easeful step must never become a reason to attempt walking someone would otherwise avoid, and that a sense of steadiness during practice does not mean steadiness afterwards.</p>
+      <p><strong>Hallucinations and confusion.</strong> Users who have experienced these are asked to discuss vivid imagery work with their neurologist before beginning — framed as an unstudied interaction, not a known risk.</p>
+      <p><strong>Swallowing difficulty.</strong> Directed to speech-language therapy assessment without delay. The one-to-one page states explicitly that a conversation there is not a substitute for that referral.</p>
+    </div>
+
+    <div class="block">
+      <h2>What would be most useful from you</h2>
+      <ul class="ticks">
+        <li>Whether the evidence badges read as accurate, or as generous</li>
+        <li>Whether the safety statement is sufficient for the population you see</li>
+        <li>Anything on the site that a patient could reasonably misread as a treatment claim</li>
+        <li>Whether the site is something you would be willing to hand to a patient, and if not, what would need to change</li>
+      </ul>
+      <p class="note">Corrections are welcomed and acted on. The site has been revised more than once on the strength of a single well-made objection.</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="brand">Living Beyond <span>Parkinson's</span></div>
+      <a href="https://livingbeyondparkinsons.com">livingbeyondparkinsons.com</a>
+      <a href="mailto:jeremy@livingbeyondparkinsons.com">jeremy@livingbeyondparkinsons.com</a>
+      <div class="tagline">Free · No paywall · No email required</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
